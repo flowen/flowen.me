@@ -1,0 +1,17 @@
+.articles {
+	text-align: center;
+
+	.articles-list {
+		margin: $m*2 0;
+		padding: 0;
+		list-style: none;
+		
+		li {
+			margin: 0 0 $m;
+		}
+
+		a {
+			font-size: 2rem;
+		}
+	}
+}

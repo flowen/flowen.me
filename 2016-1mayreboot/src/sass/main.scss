@@ -1,0 +1,80 @@
+//base
+@import "config";
+@import "mixins";
+
+//components
+@import "components/normalize";
+@import "components/loader";
+@import "components/nav";
+
+//sections
+@import "sections/intro";
+@import "sections/projects";
+@import "sections/sections";
+
+@import "components/print";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+    color: $blueDark;
+    font-size: 62.5%;
+    font-family: 'Julius Sans One', sans-serif;
+	line-height: 1.5;
+
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Voltaire', sans-serif;
+    color: $blue;
+}
+
+a {
+	color: $purple;
+	text-decoration: none;
+
+	&:hover {
+		color: saturate($purple, 75%);
+	}
+}
+
+main {
+	.js & {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow-x: hidden;
+	}
+	
+	font-size: 1.2rem;
+	h1 {
+		font-size: 2rem;
+	}
+	h2 {
+		font-size: 1.8rem;
+	}
+
+	@media (min-width: 41.25em) {
+		font-size: 1.5rem;
+		h1 {
+			font-size: 2.3rem;
+		}
+		h2 {
+			font-size: 2rem;
+		}
+	}
+
+	@media (min-width: 75em) {
+		font-size: 1.8rem;
+		h1 {
+			font-size: 2.5rem;
+		}
+		h2 {
+			font-size: 2.2rem;
+		}
+	}
+}

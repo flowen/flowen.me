@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+	background-color: $black;
+    color: #75757a;
+    font-family: 'cabin', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    @media (min-width: 62.5em) {
+        font-size: 1.8rem;
+        line-height: 1.75;
+    }
+}
+
+// small bug:
+// make sure anchors are not very long, (long) anchors that 
+// go to the next line fuk up the hover effect
+a:not(.button) {
+    position: relative;
+    text-decoration: none;
+	transition: color .2s $cb;
+
+    &:hover {
+    	color: $blue;
+    }
+    
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $blue;
+        transform: scaleX(0) translateZ(0);
+        margin-top: -4px;
+        transition: transform .3s $cb;
+    }
+    &:hover:after {
+        transform: scaleX(1) translateZ(0);
+        transition: transform .5s $cb;
+    }
+}
+
+a,
+a:visited {
+    color: $blue;
+}
+
+input:focus {
+    outline-color: blue;
+    outline-offset: -1px;
+    outline-width: 1px;
+    outline-style: solid;
+}
+
+nav ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+figure {
+	figcaption {
+		font-size: 1.6rem;
+		font-style: italic;
+		color: #929292;
+		text-align: center;
+	}
+}
+
+// headings
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Fjalla One', sans-serif;
+    color: $white;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+h2 {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+@media (min-width: 41.25em) {
+    h1 {
+        font-size: 3.5rem;
+        line-height: 1.5;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 62.5em) {
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+}
+
+// helper classes
+
+.hidden {
+    visibility: hidden !important;
+}

@@ -1,0 +1,17 @@
+.js .logo {
+	position: fixed;
+	right: $m;
+	bottom: $m;
+
+	a {
+		display: block;
+		background: url(images/xenochiku-eye.png) center center / cover no-repeat;
+		background-blend-mode: luminosity;
+		width: 7.5rem;
+		height: 7.5rem;
+	}
+
+	img {
+		display: none;
+	}
+}

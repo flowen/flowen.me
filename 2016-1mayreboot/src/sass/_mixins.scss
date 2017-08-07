@@ -1,0 +1,14 @@
+@mixin breakline() {
+	position: relative;
+
+	&:after {
+		content: ' ';
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    width: 80%;
+	    height: 1px;
+	    background: $blue;
+	    background: linear-gradient(to right, #2a43f8 35%, rgba(42, 67, 248, 0) 100%);
+	}
+}

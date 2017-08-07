@@ -1,0 +1,134 @@
+.intro {
+	
+	.contact-me {
+		text-align: center;
+		
+		.t1, .t2, .hireme {
+			opacity: 0;			
+		}
+
+		&.show-headings {
+			.t1, .t2, .hireme {
+				opacity: 1;
+			}
+
+			.hireme a:after {
+				transform: scaleX(1) translateZ(0);
+			}
+		}
+
+		.t1 {
+			font-size: 2.2rem;
+			transition: opacity .35s .35s;
+		}
+
+		.t2 {
+			font-size: 3rem;
+			transition: opacity .35s .55s;
+		}
+
+		.hireme {
+			position: relative;
+			font-size: 4.5rem;
+			transition: opacity .35s .75s;
+			a:after {
+				transition-delay: 1.1s;
+				transition-duration: .5s;
+			}
+		}
+	}
+}
+
+@media (min-width: 30em) {
+.planet-container {
+	display: block;
+	position: relative;
+	z-index: 200;
+	width: 50rem;
+	height: 50rem;
+	margin: 0 0 7rem;
+	
+	.planet-frame {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-radius: 50%;
+		overflow: hidden;
+		width: 50rem;
+		height: 50rem;
+		transform: translate(-50%, -50%);
+	}
+
+	.planet {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		width: 50rem;
+		height: 50rem;
+	}	
+
+	.planet-colors {
+		background-image: url(images/planet-colors320.jpg);
+		opacity: .2;
+		z-index: 300;
+		animation: 80s linear 0s infinite reverse planet_rotate,
+				   2s ease-in-out 0s infinite planet_scale;
+		mix-blend-mode: lighten;
+	}
+
+	.planet-light {
+		background-image: url(images/planet-light320.jpg);
+		opacity: .4;
+		z-index: 100;
+		animation: 60s ease-in-out 0s alternate infinite planet_rotate_half;
+				   // 2.25s ease-in-out 0s infinite planet_scale; // PERFORMANCE?
+		mix-blend-mode: lighten;
+	}
+
+	.planet-dark {
+		opacity: .5;
+		z-index: 200;
+		background-image: url(images/planet-dark320.jpg);
+		animation: 180s linear 0s infinite reverse planet_rotate;
+	}
+
+	.planet-sun-reflection {
+		opacity: .4;
+	    z-index: 500;
+	    background: #beced3;
+	    background: radial-gradient(ellipse at right, #beced3 0%,#000000 100%);
+	    /*TODO: animate the #000000 percentage */
+	    border-radius: 50%;
+	    // animation: 240s linear 0s infinite planet_rotate;
+	    mix-blend-mode: hard-light;
+	}
+
+	.planet-bg {
+		background-color: #3F3535;
+	}
+
+	@keyframes planet_rotate_half { 
+		to { transform: rotate(180deg) }  
+	}
+	@keyframes planet_rotate { 
+		to { transform: rotate(360deg) }  
+	}
+
+	@keyframes planet_scale { 
+		50% { transform: scale(1.1) }  
+	}
+}
+
+.xeno-chiku-holder {
+	z-index: 300;
+	position: relative;
+	width: 50%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+}
+}

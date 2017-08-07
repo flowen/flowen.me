@@ -1,0 +1,43 @@
+.who-is-rou-hun-anyway {
+	position: relative;
+	overflow-x: hidden;
+	padding: 5rem 0;
+
+	@media(min-width: 37.5em) {
+		padding: 7.5rem 0;
+	}
+
+	.inner-section {
+		p {
+			position: relative;
+			z-index: 100;
+			text-align: justify;
+		}
+	}
+	
+	.profile-pic {
+		canvas {
+			position: absolute;
+		}
+	}
+
+	.profile-pic-image {
+		float: right;
+		shape-outside: url(images/shape-who-is-rouhun-anyway-2.png);
+		shape-margin: 1rem;
+		margin: 0 -7rem 0 0;
+		
+		@media(min-width: 37.5em) {
+			margin-right: -12rem;
+		}
+
+		&.js {
+			display: none;
+		}
+
+		// @media(min-width: 37.5em) {
+			max-width: 90%;
+			height: auto;
+		// }
+	}
+}

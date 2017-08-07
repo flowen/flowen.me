@@ -1,0 +1,25 @@
+.visualiser-holder {
+	z-index: 400;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $black;
+
+	.progress-loader {
+		z-index: 500;
+	}
+
+	.no-js & {
+		display: none;
+	}
+
+	.js & canvas {
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+		pointer-events: none;
+	}
+}

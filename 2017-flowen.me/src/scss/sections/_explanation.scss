@@ -1,0 +1,25 @@
+.explanation {
+	text-align: center;
+
+	ul {
+		display: inline-block;
+		margin: 3rem 0;
+		
+		li {
+			text-align: left;
+			font-size: 2rem;
+		}
+
+		li:last-child {
+			// display: none;
+
+			.getusermedia & {
+				display: list-item;
+			}
+		}
+	}
+
+	.arrow {
+		transform: rotate(270deg);
+	}
+}

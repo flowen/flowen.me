@@ -1,0 +1,38 @@
+.social-stuff {
+	text-align: right;
+
+	p {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.social-nav {
+		display: inline-block;
+		padding: 0;
+		
+		li {
+			display: inline-block;
+			width: 2.5rem;
+			margin: 0 $m/2;
+		}
+		
+		.social-anchor {
+			display: block;
+			opacity: 0;
+			cursor: pointer;
+			transition: transform .1s ease-out;
+			
+			&:hover {
+				transform: scale(1.4);
+			}
+
+			&:after {
+				content: none;
+			}
+
+			path {
+				fill: $white;
+			}
+		}
+	}
+}

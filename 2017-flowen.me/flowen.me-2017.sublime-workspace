@@ -1,0 +1,1778 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"px-",
+				"px--holder"
+			],
+			[
+				"berlin-buy",
+				"bg-berlin-buy-1.jpg\tw:1200 h:600"
+			],
+			[
+				"b",
+				"berlin-buy-support-1.png\tw:437 h:626"
+			],
+			[
+				"flex-r",
+				"flex-direction"
+			],
+			[
+				"tw",
+				"TweenMax.min.js"
+			],
+			[
+				"quer",
+				"querySelectorAll\t( selectors: DOMString ): NodeList Element"
+			],
+			[
+				"btn",
+				"btnOne"
+			],
+			[
+				"qu",
+				"querySelector\t( selectors: DOMString ): Element Element"
+			],
+			[
+				"unifor",
+				"uniforms"
+			],
+			[
+				"smoke",
+				"smokeShader"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"P",
+				"PIXI"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"mediu",
+				"medium.com/@flowen"
+			],
+			[
+				"transfor",
+				"transform-origin"
+			],
+			[
+				"transition",
+				"transition-duration"
+			],
+			[
+				"scro",
+				"scrollTop"
+			],
+			[
+				"social",
+				"socialIcons"
+			],
+			[
+				"wind",
+				"windowHeight〔variable〕"
+			],
+			[
+				"displace",
+				"displacementFilter"
+			],
+			[
+				"who-",
+				"who-is-this-rou-hun-anyway"
+			],
+			[
+				"sroll",
+				"scroller"
+			],
+			[
+				"calc",
+				"calculateValues"
+			],
+			[
+				"sect",
+				"sectionNav"
+			],
+			[
+				"reset",
+				"resetScroll"
+			],
+			[
+				"current",
+				"currentSection"
+			],
+			[
+				"curr",
+				"currentSection"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"query",
+				"querySelector\t( selectors: DOMString ): Element Document"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"digi",
+				"digital-art"
+			],
+			[
+				"front",
+				"front-end-dev"
+			],
+			[
+				"add",
+				"addEventListener\t( type: DOMString, callback: EventListener, capture?: boolean ): void EventTarget"
+			],
+			[
+				"he",
+				"heightOffset"
+			],
+			[
+				"new",
+				"newHeight"
+			],
+			[
+				"contactM",
+				"contactMePaths"
+			],
+			[
+				"conat",
+				"contactMe"
+			],
+			[
+				"bl",
+				"black"
+			],
+			[
+				"remo",
+				"removeChild\t( child: Node ): Node Node"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"zIndex",
+				"zIndex\t = '' Style CSS"
+			],
+			[
+				"onre",
+				"onresize〔function〕"
+			],
+			[
+				"timeout",
+				"setTimeout\t( handler: any, timeout?: long, arguments_..: any ): long Window"
+			],
+			[
+				"defaul",
+				"defaultHooks"
+			],
+			[
+				"wi",
+				"windowHeight〔variable〕"
+			],
+			[
+				"trnaslate",
+				"translateX"
+			],
+			[
+				"data-scroll",
+				"data-scroll-image"
+			],
+			[
+				"quall",
+				"querySelectorAll\t( selectors: DOMString ): NodeList Document"
+			],
+			[
+				"win",
+				"windowWidth〔variable〕"
+			],
+			[
+				"window",
+				"windowWidth〔variable〕"
+			],
+			[
+				"progress",
+				"progress-loader"
+			],
+			[
+				"r",
+				"ready\t$(document).ready"
+			],
+			[
+				"V",
+				"Vel"
+			],
+			[
+				"depth",
+				"depthmapsL"
+			],
+			[
+				"depthma",
+				"depthmaps"
+			],
+			[
+				"preLo",
+				"preloader"
+			],
+			[
+				"xeno",
+				"xenoChiku"
+			],
+			[
+				"doc",
+				"document\t: Document Window"
+			],
+			[
+				"qusel",
+				"querySelector\t( selectors: DOMString ): Element (Selectors) Element"
+			],
+			[
+				"bac",
+				"background\tbackground"
+			],
+			[
+				"cube",
+				"cubeSize"
+			],
+			[
+				"rX",
+				"rXOSC"
+			],
+			[
+				"Ran",
+				"Random"
+			],
+			[
+				"Vector",
+				"Vector3"
+			],
+			[
+				"osc",
+				"oscScript"
+			],
+			[
+				"Tra",
+				"Transform\t[class]"
+			],
+			[
+				"GameTag",
+				"GameObject.FindGameObjectWithTag(tag)"
+			],
+			[
+				"Gameobjectfind",
+				"GameObject.FindWithTag(tag)"
+			],
+			[
+				"meta",
+				"metallic"
+			],
+			[
+				"moveDir",
+				"moveDirection.Up\t[property]"
+			],
+			[
+				"Rigid",
+				"Rigidbody\t[class]"
+			],
+			[
+				"acc",
+				"acceleration\tForceMode.*"
+			],
+			[
+				"Ve",
+				"Vector3"
+			],
+			[
+				"Vec",
+				"Vector3\tVector2.*()"
+			],
+			[
+				"addf",
+				"addForce\tRigidbody.*(force, mode)"
+			],
+			[
+				"onTr",
+				"onTriggerEnter\tCollider.*(other)"
+			],
+			[
+				"Ren",
+				"Renderer\t[class]"
+			],
+			[
+				"Timedelt",
+				"Time.deltaTime\t[property]"
+			],
+			[
+				"Matfpi",
+				"Mathf.PI\t[property]"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"ellip",
+				"ellipseMode\tellipseMode"
+			],
+			[
+				"start",
+				"startTholdL"
+			],
+			[
+				"prin",
+				"println\tprintln var"
+			],
+			[
+				"rect",
+				"rect\trect"
+			],
+			[
+				"fill",
+				"noFill"
+			],
+			[
+				"arr",
+				"ArrayList"
+			],
+			[
+				"arraylist",
+				"arraylist\tArrayList"
+			],
+			[
+				"sha",
+				"shapemode\tshapeMode"
+			],
+			[
+				"vertex",
+				"vertex\tvertex"
+			],
+			[
+				"mid",
+				"middleSpring"
+			],
+			[
+				"cir",
+				"circleShape"
+			],
+			[
+				"print",
+				"println\tprintln var"
+			],
+			[
+				"ell",
+				"ellipse\tellipse"
+			],
+			[
+				"attra",
+				"attractParticles"
+			],
+			[
+				"kick",
+				"kickFollower"
+			],
+			[
+				"part",
+				"particleList"
+			],
+			[
+				"parti",
+				"particlesLength"
+			],
+			[
+				"strob",
+				"stroboIn"
+			],
+			[
+				"att",
+				"attractParticles"
+			],
+			[
+				"prnt",
+				"println\tprintln var"
+			],
+			[
+				"stroke",
+				"stroke\tstroke"
+			],
+			[
+				"dist",
+				"dist\tdist"
+			],
+			[
+				"ud",
+				"update"
+			],
+			[
+				"col",
+				"color\tcolor"
+			],
+			[
+				"rectL",
+				"rectLoop"
+			],
+			[
+				"prn",
+				"println\tprintln text"
+			],
+			[
+				"size",
+				"sizeShape"
+			],
+			[
+				"diff",
+				"diffIterations"
+			],
+			[
+				"max",
+				"maxIterations"
+			],
+			[
+				"rotate",
+				"rotateY"
+			],
+			[
+				"D",
+				"DancingRect"
+			],
+			[
+				"random",
+				"randomShape"
+			],
+			[
+				"rand",
+				"randomShape"
+			],
+			[
+				"shap",
+				"shapesList"
+			],
+			[
+				"frame",
+				"framerate\tframeRate (set)"
+			],
+			[
+				"elli",
+				"ellipse\tellipse"
+			],
+			[
+				"begin",
+				"beginshape\tbeginShape"
+			],
+			[
+				"ne",
+				"negPos"
+			],
+			[
+				"fra",
+				"framerate\tframeRate (set)"
+			],
+			[
+				"rSp",
+				"rSpeedY"
+			],
+			[
+				"speed",
+				"rSpeedX"
+			],
+			[
+				"line",
+				"line\tline"
+			],
+			[
+				"oscP",
+				"oscPrev"
+			],
+			[
+				"os",
+				"oscValues"
+			],
+			[
+				"array",
+				"arraynames"
+			],
+			[
+				"entry",
+				"entrySet"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 43559,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/js/depthmap-visualiser.js",
+			"settings":
+			{
+				"buffer_size": 10156,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					""
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Re-run sketch"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch (Processing 3 only)"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch fullscreen"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Export sketch as application"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Kill running sketches"
+				]
+			],
+			[
+				"Packages/Processing/Build Systems/Processing.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					""
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Re-run sketch"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch (Processing 3 only)"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch fullscreen"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Export sketch as application"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Kill running sketches"
+				],
+				[
+					"Packages/Unity3D Build System/Unity.sublime-build",
+					""
+				],
+				[
+					"Packages/Unity3D Build System/Unity.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Processing/Build Systems/Processing.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Unity3D Build System/Unity.sublime-build",
+					""
+				],
+				[
+					"Packages/Unity3D Build System/Unity.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/JSHint/JSHint.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Unity3D Build System/Unity.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 213.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"add repo",
+				"Package Control: Add Repository"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"INSTALL",
+				"Package Control: Install Package"
+			],
+			[
+				"list ",
+				"Package Control: List Packages"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"list pac",
+				"Package Control: List Packages"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 746.0
+	},
+	"console":
+	{
+		"height": 595.0,
+		"history":
+		[
+			"clear",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/app",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss"
+	],
+	"file_history":
+	[
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/.gitignore",
+		"/Volumes/Data/DOCUMENTS/_htdocs/knomo-landingpage/ic_shopping_basket_24px.svg",
+		"/Volumes/Data/DOWNLOADS/facebook.svg",
+		"/Volumes/Data/DOCUMENTS/_htdocs/knomo-landingpage/app/images/ic-shopping-basket-24px.svg",
+		"/Volumes/Data/DOCUMENTS/_htdocs/knomo-landingpage/src/scss/components/_social-stuff.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/knomo-landingpage/src/scss/components/_logo.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/knomo-landingpage/src/main.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/knomo-landingpage/app/images/knomo-logo.svg",
+		"/Volumes/Data/DOCUMENTS/_htdocs/boilerplates/landingpage/README.md",
+		"/Volumes/Data/DOCUMENTS/_htdocs/boilerplates/2017-flowen.me/src/js/animations.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/boilerplates/2017-flowen.me/src/main.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/boilerplates/2017-flowen.me/src/scss/components/_social-stuff.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/boilerplates/2017-flowen.me/src/js/scrollmagic.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/boilerplates/2017-flowen.me/package.json",
+		"/Volumes/Data/DOCUMENTS/_htdocs/boilerplates/2017-flowen.me/webpack.config.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/webgl/button/multiple-buttons-shaders.html",
+		"/Volumes/Data/DOCUMENTS/_htdocs/webgl/background/multiple-buttons-shaders copy.html",
+		"/Volumes/Data/DOCUMENTS/_htdocs/webgl/button/shader-mousemove-element-threejs.html",
+		"/Volumes/Data/DOCUMENTS/_htdocs/webgl/button/multiple-change-light-intensity.html",
+		"/Volumes/Data/DOCUMENTS/_htdocs/webgl/button/multiple-buttons-threejs.html",
+		"/Volumes/Data/DOCUMENTS/_htdocs/webgl/button/pixijs.html",
+		"/Volumes/Data/DOCUMENTS/_htdocs/webgl/button/libs/stats.min.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/webgl/button/libs/three.min.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/pixijs/button/index.html",
+		"/Volumes/Data/DOCUMENTS/_htdocs/pixijs/button/shader.frag",
+		"/Volumes/Data/DOCUMENTS/_htdocs/pixijs/button/libs/pixi.min.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/001/package.json",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/main.scss",
+		"/Users/flowen/dead copy.letter",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_copyright.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/app/main.min.css",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_copy-right.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/main.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/forbryan/webpack.config.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/forbryan/package.json",
+		"/Volumes/Data/DOCUMENTS/_htdocs/forbryan/config.codekit3",
+		"/Volumes/Data/DOCUMENTS/_htdocs/forbryan/src/index.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/forbryan/src/main.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/js/depthmap-visualiser.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_explanation.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/index.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/cfg/_base.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_who-is-rou-hun-anyway.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/components/_visualiser.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_more-work.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_intro.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/js/profile-pic-effects.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/package.json",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/cfg/_config.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/js/vendor/modernizr-3.3.1.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/js/scrollmagic.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_testimonials.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_contact-me.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_sections.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_articles.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/js/testimonials.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/components/_buttons.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/components/_social-stuff.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/components/_social-nav.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/components/_contact-me.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/js/depthmap-visualiser.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/components/_intro.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_planets.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/components/_planets.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/js/helpers.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_cool-visual-stuff.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/components/_progress-loader.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/cfg/_mixins-extends.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/js/_cfg.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/sections/_who-is-this-rou-hun-anyway.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/scss/cfg/_typography.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.me/src/js/init-viz.js",
+		"/Volumes/Data/DOWNLOADS/html5-boilerplate-master/dist/index.html",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/js/router.js",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/sections/_who-is-this-rou-hun-anyway.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/src/scss/components/_scroller.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/src/scss/cfg/_typography.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/src/scss/cfg/_base.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/index.html",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/src/styles.scss",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/src/scss/components/_layout.html",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/src/index.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/src/scroller.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/src/section-navigation.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/section-navigation.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/src/device-type.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/package.json",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/package.bacup.json",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/webpack.config.js",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/package.json",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/index.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/000/normalize.css",
+		"/Volumes/Data/DOCUMENTS/_htdocs/ui-animation/001/index.html",
+		"/Volumes/Data/DOCUMENTS/_htdocs/whitestone-contest/bab/package.json",
+		"/Volumes/Data/DOCUMENTS/_htdocs/whitestone-contest/bab/index.js",
+		"/Volumes/Data/DOCUMENTS/_htdocs/whitestone-contest/Filament-master/index.html",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/partial-contact.php",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/components/_background-black.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/cfg/_config.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/config.codekit3",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/js/section-who-is-rouhun.js",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/cfg/_base.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/app/video/flowen.nltrailer2-compressed-1000kbps.mp4",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/footer.php",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/sections/_footer.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/js/animations.js",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/index.js",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/js/fullwidth-image.js",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/js/captcha.js",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/README.md",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/js/section-creativecoding.js",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/wp-pages/digital-art.html",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/flowen_me_import.sql",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/components/_contact-me.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/components/style.css",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/sections/_main-content.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/cfg/_typography.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/header.php",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/page.php",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/sections/_intro.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/js/fade-out-all-elements.js",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/sections/_sections.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/sections/_digitalart.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/components/_progress-loader.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/components/_buttons.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/js/fade-in-all-elements.js",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/cfg/_normalize.scss",
+		"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss/cfg/_mixins.scss"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 151.0,
+		"where_history":
+		[
+			"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/scss",
+			"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/",
+			"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/",
+			"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/js/",
+			"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2/src/js/modules",
+			"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/restflowen-v0.2",
+			"/Applications/MAMP/htdocs/flowen.nl/wp-content/themes/twentyfifteen",
+			"/Applications/MAMP/htdocs/flowen.nl",
+			"/Volumes/Data/DOCUMENTS/_htdocs/flowen.nl/2017-flowen.nl/src/js",
+			"",
+			"/Volumes/Data/DOCUMENTS/_htdocs/p5js/drawing-beats",
+			"",
+			"/Volumes/Data/Documents/Processing/libraries/controlP5/examples",
+			"/Volumes/Data/Documents/Processing/libraries/controlP5",
+			"/Volumes/Data/Documents/Processing/generate_shapes/all_shapes",
+			"/Volumes/droomplekken.nl/public_html/js",
+			"/Volumes/Data/Instructionals/LEARN-tech/Joshua davis II - animation/06_HTween",
+			"/Volumes/droomplekken.nl/templates/modules",
+			"/Volumes/droomplekken.nl 9/public_html/",
+			"/Volumes/droomplekken.nl 9/public_html/js",
+			"/Users/flowen/Documents/_htdocs/dateanomad.net/",
+			"/Users/flowen/Documents/_htdocs/dateanomad.net/client",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"Moderniz",
+			"mic",
+			"Modernizr",
+			"Modern",
+			"\"",
+			"h1",
+			"• ",
+			"px--",
+			"--",
+			"-holder",
+			"class=\"support-",
+			"class",
+			"support-2",
+			"support-1",
+			"ref=\"",
+			"mic",
+			"this.mic",
+			"ctrlVisualiser",
+			"tweenMouseOut",
+			"uMouse",
+			"uResolution",
+			"uTime",
+			"controls",
+			"currentLight",
+			"e.off",
+			";",
+			"uResolution",
+			"tweenMouseOver",
+			"Tween",
+			"$",
+			"voteItem",
+			"new ",
+			"tweenHover",
+			"btnMouseOver",
+			"x",
+			"counter",
+			"TweenM",
+			"stats",
+			"1",
+			"scenes",
+			"height",
+			"width",
+			"camera",
+			"geometries",
+			"controls",
+			"holder",
+			"Three.",
+			"<canvas",
+			"canvas",
+			"content",
+			"template",
+			"uMouse",
+			"three",
+			"simpleShader",
+			"value",
+			"x",
+			"filter",
+			"evt",
+			"uResolution",
+			"uMouse",
+			"uniforms",
+			"value:",
+			"console",
+			"$",
+			"simpleShader",
+			"height",
+			"width",
+			"img",
+			"shaderCode",
+			"filterManager",
+			"simpleShader",
+			"filter",
+			"apply",
+			"uniforms",
+			"fragShader",
+			".",
+			";",
+			"resolution",
+			"logo",
+			"//",
+			"40",
+			"\"",
+			"$btn",
+			"smokeShader",
+			"renderer",
+			"circle",
+			"logo",
+			"\"",
+			"btn",
+			"canvas",
+			"null",
+			"arrBtns",
+			"$('.btn')",
+			"array",
+			"stage",
+			"canvas",
+			"three",
+			"two",
+			"one",
+			"copyright",
+			"your.domain.name/the/path",
+			"5px",
+			"512px",
+			"http://example.com",
+			"fill:none;stroke:#FFFFFF;",
+			"coge",
+			"processing",
+			"mailto",
+			"butt",
+			"buttno",
+			"viz",
+			"newImage",
+			"width=\"640\" height=\"360\" ",
+			"onProgress",
+			"onPr",
+			"Modernizr",
+			"Dhaka - stolen money and at the police station",
+			"ttps://medium.com/@flowen/dhaka-stolen-money-and-at-the-police-station-117aff969dde",
+			"https://medium.com/@flowen/dhaka-stolen-money-and-at-the-police-station-117aff969dde",
+			".15s; ",
+			"all",
+			".5",
+			"h1",
+			"Visualiser",
+			"visualiser",
+			"\n\t\t\t",
+			"contact-me",
+			"intro"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"",
+			"flowen.me",
+			"$blue",
+			"700w",
+			"Viz",
+			"Ani",
+			"/coge/audio-anal",
+			"springParticles",
+			"osc",
+			"tmpMaxXIterations",
+			"maxXIterations",
+			"bottomLineList",
+			"maxLength",
+			"FLine",
+			"player",
+			"\"",
+			"'",
+			"ub-mockup-article_files",
+			"front-end",
+			"newMember",
+			"NewMember",
+			"newMember",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/index.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 43559,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 12122.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/js/depthmap-visualiser.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10156,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5664,
+								5664
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_is_enabled": true,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3374.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 285.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "flowen.me-2017.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"gitig",
+				".gitignore"
+			],
+			[
+				"git",
+				".gitignore"
+			],
+			[
+				"depth",
+				"src/js/depthmap-visualiser.js"
+			],
+			[
+				"sec",
+				"src/scss/sections/_sections.scss"
+			],
+			[
+				"social",
+				"src/scss/components/_social-stuff.scss"
+			],
+			[
+				"multip",
+				"button/multiple-buttons-shaders.html"
+			],
+			[
+				"packag",
+				"001/package.json"
+			],
+			[
+				"copyri",
+				"src/scss/sections/_copyright.scss"
+			],
+			[
+				"main.min",
+				"app/main.min.css"
+			],
+			[
+				"index.js",
+				"src/index.js"
+			],
+			[
+				"main",
+				"src/main.scss"
+			],
+			[
+				"expl",
+				"src/scss/sections/_explanation.scss"
+			],
+			[
+				"intro",
+				"src/scss/sections/_intro.scss"
+			],
+			[
+				"more-w",
+				"src/scss/sections/_more-work.scss"
+			],
+			[
+				"visual",
+				"src/scss/components/_visualiser.scss"
+			],
+			[
+				"explan",
+				"src/scss/sections/_explanation.scss"
+			],
+			[
+				"pa",
+				"package.json"
+			],
+			[
+				"profil",
+				"src/js/profile-pic-effects.js"
+			],
+			[
+				"base",
+				"src/scss/cfg/_base.scss"
+			],
+			[
+				"who",
+				"src/scss/sections/_who-is-rou-hun-anyway.scss"
+			],
+			[
+				"moder",
+				"src/js/vendor/modernizr-3.3.1.js"
+			],
+			[
+				"index",
+				"src/index.js"
+			],
+			[
+				"test",
+				"src/scss/sections/_testimonials.scss"
+			],
+			[
+				"scroll",
+				"src/js/scrollmagic.js"
+			],
+			[
+				"contact",
+				"src/scss/sections/_contact-me.scss"
+			],
+			[
+				"config",
+				"src/scss/cfg/_config.scss"
+			],
+			[
+				"section",
+				"src/scss/sections/_sections.scss"
+			],
+			[
+				"conta",
+				"src/scss/sections/_contact-me.scss"
+			],
+			[
+				"more",
+				"src/scss/sections/_more-work.scss"
+			],
+			[
+				"conf",
+				"src/scss/cfg/_config.scss"
+			],
+			[
+				"button",
+				"src/scss/components/_buttons.scss"
+			],
+			[
+				"visua",
+				"src/js/depthmap-visualiser.js"
+			],
+			[
+				"scrol",
+				"src/js/scrollmagic.js"
+			],
+			[
+				"testim",
+				"src/scss/sections/_testimonials.scss"
+			],
+			[
+				"helper",
+				"src/js/helpers.js"
+			],
+			[
+				"eexpl",
+				"src/scss/sections/_explanation.scss"
+			],
+			[
+				"visu",
+				"src/scss/components/_visualiser.scss"
+			],
+			[
+				"contac",
+				"src/scss/components/_contact-me.scss"
+			],
+			[
+				"whoi",
+				"src/scss/sections/_who-is-rou-hun-anyway.scss"
+			],
+			[
+				"profile",
+				"src/js/profile-pic-effects.js"
+			],
+			[
+				"main.s",
+				"src/main.scss"
+			],
+			[
+				"pro",
+				"src/scss/components/_progress-loader.scss"
+			],
+			[
+				"package",
+				"package.json"
+			],
+			[
+				"mixin",
+				"src/scss/cfg/_mixins-extends.scss"
+			],
+			[
+				"cool",
+				"src/scss/sections/_cool-visual-stuff.scss"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"contact-me",
+				"wp-content/themes/restflowen-v0.2/src/scss/components/_contact-me.scss"
+			],
+			[
+				"parti",
+				"partial-contact.php"
+			],
+			[
+				"main.scs",
+				"src/main.scss"
+			],
+			[
+				"config.scss",
+				"src/scss/cfg/_config.scss"
+			],
+			[
+				"10",
+				"app/video/flowen.nltrailer2-compressed-1000kbps.mp4"
+			],
+			[
+				"footer",
+				"src/scss/sections/_footer.scss"
+			],
+			[
+				"animat",
+				"src/js/animations.js"
+			],
+			[
+				"capth",
+				"src/js/captcha.js"
+			],
+			[
+				"cta",
+				"src/js/captcha.js"
+			],
+			[
+				"creat",
+				"src/js/section-creativecoding.js"
+			],
+			[
+				"digi",
+				"src/scss/sections/_digitalart.scss"
+			],
+			[
+				"readm",
+				"README.md"
+			],
+			[
+				"typo",
+				"src/scss/cfg/_typography.scss"
+			],
+			[
+				"main-c",
+				"src/scss/sections/_main-content.scss"
+			],
+			[
+				"head",
+				"header.php"
+			],
+			[
+				"header",
+				"header.php"
+			],
+			[
+				"page",
+				"page.php"
+			],
+			[
+				"fade",
+				"src/js/fade-out-all-elements.js"
+			],
+			[
+				"digital",
+				"src/scss/sections/_digitalart.scss"
+			],
+			[
+				"sections",
+				"src/scss/sections/_sections.scss"
+			],
+			[
+				"con",
+				"src/scss/cfg/_config.scss"
+			],
+			[
+				"router",
+				"src/js/router.js"
+			],
+			[
+				"norma",
+				"src/scss/cfg/_normalize.scss"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"nav",
+				"src/scss/components/_nav.scss"
+			],
+			[
+				"ty",
+				"src/scss/cfg/_typography.scss"
+			],
+			[
+				"request",
+				"src/js/modules/requests.js"
+			],
+			[
+				"partial",
+				"partial-contact.php"
+			],
+			[
+				"confi",
+				"src/scss/cfg/_config.scss"
+			],
+			[
+				"cfg",
+				"src/js/modules/_cfg.js"
+			],
+			[
+				"requ",
+				"src/js/modules/requests.js"
+			],
+			[
+				"utt",
+				"src/scss/components/_buttons.scss"
+			],
+			[
+				"cap",
+				"src/js/modules/captcha.js"
+			],
+			[
+				"captha",
+				"src/js/modules/captcha.js"
+			],
+			[
+				"fade-",
+				"src/js/modules/fade-in-all-elements.js"
+			],
+			[
+				"capt",
+				"src/js/modules/captcha.js"
+			],
+			[
+				"anima",
+				"src/js/modules/animations.js"
+			],
+			[
+				"req",
+				"src/js/modules/requests.js"
+			],
+			[
+				"part",
+				"app/partial-contact.php"
+			],
+			[
+				"g",
+				".gitignore"
+			],
+			[
+				"page.ph",
+				"page.php"
+			],
+			[
+				"section-d",
+				"src/js/modules/section-digitalart.js"
+			],
+			[
+				"di",
+				"src/scss/sections/_digitalart.scss"
+			],
+			[
+				"dig",
+				"wp-pages/digital-art.html"
+			],
+			[
+				"page.php",
+				"page.php"
+			],
+			[
+				"front",
+				"src/scss/sections/_frontend.scss"
+			],
+			[
+				"footer.sc",
+				"src/scss/sections/_footer.scss"
+			],
+			[
+				"contact-",
+				"src/scss/components/_contact-me.scss"
+			],
+			[
+				"fornt",
+				"src/scss/sections/_frontend.scss"
+			],
+			[
+				"gitignore",
+				".gitignore"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				".git",
+				"app/.gitignore"
+			],
+			[
+				"plaet",
+				"src/scss/components/_planets.scss"
+			],
+			[
+				"progress",
+				"src/scss/components/_progress-loader.scss"
+			],
+			[
+				"planet",
+				"src/scss/components/_planets.scss"
+			],
+			[
+				"xenochiku",
+				"app/images/xenochiku-eye.svg"
+			],
+			[
+				"fun",
+				"functions.php"
+			],
+			[
+				"ani",
+				"src/js/modules/animations.js"
+			],
+			[
+				"progre",
+				"src/scss/components/_progress-loader.scss"
+			],
+			[
+				"foo",
+				"footer.php"
+			],
+			[
+				"navi",
+				"src/js/modules/navigation.js"
+			],
+			[
+				"partia",
+				"partial-social-media.php"
+			],
+			[
+				"typ",
+				"src/scss/cfg/_typography.scss"
+			],
+			[
+				"vi",
+				"src/js/modules/depthmap-visualiser.js"
+			],
+			[
+				"frontend",
+				"src/scss/sections/_frontend.scss"
+			],
+			[
+				"projects",
+				"src/scss/sections/_projects.scss"
+			],
+			[
+				"xeno",
+				"src/images/xenochiku-eye.svg"
+			],
+			[
+				"webpa",
+				"webpack.config.js"
+			],
+			[
+				"digita",
+				"wp-pages/digital-art.html"
+			],
+			[
+				"la",
+				"src/scss/components/_lazyload.scss"
+			],
+			[
+				"data",
+				"wp-pages/digital-art.html"
+			],
+			[
+				"mainn-c",
+				"src/scss/sections/_main-content.scss"
+			],
+			[
+				"section-da",
+				"src/js/modules/section-da.js"
+			],
+			[
+				"_intro",
+				"src/scss/sections/_intro.scss"
+			],
+			[
+				"webpack",
+				"webpack.config.js"
+			],
+			[
+				"sectio",
+				"src/scss/sections/_section-da.scss"
+			],
+			[
+				"progre-",
+				"src/scss/components/_progress-loader.scss"
+			],
+			[
+				"xenoan",
+				"src/js/modules/xeno-animations.js"
+			],
+			[
+				"progres",
+				"src/scss/components/_progress-loader.scss"
+			],
+			[
+				"anim",
+				"src/js/modules/animations.js"
+			],
+			[
+				"visuali",
+				"src/scss/components/_visualiser.scss"
+			],
+			[
+				"helpers",
+				"src/js/modules/helpers.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"proces",
+				"/Volumes/Data/_Projects/processing/processing.sublime-project"
+			],
+			[
+				"flowen",
+				"/Volumes/Data/Documents/_htdocs/flowen.nl/flowen.sublime-project"
+			],
+			[
+				"",
+				"/Volumes/Data/Documents/_htdocs/flowen.nl/flowen.sublime-project"
+			],
+			[
+				"take",
+				"/Volumes/Data/Documents/_htdocs/takeaway_promo/takeaway.sublime-project"
+			],
+			[
+				"audio",
+				"/Volumes/Data/Documents/_htdocs/exp-audioreactive/audio-reactive-experiments.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 223.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

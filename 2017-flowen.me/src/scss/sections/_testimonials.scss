@@ -1,0 +1,38 @@
+.testimonials {
+	.testimonial {
+		.js & {
+			opacity: 0;	
+		}
+		position: relative;
+		margin: 7rem 0;
+
+		&:before {
+			content: "“";
+			position: absolute;
+			left: -4rem;
+			top: -4rem;
+			z-index: -10;
+			color: #E0DDD7;
+			font-size: 9em;
+			line-height: 1;
+			opacity: 0.3;
+		}
+
+		p {
+			font-size: 2.2rem;
+			font-weight: 700;
+			color: #fff;
+		}
+
+		cite {
+			font-style: normal;
+			&:before {
+				content: '\2014\00a0'
+			}	
+		}
+		
+		&:nth-child(even) {
+			margin-left: 5rem;
+		}
+	}	
+}

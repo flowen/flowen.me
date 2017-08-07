@@ -1,0 +1,30 @@
+.more-work {
+	
+	.video-container {
+		max-width: 100%;
+
+		video {
+			max-width: 100%;
+		}
+	}
+
+	.vimeo-holder {
+		iframe {
+			margin: 0 0 5rem;
+		}
+
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		align-content: center;	
+		
+		@media(min-width: 30em) {
+			flex-direction: row;
+			justify-content: space-around;
+
+			iframe {
+				width: 45%;
+			}
+		}
+	}
+}

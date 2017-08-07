@@ -1,0 +1,27 @@
+//cfg
+@import "scss/cfg/config";
+@import "scss/cfg/normalize";
+@import "scss/cfg/mixins-extends";
+@import "scss/cfg/base";
+
+//components
+@import "scss/components/buttons";
+@import "scss/components/progress-loader";
+@import "scss/components/visualiser";
+@import "scss/components/music-player";
+@import "scss/components/social-stuff";
+
+//sections
+@import "scss/sections/sections";
+@import "scss/sections/intro";
+@import "scss/sections/who-is-rou-hun-anyway";
+@import "scss/sections/cool-visual-stuff";
+@import "scss/sections/explanation";
+@import "scss/sections/testimonials";
+@import "scss/sections/contact-me";
+@import "scss/sections/articles";
+@import "scss/sections/more-work";
+@import "scss/sections/copyright";
+
+//print
+@import "scss/cfg/print";
