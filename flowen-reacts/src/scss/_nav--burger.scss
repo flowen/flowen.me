@@ -1,0 +1,52 @@
+.nav--burger {
+    z-index: 600;
+    position: fixed;
+    top: $m;
+    right: $m * 2;
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+    
+    span {
+        display: inline-block;
+        margin: 0.5rem 2rem 0 0;
+        color: #000;
+    }
+
+    div,
+    div:before,
+    div:after {
+        width: 4.5rem;
+        height: 1px;
+        background: #000;
+    }
+
+    div {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        transform-origin: center 1.2rem;
+        transition: height .15s ease-out;
+    }
+
+    div:before,
+    div:after {
+        content: ' ';
+        position: absolute;
+    }
+
+    div:before {
+        top: 1.2rem;
+    }
+    div:after {
+        top: 2.4rem;
+    }
+
+    &:hover {
+        // style 2 states, animate them too
+        div {
+            // transform: scaleY(3)
+            height: 3rem;
+        }
+    }
+}
