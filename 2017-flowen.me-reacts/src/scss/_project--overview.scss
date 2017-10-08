@@ -1,0 +1,22 @@
+.project--overview {
+	* {
+		position: relative;
+	}
+	
+	.project--overview-heading {
+		
+	}
+
+	&-list {
+		position: relative;
+		list-style: none;
+	}
+
+	.project--listitem {
+		> a {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

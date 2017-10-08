@@ -1,15 +1,15 @@
 .nav--burger {
     z-index: 600;
     position: fixed;
-    top: $m;
-    right: $m * 2;
-    width: 10rem;
+    top: $m * 2;
+    right: $m * 3;
+    width: 11rem;
     height: 3rem;
     cursor: pointer;
     
     span {
         display: inline-block;
-        margin: 0.5rem 2rem 0 0;
+        margin: 0 2rem 0 0;
         color: #000;
     }
 
@@ -17,7 +17,7 @@
     div:before,
     div:after {
         width: 4.5rem;
-        height: 1px;
+        height: 0.2rem;
         background: #000;
     }
 

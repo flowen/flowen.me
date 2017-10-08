@@ -18,3 +18,7 @@ app/main.*
 # codekit n misc
 config.codekit*
 .codekit-cache
+
+# temp projects
+p-react/*
+static-gsap/*

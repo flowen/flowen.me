@@ -18,12 +18,6 @@ module.exports = {
         loader: 'svg-react-loader',
         query: {
             classIdPrefix: '[name]-[hash:8]__',
-            filters: [
-                function (value) {
-                    // ...
-                    this.update(newvalue);
-                }
-            ],
             propsMap: {
                 fillRule: 'fill-rule',
                 foo: 'bar'

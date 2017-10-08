@@ -1,8 +1,4 @@
-$m : 2rem;
-
 * {
-    // try?
-    // position: absolute; 
     box-sizing: border-box;
 }
 
@@ -11,55 +7,19 @@ html, body, #app, main {
     height: 100%;
 }
 
-body {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    font-family: 'Eczar', serif;
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 5rem;
-}
-
-h2 {
-    font-size: 3.375rem;
-}
-
-h3 {
-    font-size: 2.25rem;
-}
-
-h4 {
-    font-size: 1.5rem;
-}
-
-small {
-    font-size: 0.618rem;
-}
-
-
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 html {
-    color: #222;
     font-size: 62.5%;
     line-height: 1.4;
 }
+
+body {
+    font-family: $f1;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #444;
+    background-color: #fff;
+}
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -70,13 +30,19 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: $mainColor;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: $mainColor;
     text-shadow: none;
+}
+
+
+a,
+a:visited {
+    color: $mainColor;
 }
 
 /*
@@ -117,6 +83,14 @@ fieldset {
     padding: 0;
 }
 
+figure {
+    margin: 0 0 $m;
+}
+
+img {
+    max-width: 100%;
+}
+
 /*
  * Allow only vertical resizing of textareas.
  */
@@ -140,6 +114,33 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
+h1, h2, h3, h4, h5, h6 {
+   margin: 0;
+   font-family: $f2;
+   font-weight: 700;
+   color: #444;
+}
+
+h1 {
+   font-size: 5rem;
+}
+
+h2 {
+   font-size: 3.375rem;
+}
+
+h3 {
+   font-size: 2.25rem;
+}
+
+h4 {
+   font-size: 1.5rem;
+}
+
+small {
+   font-size: 0.618rem;
+}
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class SocialItem extends React.Component {
+export default class SocialNavItem extends React.Component {
 	render() {
 		return(
 			<li>

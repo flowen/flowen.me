@@ -1,22 +1,24 @@
 import React from 'react';
-import ProjectPage from './project-page';
+import {Link} from 'react-router-dom';
 
 export default class ProjectOverview extends React.Component {
-	constructor(props) {
-		super(props);
-		console.log(this);
-	}
-
 	render() {
-		  // create a list of links
-		  // PlayerAPI.all().map(p => (
-		  //         <li key={p.number}>
-		  //           <Link to={`/roster/${p.number}`}>{p.name}</Link>
-		  //         </li>
-		  //       ))
+		const projects =  this.props.projectItems;
+
 		return(
 			<div className="project--overview">
-				<h1>projects </h1>
+				<h1 className="project--overview-heading">Projects overview </h1>
+				
+				<ul className="project--overview-list">
+					{Object.keys(projects).map((key) => {
+						var style = { backgroundImage: `url(${projects[key].posters.nav})` }
+						return (
+							<li key={key} className="project--listitem">
+								<Link to={`/projects/${key}`}  style={ style }>{ projects[key].title }</Link>
+							</li>
+						)
+					})}
+				</ul>
 			</div>
 		)
 	}
