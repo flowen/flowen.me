@@ -1,24 +1,28 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import ProjectOverviewItem from './project-overview-item';
 
 export default class ProjectOverview extends React.Component {
 	render() {
+		let nr = 1;
 		const projects =  this.props.projectItems;
 
 		return(
-			<div className="project--overview">
-				<h1 className="project--overview-heading">Projects overview </h1>
-				
+			<div className="project--overview grid-6">
 				<ul className="project--overview-list">
-					{Object.keys(projects).map((key) => {
-						var style = { backgroundImage: `url(${projects[key].posters.nav})` }
-						return (
-							<li key={key} className="project--listitem">
-								<Link to={`/projects/${key}`}  style={ style }>{ projects[key].title }</Link>
-							</li>
-						)
-					})}
+				    { 
+				    	Object.keys(this.props.projectItems).map((key) => {
+				    		return (<ProjectOverviewItem 
+				    					key={key}
+										href={key}
+				    					closeMenu={this.closeMenu}
+				    					nr={`0${nr++}`}
+				    					project={this.props.projectItems[key]}
+			    					/>)
+				    	}
+				    )}
 				</ul>
+
 			</div>
 		)
 	}

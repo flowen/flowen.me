@@ -4,6 +4,12 @@
 // transitie van project naar project
 
 
-.section--main * {
-	// position: absolute;
+.section--main {
+	.content-body {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 50rem;
+		transform: translate(-50%, -50%);
+	}
 }

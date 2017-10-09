@@ -35,26 +35,6 @@ const state = {
 			video: '/projects/xenochiku/video.mp4',
 			url: 'https://xenochiku.com',
 		},
-		visuals: {
-			title: 'Experimental visuals',
-			date: '2015-2017',
-			stack: 'Photoshop, Illustrator',
-			descr: 'experimental visuals I created in the years',
-			extraDescr: 'extra description',
-			posters: {
-				nav: 		'/projects/visuals/poster-nav.jpg',
-				overview: 	'/projects/visuals/poster-overview.jpg',
-				footer: 	'/projects/visuals/poster-footer.jpg'
-			},
-			images: {
-				hero: 	  '/projects/visuals/hero.jpg',
-				content1: '/projects/visuals/content-1.jpg',
-				content2: '/projects/visuals/content-2.jpg',
-				content3: '/projects/visuals/content-3.jpg',
-			},
-			video: '/projects/visuals/video.mp4',
-			url: null,
-		},
 		falcobenz: {
 			title: 'Falco Benz live visuals',
 			date: '2016',
@@ -74,6 +54,26 @@ const state = {
 			},
 			url: null,
 			video: null,
+		},
+		visuals: {
+			title: 'Experimental visuals',
+			date: '2015-2017',
+			stack: 'Photoshop, Illustrator',
+			descr: 'Some experimental visuals I created in the years',
+			extraDescr: 'extra description',
+			posters: {
+				nav: 		'/projects/visuals/poster-nav.jpg',
+				overview: 	'/projects/visuals/poster-overview.jpg',
+				footer: 	'/projects/visuals/poster-footer.jpg'
+			},
+			images: {
+				hero: 	  '/projects/visuals/hero.jpg',
+				content1: '/projects/visuals/content-1.jpg',
+				content2: '/projects/visuals/content-2.jpg',
+				content3: '/projects/visuals/content-3.jpg',
+			},
+			video: '/projects/visuals/video.mp4',
+			url: null,
 		}
 	},
 	socialItems: {
@@ -108,12 +108,12 @@ const state = {
 class Home extends React.Component {
 	render() {
 		return(
-			<div className="home--overview">
+			<div className="content-body home--overview">
 				<h1>Hi, I'm Rou Hun</h1>
 				<p>I'm a creative front-end developer. </p>
 				<ul>
-					<li>I build the front-end with React, GSAP and three.js</li>
-					<li>I can create beautiful photo content with Photoshop and illustrations with Illustrator</li>
+					<li>I help with the front-end of your webapp or website. My preferred tools are ReactJS, GSAP and HTML/SCSS.</li>
+					<li>I create beautiful content in the form of photo's or illustrations for you with Photoshop &amp; Illustrator.</li>
 					<li>I build visual systems with Processing, three.js and p5.js, link them up to Ableton Live, Resolume, madMapper, etc.</li>
 				</ul>
 				<p>
@@ -132,7 +132,7 @@ class Home extends React.Component {
 class AboutMe extends React.Component {
 	render() {
 		return(
-			<div className="about--overview">
+			<div className="content-body about--overview">
 				<h1>Who is Rou Hun?</h1>
 				<p>
 					I love creating art and the digital medium is my method of expressing. Whether that's creating a website 
@@ -151,7 +151,7 @@ class AboutMe extends React.Component {
 class Contact extends React.Component {
 	render() {
 		return(
-			<div className="contact">
+			<div className="content-body contact">
 				<h1>Contact me </h1>
 			</div>
 		)
@@ -181,7 +181,7 @@ class BlogPage extends React.Component {
 class NoMatch extends React.Component {
 	render() {
 		return(
-			<div className="page-404">
+			<div className="content-body page-404">
 				<h1>404</h1>
 			</div>
 		)
