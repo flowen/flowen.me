@@ -6,10 +6,11 @@
 
 .section--main {
 	.content-body {
+		border: 1px solid red;
 		position: absolute;
-		left: 50%;
-		top: 50%;
-		width: 50rem;
-		transform: translate(-50%, -50%);
+		// left: 50%;
+		// top: 50%;
+		// width: 50rem;
+		// transform: translate(-50%, -50%);
 	}
 }

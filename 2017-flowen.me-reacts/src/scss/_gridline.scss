@@ -34,3 +34,32 @@
 .grid-6 {
     width: calc(#{$g} * 6);
 }
+
+//outline elements on the grid
+.outline-1 {
+    left: $g;
+}
+
+.outline-2 {
+    left: $g * 2;
+}
+
+.outline-3 {
+    left: $g * 3;
+}
+
+.outline-3 {
+    left: $g * 3;
+}
+
+.outline-4 {
+    left: $g * 4;
+}
+
+.outline-5 {
+    left: $g * 5;
+}
+
+.outline-6 {
+    left: $g * 6;
+}

@@ -5,7 +5,6 @@ import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 import Nav from './js/nav/nav';
 import Projects from './js/project/projects';
 
-
 import svgGithub from '!svg-react-loader?name=svgGithub!./assets/github.svg';
 import svgGmail from '!svg-react-loader?name=svgGmail!./assets/gmail.svg';
 import svgInstagram from '!svg-react-loader?name=svgInstagram!./assets/instagram.svg';
@@ -108,7 +107,7 @@ const state = {
 class Home extends React.Component {
 	render() {
 		return(
-			<div className="content-body home--overview">
+			<div className="content-body home--overview grid-3">
 				<h1>Hi, I'm Rou Hun</h1>
 				<p>I'm a creative front-end developer. </p>
 				<ul>
@@ -132,7 +131,7 @@ class Home extends React.Component {
 class AboutMe extends React.Component {
 	render() {
 		return(
-			<div className="content-body about--overview">
+			<div className="content-body about--overview grid-3 outline-2">
 				<h1>Who is Rou Hun?</h1>
 				<p>
 					I love creating art and the digital medium is my method of expressing. Whether that's creating a website 
@@ -153,6 +152,36 @@ class Contact extends React.Component {
 		return(
 			<div className="content-body contact">
 				<h1>Contact me </h1>
+			</div>
+		)
+	}
+}
+
+class ImageGrid extends React.Component {
+	render() {
+		return(
+			<div className="image-grid grid">
+				<div className="grid--line">
+					<img src="projects/xenochiku/poster-overview.jpg" alt="title" />
+				</div>
+				<div className="grid--line">
+					<img src="projects/xenochiku/poster-overview.jpg" alt="title" />
+				</div>
+				<div className="grid--line">
+					<img src="projects/xenochiku/poster-overview.jpg" alt="title" />
+				</div>
+				<div className="grid--line">
+					<img src="projects/xenochiku/poster-overview.jpg" alt="title" />
+				</div>
+				<div className="grid--line">
+					<img src="projects/xenochiku/poster-overview.jpg" alt="title" />
+				</div>
+				<div className="grid--line">
+					<img src="projects/xenochiku/poster-overview.jpg" alt="title" />
+				</div>
+				<div className="grid--line">
+					<img src="projects/xenochiku/poster-overview.jpg" alt="title" />
+				</div>
 			</div>
 		)
 	}
@@ -203,7 +232,9 @@ class App extends React.Component {
 					<div className="grid--line"></div>
 					<div className="grid--line"></div>
 				</div>
-				  
+				
+				<ImageGrid />
+
 				<section className="section--main">
 				  <Switch>
 				    <Route exact path='/' component={Home} />
