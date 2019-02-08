@@ -1,0 +1,18 @@
+// margin
+$m : 2rem; 
+
+// grid
+$g: 16.66vw;
+
+// font
+$f1: 'Work Sans', sans-serif;
+$f2: 'Eczar', serif;
+
+@mixin fontBody() {
+	font-weight: 400;
+	font-family: $f1;
+}
+@mixin fontHeading() {
+	font-weight: 700;
+	font-family: $f2;
+}
