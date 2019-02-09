@@ -1,0 +1,22 @@
+/* stylelint-disable-line no-empty-source */
+
+$color-primary: #431616;
+$color-red: #EC3C30;
+$color-dark: #111111;
+$color-dark-light: #181818;
+$color-white: #fff;
+
+$color-grey: #EBEBEB;
+$color-grey-dark: #474747;
+$color-grey-darker: darken($color-grey, 10%);
+$color-grey-darkest: darken($color-grey, 15%);
+$color-grey-light: #C4C4C4;
+$color-grey-lighter: #F7F7F7;
+
+
+$color-heading: $color-primary;
+
+$color-invalid: #c61617; // maybe needs a different color?
+$color-success: #56c271;
+$color-disabled: $color-grey-light;
+
