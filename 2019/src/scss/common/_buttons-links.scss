@@ -11,7 +11,7 @@
   color: #fff;
   white-space: nowrap;
   text-decoration: none;
-  font-family: $primary-font, $fallback-font-stack;
+  font-family: $primary-font, $font-base;
   font-size: $fs-sm;
   line-height: 1;
   text-transform: uppercase;
@@ -55,19 +55,5 @@
   
   &:hover:before {
     transform: translateX(-100%);
-  }
-}
-
-a[rel="external"] {
-  position: relative;
-  &::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-image: url(./svg/icon-launch.svg);
-    width: 1.1rem;
-    height: 1.1rem;
-    transform: translate(calc(100% + .5rem), .3rem);
   }
 }
