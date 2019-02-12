@@ -1,0 +1,33 @@
+.about-me {
+  position: relative;
+
+  .holder {
+    // margin: 0 $col-width/2 $col-width*2 0;
+    // flex-direction: column;
+    // text-align: right;
+  }
+
+  .count {
+    position: absolute;
+    right: $col-width*2;
+    top: #{-$col-width*2};
+  }
+
+  &--text {
+    max-width: $col-width * 6;
+    padding: $col-width/2 $col-width $col-width/2 $col-width/2;
+    background: $color-secondary;
+    color: $color-white;
+
+    h1, a {
+      color: $color-white;
+      &:after {
+        fill: $color-white;
+      }
+    }
+  }
+
+  &--figure {
+
+  }
+}
