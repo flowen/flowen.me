@@ -6,11 +6,13 @@
   
   .holder {
     display: flex;
+    flex-direction: column;
     max-width: $col-width * 16;
   }
 
   .count {
     order: -1;
+    white-space: nowrap;
     font-family: $primary-font;
     font-size: $fs-xxl;
     line-height: 1;

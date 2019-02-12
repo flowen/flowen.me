@@ -10,7 +10,9 @@
 
   .holder {
     justify-content: space-around;
-    flex-wrap: wrap;
+    @include mobile-only {
+      flex-wrap: wrap;
+    }
   }
   
   .article {

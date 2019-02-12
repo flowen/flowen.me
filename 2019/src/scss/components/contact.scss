@@ -1,0 +1,31 @@
+.contact {
+  &.section {
+    margin: $col-width * 3 0;
+  }
+  
+  .holder {
+    flex-direction: column;
+    max-width: $col-width * 7;
+    margin: 0 auto;
+  }
+
+  .count {
+    position: absolute;
+    left: 0;
+    font-size: 250px;
+  }
+
+  &--text,
+  &--cta {
+    z-index: 10;
+    font-size: $fs-md;
+  }
+
+  &--text {
+
+  }
+
+  &--cta {
+
+  }
+}

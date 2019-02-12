@@ -85,7 +85,7 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 
     <link
-      href="https://fonts.googleapis.com/css?family=Audiowide|Fira+Sans"
+      href="https://fonts.googleapis.com/css?family=Audiowide|Fira+Mono"
       rel="stylesheet"
     />
     <link
@@ -122,7 +122,7 @@
           ><span class="un">un</span>
         </h3>
 
-        <span class="header--birthdate">1983 & 2019</span>
+        <span class="header--birthdate">1983 &ndash; 2019</span>
       </div>
     </header>
 
@@ -131,7 +131,7 @@
         <div class="holder">
           <div class="count">01</div>
           <h1 class="underlined">Rou Hun<br />Fan</h1>
-          <p>👋 Available for remote projects</p>
+          <p><span role="image" aria-label="wave">👋</span> Available for remote projects</p>
         </div>
       </section>
 
@@ -228,7 +228,7 @@
           <div class="count">03</div>
 
           <article class="about-me--text">
-            <h1>Hello ✌</h1>
+            <h1>Hello <span role="image" aria-label="peace sign">✌</span></h1>
             <p>
               Currently I am traveling througout Europe and Asia while working
               remotely with clients.
@@ -251,25 +251,27 @@
             </p>
           </article>
 
-          <figure>
-            <img src="./img/picture-profile.jpg" alt="Me in Nepal" />
-            <figcaption>
-              in the mountains of Nepal
-            </figcaption>
+          <figure class="about-me--figure">
+            <div class="">
+              <img src="./img/picture-profile.jpg" alt="Me in Nepal" />
+              <figcaption>
+                in the mountains of Nepal
+              </figcaption>
+            </div>
           </figure>
         </div>
       </section>
 
-      <section>
+      <section class="section contact">
         <div class="holder">
           <div class="count">04</div>
 
-          <p>
+          <p class="contact--text">
             Available for remote development, design and consulting gigs - big
             and small
           </p>
 
-          <p>👉 <a href="">Contact me</a></p>
+          <p class="contact--cta"><span role="image" aria-label="point right">👉</span> <a href="">Contact me</a></p>
         </div>
       </section>
     </main>
