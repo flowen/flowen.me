@@ -1,17 +1,16 @@
-$primary-font: 'Cairo', serif;
-$fallback-font-stack: 'Tahoma', sans-serif;
+$primary-font: 'Audiowide', cursive;
+$font-base: 'Fira Sans', sans-serif;
 
-// for Cairo font it's best to use odd numbers for better krendering
-$fs-xs: .9rem;
-$fs-sm: 1.3rem;
-$fs-base: 1.7rem;
-$fs-md: 2.5rem;
-$fs-lg: 3.3rem;
-$fs-xl: 6.5rem;
-
+$fs-xs: .8rem;
+$fs-sm: 1.2rem;
+$fs-base: 1.6rem;
+$fs-md: 2.4rem;
+$fs-lg: 3.2rem;
+$fs-xl: 7.2rem;
+$fs-xxl: 9.6rem;
 
 @mixin font-base {
-  font-family: $primary-font, $fallback-font-stack;
+  font-family: $primary-font, $font-base;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -29,15 +28,15 @@ $fs-xl: 6.5rem;
 }
 
 @mixin font-heading {
-  font-family: $primary-font, $fallback-font-stack;
+  font-family: $primary-font, $font-base;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
   font-display: swap;
 }
 
 @mixin font-h1 {
   margin: 0 0 $sp-sm;
-  font-size: $fs-md;
+  font-size: $fs-lg;
   line-height: 1/32*45;
   
   @include tablet-portrait-up {

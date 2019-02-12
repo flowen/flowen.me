@@ -1,0 +1,9 @@
+.introduction {
+  justify-content: flex-end;
+
+  .holder {
+    margin: 0 $col-width/2 $col-width*2 0;
+    flex-direction: column;
+    text-align: right;
+  }
+}

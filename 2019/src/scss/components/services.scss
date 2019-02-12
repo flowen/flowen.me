@@ -1,0 +1,39 @@
+.services {
+  position: relative;
+  
+  .count {
+    z-index: -1;
+    position: absolute;
+    left: #{-$col-width/2};
+    top: 0;
+  }
+
+  .holder {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .article {
+    margin: 0 $col-width/2;
+    
+    ul {
+      @extend %list-reset;
+      margin: 0 0 $sp-base;
+    }
+
+    h1 {
+      font-size: $fs-md;
+    }
+
+    &--projects {
+    }
+
+    &--what-i-do {
+      margin-top: $col-width;
+    }
+
+    &--tools {
+      margin-top: $col-width/2;
+    }
+  }  
+}

@@ -1,17 +1,19 @@
 /* stylelint-disable-line no-empty-source */
 
 $color-primary: #431616;
-$color-red: #EC3C30;
+$color-secondary: #EC3C30;
+
 $color-dark: #111111;
 $color-dark-light: #181818;
+
 $color-white: #fff;
+$color-off-white: #F8F6F0;
 
 $color-grey: #EBEBEB;
 $color-grey-dark: #474747;
-$color-grey-darker: darken($color-grey, 10%);
-$color-grey-darkest: darken($color-grey, 15%);
 $color-grey-light: #C4C4C4;
-$color-grey-lighter: #F7F7F7;
+$color-grey-lighter: #E5E4DF;
+$color-grey-lightest: #F7F7F7;
 
 
 $color-heading: $color-primary;

@@ -1,0 +1,26 @@
+.main {
+  .section {
+    margin: 0 0 $col-width;
+    padding: 0 10vw;
+  }
+  
+  .holder {
+    display: flex;
+    max-width: $col-width * 16;
+  }
+
+  .count {
+    order: -1;
+    font-family: $primary-font;
+    font-size: $fs-xxl;
+    line-height: 1;
+    color: $color-grey-lighter;
+  }
+
+  @for $i from 1 through 5 {
+    .col-#{$i} {
+      min-width: $col-width * $i;
+      margin: 0 $col-width / 2;
+    }
+  }
+}
