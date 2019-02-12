@@ -1,5 +1,5 @@
-$primary-font: 'Audiowide', cursive;
 $font-base: 'Fira Mono', sans-serif;
+$primary-font: 'Audiowide', cursive;
 
 $fs-xs: .8rem;
 $fs-sm: 1.2rem;
@@ -10,7 +10,7 @@ $fs-xl: 7.2rem;
 $fs-xxl: 9.6rem;
 
 @mixin font-base {
-  font-family: $primary-font, $font-base;
+  font-family: $font-base;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
