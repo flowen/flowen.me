@@ -2,9 +2,7 @@
   position: relative;
 
   .holder {
-    // margin: 0 $col-width/2 $col-width*2 0;
-    // flex-direction: column;
-    // text-align: right;
+    flex-direction: row;
   }
 
   .count {
@@ -14,20 +12,55 @@
   }
 
   &--text {
-    max-width: $col-width * 6;
+    z-index: 30;
+    position: relative;
+    width: $col-width * 6;
     padding: $col-width/2 $col-width $col-width/2 $col-width/2;
     background: $color-secondary;
     color: $color-white;
 
     h1, a {
       color: $color-white;
+      @include font-base;
+
       &:after {
         fill: $color-white;
       }
     }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: url(./img/bg-about-me.jpg) no-repeat right top;
+      background-size: contain;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: darken;
+      opacity: .65;
+    }
+  }
+
+  &--inner {
+    width: $col-width * 3;
   }
 
   &--figure {
+    z-index: 10;
+    position: relative;
+    top: $col-width;
+    left: -20px;
 
+    &::before {
+      content: '';
+      width: 125%;
+      height: 125%;
+      background: #F3F0DF;
+    }
+  }
+
+  &--caption {
+    padding: 0 0 0 $col-width;
   }
 }
