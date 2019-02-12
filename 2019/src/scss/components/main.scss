@@ -11,6 +11,7 @@
   }
 
   .count {
+    z-index: -1;
     order: -1;
     white-space: nowrap;
     font-family: $primary-font;

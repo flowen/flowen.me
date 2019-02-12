@@ -9,7 +9,9 @@
   }
 
   .holder {
+    flex-direction: row;
     justify-content: space-around;
+    
     @include mobile-only {
       flex-wrap: wrap;
     }
