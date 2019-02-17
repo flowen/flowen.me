@@ -2,7 +2,7 @@
   &.section {
     margin: $col-width * 3 0;
   }
-  
+
   .holder {
     flex-direction: column;
     max-width: $col-width * 7;
@@ -11,9 +11,15 @@
 
   .count {
     position: absolute;
-    top: 0;
-    left: -100%;
-    font-size: 250px;
+    top: -40%;
+    left: 0;
+    font-size: 120px;
+
+    @include tablet-landscape-up {
+      top: 0;
+      left: -100%;
+      font-size: 250px;
+    }
   }
 
   &--text,
