@@ -1,0 +1,10 @@
+.line {
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  background-color: $color-primary;
+
+  &--holder {
+    position: relative;
+  }
+}
