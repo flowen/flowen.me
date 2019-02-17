@@ -82,7 +82,8 @@ function init(loader, resources) {
 
   function resize() {
     getCanvasDimensions(header);
-    app.renderer.resize(CANVAS_WIDTH, CANVAS_HEIGHT);
+    // app.renderer.resize(CANVAS_WIDTH, CANVAS_HEIGHT);
+    app.renderer.resize(CANVAS_WIDTH);
     centerSprites();
   }
 

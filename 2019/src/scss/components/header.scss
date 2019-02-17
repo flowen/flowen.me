@@ -28,6 +28,12 @@
     padding: $sp-sm $sp-base;
     background: rgba($color-grey-light, .3);
 
+    @include mobile-only {
+      box-sizing: border-box;
+      left: 7.5vw;
+      width: 85vw;
+    }
+
     > * {
       position: absolute;
       margin: 0;
@@ -38,6 +44,10 @@
     z-index: -1;
     letter-spacing: .2em;
     color: $color-dark;
+
+    @include tablet-portrait-up {
+      font-size: $fs-xl;
+    }
   }
 
   &--flowen {
@@ -76,6 +86,10 @@
     text-align: right;
     transform-origin: right bottom;
     transform: rotate(-90deg);
+
+    @include mobile-only {
+      right: $col-width/2;
+    }
   }
 
   &--name,

@@ -4,6 +4,10 @@
   height: 1px;
   background-color: $color-primary;
 
+  @include mobile-only {
+    display: none;
+  }
+
   &--holder {
     position: relative;
   }
