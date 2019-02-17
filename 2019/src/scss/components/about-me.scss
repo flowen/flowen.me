@@ -6,20 +6,19 @@
   }
 
   .count {
+    z-index: 40;
     position: absolute;
-    right: $col-width*2;
-    top: #{-$col-width*2};
+    top: #{-$col-width * 1.25};
+    right: 0;
   }
 
   &--text {
     z-index: 30;
     position: relative;
-    width: $col-width * 6;
-    padding: $col-width/2 $col-width $col-width/2 $col-width/2;
-    background: $color-secondary;
     color: $color-white;
 
-    h1, a {
+    h1,
+    a {
       color: $color-white;
       @include font-base;
 
@@ -27,37 +26,59 @@
         fill: $color-white;
       }
     }
-    
-    &::before {
-      content: '';
-      position: absolute;
+
+    .line {
       right: 0;
-      top: 0;
-      background: url(./img/bg-about-me.jpg) no-repeat right top;
-      background-size: contain;
-      width: 100%;
-      height: 100%;
-      mix-blend-mode: darken;
-      opacity: .65;
+      bottom: 0;
+      transform-origin: right;
+      transform: rotate(45deg);
     }
+  }
+  
+  &--bg-mountain {
+    z-index: 30;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(./img/bg-about-me.jpg) no-repeat right top;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: darken;
+    opacity: 0.65;
   }
 
   &--inner {
+    position: relative;
+    z-index: 20;
+    box-sizing: content-box;
     width: $col-width * 3;
+    // width: $col-width * 6;
+    background: $color-secondary;
+    padding: $col-width/2 $col-width*2 $col-width/2 $col-width/2;
   }
 
   &--figure {
-    z-index: 10;
     position: relative;
     top: $col-width;
     left: -20px;
 
-    &::before {
-      content: '';
-      width: 125%;
-      height: 125%;
-      background: #F3F0DF;
+    .line {
+      right: 0;
+      top: 0;
+      transform-origin: right;
+      transform: rotate(135deg);
     }
+  }
+
+  &--bg-grey {
+    z-index: -1;
+    position: absolute;
+    top: -12.5%;
+    left: -12.5%;
+    width: 125%;
+    height: 125%;
+    background: #f6f3ea;
   }
 
   &--caption {

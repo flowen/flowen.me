@@ -4,22 +4,22 @@
   .count {
     z-index: -1;
     position: absolute;
-    left: #{-$col-width/2};
-    top: 0;
+    top: -8rem;
+    left: #{-$col-width};
   }
 
   .holder {
-    flex-direction: row;
-    justify-content: space-around;
-    
     @include mobile-only {
       flex-wrap: wrap;
+    }
+
+    @include tablet-portrait-up {
+      flex-direction: row;
+      justify-content: space-around;
     }
   }
   
   .article {
-    margin: 0 $col-width/2;
-    
     ul {
       @extend %list-reset;
       margin: 0 0 $sp-base;
