@@ -20,9 +20,10 @@
     }
   }
 
-  &--text {
+  &__text {
     z-index: 30;
     position: relative;
+    min-width: 40vw;
     color: $color-white;
 
     h1,
@@ -43,7 +44,7 @@
     }
   }
 
-  &--bg-mountain {
+  &__bg-mountain {
     z-index: 30;
     position: absolute;
     right: 0;
@@ -56,23 +57,25 @@
     opacity: 0.65;
   }
 
-  &--inner {
+  &__inner {
     position: relative;
     z-index: 20;
     box-sizing: content-box;
     background: $color-secondary;
-    padding: $col-width/2 $col-width * 2 $col-width/2 $col-width/2;
+    padding: $col-width/2 $col-width/2 $col-width/2 $col-width/2;
 
-    @include tablet-portrait-up {
-      width: $col-width * 3;
+    @include tablet-landscape-up {
+      width: $col-width*3;
+      padding-right: $col-width*2;
     }
   }
 
-  &--figure {
+  &__figure {
     @include tablet-portrait-up {
       position: relative;
       top: $col-width;
-      left: -20px;
+      left: -2rem;
+      min-width: 30rem;
     }
 
     .line {
@@ -83,7 +86,13 @@
     }
   }
 
-  &--bg-grey {
+  &__img {
+    @include mobile-only {
+      width: 100%;
+    }
+  }
+
+  &__bg-grey {
     z-index: -1;
     position: absolute;
     top: -12.5%;
@@ -93,7 +102,7 @@
     background: #f6f3ea;
   }
 
-  &--caption {
+  &__caption {
     @include tablet-portrait-up {
       padding: 0 0 0 $col-width;
     }

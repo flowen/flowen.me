@@ -53,15 +53,15 @@ h3, .h3 { @include font-h3; }
 h4, .h4 { @include font-h4; }
 
 .text {
-  &--lead {
+  &__lead {
     @include font-lead;
   }
 
-  &--strong {
+  &__strong {
     @include font-strong;
   }
 
-  &--small {
+  &__small {
     @include font-small;
   }
 }

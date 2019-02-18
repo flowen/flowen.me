@@ -19,13 +19,10 @@
     max-width: 1024px;
   }
   
-  &--title {
+  &__title {
     box-sizing: content-box;
     top: 20vh;
-    left: 15vw;
-    width: 60vw;
-    height: 30vh;
-    padding: $sp-sm $sp-base;
+    padding: $sp-base $sp-md;
     background: rgba($color-grey-light, .3);
 
     @include mobile-only {
@@ -33,14 +30,10 @@
       left: 7.5vw;
       width: 85vw;
     }
-
-    > * {
-      position: absolute;
-      margin: 0;
-    }
   }
 
-  &--frontend {
+  &__frontend {
+    position: relative;
     z-index: -1;
     letter-spacing: .2em;
     color: $color-dark;
@@ -50,7 +43,8 @@
     }
   }
 
-  &--flowen {
+  &__flowen {
+    position: absolute;
     top: 0;
     left: 0;
     margin: -2.4rem 0 0;
@@ -72,14 +66,15 @@
     }
   }
 
-  &--forhire {
+  &__forhire {
     position: absolute;
     right: $sp-sm;
     bottom: $sp-sm;
     font-size: $fs-xs;
+    margin-bottom: 0;
   }
 
-  &--me {
+  &__me {
     top: 0;
     right: $col-width;
     font-size: 1.8rem;
@@ -92,13 +87,13 @@
     }
   }
 
-  &--name,
-  &--birthdate {
+  &__name,
+  &__birthdate {
     display: block;
     
   }
 
-  &--name {
+  &__name {
     margin: 0;
     font-size: $fs-sm;
     color: $color-grey-dark;
@@ -117,7 +112,7 @@
     }
   }
 
-  &--birthdate {
+  &__birthdate {
     font-size: $fs-xs;
     font-family: $font-base;
   }

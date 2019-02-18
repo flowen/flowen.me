@@ -9,17 +9,25 @@
   }
 
   .holder {
-    @include mobile-only {
-      flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
     @include tablet-portrait-up {
       flex-direction: row;
+    }
+
+    @include tablet-landscape-up {
+      flex-wrap: nowrap;
       justify-content: space-around;
     }
   }
   
   .article {
+    @include tablet-landscape-up {
+      max-width: $col-width * 3;
+      margin: 0 $col-width / 2;
+    }
+
     ul {
       @extend %list-reset;
       margin: 0 0 $sp-base;
@@ -29,14 +37,14 @@
       font-size: $fs-md;
     }
 
-    &--projects {
+    &__projects {
     }
 
-    &--what-i-do {
+    &__what-i-do {
       margin-top: $col-width;
     }
 
-    &--tools {
+    &__tools {
       margin-top: $col-width/2;
     }
   }  

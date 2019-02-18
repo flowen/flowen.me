@@ -21,13 +21,4 @@
     line-height: 1;
     color: $color-grey-lighter;
   }
-
-  @for $i from 1 through 5 {
-    .col-#{$i} {
-      @include tablet-portrait-up {
-        min-width: $col-width * $i;
-        margin: 0 $col-width / 2;
-      }
-    }
-  }
 }
