@@ -97,7 +97,7 @@ form,
     height: 6 * 1.5em;
   }
 
-  &--row {
+  &__row {
     margin: 0 0 2vmax;
 
     &.form--error {
@@ -106,11 +106,11 @@ form,
     }
   }
 
-  &--error {
+  &__error {
     color: $color-invalid;
   }
 
-  &--success {
+  &__success {
     color: $color-success;
   }
 }
