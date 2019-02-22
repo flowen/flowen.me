@@ -1,0 +1,16 @@
+.svg-definition {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.char {
+  width: 300px;
+  fill: none;
+
+  &__path {
+    stroke-width: 1px;
+    stroke: #444;
+  }
+}
