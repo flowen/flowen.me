@@ -1,24 +1,16 @@
 /* stylelint-disable-line no-empty-source */
 
-$color-primary: #431616;
-$color-secondary: #EC3C30;
+$color-primary: #444;
+$color-secondary: #ec3c30;
 
-$color-dark: #111111;
-$color-dark-light: #181818;
-
+$color-dark: #111;
 $color-white: #fff;
-$color-off-white: #F8F6F0;
-
-$color-grey: #EBEBEB;
+$color-off-white: #f8f6f0;
+$color-grey: #ebebeb;
 $color-grey-dark: #474747;
-$color-grey-light: #C4C4C4;
-$color-grey-lighter: #E5E4DF;
-$color-grey-lightest: #F7F7F7;
-
 
 $color-heading: $color-primary;
 
 $color-invalid: #c61617; // maybe needs a different color?
 $color-success: #56c271;
-$color-disabled: $color-grey-light;
-
+$color-disabled: $color-grey;

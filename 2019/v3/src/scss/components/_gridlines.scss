@@ -1,6 +1,6 @@
 .grid-lines {
   z-index: -1;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   height: 100%;
@@ -11,6 +11,6 @@
   .col {
     min-width: 1/9 * 100vw;
     height: 100%;
-    border-right: 1px solid rgba(#222, 0.15);
+    border-right: 1px solid rgba(#222, 0.05);
   }
 }
