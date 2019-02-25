@@ -1,13 +1,13 @@
-const autoprefixer = require('autoprefixer')
-const mqPacker = require('css-mqpacker')
-const cssnano = require('css-mqpacker')
+const autoprefixer = require('autoprefixer');
+const mqPacker = require('css-mqpacker');
+const cssnano = require('css-mqpacker');
 
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.flowen.me`,
     title: 'Rou Hun Fan',
     description: 'Rou Hun Fan',
-    keywords: 'Front end development freelance',
+    keywords: 'Front-end developer &amp; designer. \n Freelancer.'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -23,23 +23,21 @@ module.exports = {
                 autoprefixer: true,
                 discardUnused: true,
                 mergeIdents: true,
-                zindex: true,
-              },
-            ],
+                zindex: true
+              }
+            ]
           }),
           mqPacker({
-            sort: true,
-          }),
-        ],
-      },
+            sort: true
+          })
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `comfortaa\: 400`,
-        ],
-      },
+        fonts: [`comfortaa\: 400`]
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -47,8 +45,8 @@ module.exports = {
         trackingId: 'UA-133342906-1',
         head: false,
         anonymize: true,
-        respectDNT: true,
-      },
-    },
-  ],
-}
+        respectDNT: true
+      }
+    }
+  ]
+};

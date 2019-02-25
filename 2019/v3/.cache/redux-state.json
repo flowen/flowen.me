@@ -528,7 +528,7 @@
       "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3",
       "id": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
       "name": "default-site-plugin",
-      "version": "25330e17f1673a59806188d9b6a18637",
+      "version": "e678487b9ef16fd847b2a6ce056e78f4",
       "pluginOptions": {
         "plugins": []
       },
@@ -544,6 +544,10 @@
         "author": "",
         "license": "ISC",
         "dependencies": [
+          {
+            "name": "@researchgate/react-intersection-observer",
+            "version": "^0.7.4"
+          },
           {
             "name": "autoprefix",
             "version": "^1.0.1"
@@ -609,7 +613,7 @@
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "32ed3df1e09beedd03ee770962044d4a",
+        "contentDigest": "081ea7cea1cf870d5139d20117ca49ff",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -722,18 +726,18 @@
         "siteUrl": "https://www.flowen.me",
         "title": "Rou Hun Fan",
         "description": "Rou Hun Fan",
-        "keywords": "Front end development freelance"
+        "keywords": "Front-end developer &amp; designer. \n Freelancer."
       },
       "port": "8000",
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-02-22T12:31:00.406Z",
+      "buildTime": "2019-02-25T12:27:14.985Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "7bdb4006ff9a9ac7e2045102012b9071",
+        "contentDigest": "57395b8c63b67643155b3e01ba9448ef",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -821,7 +825,7 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "067506fb45ebf08a722cab4623d9a1fd"
+    "PLUGINS_HASH": "f0ac87ee17f12a3f7bc084bc427057e4"
   },
   "componentDataDependencies": {
     "nodes": {},

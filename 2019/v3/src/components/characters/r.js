@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { TweenLite } from 'gsap';
-import { drawSVG } from '../../lib/DrawSVGPlugin';
 
 const R = () => {
   useEffect(() => {
@@ -8,8 +7,8 @@ const R = () => {
   }, []);
 
   return (
-    <svg className="char" viewBox="0 0 251.02 266">
-      <g id="bowl">
+    <svg className="char" aria-label="R" viewBox="-0.5 -0.5 252.02 267">
+      <g className="bowl">
         <path
           className="char__path js--r"
           d="M109.31,88.76l0-.34.3-.17c1-.57,2.82-.85,5.36-.85a6.17,6.17,0,0,1,5.85,3.21c1.15,2.2,1.73,5.62,1.73,10.17"
@@ -32,7 +31,7 @@ const R = () => {
           strokeMiterlimit="10"
         />
       </g>
-      <g id="outlines">
+      <g className="outlines">
         <path
           className="char__path js--r"
           d="M.5,224V36.23c-.1-6,5.23-11.7,16.32-17.35C27.75,13.36,42,8.88,59.25,5.57A280.12,280.12,0,0,1,111.65.5c39.83,0,71.41,8.21,93.87,24.39,23.73,17,35.76,41.31,35.76,72.18"
