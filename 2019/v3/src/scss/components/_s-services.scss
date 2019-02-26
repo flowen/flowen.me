@@ -11,16 +11,13 @@
     width: $col * 3;
     margin: 0 0 $col $col;
 
-    &--what-i-do {
-    }
-
     &--projects {
       margin-left: $col * 3;
     }
 
     &--tools {
-      margin-left: $col * 2;
       width: $col * 5;
+      margin-left: $col * 2;
     }
   }
 }

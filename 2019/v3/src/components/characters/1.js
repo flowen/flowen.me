@@ -7,12 +7,7 @@ const Nr1 = () => {
   }, []);
 
   return (
-    <svg
-      className="char"
-      aria-label="1"
-      // viewBox="0 0 74.54 130.59"
-      viewBox="0 0 114 133"
-    >
+    <svg className="char" aria-label="1" viewBox="0 0 114 133">
       <path
         className="char__path js--1"
         d="M36.14,62a37.81,37.81,0,0,1-13,2.15A21.83,21.83,0,0,1,7,57.58Q.5,51,.5,38.59A38.88,38.88,0,0,1,3.92,22.67q12.3-1.47,19.14-4.88,9.57-4.89,16.4-15.73"
