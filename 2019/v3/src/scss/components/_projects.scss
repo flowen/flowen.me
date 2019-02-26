@@ -1,0 +1,11 @@
+.projects {
+  &__list {
+    @extend %list-reset;
+    margin-bottom: 6vh;
+  }
+
+  .anchor--hot {
+    background: none;
+    white-space: nowrap;
+  }
+}

@@ -7,6 +7,7 @@ import useIntersection from '../hooks/useIntersectionobserver';
 import Nr0 from './characters/0';
 import Nr3 from './characters/3';
 import Dot from './characters/dot';
+import Gridlines from './gridlines';
 
 const Outro = () => {
   const tl = new TimelineLite();
@@ -31,8 +32,10 @@ const Outro = () => {
       </div>
 
       <article className="outro__article">
-        I am available for remote development, design and consulting gigs - big
-        and small.
+        <p className="outro__paragraph">
+          I am available for remote development, design and consulting gigs -
+          big and small.
+        </p>
         <span
           className="emoji emoji--point"
           role="img"
@@ -40,8 +43,12 @@ const Outro = () => {
         >
           👉
         </span>{' '}
-        Contact me
+        <a href="mailto:lowen.f@gmail.com" className="outro__anchor">
+          Contact me
+        </a>
       </article>
+
+      <Gridlines />
     </section>
   );
 };

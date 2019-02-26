@@ -1,0 +1,17 @@
+.tools {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__title {
+    flex: 0 0 100%;
+  }
+
+  &__list {
+    @extend %list-reset;
+    width: $col * 1.5;
+  }
+
+  &__listitem {
+  }
+}

@@ -8,7 +8,7 @@ const CTA = () => {
     <section className="cta" ref={elRef}>
       <a
         href="mailto:lowen.f@gmail.com"
-        className="cta__anchor"
+        className="anchor cta__anchor"
         data-visible={observerEntry.isIntersecting}
       >
         <span

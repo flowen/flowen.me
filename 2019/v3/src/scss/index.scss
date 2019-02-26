@@ -14,7 +14,9 @@
 // Common
 @import 'common/typography';
 @import 'common/base';
+@import 'common/anchor';
 @import 'common/form';
+@import 'common/animation';
 
 // Components
 @import 'components/svg-definitions';
@@ -25,3 +27,7 @@
 @import 'components/s-cta';
 @import 'components/s-hi';
 @import 'components/s-services';
+@import 'components/s-outro';
+@import 'components/what-i-do';
+@import 'components/projects';
+@import 'components/tools';
