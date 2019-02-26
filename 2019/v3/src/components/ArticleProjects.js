@@ -23,7 +23,7 @@ const ArticleProjects = () => {
   }
 
   return (
-    <article className="article projects" ref={elRef}>
+    <article className="article article--projects projects" ref={elRef}>
       <h1>Some projects</h1>
 
       <ul className="projects__list">
