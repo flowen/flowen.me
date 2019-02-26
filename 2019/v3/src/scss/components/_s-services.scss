@@ -1,0 +1,25 @@
+.services {
+  display: flex;
+  flex-direction: column;
+
+  .count {
+    position: absolute;
+    right: $col * 2;
+  }
+
+  .article {
+    width: $col * 3;
+    margin: 0 0 $col $col;
+
+    &--what-i-do {
+    }
+
+    &--projects {
+      margin-left: $col * 3;
+    }
+
+    &--tools {
+      margin-left: $col * 2;
+    }
+  }
+}
