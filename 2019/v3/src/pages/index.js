@@ -9,6 +9,8 @@ import Intro from '../components/s-intro';
 import CTA from '../components/s-cta';
 import Hi from '../components/s-hi';
 import Services from '../components/s-services';
+import Outro from '../components/s-outro';
+import Gridlines from '../components/gridlines';
 
 import '../scss/index.scss';
 
@@ -31,32 +33,9 @@ export default () => {
 
       <Services />
 
-      <section className="outro">
-        <div className="count">02.</div>
-        <p className="outro__text">
-          I am available for remote development, design and consulting gigs -
-          big and small.
-          <span
-            className="emoji emoji--point"
-            role="img"
-            aria-label="pointing right"
-          >
-            👉
-          </span>{' '}
-          Contact me
-        </p>
-      </section>
+      <Outro />
 
-      <div className="grid-lines">
-        <div className="col" />
-        <div className="col" />
-        <div className="col" />
-        <div className="col" />
-        <div className="col" />
-        <div className="col" />
-        <div className="col" />
-        <div className="col" />
-      </div>
+      <Gridlines />
     </main>
   );
 };
