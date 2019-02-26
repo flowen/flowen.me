@@ -1,3 +1,37 @@
 .outro {
+  position: relative;
+  display: flex;
+  flex-direction: row;
   background: $color-dark;
+  margin: 0;
+  padding: 30vh 0;
+
+  .grid-lines {
+    position: absolute;
+    z-index: 100;
+
+    .col {
+      border-right-color: #282828;
+    }
+  }
+
+  .count {
+    position: absolute;
+    right: $col * 7;
+    path {
+      stroke: $color-off-white;
+    }
+  }
+
+  &__paragraph,
+  &__anchor {
+    color: $color-off-white;
+  }
+
+  &__article {
+    margin-left: $col * 3;
+  }
+
+  &__anchor {
+  }
 }

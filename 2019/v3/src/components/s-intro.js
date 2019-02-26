@@ -15,28 +15,31 @@ import A from './characters/a';
 const Intro = () => {
   const tl = new TimelineLite();
 
-  const m = 1; // multiplier
-  const t1 = 1.25;
-  const t2 = 2.25;
+  const m = 0.5; // multiplier
+  const t1 = 0.75 * m;
+  const t2 = 1.25 * m;
 
   useEffect(() => {
-    TweenLite.set('.container', { visibility: 'visible' });
+    document.querySelector('.rouhun').classList.remove('not-visible');
+    document.querySelector('.container').classList.remove('not-visible');
 
-    tl.to('.rouhun .js--r', t1 * m, { drawSVG: '0% 100%', ease })
-      .to('.rouhun .js--o', t2 * m, { drawSVG: '0% 100%', ease }, t1 * m)
-      .to('.rouhun .js--u', t2 * m, { drawSVG: '0% 100%', ease }, t1 * m)
-      .to('.rouhun .js--h', t1 * m, { drawSVG: '0% 100%', ease }, 0)
-      .to('.rouhun .js--u', t2 * m, { drawSVG: '0% 100%', ease }, t1 * m + 0.5)
-      .to('.rouhun .js--n', t2 * m, { drawSVG: '0% 100%', ease }, t1 * m + 0.5)
-      .to('.fan .js--f', t1 * m, { drawSVG: '0% 100%', ease }, t1 * m + 0.5)
-      .to('.fan .js--a', t2 * m, { drawSVG: '0% 100%', ease }, t2 * m)
-      .to('.fan .js--n', t2 * m, { drawSVG: '0% 100%', ease }, t2 * m)
-      .to('.occupation', t2 * m, { opacity: 1, ease }, t2 * m + 0.25);
+    tl.add('startLabel', 0)
+      .add('lowerCaseLabel', 0.5 * m)
+      .to('.rouhun .js--r', t1, { drawSVG: '0% 100%', ease }, 'startLabel')
+      .to('.rouhun .js--o', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel')
+      .to('.rouhun .js--u', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel')
+      .to('.rouhun .js--h', t1, { drawSVG: '0% 100%', ease }, 'startLabel')
+      .to('.rouhun .js--u', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel')
+      .to('.rouhun .js--n', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel')
+      .to('.fan .js--f', t1, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel')
+      .to('.fan .js--a', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel+=.5')
+      .to('.fan .js--n', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel+=.5')
+      .to('.occupation', t2, { opacity: 1, ease }, 'lowerCaseLabel+=.75');
   }, []);
 
   return (
     <section className="intro">
-      <div className="container rouhun">
+      <div className="rouhun not-visible">
         <R />
         <O />
         <U />
@@ -45,7 +48,7 @@ const Intro = () => {
         <N />
       </div>
 
-      <div className="container">
+      <div className="container not-visible">
         <div className="fan">
           <F />
           <A />
