@@ -16,13 +16,11 @@ const Hi = () => {
   const TITLE = '.hi__article h1';
   const PARAGRAPHS = '.hi__article p';
   const IMG = '.hi__figure img';
-  const FIGCAPTION = '.hi__figure figcaption';
 
   useEffect(() => {
     TweenLite.set(TITLE, { opacity: 0 });
     TweenLite.set(PARAGRAPHS, { opacity: 0 });
     TweenLite.set(IMG, { opacity: 0 });
-    TweenLite.set(FIGCAPTION, { opacity: 0 });
   }, []);
 
   const tl = new TimelineLite();
@@ -38,8 +36,7 @@ const Hi = () => {
       .add('textLabel', '1')
       .staggerTo(PARAGRAPHS, 0.5, { opacity: 1, ease }, 0.07, 'textLabel')
       .to(TITLE, 0.5, { opacity: 1, ease }, 'textLabel')
-      .to(IMG, 0.5, { opacity: 1, ease }, 'textLabel')
-      .to(FIGCAPTION, 0.5, { opacity: 1, ease }, 'textLabel');
+      .to(IMG, 0.5, { opacity: 1, ease }, 'textLabel');
   }
 
   return (
@@ -80,13 +77,8 @@ const Hi = () => {
       </article>
 
       <figure className="hi__figure">
-        <div className="hi__img--wrapper">
-          <img src={me} className="hi__img" />
-          <DrawBoxLines />
-        </div>
-        <figcaption className="hi__figcaption">
-          Facing windstorms in the mountains of Annapurna, Nepal
-        </figcaption>
+        <img src={me} alt="hi it's me" className="hi__img" />
+        <DrawBoxLines />
       </figure>
     </section>
   );

@@ -38,29 +38,15 @@
   }
 
   &__figure {
+    position: relative;
     width: 35vw;
     margin: 0 0 0 -7vw;
+    background-color: $color-off-white;
 
     @include mobile-only {
       width: 30vw;
       margin-left: -3vw;
       align-self: center;
-    }
-  }
-
-  &__img {
-    &--wrapper {
-      position: relative;
-      background-color: $color-off-white;
-    }
-  }
-
-  &__figcaption {
-    margin: 0 2vmax 0 8vmax;
-    font-size: 1.8vmax;
-
-    @include mobile-only {
-      display: none;
     }
   }
 }
