@@ -7,24 +7,35 @@ const ArticleProjects = () => {
   const tl = new TimelineLite();
   const { observerEntry, elRef } = useIntersection({ threshold: 0.35 });
   const TITLE = '.article--projects';
-  const PROJECTS = '.projects';
+  const PROJECTLIST = '.projects__list';
+  const EMOJI = '.emoji';
   const PARAGRAPHS = '.article--projects p';
 
   useEffect(() => {
     TweenLite.set(TITLE, { opacity: 0 });
-    TweenLite.set(PROJECTS, { opacity: 0 });
+    TweenLite.set(PROJECTLIST, { opacity: 0 });
     TweenLite.set(PARAGRAPHS, { opacity: 0 });
   }, []);
 
   if (observerEntry.isIntersecting) {
     tl.to(TITLE, 0.5, { opacity: 1, ease })
-      .to(PROJECTS, 0.5, { opacity: 1, ease })
+      .to(PROJECTLIST, 0.5, {
+        opacity: 1,
+        ease,
+        onComplete: () =>
+          document.querySelector(PROJECTLIST).setAttribute('data-visible', true)
+      })
       .to(PARAGRAPHS, 0.5, { opacity: 1, ease });
   }
 
+  const openVisual = e => {
+    e.preventDefault();
+    console.log('openVisual');
+  };
+
   return (
     <article className="article article--projects projects" ref={elRef}>
-      <h1>Some projects</h1>
+      <h1 className="projects__title">Some projects</h1>
 
       <ul className="projects__list">
         <li className="projects__listitem">
@@ -69,10 +80,11 @@ const ArticleProjects = () => {
         </li>
         <li className="projects__listitem">
           <a
-            className="anchor--hot js--hot"
+            className="anchor anchor--hot js--hot"
             href="https://xenochiku.com/015/"
             target="_blank"
             rel="noopener noreferrer external"
+            onClick={openVisual}
           >
             audiovisual experiments
             <span
