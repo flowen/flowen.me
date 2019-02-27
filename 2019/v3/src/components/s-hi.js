@@ -55,22 +55,40 @@ const Hi = () => {
         <h1 className="hi__title">
           Hi
           <span className="emoji emoji--peace" role="img" aria-label="vow">
-            🤜 💢 🤛
+            🤝
           </span>
         </h1>
         <p>
-          I'm currently travelling througout Europe, Asia and the middle East
-          while working remotely with clients.
+          I'm currently travelling througout Europe and Asia while working
+          remotely with clients.
         </p>
 
         <p>
           In the Netherlands I've worked with some of the top digital agencies
-          such as Valtech and Mirabeau.
+          such as{' '}
+          <a
+            className="anchor"
+            href="https://www.valtech.nl/"
+            target="_blank"
+            rel="noopener noreferrer external"
+          >
+            Valtech
+          </a>{' '}
+          and{' '}
+          <a
+            className="anchor"
+            href="https://www.mirabeau.nl/"
+            target="_blank"
+            rel="noopener noreferrer external"
+          >
+            Mirabeau
+          </a>
+          .
         </p>
 
         <p>
-          I loves typography, graphic design and animation and try to mix them
-          with my technical skills as a developer.
+          I love typography, graphic design and animation and mix them
+          creatively with my technical skills as a developer.
         </p>
 
         <DrawBoxLines />

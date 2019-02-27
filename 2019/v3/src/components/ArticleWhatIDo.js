@@ -29,10 +29,11 @@ const ArticleWhatIDo = () => {
       <h1>What I do</h1>
 
       <p>
-        I love create web user interfaces and creating beautiful and accessible
-        animation. I can do this in pretty much any environment: React, Vue,
-        Gatsby, Wordpress, Sitecore, Episerver, etc. I find myself easy to
-        adjust to whatever coding patterns you are using.
+        I love to create performant, accessible webpages and user interfaces,
+        supporting them with beautiful animation. I find myself quickly
+        comfortable in any environment: React, Vue, Gatsby, Wordpress, Sitecore,
+        Episerver, etc. I'm easy to adjust to any coding patterns currently used
+        in your project.
       </p>
 
       <p>I also consult on UI/UX, designs and accessibility.</p>

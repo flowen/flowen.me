@@ -113,8 +113,10 @@ const ArticleProjects = () => {
       </ul>
 
       <p>
-        Apart from websites other projects include: interactive games, large
-        corporate sites to small marketing landingpages and blogs.
+        I've worked in agile, remote and waterfall project environments and am
+        comfortable with a lot of different project management tools. Working in
+        sprints, estimating stories and managing junior developers are part of
+        my experience.
       </p>
     </article>
   );
