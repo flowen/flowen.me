@@ -3,12 +3,13 @@
     @extend %list-reset;
     margin-bottom: 6vh;
 
-    .emoji {
+    .emoji--fire {
       display: inline-block;
       transform: translateY(100%);
       transform-origin: center 19px;
       transition: transform 0.5s $ease-out;
       animation: firedance 1.5s infinite;
+      text-decoration: none;
     }
 
     @keyframes firedance {
@@ -32,7 +33,7 @@
       }
 
       @for $i from 1 through 3 {
-        .emoji:nth-child(#{$i}) {
+        .emoji--fire:nth-child(#{$i}) {
           transition-delay: $i * 0.05s;
           animation-delay: $i * 0.1s;
         }
@@ -48,7 +49,7 @@
         transform: translateX(101%) !important;
       }
 
-      .emoji {
+      .emoji--fire {
         transform: translateY(0);
       }
     }

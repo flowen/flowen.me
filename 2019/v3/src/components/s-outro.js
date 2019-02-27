@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { TimelineLite } from 'gsap';
-import { drawSVG } from '../lib/DrawSVGPlugin';
 import { ease } from '../utils/ease';
 import useIntersection from '../hooks/useIntersectionobserver';
 
@@ -9,6 +8,11 @@ import Nr3 from './characters/3';
 import Dot from './characters/dot';
 import Gridlines from './gridlines';
 import TweenLite from 'gsap/TweenLite';
+
+if (typeof window !== `undefined`) {
+  // eslint-disable-next-line
+  require('../lib/DrawSVGPlugin.js');
+}
 
 const Outro = () => {
   const tl = new TimelineLite();

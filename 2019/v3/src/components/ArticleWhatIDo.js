@@ -6,8 +6,8 @@ import useIntersection from '../hooks/useIntersectionobserver';
 const ArticleWhatIDo = () => {
   const tl = new TimelineLite();
   const { observerEntry, elRef } = useIntersection({ threshold: 0.5 });
-  const TITLE = '.article--what-i-do h1';
-  const PARAGRAPHS = '.article--what-i-do p';
+  const TITLE = '.what-i-do h1';
+  const PARAGRAPHS = '.what-i-do p';
 
   useEffect(() => {
     TweenLite.set(TITLE, { opacity: 0 });
@@ -19,8 +19,8 @@ const ArticleWhatIDo = () => {
       PARAGRAPHS,
       0.5,
       { opacity: 1, ease },
-      0.07,
-      '-=.2'
+      0.1,
+      '-=.3'
     );
   }
 
@@ -29,22 +29,21 @@ const ArticleWhatIDo = () => {
       <h1>What I do</h1>
 
       <p>
-        I love to create performant, accessible webpages and user interfaces,
-        supporting them with beautiful animation. I find myself quickly
-        comfortable in any environment: React, Vue, Gatsby, Wordpress, Sitecore,
-        Episerver, etc. I'm easy to adjust to any coding patterns currently used
-        in your project.
+        I create performant, accessible websites and UI with beautiful
+        animation. I'm comfortable working in most coding environments: React,
+        Vue, Gatsby, Wordpress, Sitecore, Episerver, etc.
       </p>
 
       <p>I also consult on UI/UX, designs and accessibility.</p>
 
       <p>
-        And have been called a patient and strong communicator{' '}
+        And have been called a patient and clear communicator
         <span
           className="emoji emoji--hands-up"
           role="img"
           aria-label="exclamate"
         >
+          {' '}
           🙌
         </span>
       </p>

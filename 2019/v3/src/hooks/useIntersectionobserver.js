@@ -1,5 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
-require('intersection-observer');
+
+if (typeof window !== `undefined`) {
+  // eslint-disable-next-line
+  require('intersection-observer');
+}
 
 /**
  *

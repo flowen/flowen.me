@@ -1,6 +1,6 @@
 import React from 'react';
 import { TimelineLite } from 'gsap';
-import { drawSVG } from '../lib/DrawSVGPlugin';
+// import { drawSVG } from '../lib/DrawSVGPlugin';
 import { ease } from '../utils/ease';
 import useIntersection from '../hooks/useIntersectionobserver';
 
@@ -11,6 +11,11 @@ import Dot from './characters/dot';
 import ArticleWhatIDo from './ArticleWhatIDo';
 import ArticleProjects from './ArticleProjects';
 import ArticleTools from './ArticleTools';
+
+if (typeof window !== `undefined`) {
+  // eslint-disable-next-line
+  require('../lib/DrawSVGPlugin.js');
+}
 
 const Services = () => {
   const tl = new TimelineLite();

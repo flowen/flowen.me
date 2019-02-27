@@ -3,7 +3,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
-      options: {"plugins":[],"fonts":["comfortaa: 400"]},
+      options: {"plugins":[],"fonts":["comfortaa: 400","modak: 400"]},
     },{
       plugin: require('/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"trackingId":"UA-133342906-1","head":false,"anonymize":true,"respectDNT":true},

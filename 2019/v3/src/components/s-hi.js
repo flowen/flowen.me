@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { TimelineLite } from 'gsap';
-import { drawSVG } from '../lib/DrawSVGPlugin';
 import { ease } from '../utils/ease';
+
 import useIntersection from '../hooks/useIntersectionobserver';
 
 import Nr0 from './characters/0';
@@ -11,6 +11,11 @@ import DrawBoxLines from './drawBoxLines';
 
 import me from '../assets/img/me.jpg';
 import TweenLite from 'gsap/TweenLite';
+
+if (typeof window !== `undefined`) {
+  // eslint-disable-next-line
+  require('../lib/DrawSVGPlugin.js');
+}
 
 const Hi = () => {
   const TITLE = '.hi__article h1';
@@ -24,7 +29,7 @@ const Hi = () => {
   }, []);
 
   const tl = new TimelineLite();
-  const { observerEntry, elRef } = useIntersection({ threshold: 0.75 });
+  const { observerEntry, elRef } = useIntersection({ threshold: 0.6 });
 
   if (observerEntry.isIntersecting) {
     tl.add('start', '0')
@@ -55,7 +60,7 @@ const Hi = () => {
           </span>
         </p>
         <p>
-          I'm currently travelling througout Europe and Asia while working
+          I'm currently travelling throughout Europe and Asia while working
           remotely with clients.
         </p>
 
