@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { TimelineLite } from 'gsap';
-// eslint-disable-next-line
-import { drawSVG } from '../lib/DrawSVGPlugin';
 import { ease } from '../utils/ease';
 
 import R from './characters/r';
@@ -11,6 +9,11 @@ import H from './characters/h';
 import N from './characters/n';
 import F from './characters/f';
 import A from './characters/a';
+
+if (typeof window !== `undefined`) {
+  // eslint-disable-next-line
+  require('../lib/DrawSVGPlugin.js');
+}
 
 const Intro = () => {
   const tl = new TimelineLite();

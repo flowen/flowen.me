@@ -8,7 +8,6 @@ const ArticleProjects = () => {
   const { observerEntry, elRef } = useIntersection({ threshold: 0.35 });
   const TITLE = '.article--projects';
   const PROJECTLIST = '.projects__list';
-  const EMOJI = '.emoji';
   const PARAGRAPHS = '.article--projects p';
 
   useEffect(() => {
@@ -113,10 +112,8 @@ const ArticleProjects = () => {
       </ul>
 
       <p>
-        I've worked in agile, remote and waterfall project environments and am
-        comfortable with a diverse range of project management tools. Working in
-        sprints, estimating stories and managing junior developers are part of
-        my experience.
+        I work with agile, remote and waterfall methods. Sprints, estimation (of
+        stories) and managing junior developers are part of my experience.
       </p>
     </article>
   );
