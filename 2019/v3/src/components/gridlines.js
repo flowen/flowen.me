@@ -10,6 +10,7 @@ const Gridlines = () => (
     <div className="col" />
     <div className="col" />
     <div className="col" />
+    <div className="col" />
   </div>
 );
 

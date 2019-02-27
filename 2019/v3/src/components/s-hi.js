@@ -24,40 +24,36 @@ const Hi = () => {
   }, []);
 
   const tl = new TimelineLite();
-  const { observerEntry, elRef } = useIntersection({ threshold: 0.25 });
+  const { observerEntry, elRef } = useIntersection({ threshold: 0.75 });
 
   if (observerEntry.isIntersecting) {
     tl.add('start', '0')
       .to('.hi .js--0', 0.5, { drawSVG: '0% 100%', ease })
       .to('.hi .js--1', 0.5, { drawSVG: '0% 100%', ease })
       .to('.hi .js--dot', 0.5, { drawSVG: '0% 100%', ease })
-      .to('.hi__article path', 2.5, { drawSVG: '0% 100%' }, 'start')
-      .to('.hi__figure path', 2.5, { drawSVG: '0% 100%' }, 'start')
+      .to('.hi__article path', 0.75, { drawSVG: '0% 100%' }, 'start')
+      .to('.hi__figure path', 0.75, { drawSVG: '0% 100%' }, 'start')
       .add('textLabel', '1')
-      .staggerTo(PARAGRAPHS, 0.5, { opacity: 1, ease }, 0.07, 'textLabel')
       .to(TITLE, 0.5, { opacity: 1, ease }, 'textLabel')
-      .to(IMG, 0.5, { opacity: 1, ease }, 'textLabel');
+      .staggerTo(PARAGRAPHS, 0.5, { opacity: 1, ease }, 0.1, 'textLabel')
+      .to(IMG, 0.5, { opacity: 1, ease }, 'textLabel+=.5');
   }
 
   return (
-    <section
-      className="hi"
-      ref={elRef}
-      data-visible={observerEntry.isIntersecting}
-    >
+    <section className="hi" data-visible={observerEntry.isIntersecting}>
       <div className="count">
         <Nr0 />
         <Nr1 />
         <Dot />
       </div>
 
-      <article className="hi__article">
-        <h1 className="hi__title">
+      <article className="hi__article" ref={elRef}>
+        <p className="hi__title">
           Hi
           <span className="emoji emoji--peace" role="img" aria-label="vow">
             🤝
           </span>
-        </h1>
+        </p>
         <p>
           I'm currently travelling througout Europe and Asia while working
           remotely with clients.

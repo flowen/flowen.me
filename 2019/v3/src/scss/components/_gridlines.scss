@@ -13,5 +13,9 @@
     min-width: 1/9 * 100vw;
     height: 100%;
     border-right: 1px solid rgba(#222, 0.05);
+
+    &:last-child {
+      border-right: none;
+    }
   }
 }
