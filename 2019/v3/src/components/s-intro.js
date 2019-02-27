@@ -55,7 +55,7 @@ const Intro = () => {
           <N />
         </div>
 
-        <p className="occupation">Front-end developer &amp; designer.</p>
+        <p className="occupation">Creative developer &amp; designer.</p>
       </div>
     </section>
   );
