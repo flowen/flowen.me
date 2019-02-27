@@ -1,6 +1,6 @@
 const autoprefixer = require('autoprefixer');
-const mqPacker = require('css-mqpacker');
-const cssnano = require('css-mqpacker');
+const mqPacker = require('css-mqpacker'); // compresses media queries into a single query
+const cssnano = require('css-mqpacker'); // super compressor
 
 module.exports = {
   siteMetadata: {
@@ -9,8 +9,10 @@ module.exports = {
     description: 'Rou Hun Fan',
     keywords: 'Front-end developer &amp; designer. \n Freelancer.'
   },
+
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -36,7 +38,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`comfortaa\: 400`]
+        fonts: [`comfortaa\: 400`, `modak\: 400`]
       }
     },
     {

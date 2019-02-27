@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { TweenLite, TimelineLite } from 'gsap';
+import { TimelineLite } from 'gsap';
 // eslint-disable-next-line
 import { drawSVG } from '../lib/DrawSVGPlugin';
 import { ease } from '../utils/ease';
@@ -15,22 +15,22 @@ import A from './characters/a';
 const Intro = () => {
   const tl = new TimelineLite();
 
-  const m = 0.5; // multiplier
+  const m = 1.5; // multiplier
   const t1 = 0.75 * m;
-  const t2 = 1.25 * m;
+  const t2 = 1.75 * m;
 
   useEffect(() => {
     document.querySelector('.rouhun').classList.remove('not-visible');
     document.querySelector('.container').classList.remove('not-visible');
-
+    // prettier-ignore
     tl.add('startLabel', 0)
       .add('lowerCaseLabel', 0.5 * m)
       .to('.rouhun .js--r', t1, { drawSVG: '0% 100%', ease }, 'startLabel')
       .to('.rouhun .js--o', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel')
-      .to('.rouhun .js--u', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel')
+      .to('.rouhun .js--u', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel+=.5')
       .to('.rouhun .js--h', t1, { drawSVG: '0% 100%', ease }, 'startLabel')
-      .to('.rouhun .js--u', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel')
-      .to('.rouhun .js--n', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel')
+      .to('.rouhun .js--u', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel+=.5')
+      .to('.rouhun .js--n', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel+=.75')
       .to('.fan .js--f', t1, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel')
       .to('.fan .js--a', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel+=.5')
       .to('.fan .js--n', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel+=.5')

@@ -114,7 +114,7 @@ const ArticleProjects = () => {
 
       <p>
         I've worked in agile, remote and waterfall project environments and am
-        comfortable with a lot of different project management tools. Working in
+        comfortable with a diverse range of project management tools. Working in
         sprints, estimating stories and managing junior developers are part of
         my experience.
       </p>

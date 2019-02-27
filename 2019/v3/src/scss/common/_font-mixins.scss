@@ -1,4 +1,5 @@
 $primary-font: 'Comfortaa', sans-serif;
+$heading-font: 'Modak', sans-serif;
 
 $fs-xs: 1.2vmax;
 $fs-sm: 1.8vmax;
@@ -26,10 +27,15 @@ $fs-xl: 7.2vmax;
 }
 
 @mixin font-heading {
-  font-family: $primary-font, $primary-font;
+  font-family: $heading-font;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
+  white-space: nowrap;
+  color: $color-primary;
+  -webkit-text-fill-color: $color-off-white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $color-primary;
 }
 
 @mixin font-h1 {

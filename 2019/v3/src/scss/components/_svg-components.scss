@@ -9,4 +9,9 @@
 
 .hi__drawbox {
   pointer-events: none;
+
+  .path {
+    stroke-width: 2px;
+    stroke: #444;
+  }
 }

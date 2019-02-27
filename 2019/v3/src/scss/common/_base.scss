@@ -45,25 +45,13 @@ img {
   height: auto;
 }
 
-a:not(.anchor) {
+a {
   display: inline-block;
-  margin: 0 1px;
-  background-image: linear-gradient(
-    0deg,
-    currentColor 100%,
-    hsla(0, 0%, 100%, 0)
-  );
-  background-size: 100% 1px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transform-origin: left bottom;
-  transition: background-size 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   color: $color-primary;
   text-decoration: none;
 
-  &:hover {
-    background-size: 0 1px;
-    background-position: 100% 100%;
+  &:not(.anchor, .cta__anchor):hover {
+    text-decoration: underline;
   }
 
   &:focus {
@@ -72,7 +60,7 @@ a:not(.anchor) {
 
   &[aria-current='page'],
   &[aria-current='page']:hover {
-    background-image: none;
+    text-decoration: underline;
   }
 }
 
