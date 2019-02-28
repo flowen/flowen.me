@@ -6,7 +6,7 @@ var plugins = [{
       options: {"plugins":[],"fonts":["comfortaa: 400","modak: 400"]},
     },{
       plugin: require('/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
-      options: {"plugins":[],"trackingId":"UA-133342906-1","head":false,"anonymize":true,"respectDNT":true},
+      options: {"plugins":[],"trackingId":"UA-77081345-1","head":false,"anonymize":true,"respectDNT":true},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

@@ -449,14 +449,14 @@
         "owner": "internal-data-bridge"
       }
     },
-    "0a8c5a41-deda-5982-88df-fa63feb07c79": {
+    "a1b465b1-9d40-5b50-a30f-fd34725d570c": {
       "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-google-analytics",
-      "id": "0a8c5a41-deda-5982-88df-fa63feb07c79",
+      "id": "a1b465b1-9d40-5b50-a30f-fd34725d570c",
       "name": "gatsby-plugin-google-analytics",
       "version": "2.0.14",
       "pluginOptions": {
         "plugins": [],
-        "trackingId": "UA-133342906-1",
+        "trackingId": "UA-77081345-1",
         "head": false,
         "anonymize": true,
         "respectDNT": true
@@ -520,7 +520,7 @@
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "f4a5da5b3b741bb53edd8685f53931b5",
+        "contentDigest": "fe986f5f015bc108c06a8a81098d1323",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -529,7 +529,7 @@
       "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3",
       "id": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
       "name": "default-site-plugin",
-      "version": "5b2bb3f6ddd8acabf7b5cac9be4c0531",
+      "version": "03847c4fb7ab9dc944d72c6a6c5ac749",
       "pluginOptions": {
         "plugins": []
       },
@@ -618,7 +618,7 @@
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "3d90f51d23b6ccc1114a93ff26661291",
+        "contentDigest": "1ea8138749fb842cae8485b74a5b7abf",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -735,12 +735,14 @@
       },
       "port": "8000",
       "host": "localhost",
-      "buildTime": "2019-02-27T14:12:24.535Z",
+      "pathPrefix": "",
+      "polyfill": true,
+      "buildTime": "2019-02-28T08:23:05.379Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "4be91ffe7b60da3776d463cedc912aae",
+        "contentDigest": "e4d1c71da1a371b34f504b615bbab4e3",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -804,11 +806,31 @@
         "description": "550302b4-0869-5470-ba60-649cd4f304a4",
         "owner": "internal-data-bridge"
       }
+    },
+    "SitePage /404.html": {
+      "jsonName": "404-html-516",
+      "internalComponentName": "Component404Html",
+      "path": "/404.html",
+      "component": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/404.js",
+      "componentChunkName": "component---src-pages-404-js",
+      "context": {},
+      "pluginCreator___NODE": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+      "pluginCreatorId": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/404.js",
+      "id": "SitePage /404.html",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "85295f237e6127350c02de1f1c927c4d",
+        "description": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+        "owner": "internal-data-bridge"
+      }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "0ddfbee4f3d2518e21a6169b7789374a"
+    "PLUGINS_HASH": "b0a4988bb3e1d6d0c350bbab0c9da34a"
   },
   "componentDataDependencies": {
     "nodes": {},
