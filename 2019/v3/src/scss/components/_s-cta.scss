@@ -1,7 +1,11 @@
 .cta {
-  min-height: 80vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
+
+  @include tablet-portrait-up {
+    min-height: 80vh;
+  }
 
   &__anchor {
     display: inline-block;

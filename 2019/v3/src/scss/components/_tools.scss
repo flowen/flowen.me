@@ -9,9 +9,10 @@
 
   &__list {
     @extend %list-reset;
-    width: $col * 1.5;
-  }
+    margin: 0 1vh 3vh 0;
 
-  &__listitem {
+    @include tablet-portrait-up {
+      width: $col * 1.5;
+    }
   }
 }
