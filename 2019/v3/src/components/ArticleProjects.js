@@ -27,10 +27,10 @@ const ArticleProjects = () => {
       .to(PARAGRAPHS, 0.5, { opacity: 1, ease });
   }
 
-  const openVisual = e => {
-    e.preventDefault();
-    console.log('openVisual');
-  };
+  // const openVisual = e => {
+  //   e.preventDefault();
+  //   console.log('openVisual');
+  // };
 
   return (
     <article className="article article--projects projects" ref={elRef}>
@@ -50,11 +50,21 @@ const ArticleProjects = () => {
         <li className="projects__listitem">
           <a
             className="anchor"
-            href="https://huisartsenpensioen.nl"
+            href="http://huisartsenpensioen.nl"
             target="_blank"
             rel="noopener noreferrer external"
           >
             huisartsenpensioen.nl
+          </a>
+        </li>
+        <li className="projects__listitem">
+          <a
+            className="anchor"
+            href="https://vvvcadeaubonnen.nl/"
+            target="_blank"
+            rel="noopener noreferrer external"
+          >
+            https://vvvcadeaubonnen.nl/
           </a>
         </li>
         <li className="projects__listitem">
@@ -83,7 +93,7 @@ const ArticleProjects = () => {
             href="https://xenochiku.com/015/"
             target="_blank"
             rel="noopener noreferrer external"
-            onClick={openVisual}
+            // onClick={openVisual}
           >
             audiovisual experiments
             <span
