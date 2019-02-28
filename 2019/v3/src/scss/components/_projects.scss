@@ -27,7 +27,7 @@
       }
     }
 
-    @for $i from 1 through 5 {
+    @for $i from 1 through 6 {
       .projects__listitem:nth-child(#{$i}) .anchor::before {
         transition-delay: $i * 0.05s;
       }

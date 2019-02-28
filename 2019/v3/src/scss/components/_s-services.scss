@@ -5,11 +5,7 @@
   .count {
     position: absolute;
     right: $col * 2;
-    height: 66px;
-
-    @include mobile-only {
-      top: -10vh;
-    }
+    top: -5vh;
   }
 
   .article {

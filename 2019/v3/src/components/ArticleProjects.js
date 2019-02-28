@@ -64,7 +64,7 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            https://vvvcadeaubonnen.nl/
+            vvvcadeaubonnen.nl
           </a>
         </li>
         <li className="projects__listitem">

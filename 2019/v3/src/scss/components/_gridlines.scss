@@ -10,7 +10,7 @@
   pointer-events: none;
 
   .col {
-    min-width: 1/9 * 100vw;
+    // min-width: calc(100vw / 9); // we calculate with Javascript instead because of rounding bugs in browsers
     height: 100%;
     border-right: 1px solid rgba(#222, 0.05);
 
