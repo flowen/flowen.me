@@ -73,27 +73,28 @@ const Layout = ({ children }) => (
               { property: 'og:site_name', content: title },
               { property: 'og:type', content: 'website' }
             ]}
-            link={[
-              { rel: 'icon', type: 'image/x-icon', href: { favicon } },
-              {
-                rel: 'icon',
-                type: 'image/png',
-                sizes: '32x32',
-                href: favicon32
-              },
-              {
-                rel: 'icon',
-                type: 'image/png',
-                sizes: '16x16',
-                href: favicon16
-              },
-              { rel: 'mask-icon', type: 'image/png', href: safariPinnedTab },
-              {
-                rel: 'apple-touch-icon',
-                sizes: '180x180',
-                href: appleTouchIcon
-              }
-            ]}
+            // causes a bug in react-helmet - probably because of gatsby-plugin-manifest
+            // link={[
+            //   { rel: 'icon', type: 'image/x-icon', href: { favicon } },
+            //   {
+            //     rel: 'icon',
+            //     type: 'image/png',
+            //     sizes: '32x32',
+            //     href: favicon32
+            //   },
+            //   {
+            //     rel: 'icon',
+            //     type: 'image/png',
+            //     sizes: '16x16',
+            //     href: favicon16
+            //   },
+            //   { rel: 'mask-icon', type: 'image/png', href: safariPinnedTab },
+            //   {
+            //     rel: 'apple-touch-icon',
+            //     sizes: '180x180',
+            //     href: appleTouchIcon
+            //   }
+            // ]}
           >
             <html lang="en" />
           </Helmet>
