@@ -5,13 +5,27 @@ const cssnano = require('css-mqpacker'); // super compressor
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.flowen.me`,
-    title: 'Rou Hun Fan',
-    description: 'Rou Hun Fan',
-    keywords: 'Front-end developer &amp; designer. \n Freelancer.'
+    title: 'Freelance creative developer and designer, Rou Hun Fan',
+    description:
+      'Freelance creative developer and designer, Rou Hun Fan, working remotely for international clients',
+    keywords:
+      'Creative developer, developer, front-end developer, front-end, designer, front-end designer, remote, freelancer, the Netherlands, Holland, Nederland'
   },
-
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Freelance creative developer and designer, Rou Hun Fan`,
+        short_name: `Flowen.me | creative developer`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `src/assets/favicon/icon-512x512.png`,
+        include_favicon: true
+      }
+    },
     {
       resolve: `gatsby-plugin-sass`,
       options: {

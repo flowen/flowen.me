@@ -316,6 +316,98 @@
         "owner": "internal-data-bridge"
       }
     },
+    "ccae85c0-0bd0-50e9-9f59-820d9cb54947": {
+      "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-manifest",
+      "id": "ccae85c0-0bd0-50e9-9f59-820d9cb54947",
+      "name": "gatsby-plugin-manifest",
+      "version": "2.0.20",
+      "pluginOptions": {
+        "plugins": [],
+        "name": "Freelance creative developer and designer, Rou Hun Fan",
+        "short_name": "Flowen.me | creative developer",
+        "start_url": "/",
+        "background_color": "#ffffff",
+        "theme_color": "#ffffff",
+        "display": "standalone",
+        "icon": "src/assets/favicon/icon-512x512.png",
+        "include_favicon": true
+      },
+      "nodeAPIs": [
+        "onPostBootstrap"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [
+        "onRenderBody"
+      ],
+      "pluginFilepath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-manifest",
+      "packageJson": {
+        "name": "gatsby-plugin-manifest",
+        "description": "Gatsby plugin which adds a manifest.webmanifest to make sites progressive web apps",
+        "version": "2.0.20",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "favicon",
+          "icons",
+          "manifest.webmanifest",
+          "progressive-web-app",
+          "pwa"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "sharp",
+            "version": "^0.21.3"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.3"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "6f83e8375d99c42556de6b594a55b8d8",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
     "700be3d3-d0e0-5562-ae6d-17b8d93d43ff": {
       "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-sass",
       "id": "700be3d3-d0e0-5562-ae6d-17b8d93d43ff",
@@ -529,7 +621,7 @@
       "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3",
       "id": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
       "name": "default-site-plugin",
-      "version": "03847c4fb7ab9dc944d72c6a6c5ac749",
+      "version": "2224a99c43ed82dd59198a375d2e3a9a",
       "pluginOptions": {
         "plugins": []
       },
@@ -568,6 +660,10 @@
           {
             "name": "gatsby-plugin-google-fonts",
             "version": "0.0.4"
+          },
+          {
+            "name": "gatsby-plugin-manifest",
+            "version": "^2.0.20"
           },
           {
             "name": "gatsby-plugin-react-helmet",
@@ -618,7 +714,7 @@
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "1ea8138749fb842cae8485b74a5b7abf",
+        "contentDigest": "b86a69cab0a33ce9ab0b474c6541207c",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -729,20 +825,20 @@
     "Site": {
       "siteMetadata": {
         "siteUrl": "https://www.flowen.me",
-        "title": "Rou Hun Fan",
-        "description": "Rou Hun Fan",
-        "keywords": "Front-end developer &amp; designer. \n Freelancer."
+        "title": "Freelance creative developer and designer, Rou Hun Fan",
+        "description": "Freelance creative developer and designer, Rou Hun Fan, working remotely for international clients",
+        "keywords": "Creative developer, developer, front-end developer, front-end, designer, front-end designer, remote, freelancer, the Netherlands, Holland, Nederland"
       },
       "port": "8000",
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-02-28T08:23:05.379Z",
+      "buildTime": "2019-02-28T13:12:59.993Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "e4d1c71da1a371b34f504b615bbab4e3",
+        "contentDigest": "2406b1e659bd0feb710a21f3bd2f7a0c",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -763,26 +859,6 @@
       "internal": {
         "type": "SitePage",
         "contentDigest": "bb44f0b031f1055b5da5e43892dc1d84",
-        "description": "550302b4-0869-5470-ba60-649cd4f304a4",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /all-elements/": {
-      "jsonName": "all-elements-4dd",
-      "internalComponentName": "ComponentAllElements",
-      "path": "/all-elements/",
-      "component": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/all-elements.js",
-      "componentChunkName": "component---src-pages-all-elements-js",
-      "context": {},
-      "pluginCreator___NODE": "550302b4-0869-5470-ba60-649cd4f304a4",
-      "pluginCreatorId": "550302b4-0869-5470-ba60-649cd4f304a4",
-      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/all-elements.js",
-      "id": "SitePage /all-elements/",
-      "parent": null,
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "22f7241582a9eaf0e1dd305ffdd0b2b4",
         "description": "550302b4-0869-5470-ba60-649cd4f304a4",
         "owner": "internal-data-bridge"
       }
@@ -830,10 +906,14 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "b0a4988bb3e1d6d0c350bbab0c9da34a"
+    "PLUGINS_HASH": "2648b1c982e245f49ebc4e8602cf4087"
   },
   "componentDataDependencies": {
-    "nodes": {},
+    "nodes": {
+      "Site": [
+        "sq--src-templates-layout-js"
+      ]
+    },
     "connections": {}
   },
   "jsonDataPaths": {
@@ -841,25 +921,31 @@
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
     "404-html-516": "164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E",
     "404-22d": "44/path---404-22-d-bce-NZuapzHg3X9TaN1iIixfv1W23E",
-    "all-elements-4dd": "263/path---all-elements-4-dd-4e8-NZuapzHg3X9TaN1iIixfv1W23E"
+    "all-elements-4dd": "263/path---all-elements-4-dd-4e8-NZuapzHg3X9TaN1iIixfv1W23E",
+    "sq--src-templates-layout-js": 1064776671
   },
   "components": {
+    "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/.cache/dev-404-page.js": {
+      "query": "",
+      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/.cache/dev-404-page.js"
+    },
     "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/404.js": {
       "query": "",
       "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/404.js"
     },
-    "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/all-elements.js": {
-      "query": "",
-      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/all-elements.js"
-    },
     "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/index.js": {
       "query": "",
       "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/index.js"
-    },
-    "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/.cache/dev-404-page.js": {
-      "query": "",
-      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/.cache/dev-404-page.js"
     }
   },
-  "staticQueryComponents": {}
+  "staticQueryComponents": {
+    "sq--src-templates-layout-js": {
+      "name": "SiteTitleQuery",
+      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/templates/layout.js",
+      "id": "sq--src-templates-layout-js",
+      "jsonName": "sq--src-templates-layout-js",
+      "query": "query SiteTitleQuery {\n  site {\n    siteMetadata {\n      siteUrl\n      title\n      description\n      keywords\n    }\n  }\n}\n",
+      "hash": 1064776671
+    }
+  }
 }
