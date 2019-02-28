@@ -25,7 +25,7 @@ const ArticleWhatIDo = () => {
   }
 
   return (
-    <article className="article what-i-do" ref={elRef}>
+    <article className="article article--what-i-do what-i-do" ref={elRef}>
       <h1>What I do</h1>
 
       <p>

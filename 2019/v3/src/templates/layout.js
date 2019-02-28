@@ -5,11 +5,11 @@ import { setConfig } from 'react-hot-loader';
 
 import twitterCard from '../assets/img/twitter-card.png';
 import ogCard from '../assets/img/og-card.png';
-import favicon32 from '../assets/favicon/favicon-32x32.png';
-import favicon16 from '../assets/favicon/favicon-16x16.png';
-import favicon from '../assets/favicon/favicon.ico';
-import appleTouchIcon from '../assets/favicon/apple-touch-icon.png';
-import safariPinnedTab from '../assets/favicon/safari-pinned-tab.svg';
+// import favicon32 from '../assets/favicon/favicon-32x32.png';
+// import favicon16 from '../assets/favicon/favicon-16x16.png';
+// import favicon from '../assets/favicon/favicon.ico';
+// import appleTouchIcon from '../assets/favicon/apple-touch-icon.png';
+// import safariPinnedTab from '../assets/favicon/safari-pinned-tab.svg';
 
 import '../scss/index.scss';
 

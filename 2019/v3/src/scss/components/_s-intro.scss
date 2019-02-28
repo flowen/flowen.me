@@ -1,5 +1,7 @@
 .intro {
-  min-height: 100vh;
+  @include tablet-portrait-up {
+    min-height: 100vh;
+  }
 
   .container {
     position: relative;

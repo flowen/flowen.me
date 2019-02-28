@@ -31,17 +31,20 @@ $fs-xl: 7.2vmax;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  white-space: nowrap;
   color: $color-primary;
   -webkit-text-fill-color: $color-off-white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: $color-primary;
+
+  @include tablet-portrait-up {
+    white-space: nowrap;
+  }
 }
 
 @mixin font-h1 {
   margin: 0 0 $sp-sm;
   font-size: $fs-lg;
-  line-height: 1/32 * 45;
+  line-height: 0.9;
 
   @include tablet-portrait-up {
     font-size: $fs-lg;

@@ -5,19 +5,36 @@
   .count {
     position: absolute;
     right: $col * 2;
+    height: 66px;
+
+    @include mobile-only {
+      top: -10vh;
+    }
   }
 
   .article {
-    width: $col * 3;
     margin: 0 0 $col $col;
 
+    &--what-i-do {
+      width: $col * 3;
+    }
+
     &--projects {
-      margin-left: $col * 3;
+      width: $col * 3;
+      margin-left: $col;
+
+      @include tablet-portrait-up {
+        margin-left: $col * 3;
+      }
     }
 
     &--tools {
-      width: $col * 5;
-      margin-left: $col * 2;
+      margin-left: $col;
+
+      @include tablet-portrait-up {
+        width: $col * 5;
+        margin-left: $col * 2;
+      }
     }
   }
 }

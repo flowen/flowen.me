@@ -13,6 +13,13 @@
     align-items: center;
   }
 
+  .count {
+    @include mobile-only {
+      position: absolute;
+      right: $col * 2;
+    }
+  }
+
   &__article {
     position: relative;
     width: 55vw;
@@ -20,7 +27,8 @@
     font-size: 2vmax;
 
     @include mobile-only {
-      width: 73vw;
+      width: 60vw;
+      margin-left: $col / 2;
       padding-right: 7vw;
     }
   }
@@ -44,9 +52,10 @@
     background-color: $color-off-white;
 
     @include mobile-only {
-      width: 30vw;
-      margin-left: -3vw;
-      align-self: center;
+      position: absolute;
+      right: 0;
+      top: 31vw;
+      width: 40vw;
     }
   }
 }

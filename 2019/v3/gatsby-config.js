@@ -17,7 +17,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Freelance creative developer and designer, Rou Hun Fan`,
-        short_name: `Flowen.me | creative developer`,
+        short_name: `Flowen.me`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
