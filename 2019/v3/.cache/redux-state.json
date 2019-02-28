@@ -316,15 +316,15 @@
         "owner": "internal-data-bridge"
       }
     },
-    "ccae85c0-0bd0-50e9-9f59-820d9cb54947": {
+    "d642dd35-982b-59be-9c9a-1bc8aecf5b42": {
       "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-manifest",
-      "id": "ccae85c0-0bd0-50e9-9f59-820d9cb54947",
+      "id": "d642dd35-982b-59be-9c9a-1bc8aecf5b42",
       "name": "gatsby-plugin-manifest",
       "version": "2.0.20",
       "pluginOptions": {
         "plugins": [],
         "name": "Freelance creative developer and designer, Rou Hun Fan",
-        "short_name": "Flowen.me | creative developer",
+        "short_name": "Flowen.me",
         "start_url": "/",
         "background_color": "#ffffff",
         "theme_color": "#ffffff",
@@ -403,7 +403,104 @@
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "6f83e8375d99c42556de6b594a55b8d8",
+        "contentDigest": "7bbb9d13210b6cd2d464146d9a440d86",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "63e5f7ff-e5f1-58f7-8e2c-55872ac42281": {
+      "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-offline",
+      "id": "63e5f7ff-e5f1-58f7-8e2c-55872ac42281",
+      "name": "gatsby-plugin-offline",
+      "version": "2.0.24",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPages",
+        "onPostBuild"
+      ],
+      "browserAPIs": [
+        "registerServiceWorker",
+        "onServiceWorkerActive",
+        "onPostPrefetchPathname"
+      ],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-offline",
+      "packageJson": {
+        "name": "gatsby-plugin-offline",
+        "description": "Gatsby plugin which sets up a site to be able to run offline",
+        "version": "2.0.24",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "offline",
+          "precache",
+          "service-worker"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "cheerio",
+            "version": "^1.0.0-rc.2"
+          },
+          {
+            "name": "idb-keyval",
+            "version": "^3.1.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "workbox-build",
+            "version": "^3.6.3"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.3"
+          },
+          {
+            "name": "cpx",
+            "version": "^1.5.0"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.100"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "03c8e3e9adcca12c0f4a7c46fc405678",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -492,43 +589,70 @@
         "owner": "internal-data-bridge"
       }
     },
-    "20d75235-981e-561e-a9f1-58e76d8b3068": {
-      "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-google-fonts",
-      "id": "20d75235-981e-561e-a9f1-58e76d8b3068",
-      "name": "gatsby-plugin-google-fonts",
-      "version": "0.0.4",
+    "8ab120c7-7d35-5ec8-b841-d89f40fa3a5c": {
+      "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-web-font-loader",
+      "id": "8ab120c7-7d35-5ec8-b841-d89f40fa3a5c",
+      "name": "gatsby-plugin-web-font-loader",
+      "version": "1.0.4",
       "pluginOptions": {
         "plugins": [],
-        "fonts": [
-          "comfortaa: 400",
-          "modak: 400"
-        ]
+        "google": {
+          "families": [
+            "Comfortaa:400",
+            "Modak:400"
+          ]
+        }
       },
       "nodeAPIs": [],
-      "browserAPIs": [],
-      "ssrAPIs": [
-        "onRenderBody"
+      "browserAPIs": [
+        "onInitialClientRender"
       ],
-      "pluginFilepath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-google-fonts",
+      "ssrAPIs": [],
+      "pluginFilepath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-web-font-loader",
       "packageJson": {
-        "name": "gatsby-plugin-google-fonts",
-        "description": "Bring Google Fonts to Gatsby",
-        "version": "0.0.4",
-        "main": "index.js",
+        "name": "gatsby-plugin-web-font-loader",
+        "description": "A Gatsby plugin to asynchronously load webfonts using [Web Font Loader](https://github.com/typekit/webfontloader). Can load fonts from [Google Fonts](http://www.google.com/fonts/), [Typekit](http://www.typekit.com/),  [Fonts.com](http://www.fonts.com/), and [Fontdeck](http://fontdeck.com/), as well as self-hosted web fonts.",
+        "version": "1.0.4",
+        "main": "gatsby-browser.js",
         "keywords": [
+          "gatsby-plugin",
           "gatsby",
-          "gastby-plugin",
-          "react",
+          "plugin",
+          "web",
+          "font",
+          "loader",
           "google",
-          "fonts"
+          "typekit",
+          "webfont",
+          "webfontloader",
+          "fonts.com",
+          "fontdeck"
         ],
         "author": {
-          "name": "Didier Franc",
-          "email": "dev@didierfranc.com"
+          "name": "Kennedy Rose",
+          "email": "krose@escaladesports.com"
         },
         "license": "MIT",
-        "dependencies": [],
-        "devDependencies": [],
+        "dependencies": [
+          {
+            "name": "babel-runtime",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "webfontloader",
+            "version": "^1.6.28"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "esca-scripts",
+            "version": "^1.4.0"
+          },
+          {
+            "name": "opn-cli",
+            "version": "^3.1.0"
+          }
+        ],
         "peerDependencies": [],
         "optionalDependecies": [],
         "bundledDependecies": []
@@ -536,7 +660,7 @@
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "c86b734107404c70d56de936ee88c7a0",
+        "contentDigest": "c371975b7d4f363cfe209ea8356bf4a2",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -621,7 +745,7 @@
       "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3",
       "id": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
       "name": "default-site-plugin",
-      "version": "2224a99c43ed82dd59198a375d2e3a9a",
+      "version": "e8ee51562cf3d887e3b3566e9026bc57",
       "pluginOptions": {
         "plugins": []
       },
@@ -638,10 +762,6 @@
         "license": "ISC",
         "dependencies": [
           {
-            "name": "@researchgate/react-intersection-observer",
-            "version": "^0.7.4"
-          },
-          {
             "name": "autoprefix",
             "version": "^1.0.1"
           },
@@ -654,6 +774,10 @@
             "version": "^2.1.10"
           },
           {
+            "name": "gatsby-image",
+            "version": "^2.0.30"
+          },
+          {
             "name": "gatsby-plugin-google-analytics",
             "version": "^2.0.14"
           },
@@ -664,6 +788,10 @@
           {
             "name": "gatsby-plugin-manifest",
             "version": "^2.0.20"
+          },
+          {
+            "name": "gatsby-plugin-offline",
+            "version": "^2.0.24"
           },
           {
             "name": "gatsby-plugin-react-helmet",
@@ -714,7 +842,7 @@
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "b86a69cab0a33ce9ab0b474c6541207c",
+        "contentDigest": "d50845aff862406a631b1260c45936d7",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -831,12 +959,14 @@
       },
       "port": "8000",
       "host": "localhost",
-      "buildTime": "2019-02-28T13:12:59.993Z",
+      "pathPrefix": "",
+      "polyfill": true,
+      "buildTime": "2019-02-28T19:10:44.045Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "231f7cb1acfdfc6617a830c2f779877a",
+        "contentDigest": "056def422b003020fbecaba68651b659",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -880,11 +1010,31 @@
         "description": "550302b4-0869-5470-ba60-649cd4f304a4",
         "owner": "internal-data-bridge"
       }
+    },
+    "SitePage /404.html": {
+      "jsonName": "404-html-516",
+      "internalComponentName": "Component404Html",
+      "path": "/404.html",
+      "component": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/404.js",
+      "componentChunkName": "component---src-pages-404-js",
+      "context": {},
+      "pluginCreator___NODE": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+      "pluginCreatorId": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/404.js",
+      "id": "SitePage /404.html",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "85295f237e6127350c02de1f1c927c4d",
+        "description": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+        "owner": "internal-data-bridge"
+      }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "2648b1c982e245f49ebc4e8602cf4087"
+    "PLUGINS_HASH": "e99f90a9b5ade71fe84afab5f73c8f18"
   },
   "componentDataDependencies": {
     "nodes": {

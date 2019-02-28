@@ -50,9 +50,33 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        fonts: [`comfortaa\: 400`, `modak\: 400`]
+        name: `images`,
+        path: `${__dirname}/src/img/`
+      }
+    },
+
+    'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: true,
+        stripMetadata: true
+      }
+    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [`comfortaa\: 400`, `modak\: 400`]
+    //   }
+    // },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Comfortaa:400', 'Modak:400']
+        }
       }
     },
     {

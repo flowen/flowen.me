@@ -3,10 +3,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"Freelance creative developer and designer, Rou Hun Fan","short_name":"Flowen.me | creative developer","start_url":"/","background_color":"#ffffff","theme_color":"#ffffff","display":"standalone","icon":"src/assets/favicon/icon-512x512.png","include_favicon":true},
-    },{
-      plugin: require('/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
-      options: {"plugins":[],"fonts":["comfortaa: 400","modak: 400"]},
+      options: {"plugins":[],"name":"Freelance creative developer and designer, Rou Hun Fan","short_name":"Flowen.me","start_url":"/","background_color":"#ffffff","theme_color":"#ffffff","display":"standalone","icon":"src/assets/favicon/icon-512x512.png","include_favicon":true},
     },{
       plugin: require('/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"trackingId":"UA-77081345-1","head":false,"anonymize":true,"respectDNT":true},
