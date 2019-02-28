@@ -26,6 +26,7 @@ module.exports = {
         include_favicon: true
       }
     },
+    'gatsby-plugin-offline', // MUST be after the manifest plugin
     {
       resolve: `gatsby-plugin-sass`,
       options: {
