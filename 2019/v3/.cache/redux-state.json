@@ -589,6 +589,493 @@
         "owner": "internal-data-bridge"
       }
     },
+    "a44929e5-5ae0-5734-ab57-19838c35734f": {
+      "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-source-filesystem",
+      "id": "a44929e5-5ae0-5734-ab57-19838c35734f",
+      "name": "gatsby-source-filesystem",
+      "version": "2.0.23",
+      "pluginOptions": {
+        "plugins": [],
+        "name": "images",
+        "path": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/assets/img/"
+      },
+      "nodeAPIs": [
+        "sourceNodes",
+        "setFieldsOnGraphQLNodeType"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-source-filesystem",
+      "packageJson": {
+        "name": "gatsby-source-filesystem",
+        "description": "Gatsby plugin which parses files within a directory for further parsing by other plugins",
+        "version": "2.0.23",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "better-queue",
+            "version": "^3.8.7"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "chokidar",
+            "version": "^2.1.2"
+          },
+          {
+            "name": "file-type",
+            "version": "^10.2.0"
+          },
+          {
+            "name": "fs-extra",
+            "version": "^5.0.0"
+          },
+          {
+            "name": "got",
+            "version": "^7.1.0"
+          },
+          {
+            "name": "md5-file",
+            "version": "^3.1.1"
+          },
+          {
+            "name": "mime",
+            "version": "^2.2.0"
+          },
+          {
+            "name": "pretty-bytes",
+            "version": "^4.0.2"
+          },
+          {
+            "name": "progress",
+            "version": "^1.1.8"
+          },
+          {
+            "name": "read-chunk",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "slash",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "valid-url",
+            "version": "^1.0.9"
+          },
+          {
+            "name": "xstate",
+            "version": "^3.1.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.3"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "04b9f8bbd1f4108b3bbd06744cf7f7ef",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "84d6154d-4241-556c-a679-cc8339cac100": {
+      "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-sharp",
+      "id": "84d6154d-4241-556c-a679-cc8339cac100",
+      "name": "gatsby-plugin-sharp",
+      "version": "2.0.23",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onPreInit"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-sharp",
+      "packageJson": {
+        "name": "gatsby-plugin-sharp",
+        "description": "Wrapper of the Sharp image manipulation library for Gatsby plugins",
+        "version": "2.0.23",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "image",
+          "sharp"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "async",
+            "version": "^2.1.2"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "fs-exists-cached",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "fs-extra",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "imagemin",
+            "version": "^6.0.0"
+          },
+          {
+            "name": "imagemin-mozjpeg",
+            "version": "^8.0.0"
+          },
+          {
+            "name": "imagemin-pngquant",
+            "version": "^6.0.0"
+          },
+          {
+            "name": "imagemin-webp",
+            "version": "^5.0.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "mini-svg-data-uri",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "potrace",
+            "version": "^2.1.1"
+          },
+          {
+            "name": "probe-image-size",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "progress",
+            "version": "^1.1.8"
+          },
+          {
+            "name": "sharp",
+            "version": "^0.21.3"
+          },
+          {
+            "name": "svgo",
+            "version": "^0.7.2"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.3"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "b607fea9b0c1e2724c61474330a7eadd",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "da3d06eb-685e-5c77-ae1d-750eb6a2e4a9": {
+      "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-transformer-sharp",
+      "id": "da3d06eb-685e-5c77-ae1d-750eb6a2e4a9",
+      "name": "gatsby-transformer-sharp",
+      "version": "2.1.15",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreateNode",
+        "setFieldsOnGraphQLNodeType",
+        "onPreExtractQueries"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-transformer-sharp",
+      "packageJson": {
+        "name": "gatsby-transformer-sharp",
+        "description": "Gatsby transformer plugin for images using Sharp",
+        "version": "2.1.15",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "image",
+          "sharp"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "fs-extra",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "potrace",
+            "version": "^2.1.1"
+          },
+          {
+            "name": "probe-image-size",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "sharp",
+            "version": "^0.21.3"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.3"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.33"
+          },
+          {
+            "name": "gatsby-plugin-sharp",
+            "version": "^2.0.0-beta.3"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "b312294a5b08c42dcc0ee83aafc23833",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "d63f2923-c16d-553d-8265-b657b1fafba6": {
+      "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-sharp",
+      "id": "d63f2923-c16d-553d-8265-b657b1fafba6",
+      "name": "gatsby-plugin-sharp",
+      "version": "2.0.23",
+      "pluginOptions": {
+        "plugins": [],
+        "useMozJpeg": true,
+        "stripMetadata": true
+      },
+      "nodeAPIs": [
+        "onPreInit"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-sharp",
+      "packageJson": {
+        "name": "gatsby-plugin-sharp",
+        "description": "Wrapper of the Sharp image manipulation library for Gatsby plugins",
+        "version": "2.0.23",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "image",
+          "sharp"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "async",
+            "version": "^2.1.2"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "fs-exists-cached",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "fs-extra",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "imagemin",
+            "version": "^6.0.0"
+          },
+          {
+            "name": "imagemin-mozjpeg",
+            "version": "^8.0.0"
+          },
+          {
+            "name": "imagemin-pngquant",
+            "version": "^6.0.0"
+          },
+          {
+            "name": "imagemin-webp",
+            "version": "^5.0.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "mini-svg-data-uri",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "potrace",
+            "version": "^2.1.1"
+          },
+          {
+            "name": "probe-image-size",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "progress",
+            "version": "^1.1.8"
+          },
+          {
+            "name": "sharp",
+            "version": "^0.21.3"
+          },
+          {
+            "name": "svgo",
+            "version": "^0.7.2"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.3"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "6192e841770f00addb444dfabdcd1814",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
     "8ab120c7-7d35-5ec8-b841-d89f40fa3a5c": {
       "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/node_modules/gatsby-plugin-web-font-loader",
       "id": "8ab120c7-7d35-5ec8-b841-d89f40fa3a5c",
@@ -745,7 +1232,7 @@
       "resolve": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3",
       "id": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
       "name": "default-site-plugin",
-      "version": "e8ee51562cf3d887e3b3566e9026bc57",
+      "version": "cfeb974adafd94fad56fe7e0adf4252e",
       "pluginOptions": {
         "plugins": []
       },
@@ -782,10 +1269,6 @@
             "version": "^2.0.14"
           },
           {
-            "name": "gatsby-plugin-google-fonts",
-            "version": "0.0.4"
-          },
-          {
             "name": "gatsby-plugin-manifest",
             "version": "^2.0.20"
           },
@@ -798,16 +1281,24 @@
             "version": "^3.0.6"
           },
           {
-            "name": "gatsby-plugin-react-svg",
-            "version": "^2.0.0"
-          },
-          {
             "name": "gatsby-plugin-sass",
             "version": "^2.0.10"
           },
           {
+            "name": "gatsby-plugin-sharp",
+            "version": "^2.0.23"
+          },
+          {
             "name": "gatsby-plugin-web-font-loader",
             "version": "^1.0.4"
+          },
+          {
+            "name": "gatsby-source-filesystem",
+            "version": "^2.0.23"
+          },
+          {
+            "name": "gatsby-transformer-sharp",
+            "version": "^2.1.15"
           },
           {
             "name": "gsap",
@@ -842,7 +1333,7 @@
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "d50845aff862406a631b1260c45936d7",
+        "contentDigest": "d0a1f287ab0d4f5136a934fbaac5b26e",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -961,14 +1452,229 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-02-28T19:10:44.045Z",
+      "buildTime": "2019-03-03T17:11:56.836Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "056def422b003020fbecaba68651b659",
+        "contentDigest": "d6b60e827cf51dbd8dbe0529f19870e8",
         "type": "Site",
         "owner": "internal-data-bridge"
+      }
+    },
+    "50f1f145-a3ad-52c4-85f1-16c3f33693aa": {
+      "id": "50f1f145-a3ad-52c4-85f1-16c3f33693aa",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "2d604ed1bfa070422a77046f55879f89",
+        "type": "Directory",
+        "description": "Directory \"src/assets/img\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "images",
+      "absolutePath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/assets/img/",
+      "relativePath": "",
+      "extension": "",
+      "size": 170,
+      "prettySize": "170 B",
+      "modifiedTime": "2019-02-28T21:14:50.000Z",
+      "accessTime": "2019-03-03T17:12:01.000Z",
+      "changeTime": "2019-02-28T21:14:50.000Z",
+      "birthTime": "2019-02-28T21:14:50.000Z",
+      "root": "/",
+      "dir": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/assets",
+      "base": "img",
+      "ext": "",
+      "name": "img",
+      "relativeDirectory": "..",
+      "dev": 16777221,
+      "mode": 16877,
+      "nlink": 5,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 13402151,
+      "blocks": 0,
+      "atimeMs": 1551633121000,
+      "mtimeMs": 1551388490000,
+      "ctimeMs": 1551388490000,
+      "birthtimeMs": 1551388490000,
+      "atime": "2019-03-03T17:12:01.000Z",
+      "mtime": "2019-02-28T21:14:50.000Z",
+      "ctime": "2019-02-28T21:14:50.000Z",
+      "birthtime": "2019-02-28T21:14:50.000Z"
+    },
+    "fd5c519c-b1c6-58ba-9b53-fa934ba720fb": {
+      "id": "fd5c519c-b1c6-58ba-9b53-fa934ba720fb",
+      "children": [
+        "5aa993cf-23a2-5a47-bcd9-5a3cb4e409d3"
+      ],
+      "parent": null,
+      "internal": {
+        "contentDigest": "6c5e22ec42ca8bab181416585ff9c09b",
+        "type": "File",
+        "mediaType": "image/png",
+        "description": "File \"src/assets/img/og-card.png\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "images",
+      "absolutePath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/assets/img/og-card.png",
+      "relativePath": "og-card.png",
+      "extension": "png",
+      "size": 19257,
+      "prettySize": "19.3 kB",
+      "modifiedTime": "2019-02-28T21:14:50.000Z",
+      "accessTime": "2019-02-28T21:33:32.000Z",
+      "changeTime": "2019-02-28T21:14:50.000Z",
+      "birthTime": "2019-02-28T21:14:50.000Z",
+      "root": "/",
+      "dir": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/assets/img",
+      "base": "og-card.png",
+      "ext": ".png",
+      "name": "og-card",
+      "relativeDirectory": "",
+      "dev": 16777221,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 13402153,
+      "blocks": 40,
+      "atimeMs": 1551389612000,
+      "mtimeMs": 1551388490000,
+      "ctimeMs": 1551388490000,
+      "birthtimeMs": 1551388490000,
+      "atime": "2019-02-28T21:33:32.000Z",
+      "mtime": "2019-02-28T21:14:50.000Z",
+      "ctime": "2019-02-28T21:14:50.000Z",
+      "birthtime": "2019-02-28T21:14:50.000Z"
+    },
+    "b6b3af2e-c4d3-514b-982e-da5495b1dfca": {
+      "id": "b6b3af2e-c4d3-514b-982e-da5495b1dfca",
+      "children": [
+        "bab1434b-6e96-561e-9f2c-cd0b9b1c36e0"
+      ],
+      "parent": null,
+      "internal": {
+        "contentDigest": "2ec58ed10c6d60edf6ccb8195632097e",
+        "type": "File",
+        "mediaType": "image/png",
+        "description": "File \"src/assets/img/twitter-card.png\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "images",
+      "absolutePath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/assets/img/twitter-card.png",
+      "relativePath": "twitter-card.png",
+      "extension": "png",
+      "size": 19333,
+      "prettySize": "19.3 kB",
+      "modifiedTime": "2019-02-28T21:14:50.000Z",
+      "accessTime": "2019-02-28T21:33:32.000Z",
+      "changeTime": "2019-02-28T21:14:50.000Z",
+      "birthTime": "2019-02-28T21:14:50.000Z",
+      "root": "/",
+      "dir": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/assets/img",
+      "base": "twitter-card.png",
+      "ext": ".png",
+      "name": "twitter-card",
+      "relativeDirectory": "",
+      "dev": 16777221,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 13402154,
+      "blocks": 40,
+      "atimeMs": 1551389612000,
+      "mtimeMs": 1551388490000,
+      "ctimeMs": 1551388490000,
+      "birthtimeMs": 1551388490000,
+      "atime": "2019-02-28T21:33:32.000Z",
+      "mtime": "2019-02-28T21:14:50.000Z",
+      "ctime": "2019-02-28T21:14:50.000Z",
+      "birthtime": "2019-02-28T21:14:50.000Z"
+    },
+    "5aa993cf-23a2-5a47-bcd9-5a3cb4e409d3": {
+      "id": "5aa993cf-23a2-5a47-bcd9-5a3cb4e409d3",
+      "children": [],
+      "parent": "fd5c519c-b1c6-58ba-9b53-fa934ba720fb",
+      "internal": {
+        "contentDigest": "6c5e22ec42ca8bab181416585ff9c09b",
+        "type": "ImageSharp",
+        "owner": "gatsby-transformer-sharp"
+      }
+    },
+    "bab1434b-6e96-561e-9f2c-cd0b9b1c36e0": {
+      "id": "bab1434b-6e96-561e-9f2c-cd0b9b1c36e0",
+      "children": [],
+      "parent": "b6b3af2e-c4d3-514b-982e-da5495b1dfca",
+      "internal": {
+        "contentDigest": "2ec58ed10c6d60edf6ccb8195632097e",
+        "type": "ImageSharp",
+        "owner": "gatsby-transformer-sharp"
+      }
+    },
+    "cf2e7612-d581-5429-96cb-3d69a4f97579": {
+      "id": "cf2e7612-d581-5429-96cb-3d69a4f97579",
+      "children": [
+        "d5d9f479-ff6b-5559-b4e1-befd67dc6c28"
+      ],
+      "parent": null,
+      "internal": {
+        "contentDigest": "c5abe6801ddfd52c590a83a9f64b03d4",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"src/assets/img/me.jpg\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "images",
+      "absolutePath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/assets/img/me.jpg",
+      "relativePath": "me.jpg",
+      "extension": "jpg",
+      "size": 409762,
+      "prettySize": "410 kB",
+      "modifiedTime": "2019-02-28T21:14:50.000Z",
+      "accessTime": "2019-02-28T21:33:32.000Z",
+      "changeTime": "2019-02-28T21:14:50.000Z",
+      "birthTime": "2019-02-28T21:14:50.000Z",
+      "root": "/",
+      "dir": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/assets/img",
+      "base": "me.jpg",
+      "ext": ".jpg",
+      "name": "me",
+      "relativeDirectory": "",
+      "dev": 16777221,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 13402152,
+      "blocks": 808,
+      "atimeMs": 1551389612000,
+      "mtimeMs": 1551388490000,
+      "ctimeMs": 1551388490000,
+      "birthtimeMs": 1551388490000,
+      "atime": "2019-02-28T21:33:32.000Z",
+      "mtime": "2019-02-28T21:14:50.000Z",
+      "ctime": "2019-02-28T21:14:50.000Z",
+      "birthtime": "2019-02-28T21:14:50.000Z"
+    },
+    "d5d9f479-ff6b-5559-b4e1-befd67dc6c28": {
+      "id": "d5d9f479-ff6b-5559-b4e1-befd67dc6c28",
+      "children": [],
+      "parent": "cf2e7612-d581-5429-96cb-3d69a4f97579",
+      "internal": {
+        "contentDigest": "c5abe6801ddfd52c590a83a9f64b03d4",
+        "type": "ImageSharp",
+        "owner": "gatsby-transformer-sharp"
       }
     },
     "SitePage /404/": {
@@ -1034,15 +1740,36 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "e99f90a9b5ade71fe84afab5f73c8f18"
+    "PLUGINS_HASH": "6725f72a910cf031bb2f3e3a3418fd73"
   },
   "componentDataDependencies": {
     "nodes": {
       "Site": [
         "sq--src-templates-layout-js"
+      ],
+      "fd5c519c-b1c6-58ba-9b53-fa934ba720fb": [
+        "/"
+      ],
+      "b6b3af2e-c4d3-514b-982e-da5495b1dfca": [
+        "/"
+      ],
+      "cf2e7612-d581-5429-96cb-3d69a4f97579": [
+        "/",
+        "sq--src-components-s-hi-js"
+      ],
+      "d5d9f479-ff6b-5559-b4e1-befd67dc6c28": [
+        "sq--src-components-s-hi-js"
       ]
     },
-    "connections": {}
+    "connections": {
+      "ImageSharp": [
+        null
+      ],
+      "File": [
+        null,
+        null
+      ]
+    }
   },
   "jsonDataPaths": {
     "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
@@ -1050,7 +1777,8 @@
     "404-html-516": "164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E",
     "404-22d": "44/path---404-22-d-bce-NZuapzHg3X9TaN1iIixfv1W23E",
     "all-elements-4dd": "263/path---all-elements-4-dd-4e8-NZuapzHg3X9TaN1iIixfv1W23E",
-    "sq--src-templates-layout-js": 1064776671
+    "sq--src-templates-layout-js": 1064776671,
+    "sq--src-components-s-hi-js": 3233308767
   },
   "components": {
     "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/.cache/dev-404-page.js": {
@@ -1074,6 +1802,14 @@
       "jsonName": "sq--src-templates-layout-js",
       "query": "query SiteTitleQuery {\n  site {\n    siteMetadata {\n      siteUrl\n      title\n      description\n      keywords\n    }\n  }\n}\n",
       "hash": 1064776671
+    },
+    "sq--src-components-s-hi-js": {
+      "name": "volumesDataDocumentsHtdocsFlowenMe2019V3SrcComponentsSHiJs3233308767",
+      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/components/s-hi.js",
+      "id": "sq--src-components-s-hi-js",
+      "jsonName": "sq--src-components-s-hi-js",
+      "query": "query volumesDataDocumentsHtdocsFlowenMe2019V3SrcComponentsSHiJs3233308767 {\n  file(relativePath: {eq: \"me.jpg\"}) {\n    childImageSharp {\n      fixed(width: 400, height: 400) {\n        ...GatsbyImageSharpFixed\n      }\n    }\n  }\n}\n\nfragment GatsbyImageSharpFixed on ImageSharpFixed {\n  base64\n  width\n  height\n  src\n  srcSet\n}\n",
+      "hash": 3233308767
     }
   }
 }

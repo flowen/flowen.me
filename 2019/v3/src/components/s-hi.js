@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { TimelineLite } from 'gsap';
+import { graphql, useStaticQuery } from 'gatsby';
+import { Img } from 'gatsby-image';
+import { TimelineLite, TweenLite } from 'gsap';
 import { ease } from '../utils/ease';
-
 import useIntersection from '../hooks/useIntersectionobserver';
 
 import Nr0 from './characters/0';
@@ -9,15 +10,24 @@ import Nr1 from './characters/1';
 import Dot from './characters/dot';
 import DrawBoxLines from './drawBoxLines';
 
-import me from '../assets/img/me.jpg';
-import TweenLite from 'gsap/TweenLite';
-
 if (typeof window !== `undefined`) {
   // eslint-disable-next-line
   require('../lib/DrawSVGPlugin.js');
 }
 
 const Hi = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "me.jpg" }) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `);
+
   const TITLE = '.hi__article h1';
   const PARAGRAPHS = '.hi__article p';
   const IMG = '.hi__figure img';
@@ -44,6 +54,7 @@ const Hi = () => {
       .to(IMG, 0.5, { opacity: 1, ease }, 'textLabel+=.5');
   }
 
+  console.log(<Img fixed={data.file.childImageSharp.fixed} />);
   return (
     <section className="hi" data-visible={observerEntry.isIntersecting}>
       <div className="count">
@@ -96,7 +107,11 @@ const Hi = () => {
       </article>
 
       <figure className="hi__figure">
-        <img src={me} alt="hi it's me" className="hi__img" />
+        {/* <Img
+          fixed={data.file.childImageSharp.fixed}
+          alt="hi it's me"
+          className="hi__img"
+        /> */}
         <DrawBoxLines />
       </figure>
     </section>
