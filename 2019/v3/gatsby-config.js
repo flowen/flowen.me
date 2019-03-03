@@ -53,10 +53,10 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/img/`
+        path: `${__dirname}/src/assets/img/`
       }
     },
-
+    `gatsby-plugin-sharp`,
     'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-sharp`,
@@ -65,12 +65,6 @@ module.exports = {
         stripMetadata: true
       }
     },
-    // {
-    //   resolve: `gatsby-plugin-google-fonts`,
-    //   options: {
-    //     fonts: [`comfortaa\: 400`, `modak\: 400`]
-    //   }
-    // },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
