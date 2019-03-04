@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { TimelineLite } from 'gsap';
 import { ease } from '../utils/ease';
+import logger from '../utils/logger';
 
 import R from './characters/r';
 import O from './characters/o';
@@ -16,7 +17,14 @@ if (typeof window !== `undefined`) {
 }
 
 const Intro = () => {
-  const tl = new TimelineLite();
+  const tl = new TimelineLite({
+    paused: true,
+    onComplete: () =>
+      logger({
+        category: 'Intro section',
+        action: 'User viewed section Intro'
+      })
+  });
 
   const m = 1.5; // multiplier
   const t1 = 0.75 * m;
@@ -25,6 +33,7 @@ const Intro = () => {
   useEffect(() => {
     document.querySelector('.rouhun').classList.remove('not-visible');
     document.querySelector('.container').classList.remove('not-visible');
+
     // prettier-ignore
     tl.add('startLabel', 0)
       .add('lowerCaseLabel', 0.5 * m)
@@ -37,7 +46,8 @@ const Intro = () => {
       .to('.fan .js--f', t1, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel')
       .to('.fan .js--a', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel+=.5')
       .to('.fan .js--n', t2, { drawSVG: '0% 100%', ease }, 'lowerCaseLabel+=.5')
-      .to('.occupation', t2, { opacity: 1, ease }, 'lowerCaseLabel+=.75');
+      .to('.occupation', t2, { opacity: 1, ease }, 'lowerCaseLabel+=.75')
+      .play();
   }, []);
 
   return (

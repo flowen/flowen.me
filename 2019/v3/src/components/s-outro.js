@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-import { TimelineLite } from 'gsap';
+import { TweenLite, TimelineLite } from 'gsap';
 import { ease } from '../utils/ease';
 import useIntersection from '../hooks/useIntersectionobserver';
+import logger from '../utils/logger';
 
 import Nr0 from './characters/0';
 import Nr3 from './characters/3';
 import Dot from './characters/dot';
 import Gridlines from './gridlines';
-import TweenLite from 'gsap/TweenLite';
 
 if (typeof window !== `undefined`) {
   // eslint-disable-next-line
@@ -15,7 +15,14 @@ if (typeof window !== `undefined`) {
 }
 
 const Outro = () => {
-  const tl = new TimelineLite();
+  const tl = new TimelineLite({
+    paused: true,
+    onComplete: () =>
+      logger({
+        category: 'Outro section',
+        action: 'User viewed section Outro'
+      })
+  });
   const PARAGRAPH = '.outro__paragraph';
   const ANCHOR = '.outro__anchor';
   const EMOJI = '.emoji--point';
@@ -36,7 +43,8 @@ const Outro = () => {
       .to('.outro .js--dot', 0.5, { drawSVG: '0% 100%', ease })
       .to(PARAGRAPH, 0.5, { opacity: 1, ease })
       .to(ANCHOR, 0.5, { opacity: 1, ease })
-      .to(EMOJI, 0.5, { opacity: 1, ease });
+      .to(EMOJI, 0.5, { opacity: 1, ease })
+      .play();
   }
 
   return (

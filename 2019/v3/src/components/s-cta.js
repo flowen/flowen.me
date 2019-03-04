@@ -1,8 +1,16 @@
 import React from 'react';
 import useIntersection from '../hooks/useIntersectionobserver';
+import logger from '../utils/logger';
 
 const CTA = () => {
   const { observerEntry, elRef } = useIntersection({ threshold: 0.75 });
+
+  if (observerEntry.isIntersecting) {
+    logger({
+      category: 'CTA section',
+      action: 'User viewed section CTA'
+    });
+  }
 
   return (
     <section className="cta" ref={elRef}>
