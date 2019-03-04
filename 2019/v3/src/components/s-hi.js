@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Img } from 'gatsby-image';
+import Img from 'gatsby-image';
 import { TimelineLite, TweenLite } from 'gsap';
 import { ease } from '../utils/ease';
 import useIntersection from '../hooks/useIntersectionobserver';
@@ -30,7 +30,7 @@ const Hi = () => {
 
   const TITLE = '.hi__article h1';
   const PARAGRAPHS = '.hi__article p';
-  const IMG = '.hi__figure img';
+  const IMG = '.hi__img';
 
   useEffect(() => {
     TweenLite.set(TITLE, { opacity: 0 });
@@ -39,7 +39,7 @@ const Hi = () => {
   }, []);
 
   const tl = new TimelineLite();
-  const { observerEntry, elRef } = useIntersection({ threshold: 0.6 });
+  const { observerEntry, elRef } = useIntersection({ threshold: 0.5 });
 
   if (observerEntry.isIntersecting) {
     tl.add('start', '0')
@@ -54,7 +54,6 @@ const Hi = () => {
       .to(IMG, 0.5, { opacity: 1, ease }, 'textLabel+=.5');
   }
 
-  console.log(<Img fixed={data.file.childImageSharp.fixed} />);
   return (
     <section className="hi" data-visible={observerEntry.isIntersecting}>
       <div className="count">
@@ -107,11 +106,15 @@ const Hi = () => {
       </article>
 
       <figure className="hi__figure">
-        {/* <Img
+        <Img
           fixed={data.file.childImageSharp.fixed}
           alt="hi it's me"
           className="hi__img"
-        /> */}
+          fadeIn={false}
+          style={{
+            width: '100%'
+          }}
+        />
         <DrawBoxLines />
       </figure>
     </section>
