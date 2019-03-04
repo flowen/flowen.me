@@ -1452,12 +1452,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-03-03T17:11:56.836Z",
+      "buildTime": "2019-03-04T06:59:00.857Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "d6b60e827cf51dbd8dbe0529f19870e8",
+        "contentDigest": "4cd0cab49911abd74b27dfdbdd76a77a",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1467,7 +1467,7 @@
       "children": [],
       "parent": null,
       "internal": {
-        "contentDigest": "2d604ed1bfa070422a77046f55879f89",
+        "contentDigest": "4b28e3dbdb9a0bfbd621ed6f5ceb1ee2",
         "type": "Directory",
         "description": "Directory \"src/assets/img\"",
         "owner": "gatsby-source-filesystem"
@@ -1479,7 +1479,7 @@
       "size": 170,
       "prettySize": "170 B",
       "modifiedTime": "2019-02-28T21:14:50.000Z",
-      "accessTime": "2019-03-03T17:12:01.000Z",
+      "accessTime": "2019-03-04T06:59:33.000Z",
       "changeTime": "2019-02-28T21:14:50.000Z",
       "birthTime": "2019-02-28T21:14:50.000Z",
       "root": "/",
@@ -1488,7 +1488,7 @@
       "ext": "",
       "name": "img",
       "relativeDirectory": "..",
-      "dev": 16777221,
+      "dev": 16777218,
       "mode": 16877,
       "nlink": 5,
       "uid": 501,
@@ -1497,11 +1497,11 @@
       "blksize": 4096,
       "ino": 13402151,
       "blocks": 0,
-      "atimeMs": 1551633121000,
+      "atimeMs": 1551682773000,
       "mtimeMs": 1551388490000,
       "ctimeMs": 1551388490000,
       "birthtimeMs": 1551388490000,
-      "atime": "2019-03-03T17:12:01.000Z",
+      "atime": "2019-03-04T06:59:33.000Z",
       "mtime": "2019-02-28T21:14:50.000Z",
       "ctime": "2019-02-28T21:14:50.000Z",
       "birthtime": "2019-02-28T21:14:50.000Z"
@@ -1758,6 +1758,7 @@
         "sq--src-components-s-hi-js"
       ],
       "d5d9f479-ff6b-5559-b4e1-befd67dc6c28": [
+        "/",
         "sq--src-components-s-hi-js"
       ]
     },
@@ -1778,7 +1779,7 @@
     "404-22d": "44/path---404-22-d-bce-NZuapzHg3X9TaN1iIixfv1W23E",
     "all-elements-4dd": "263/path---all-elements-4-dd-4e8-NZuapzHg3X9TaN1iIixfv1W23E",
     "sq--src-templates-layout-js": 1064776671,
-    "sq--src-components-s-hi-js": 3233308767
+    "sq--src-components-s-hi-js": 2611244418
   },
   "components": {
     "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/.cache/dev-404-page.js": {
@@ -1795,14 +1796,6 @@
     }
   },
   "staticQueryComponents": {
-    "sq--src-templates-layout-js": {
-      "name": "SiteTitleQuery",
-      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/templates/layout.js",
-      "id": "sq--src-templates-layout-js",
-      "jsonName": "sq--src-templates-layout-js",
-      "query": "query SiteTitleQuery {\n  site {\n    siteMetadata {\n      siteUrl\n      title\n      description\n      keywords\n    }\n  }\n}\n",
-      "hash": 1064776671
-    },
     "sq--src-components-s-hi-js": {
       "name": "volumesDataDocumentsHtdocsFlowenMe2019V3SrcComponentsSHiJs3233308767",
       "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/components/s-hi.js",
@@ -1810,6 +1803,14 @@
       "jsonName": "sq--src-components-s-hi-js",
       "query": "query volumesDataDocumentsHtdocsFlowenMe2019V3SrcComponentsSHiJs3233308767 {\n  file(relativePath: {eq: \"me.jpg\"}) {\n    childImageSharp {\n      fixed(width: 400, height: 400) {\n        ...GatsbyImageSharpFixed\n      }\n    }\n  }\n}\n\nfragment GatsbyImageSharpFixed on ImageSharpFixed {\n  base64\n  width\n  height\n  src\n  srcSet\n}\n",
       "hash": 3233308767
+    },
+    "sq--src-templates-layout-js": {
+      "name": "SiteTitleQuery",
+      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/templates/layout.js",
+      "id": "sq--src-templates-layout-js",
+      "jsonName": "sq--src-templates-layout-js",
+      "query": "query SiteTitleQuery {\n  site {\n    siteMetadata {\n      siteUrl\n      title\n      description\n      keywords\n    }\n  }\n}\n",
+      "hash": 1064776671
     }
   }
 }
