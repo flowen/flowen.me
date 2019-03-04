@@ -5,11 +5,6 @@ import { setConfig } from 'react-hot-loader';
 
 import twitterCard from '../assets/img/twitter-card.png';
 import ogCard from '../assets/img/og-card.png';
-// import favicon32 from '../assets/favicon/favicon-32x32.png';
-// import favicon16 from '../assets/favicon/favicon-16x16.png';
-// import favicon from '../assets/favicon/favicon.ico';
-// import appleTouchIcon from '../assets/favicon/apple-touch-icon.png';
-// import safariPinnedTab from '../assets/favicon/safari-pinned-tab.svg';
 
 import '../scss/index.scss';
 
@@ -73,28 +68,6 @@ const Layout = ({ children }) => (
               { property: 'og:site_name', content: title },
               { property: 'og:type', content: 'website' }
             ]}
-            // causes a bug in react-helmet - probably because of gatsby-plugin-manifest
-            // link={[
-            //   { rel: 'icon', type: 'image/x-icon', href: { favicon } },
-            //   {
-            //     rel: 'icon',
-            //     type: 'image/png',
-            //     sizes: '32x32',
-            //     href: favicon32
-            //   },
-            //   {
-            //     rel: 'icon',
-            //     type: 'image/png',
-            //     sizes: '16x16',
-            //     href: favicon16
-            //   },
-            //   { rel: 'mask-icon', type: 'image/png', href: safariPinnedTab },
-            //   {
-            //     rel: 'apple-touch-icon',
-            //     sizes: '180x180',
-            //     href: appleTouchIcon
-            //   }
-            // ]}
           >
             <html lang="en" />
           </Helmet>

@@ -1796,14 +1796,6 @@
     }
   },
   "staticQueryComponents": {
-    "sq--src-components-s-hi-js": {
-      "name": "volumesDataDocumentsHtdocsFlowenMe2019V3SrcComponentsSHiJs3233308767",
-      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/components/s-hi.js",
-      "id": "sq--src-components-s-hi-js",
-      "jsonName": "sq--src-components-s-hi-js",
-      "query": "query volumesDataDocumentsHtdocsFlowenMe2019V3SrcComponentsSHiJs3233308767 {\n  file(relativePath: {eq: \"me.jpg\"}) {\n    childImageSharp {\n      fixed(width: 400, height: 400) {\n        ...GatsbyImageSharpFixed\n      }\n    }\n  }\n}\n\nfragment GatsbyImageSharpFixed on ImageSharpFixed {\n  base64\n  width\n  height\n  src\n  srcSet\n}\n",
-      "hash": 3233308767
-    },
     "sq--src-templates-layout-js": {
       "name": "SiteTitleQuery",
       "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/templates/layout.js",
@@ -1811,6 +1803,14 @@
       "jsonName": "sq--src-templates-layout-js",
       "query": "query SiteTitleQuery {\n  site {\n    siteMetadata {\n      siteUrl\n      title\n      description\n      keywords\n    }\n  }\n}\n",
       "hash": 1064776671
+    },
+    "sq--src-components-s-hi-js": {
+      "name": "volumesDataDocumentsHtdocsFlowenMe2019V3SrcComponentsSHiJs3233308767",
+      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/components/s-hi.js",
+      "id": "sq--src-components-s-hi-js",
+      "jsonName": "sq--src-components-s-hi-js",
+      "query": "query volumesDataDocumentsHtdocsFlowenMe2019V3SrcComponentsSHiJs3233308767 {\n  file(relativePath: {eq: \"me.jpg\"}) {\n    childImageSharp {\n      fixed(width: 400, height: 400) {\n        ...GatsbyImageSharpFixed\n      }\n    }\n  }\n}\n\nfragment GatsbyImageSharpFixed on ImageSharpFixed {\n  base64\n  width\n  height\n  src\n  srcSet\n}\n",
+      "hash": 3233308767
     }
   }
 }

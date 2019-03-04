@@ -2,9 +2,17 @@ import React, { useEffect } from 'react';
 import { TimelineLite, TweenLite } from 'gsap';
 import { ease } from '../utils/ease';
 import useIntersection from '../hooks/useIntersectionobserver';
+import logger from '../utils/logger';
 
 const ArticleProjects = () => {
-  const tl = new TimelineLite();
+  const tl = new TimelineLite({
+    paused: true,
+    onComplete: () =>
+      logger({
+        category: 'Projects section',
+        action: 'User viewed section Projects'
+      })
+  });
   const { observerEntry, elRef } = useIntersection({ threshold: 0.35 });
   const TITLE = '.article--projects';
   const PROJECTLIST = '.projects__list';
@@ -24,13 +32,9 @@ const ArticleProjects = () => {
         onComplete: () =>
           document.querySelector(PROJECTLIST).setAttribute('data-visible', true)
       })
-      .to(PARAGRAPHS, 0.5, { opacity: 1, ease });
+      .to(PARAGRAPHS, 0.5, { opacity: 1, ease })
+      .play();
   }
-
-  // const openVisual = e => {
-  //   e.preventDefault();
-  //   console.log('openVisual');
-  // };
 
   return (
     <article className="article article--projects projects" ref={elRef}>
@@ -93,7 +97,6 @@ const ArticleProjects = () => {
             href="https://xenochiku.com/015/"
             target="_blank"
             rel="noopener noreferrer external"
-            // onClick={openVisual}
           >
             audiovisual experiments
             <span

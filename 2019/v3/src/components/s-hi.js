@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import { TimelineLite, TweenLite } from 'gsap';
-import { ease } from '../utils/ease';
 import useIntersection from '../hooks/useIntersectionobserver';
+import { ease } from '../utils/ease';
+import logger from '../utils/logger';
 
 import Nr0 from './characters/0';
 import Nr1 from './characters/1';
@@ -38,7 +39,14 @@ const Hi = () => {
     TweenLite.set(IMG, { opacity: 0 });
   }, []);
 
-  const tl = new TimelineLite();
+  const tl = new TimelineLite({
+    paused: true,
+    onComplete: () =>
+      logger({
+        category: 'Hi section',
+        action: 'User viewed section Hi'
+      })
+  });
   const { observerEntry, elRef } = useIntersection({ threshold: 0.5 });
 
   if (observerEntry.isIntersecting) {
@@ -51,7 +59,8 @@ const Hi = () => {
       .add('textLabel', '1')
       .to(TITLE, 0.5, { opacity: 1, ease }, 'textLabel')
       .staggerTo(PARAGRAPHS, 0.5, { opacity: 1, ease }, 0.1, 'textLabel')
-      .to(IMG, 0.5, { opacity: 1, ease }, 'textLabel+=.5');
+      .to(IMG, 0.5, { opacity: 1, ease }, 'textLabel+=.5')
+      .play();
   }
 
   return (

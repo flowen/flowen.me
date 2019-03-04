@@ -1,6 +1,5 @@
 import React from 'react';
 import { TimelineLite } from 'gsap';
-// import { drawSVG } from '../lib/DrawSVGPlugin';
 import { ease } from '../utils/ease';
 import useIntersection from '../hooks/useIntersectionobserver';
 

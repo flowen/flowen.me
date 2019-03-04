@@ -2,9 +2,17 @@ import React, { useEffect } from 'react';
 import { TimelineLite, TweenLite } from 'gsap';
 import { ease } from '../utils/ease';
 import useIntersection from '../hooks/useIntersectionobserver';
+import logger from '../utils/logger';
 
 const ArticleWhatIDo = () => {
-  const tl = new TimelineLite();
+  const tl = new TimelineLite({
+    paused: true,
+    onComplete: () =>
+      logger({
+        category: 'WhatIDo section',
+        action: 'User viewed section WhatIDo'
+      })
+  });
   const { observerEntry, elRef } = useIntersection({ threshold: 0.5 });
   const TITLE = '.what-i-do h1';
   const PARAGRAPHS = '.what-i-do p';
@@ -15,13 +23,9 @@ const ArticleWhatIDo = () => {
   }, []);
 
   if (observerEntry.isIntersecting) {
-    tl.to(TITLE, 0.5, { opacity: 1, ease }).staggerTo(
-      PARAGRAPHS,
-      0.5,
-      { opacity: 1, ease },
-      0.1,
-      '-=.3'
-    );
+    tl.to(TITLE, 0.5, { opacity: 1, ease })
+      .staggerTo(PARAGRAPHS, 0.5, { opacity: 1, ease }, 0.1, '-=.3')
+      .play();
   }
 
   return (
