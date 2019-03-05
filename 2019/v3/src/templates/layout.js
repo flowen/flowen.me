@@ -7,7 +7,6 @@ import twitterCard from '../assets/cards/twitter-card.png';
 import ogCard from '../assets/cards/og-card.png';
 
 import '../scss/index.scss';
-
 // for hot-reloader to work - https://github.com/gaearon/react-hot-loader/issues/1088
 setConfig({ pureSFC: true });
 
@@ -27,6 +26,7 @@ const Layout = ({ children }) => (
     `}
     render={data => {
       const { siteUrl, title, description, keywords } = data.site.siteMetadata;
+
       return (
         <>
           <Helmet
@@ -64,7 +64,9 @@ const Layout = ({ children }) => (
               { property: 'og:title', content: title },
               { property: 'og:url', content: siteUrl },
               { property: 'og:description', content: description },
-              { property: 'og:image', content: ogCard },
+              { property: 'og:image', content: siteUrl + ogCard },
+              { property: 'og:image:width', content: 1200 },
+              { property: 'og:image:height', content: 628 },
               { property: 'og:image:secure_url', content: ogCard },
               { property: 'og:image:alt', content: title },
               { property: 'og:site_name', content: title },
