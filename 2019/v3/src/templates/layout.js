@@ -3,8 +3,8 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import { setConfig } from 'react-hot-loader';
 
-import twitterCard from '../assets/img/twitter-card.png';
-import ogCard from '../assets/img/og-card.png';
+import twitterCard from '../assets/cards/twitter-card.png';
+import ogCard from '../assets/cards/og-card.png';
 
 import '../scss/index.scss';
 
@@ -65,6 +65,7 @@ const Layout = ({ children }) => (
               { property: 'og:url', content: siteUrl },
               { property: 'og:description', content: description },
               { property: 'og:image:url', content: ogCard },
+              { property: 'og:image:alt', content: title },
               { property: 'og:site_name', content: title },
               { property: 'og:type', content: 'website' }
             ]}
