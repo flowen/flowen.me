@@ -64,7 +64,7 @@ const Layout = ({ children }) => (
               { property: 'og:title', content: title },
               { property: 'og:url', content: siteUrl },
               { property: 'og:description', content: description },
-              { property: 'og:image', content: ogCard },
+              { property: 'og:image:url', content: ogCard },
               { property: 'og:site_name', content: title },
               { property: 'og:type', content: 'website' }
             ]}
