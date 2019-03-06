@@ -1,0 +1,134 @@
+/* Coded by Lorenzo Bocchi ~ www.be.net/LorenzoBocchi */
+/* Designed by CSS Design Awards ~ www.cssdesignawards.com */
+
+/* purple: #673AB7 */
+/* light: #EDEDED */
+/* black: #000000 */
+
+#cssda-badge {
+  position: fixed;
+  bottom: $col/2;
+  right: $col/2;
+  width: 90px;
+  height: 90px;
+  border-radius: 90px;
+  background: #ededed;
+  transition: transform $d-normal $ease-in-out;
+  cursor: pointer;
+}
+#cssda-badge:hover {
+  animation: bounce $d-normal linear both;
+  background: #673ab7;
+}
+#cssda-badge svg {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  fill: #000000;
+}
+#cssda-badge:hover svg {
+  fill: #ededed;
+}
+.cssda-badge-content {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  transition: transform $d-fast $ease-out;
+}
+#cssda-badge:hover .cssda-badge-content {
+  transform: rotate(360deg);
+}
+#cssda-badge:hover #cssda-badge-logo {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 700px) {
+  #cssda-badge,
+  #cssda-badge svg {
+    width: 60px;
+    height: 60px;
+  }
+  #cssda-badge-logo {
+    transform: scale(1.35);
+  }
+  #cssda-badge:hover #cssda-badge-logo {
+    transform: scale(1.5);
+  }
+  #cssda-badge-title,
+  #cssda-badge-award {
+    display: none;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  3% {
+    transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  4% {
+    transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  6% {
+    transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  9% {
+    transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  10% {
+    transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  13% {
+    transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  14% {
+    transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  17% {
+    transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  18% {
+    transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  21% {
+    transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  24% {
+    transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  25% {
+    transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  29% {
+    transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  29% {
+    transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  35% {
+    transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  36% {
+    transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  41% {
+    transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  44% {
+    transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  52% {
+    transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  59%,
+  63% {
+    transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100%,
+  75%,
+  85%,
+  90% {
+    transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}

@@ -1456,12 +1456,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-03-05T13:42:55.579Z",
+      "buildTime": "2019-03-06T13:40:12.269Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "d728d02cc8b033b84b9bf0a0100d9059",
+        "contentDigest": "427f0320a6b5ad5ea2732cbd3a27815b",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1471,7 +1471,7 @@
       "children": [],
       "parent": null,
       "internal": {
-        "contentDigest": "7d0862986d03ab1292ec4151e718cff8",
+        "contentDigest": "8c572ef2d2a334263f8446f63ed6228e",
         "type": "Directory",
         "description": "Directory \"src/assets/img\"",
         "owner": "gatsby-source-filesystem"
@@ -1482,9 +1482,9 @@
       "extension": "",
       "size": 102,
       "prettySize": "102 B",
-      "modifiedTime": "2019-03-05T13:05:02.000Z",
-      "accessTime": "2019-03-05T13:43:17.000Z",
-      "changeTime": "2019-03-05T13:05:02.000Z",
+      "modifiedTime": "2019-03-06T09:47:03.000Z",
+      "accessTime": "2019-03-06T13:40:42.000Z",
+      "changeTime": "2019-03-06T09:47:03.000Z",
       "birthTime": "2019-02-28T21:14:50.000Z",
       "root": "/",
       "dir": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/assets",
@@ -1501,13 +1501,13 @@
       "blksize": 4096,
       "ino": 13402151,
       "blocks": 0,
-      "atimeMs": 1551793397000,
-      "mtimeMs": 1551791102000,
-      "ctimeMs": 1551791102000,
+      "atimeMs": 1551879642000,
+      "mtimeMs": 1551865623000,
+      "ctimeMs": 1551865623000,
       "birthtimeMs": 1551388490000,
-      "atime": "2019-03-05T13:43:17.000Z",
-      "mtime": "2019-03-05T13:05:02.000Z",
-      "ctime": "2019-03-05T13:05:02.000Z",
+      "atime": "2019-03-06T13:40:42.000Z",
+      "mtime": "2019-03-06T09:47:03.000Z",
+      "ctime": "2019-03-06T09:47:03.000Z",
       "birthtime": "2019-02-28T21:14:50.000Z"
     },
     "cf2e7612-d581-5429-96cb-3d69a4f97579": {
