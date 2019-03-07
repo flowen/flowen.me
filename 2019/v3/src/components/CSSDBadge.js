@@ -7,13 +7,7 @@ const CSSDBadge = () => (
     rel="noopener noreferrer external"
   >
     <div id="cssda-badge">
-      <svg
-        id="cssda-badge-logo"
-        x="0px"
-        y="0px"
-        viewBox="0 0 90 90"
-        // style="enable-background:new 0 0 90 90;"
-      >
+      <svg id="cssda-badge-logo" x="0px" y="0px" viewBox="0 0 90 90">
         <path
           d="M32.6,43.6c-0.3,0-0.5,0.1-0.7,0.4c-0.2,0.2-0.3,0.6-0.3,1c0,0.9,0.3,1.3,1,1.3c0.2,0,0.4,0,0.6-0.1
           c0.2-0.1,0.4-0.1,0.6-0.2v1.1c-0.4,0.2-0.8,0.3-1.3,0.3c-0.7,0-1.2-0.2-1.6-0.6c-0.4-0.4-0.6-1-0.6-1.8c0-0.5,0.1-0.9,0.3-1.3
@@ -51,13 +45,7 @@ const CSSDBadge = () => (
       </svg>
 
       <div class="cssda-badge-content">
-        <svg
-          id="cssda-badge-title"
-          x="0px"
-          y="0px"
-          viewBox="0 0 90 90"
-          // style="enable-background:new 0 0 90 90;"
-        >
+        <svg id="cssda-badge-title" x="0px" y="0px" viewBox="0 0 90 90">
           <path
             d="M15.4,42.5l0,1.3l-2.8,0.7c-0.1,0-0.3,0.1-0.6,0.1c-0.3,0.1-0.5,0.1-0.6,0.1c0.1,0,0.3,0.1,0.6,0.1c0.3,0.1,0.5,0.1,0.6,0.1
          	l2.7,0.8l0,1.3L10,48.2l0-1.1l2.9-0.6c0.5-0.1,1-0.2,1.4-0.2c-0.1,0-0.3-0.1-0.6-0.1C13.4,46,13.2,46,13,45.9l-2.9-0.8l0-1l2.9-0.7
@@ -107,7 +95,6 @@ const CSSDBadge = () => (
           x="0px"
           y="0px"
           viewBox="0 0 90 90"
-          // style="enable-background:new 0 0 90 90;"
         >
           <path
             d="M25.5,73.7l-1.2-1l0.8-4.9l0,0c-0.4,0.6-0.8,1.1-1,1.3l-1.7,2.1l-0.8-0.7l3.6-4.4l1.2,1l-0.8,4.8l0,0

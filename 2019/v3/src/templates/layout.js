@@ -79,7 +79,7 @@ const Layout = ({ children }) => (
 
           <main className="layout">{children}</main>
 
-          <footer>
+          <footer className="footer">
             <CSSDBadge />
           </footer>
         </>
