@@ -10,7 +10,7 @@
 # unless otherwise overridden by more specific contexts.  
 [build]
   base = "2019/v3"
-  publish = "public"
+  publish = "2019/v3/public"
   command = "npm run build"
 
 
@@ -23,8 +23,8 @@
 
 # Deploy Preview context: All Deploy Previews
 # will inherit these settings.
-[context.deploy-preview.environment]
-  NOSCRAPE = "true"
+# [context.deploy-preview.environment]
+#   NOSCRAPE = "true"
 
 # Branch deploy context: All deploys that are not in
 # an active Deploy Preview will inherit these settings.
@@ -36,5 +36,5 @@
 # current ones.
 [context.v1]
   base = "2019/v1"
-  publish = "public"
+  publish = "2019/v1/public"
   command = "npm run build"
