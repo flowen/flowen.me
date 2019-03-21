@@ -1,4 +1,3 @@
-// import React from 'react';
 import ReactGA from 'react-ga';
 
 ReactGA.initialize('UA-77081345-1');
@@ -21,8 +20,6 @@ const logger = ({ category, action }) => {
     category: category,
     action: action
   });
-
-  // console.log(`log succeeded.\n category: ${category} \n action: ${action}`);
 };
 
 export default logger;

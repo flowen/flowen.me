@@ -94,8 +94,13 @@
 
   .emoji--wave {
     display: inline-block;
+    margin: 0 1vw 0 0;
     line-height: 1;
     transform-origin: 29px 24px;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   $deg: 18deg;

@@ -1452,16 +1452,16 @@
         "description": "Freelance creative developer and designer, Rou Hun Fan, working remotely for international clients",
         "keywords": "Creative developer, developer, front-end developer, front-end, designer, front-end designer, remote, freelancer, the Netherlands, Holland, Nederland"
       },
-      "port": "8000",
+      "port": 8001,
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-03-07T11:24:11.972Z",
+      "buildTime": "2019-03-21T14:00:58.370Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "f2f9d92544bd0b1eb153448f6ddbdd10",
+        "contentDigest": "4b56d9e21dcd52d6bfb28fc3e85d376f",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1471,7 +1471,7 @@
       "children": [],
       "parent": null,
       "internal": {
-        "contentDigest": "85591cbaace0066d800ee8085771304e",
+        "contentDigest": "ebc910f121ce27a19e3998be7030ebc8",
         "type": "Directory",
         "description": "Directory \"src/assets/img\"",
         "owner": "gatsby-source-filesystem"
@@ -1483,7 +1483,7 @@
       "size": 102,
       "prettySize": "102 B",
       "modifiedTime": "2019-03-06T09:47:03.000Z",
-      "accessTime": "2019-03-07T11:24:42.000Z",
+      "accessTime": "2019-03-21T14:01:39.000Z",
       "changeTime": "2019-03-06T09:47:03.000Z",
       "birthTime": "2019-02-28T21:14:50.000Z",
       "root": "/",
@@ -1492,7 +1492,7 @@
       "ext": "",
       "name": "img",
       "relativeDirectory": "..",
-      "dev": 16777219,
+      "dev": 16777218,
       "mode": 16877,
       "nlink": 3,
       "uid": 501,
@@ -1501,11 +1501,11 @@
       "blksize": 4096,
       "ino": 13402151,
       "blocks": 0,
-      "atimeMs": 1551957882000,
+      "atimeMs": 1553176899000,
       "mtimeMs": 1551865623000,
       "ctimeMs": 1551865623000,
       "birthtimeMs": 1551388490000,
-      "atime": "2019-03-07T11:24:42.000Z",
+      "atime": "2019-03-21T14:01:39.000Z",
       "mtime": "2019-03-06T09:47:03.000Z",
       "ctime": "2019-03-06T09:47:03.000Z",
       "birthtime": "2019-02-28T21:14:50.000Z"
