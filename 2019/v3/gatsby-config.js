@@ -1,6 +1,6 @@
-const autoprefixer = require('autoprefixer');
-const mqPacker = require('css-mqpacker'); // compresses media queries into a single query
-const cssnano = require('css-mqpacker'); // super compressor
+const autoprefixer = require('autoprefixer')
+const mqPacker = require('css-mqpacker') // compresses media queries into a single query
+const cssnano = require('css-mqpacker') // super compressor
 
 module.exports = {
   siteMetadata: {
@@ -9,7 +9,7 @@ module.exports = {
     description:
       'Freelance creative developer and designer, Rou Hun Fan, working remotely for international clients',
     keywords:
-      'Creative developer, developer, front-end developer, front-end, designer, front-end designer, remote, freelancer, the Netherlands, Holland, Nederland'
+      'Creative developer, developer, front-end developer, front-end, designer, front-end designer, remote, freelancer, the Netherlands, Holland, Nederland',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -23,9 +23,10 @@ module.exports = {
         theme_color: `#ffffff`,
         display: `standalone`,
         icon: `src/assets/favicon/icon-512x512.png`,
-        include_favicon: true
-      }
+        include_favicon: true,
+      },
     },
+    `gatsby-plugin-polyfill-io`,
     'gatsby-plugin-offline', // MUST be after the manifest plugin
     {
       resolve: `gatsby-plugin-sass`,
@@ -39,22 +40,22 @@ module.exports = {
                 autoprefixer: true,
                 discardUnused: true,
                 mergeIdents: true,
-                zindex: true
-              }
-            ]
+                zindex: true,
+              },
+            ],
           }),
           mqPacker({
-            sort: true
-          })
-        ]
-      }
+            sort: true,
+          }),
+        ],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/img/`
-      }
+        path: `${__dirname}/src/assets/img/`,
+      },
     },
     `gatsby-plugin-sharp`,
     'gatsby-transformer-sharp',
@@ -62,16 +63,16 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         useMozJpeg: true,
-        stripMetadata: true
-      }
+        stripMetadata: true,
+      },
     },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Comfortaa:400', 'Modak:400']
-        }
-      }
+          families: ['Comfortaa:400', 'Modak:400'],
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -79,8 +80,8 @@ module.exports = {
         trackingId: 'UA-77081345-1',
         head: false,
         anonymize: true,
-        respectDNT: true
-      }
-    }
-  ]
-};
+        respectDNT: true,
+      },
+    },
+  ],
+}

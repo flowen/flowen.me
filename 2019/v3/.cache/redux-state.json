@@ -1452,16 +1452,14 @@
         "description": "Freelance creative developer and designer, Rou Hun Fan, working remotely for international clients",
         "keywords": "Creative developer, developer, front-end developer, front-end, designer, front-end designer, remote, freelancer, the Netherlands, Holland, Nederland"
       },
-      "port": 8001,
+      "port": "8000",
       "host": "localhost",
-      "pathPrefix": "",
-      "polyfill": true,
-      "buildTime": "2019-03-21T14:00:58.370Z",
+      "buildTime": "2019-03-27T14:18:09.202Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "4b56d9e21dcd52d6bfb28fc3e85d376f",
+        "contentDigest": "f1312f014486df78db444cb6bbb77957",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1471,7 +1469,7 @@
       "children": [],
       "parent": null,
       "internal": {
-        "contentDigest": "ebc910f121ce27a19e3998be7030ebc8",
+        "contentDigest": "26e2a29c2fe7f2da2b965b6744dbfa1a",
         "type": "Directory",
         "description": "Directory \"src/assets/img\"",
         "owner": "gatsby-source-filesystem"
@@ -1483,7 +1481,7 @@
       "size": 102,
       "prettySize": "102 B",
       "modifiedTime": "2019-03-06T09:47:03.000Z",
-      "accessTime": "2019-03-21T14:01:39.000Z",
+      "accessTime": "2019-03-27T14:18:48.000Z",
       "changeTime": "2019-03-06T09:47:03.000Z",
       "birthTime": "2019-02-28T21:14:50.000Z",
       "root": "/",
@@ -1492,7 +1490,7 @@
       "ext": "",
       "name": "img",
       "relativeDirectory": "..",
-      "dev": 16777218,
+      "dev": 16777217,
       "mode": 16877,
       "nlink": 3,
       "uid": 501,
@@ -1501,11 +1499,11 @@
       "blksize": 4096,
       "ino": 13402151,
       "blocks": 0,
-      "atimeMs": 1553176899000,
+      "atimeMs": 1553696328000,
       "mtimeMs": 1551865623000,
       "ctimeMs": 1551865623000,
       "birthtimeMs": 1551388490000,
-      "atime": "2019-03-21T14:01:39.000Z",
+      "atime": "2019-03-27T14:18:48.000Z",
       "mtime": "2019-03-06T09:47:03.000Z",
       "ctime": "2019-03-06T09:47:03.000Z",
       "birthtime": "2019-02-28T21:14:50.000Z"
@@ -1604,26 +1602,6 @@
         "type": "SitePage",
         "contentDigest": "aa8102f5b1cb4e5444756b34a2d4ba09",
         "description": "550302b4-0869-5470-ba60-649cd4f304a4",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /404.html": {
-      "jsonName": "404-html-516",
-      "internalComponentName": "Component404Html",
-      "path": "/404.html",
-      "component": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/404.js",
-      "componentChunkName": "component---src-pages-404-js",
-      "context": {},
-      "pluginCreator___NODE": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
-      "pluginCreatorId": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
-      "componentPath": "/Volumes/Data/DOCUMENTS/_htdocs/flowen.me/2019/v3/src/pages/404.js",
-      "id": "SitePage /404.html",
-      "parent": null,
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "85295f237e6127350c02de1f1c927c4d",
-        "description": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
         "owner": "internal-data-bridge"
       }
     }

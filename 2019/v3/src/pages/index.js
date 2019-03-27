@@ -7,8 +7,6 @@ import Services from '../components/s-services'
 import Outro from '../components/s-outro'
 import Gridlines from '../components/gridlines'
 
-import '../lib/polyfill-foreach'
-
 export default () => {
   return (
     <Layout>
