@@ -1,3 +1,5 @@
+import '../utils/welcomelog'
+
 import React from 'react'
 import Layout from '../templates/layout'
 import Intro from '../components/s-intro'
