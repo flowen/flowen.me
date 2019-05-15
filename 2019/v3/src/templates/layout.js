@@ -1,15 +1,15 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
-import { setConfig } from 'react-hot-loader';
-import CSSDBadge from '../components/CSSDBadge';
+import React from 'react'
+import Helmet from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
+import { setConfig } from 'react-hot-loader'
+import CSSDBadge from '../components/CSSDBadge'
 
-import twitterCard from '../assets/cards/twitter-card.png';
-import ogCard from '../assets/cards/og-card.png';
+import twitterCard from '../assets/cards/twitter-card.png'
+import ogCard from '../assets/cards/og-card.png'
 
-import '../scss/index.scss';
+import '../scss/index.scss'
 // for hot-reloader to work - https://github.com/gaearon/react-hot-loader/issues/1088
-setConfig({ pureSFC: true });
+setConfig({ pureSFC: true })
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -25,8 +25,8 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => {
-      const { siteUrl, title, description, keywords } = data.site.siteMetadata;
+    render={(data) => {
+      const { siteUrl, title, description, keywords } = data.site.siteMetadata
 
       return (
         <>
@@ -38,8 +38,12 @@ const Layout = ({ children }) => (
               { httpEquiv: 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
               { httpEquiv: 'cleartype', content: 'on' },
               {
+                name: 'p:domain_verify',
+                content: '8a3a8cd3775b367e1188759694dd83c8',
+              },
+              {
                 name: 'viewport',
-                content: 'width=device-width,initial-scale=1'
+                content: 'width=device-width,initial-scale=1',
               },
               { name: 'description', content: description },
               { name: 'keywords', content: keywords },
@@ -49,7 +53,7 @@ const Layout = ({ children }) => (
               { name: 'apple-mobile-web-app-capable', content: 'yes' },
               {
                 name: 'apple-mobile-web-app-status-bar-style',
-                content: 'white'
+                content: 'white',
               },
               { name: 'msapplication-TileColor', content: '#da532c' },
               { name: 'theme-color', content: '#ffffff' },
@@ -71,7 +75,7 @@ const Layout = ({ children }) => (
               { property: 'og:image:secure_url', content: siteUrl + ogCard },
               { property: 'og:image:alt', content: title },
               { property: 'og:site_name', content: title },
-              { property: 'og:type', content: 'website' }
+              { property: 'og:type', content: 'website' },
             ]}
           >
             <html lang="en" />
@@ -83,9 +87,9 @@ const Layout = ({ children }) => (
             <CSSDBadge />
           </footer>
         </>
-      );
+      )
     }}
   />
-);
+)
 
-export default Layout;
+export default Layout
