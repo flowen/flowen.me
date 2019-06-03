@@ -45,12 +45,74 @@ const ArticleProjects = () => {
       <ul className="projects__list">
         <li className="projects__listitem">
           <a
+            className="anchor anchor--hot js--hot"
+            href="https://mevish-aslam.netlify.com"
+            target="_blank"
+            rel="noopener noreferrer external"
+          >
+            Mevish Aslam portfolio website
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+          </a>
+        </li>
+        <li className="projects__listitem">
+          <a
+            className="anchor anchor--hot js--hot"
+            href="https://theatrejs-demo.netlify.com"
+            target="_blank"
+            rel="noopener noreferrer external"
+          >
+            Audiovisual demo for TheatreJS
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+          </a>
+        </li>
+        <li className="projects__listitem">
+          <a
             className="anchor"
             href="https://www.mirabeau.nl/"
             target="_blank"
             rel="noopener noreferrer external"
           >
-            mirabeau.nl
+            Studio Mirabeau website
           </a>
         </li>
         <li className="projects__listitem">
@@ -60,7 +122,7 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            huisartsenpensioen.nl
+            Huisartsen pensioen website
           </a>
         </li>
         <li className="projects__listitem">
@@ -70,7 +132,7 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            vvvcadeaubonnen.nl
+            VVV cadeaubonnen website
           </a>
         </li>
         <li className="projects__listitem">
@@ -80,7 +142,7 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            technoinasia.com
+            Techno in Asia website
           </a>
         </li>
         <li className="projects__listitem">
@@ -90,38 +152,7 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            shinbyeong.com
-          </a>
-        </li>
-        <li className="projects__listitem">
-          <a
-            className="anchor anchor--hot js--hot"
-            href="https://audiovisuals.netlify.com/015/"
-            target="_blank"
-            rel="noopener noreferrer external"
-          >
-            audiovisual experiments
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
+            Landingpage for the book Shinbyeong
           </a>
         </li>
       </ul>

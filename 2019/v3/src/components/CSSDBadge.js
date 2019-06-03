@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const CSSDBadge = () => (
   <a
@@ -44,7 +44,7 @@ const CSSDBadge = () => (
         />
       </svg>
 
-      <div class="cssda-badge-content">
+      <div className="cssda-badge-content">
         <svg id="cssda-badge-title" x="0px" y="0px" viewBox="0 0 90 90">
           <path
             d="M15.4,42.5l0,1.3l-2.8,0.7c-0.1,0-0.3,0.1-0.6,0.1c-0.3,0.1-0.5,0.1-0.6,0.1c0.1,0,0.3,0.1,0.6,0.1c0.3,0.1,0.5,0.1,0.6,0.1
@@ -120,6 +120,6 @@ const CSSDBadge = () => (
       </div>
     </div>
   </a>
-);
+)
 
-export default CSSDBadge;
+export default CSSDBadge

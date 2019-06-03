@@ -1,7 +1,7 @@
 {
   "name": "flowen-2019",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "portfolio website of creative developer Rou Hun Fan",
   "main": "index.js",
   "scripts": {
     "build": "gatsby build",
