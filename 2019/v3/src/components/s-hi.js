@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-import { TimelineLite, TweenLite } from 'gsap';
-import useIntersection from '../hooks/useIntersectionobserver';
-import { ease } from '../utils/ease';
-import logger from '../utils/logger';
+import React, { useEffect } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+import { TimelineLite, TweenLite } from 'gsap'
+import useIntersection from '../hooks/useIntersectionobserver'
+import { ease } from '../utils/ease'
+import logger from '../utils/logger'
 
-import Nr0 from './characters/0';
-import Nr1 from './characters/1';
-import Dot from './characters/dot';
-import DrawBoxLines from './drawBoxLines';
+import Nr0 from './characters/0'
+import Nr1 from './characters/1'
+import Dot from './characters/dot'
+import DrawBoxLines from './drawBoxLines'
 
 if (typeof window !== `undefined`) {
   // eslint-disable-next-line
-  require('../lib/DrawSVGPlugin.js');
+  require('../lib/DrawSVGPlugin.js')
 }
 
 const Hi = () => {
@@ -21,33 +21,33 @@ const Hi = () => {
     query {
       file(relativePath: { eq: "me.jpg" }) {
         childImageSharp {
-          fixed(width: 400, height: 400) {
+          fixed(width: 400, height: 400, quality: 80) {
             ...GatsbyImageSharpFixed
           }
         }
       }
     }
-  `);
+  `)
 
-  const TITLE = '.hi__article h1';
-  const PARAGRAPHS = '.hi__article p';
-  const IMG = '.hi__img';
+  const TITLE = '.hi__article h1'
+  const PARAGRAPHS = '.hi__article p'
+  const IMG = '.hi__img'
 
   useEffect(() => {
-    TweenLite.set(TITLE, { opacity: 0 });
-    TweenLite.set(PARAGRAPHS, { opacity: 0 });
-    TweenLite.set(IMG, { opacity: 0 });
-  }, []);
+    TweenLite.set(TITLE, { opacity: 0 })
+    TweenLite.set(PARAGRAPHS, { opacity: 0 })
+    TweenLite.set(IMG, { opacity: 0 })
+  }, [])
 
   const tl = new TimelineLite({
     paused: true,
     onComplete: () =>
       logger({
         category: 'Hi section',
-        action: 'User viewed section Hi'
-      })
-  });
-  const { observerEntry, elRef } = useIntersection({ threshold: 0.5 });
+        action: 'User viewed section Hi',
+      }),
+  })
+  const { observerEntry, elRef } = useIntersection({ threshold: 0.5 })
 
   if (observerEntry.isIntersecting) {
     tl.add('start', '0')
@@ -60,7 +60,7 @@ const Hi = () => {
       .to(TITLE, 0.5, { opacity: 1, ease }, 'textLabel')
       .staggerTo(PARAGRAPHS, 0.5, { opacity: 1, ease }, 0.1, 'textLabel')
       .to(IMG, 0.5, { opacity: 1, ease }, 'textLabel+=.5')
-      .play();
+      .play()
   }
 
   return (
@@ -121,13 +121,13 @@ const Hi = () => {
           className="hi__img"
           fadeIn={false}
           style={{
-            width: '100%'
+            width: '100%',
           }}
         />
         <DrawBoxLines />
       </figure>
     </section>
-  );
-};
+  )
+}
 
-export default Hi;
+export default Hi

@@ -1,7 +1,7 @@
 {
   "name": "flowen-2019",
   "version": "1.0.1",
-  "description": "portfolio website of creative developer Rou Hun Fan",
+  "description": "Freelance creative developer and designer, Rou Hun Fan, working remotely for international clients",
   "main": "index.js",
   "scripts": {
     "build": "gatsby build",
@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "autoprefix": "^1.0.1",
     "autoprefixer": "^9.5.1",
     "css-mqpacker": "^7.0.0",
     "gatsby": "2.8.2",

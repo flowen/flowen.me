@@ -57,7 +57,14 @@ module.exports = {
         path: `${__dirname}/src/assets/img/`,
       },
     },
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 80,
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-sharp`,
