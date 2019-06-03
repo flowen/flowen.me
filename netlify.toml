@@ -11,7 +11,7 @@
 [build]
   base = "2019/v3"
   publish = "2019/v3/public"
-  command = "npm run build"
+  command = "yarn build"
 
 
 # Production context: All deploys to the main
@@ -34,7 +34,6 @@
 # Specific branch context: Deploys from this branch
 # will take these settings and override their
 # current ones.
-[context.v1]
-  base = "2019/v1"
-  publish = "2019/v1/public"
-  command = "npm run build"
+[context.develop]
+  base = "2019/develop"
+  command = "yarn build"
