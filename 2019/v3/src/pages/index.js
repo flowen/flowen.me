@@ -1,12 +1,12 @@
 import '../utils/welcomelog'
 
 import React from 'react'
-import Layout from '../templates/layout'
-import Intro from '../components/s-intro'
-import CTA from '../components/s-cta'
-import Hi from '../components/s-hi'
-import Services from '../components/s-services'
-import Outro from '../components/s-outro'
+import Layout from '../components/layout'
+import Intro from '../components/section-intro'
+import CTA from '../components/section-cta'
+import Hi from '../components/section-hi'
+import Services from '../components/section-services'
+import Outro from '../components/section-outro'
 import Gridlines from '../components/gridlines'
 
 export default () => {
