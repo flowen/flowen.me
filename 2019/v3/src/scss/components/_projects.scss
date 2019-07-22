@@ -55,9 +55,13 @@
     }
   }
 
-  .anchor--hot {
-    overflow: hidden;
-    background: none;
+  .anchor {
     white-space: nowrap;
+
+    &--hot {
+      overflow: hidden;
+      background: none;
+      white-space: nowrap;
+    }
   }
 }

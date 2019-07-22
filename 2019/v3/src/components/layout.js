@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { setConfig } from 'react-hot-loader'
-import CSSDBadge from '../components/CSSDBadge'
+// import CSSDBadge from '../components/CSSDBadge'
 
 import twitterCard from '../assets/cards/twitter-card.png'
 import ogCard from '../assets/cards/og-card.png'
@@ -83,9 +83,7 @@ const Layout = ({ children }) => (
 
           <main className="layout">{children}</main>
 
-          <footer className="footer">
-            <CSSDBadge />
-          </footer>
+          <footer className="footer">{/* <CSSDBadge /> */}</footer>
         </>
       )
     }}
