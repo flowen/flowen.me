@@ -45,6 +45,37 @@ const ArticleProjects = () => {
       <ul className="projects__list">
         <li className="projects__listitem">
           <a
+            className="anchor"
+            href="https://principlesofwealth.net"
+            target="_blank"
+            rel="noopener noreferrer external"
+          >
+            Principles of wealth
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+          </a>
+        </li>
+        <li className="projects__listitem">
+          <a
             className="anchor anchor--hot js--hot"
             href="https://mevish-aslam.netlify.com"
             target="_blank"
@@ -113,6 +144,27 @@ const ArticleProjects = () => {
             rel="noopener noreferrer external"
           >
             Studio Mirabeau website
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
           </a>
         </li>
         <li className="projects__listitem">
@@ -135,31 +187,16 @@ const ArticleProjects = () => {
             VVV cadeaubonnen website
           </a>
         </li>
-        <li className="projects__listitem">
-          <a
-            className="anchor"
-            href="https://technoinasia.com"
-            target="_blank"
-            rel="noopener noreferrer external"
-          >
-            Techno in Asia website
-          </a>
-        </li>
-        <li className="projects__listitem">
-          <a
-            className="anchor"
-            href="https://shinbyeong.com"
-            target="_blank"
-            rel="noopener noreferrer external"
-          >
-            Landingpage for the book Shinbyeong
-          </a>
-        </li>
       </ul>
 
       <p>
         I work with agile, remote and waterfall methods. Sprints, estimation (of
         stories) and managing junior developers are part of my experience.
+      </p>
+
+      <p>
+        I also work with a group of freelancers and can help fulfill your
+        business goals and needs
       </p>
     </article>
   )

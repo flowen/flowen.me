@@ -79,13 +79,12 @@ const Hi = () => {
           </span>
         </p>
         <p>
-          I'm currently travelling throughout Europe and Asia while working
-          remotely with clients.
+          I work remotely with international clients from all over the world.
+          And can usually be found in Europe or Asia.
         </p>
 
         <p>
-          In the Netherlands I've worked with some of the top digital agencies
-          such as{' '}
+          I've worked with some of the top digital agencies such as{' '}
           <a
             className="anchor"
             href="https://www.valtech.nl/"
@@ -107,8 +106,21 @@ const Hi = () => {
         </p>
 
         <p>
-          I love typography, graphic design and animation and mix them
-          creatively with my technical skills as a developer.
+          As a developer I love typography, design, 3d and animation. I also
+          love collaborating with others.
+        </p>
+
+        <p>
+          I've written{' '}
+          <a
+            className="anchor anchor--underlined"
+            href="https://shinbyeong.com"
+            target="_blank"
+            rel="noopener noreferrer external"
+          >
+            a book
+          </a>{' '}
+          once .
         </p>
 
         <DrawBoxLines />

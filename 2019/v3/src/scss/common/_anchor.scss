@@ -26,4 +26,14 @@
   &:hover::before {
     transform: translateX(0);
   }
+
+  &--underlined {
+    &::before {
+      transform: translateX(0);
+    }
+
+    &:hover::before {
+      transform: translateX(-101%);
+    }
+  }
 }
