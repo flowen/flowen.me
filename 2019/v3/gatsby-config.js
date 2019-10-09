@@ -27,7 +27,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-polyfill-io`,
-    'gatsby-plugin-offline', // MUST be after the manifest plugin
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -66,13 +65,6 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        useMozJpeg: true,
-        stripMetadata: true,
-      },
-    },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
