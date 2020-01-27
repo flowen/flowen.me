@@ -46,7 +46,38 @@ const ArticleProjects = () => {
         <li className="projects__listitem">
           <a
             className="anchor anchor--hot js--hot"
-            href="https://mevish-aslam.netlify.com"
+            href="https://problem.studio/"
+            target="_blank"
+            rel="noopener noreferrer external"
+          >
+            Problem Studio
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+          </a>
+        </li>
+        <li className="projects__listitem">
+          <a
+            className="anchor anchor--hot js--hot"
+            href="https://mevishaslam.com/"
             target="_blank"
             rel="noopener noreferrer external"
           >
@@ -76,33 +107,12 @@ const ArticleProjects = () => {
         </li>
         <li className="projects__listitem">
           <a
-            className="anchor anchor--hot js--hot"
+            className="anchor"
             href="https://theatrejs-demo.netlify.com"
             target="_blank"
             rel="noopener noreferrer external"
           >
             Audiovisual demo for TheatreJS
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
           </a>
         </li>
         <li className="projects__listitem">
@@ -138,28 +148,23 @@ const ArticleProjects = () => {
         <li className="projects__listitem">
           <a
             className="anchor"
-            href="https://technoinasia.com"
-            target="_blank"
-            rel="noopener noreferrer external"
-          >
-            Techno in Asia website
-          </a>
-        </li>
-        <li className="projects__listitem">
-          <a
-            className="anchor"
             href="https://shinbyeong.com"
             target="_blank"
             rel="noopener noreferrer external"
           >
-            Landingpage for the book Shinbyeong
+            Oh yea I wrote a fiction book once
           </a>
         </li>
       </ul>
 
       <p>
-        I work with agile, remote and waterfall methods. Sprints, estimation (of
-        stories) and managing junior developers are part of my experience.
+        I've worked with agile, remote and waterfall methods. Sprints,
+        estimation of stories and project managing a small team including junior
+        developers are part of my experience.
+        <br /> <br />
+        My favorite approach to doing project management is a Kanban style. I
+        keep it simple and minimal. For larger projects obviously some form for
+        sprints are required.
       </p>
     </article>
   )

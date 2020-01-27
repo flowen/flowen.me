@@ -27,7 +27,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-polyfill-io`,
-    'gatsby-plugin-offline', // MUST be after the manifest plugin
+    // 'gatsby-plugin-offline', // MUST be after the manifest plugin
     {
       resolve: `gatsby-plugin-sass`,
       options: {
