@@ -30,12 +30,18 @@ const ArticleWhatIDo = () => {
 
   return (
     <article className="article article--what-i-do what-i-do" ref={elRef}>
-      <h1>What can I do for you?</h1>
+      <h1>
+        What can I do <br />
+        for you?
+      </h1>
 
       <p>
-        Do you need a performant and accessible websites?
+        Do you need a performant and accessible website?
         <br />
-        Are you looking for beautiful, modern user interfaces (UI) ?
+        <br />
+        Are you looking for someone to create beautiful, modern user interfaces
+        (UI) ?
+        <br />
         <br />
         Or use micro-interactions, 3d or animation to spice up the experience of
         your website?
