@@ -81,7 +81,7 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            Mevish Aslam portfolio website
+            Mevish Aslam Business coach
             <span
               className="emoji emoji--fire"
               role="img"
@@ -112,7 +112,7 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            Audiovisual demo for TheatreJS
+            Audiovisual animation for TheatreJS
           </a>
         </li>
         <li className="projects__listitem">
@@ -122,7 +122,7 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            Studio Mirabeau website
+            Studio Mirabeau
           </a>
         </li>
         <li className="projects__listitem">
@@ -132,7 +132,7 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            Huisartsen pensioen website
+            Huisartsen pensioen
           </a>
         </li>
         <li className="projects__listitem">
@@ -142,7 +142,7 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            VVV cadeaubonnen website
+            VVV cadeaubonnen
           </a>
         </li>
         <li className="projects__listitem">

@@ -46,29 +46,12 @@ const ArticleWhatIDo = () => {
       </p>
 
       <p>
-        Consultance for your current UI/UX project? Need answers for design or
-        accessibility questions? Or even someone that can manage a small team
-        while designing and coding?
-        <br />
-        <br />
         You're in luck{' '}
         <span className="emoji" role="img" aria-label="party face">
           {' '}
           🥳
         </span>{' '}
         that's exactly what I can help you with.
-      </p>
-
-      <p>
-        People call me a patient and clear communicator
-        <span
-          className="emoji emoji--hands-up"
-          role="img"
-          aria-label="exclamate"
-        >
-          {' '}
-          🙌
-        </span>
       </p>
     </article>
   )
