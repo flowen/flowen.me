@@ -30,20 +30,33 @@ const ArticleWhatIDo = () => {
 
   return (
     <article className="article article--what-i-do what-i-do" ref={elRef}>
-      <h1>What I do</h1>
+      <h1>What can I do for you?</h1>
 
       <p>
-        I create performant and accessible websites with beautiful and modern
-        user interfaces (UI).
-        <br />I love micro-interactions, three.js and animation.
+        Do you need a performant and accessible websites?
         <br />
-        I'm comfortable working in a lot of different environments: React, Vue,
-        Gatsby, Wordpress, Sitecore, Episerver, etc.
+        Are you looking for beautiful, modern user interfaces (UI) ?
+        <br />
+        Or use micro-interactions, 3d or animation to spice up the experience of
+        your website?
+        <br />
+        <br />
+        Or perhaps need a experienced front-end developer in your team who can
+        wiggle with both the code and design?
       </p>
 
       <p>
-        I also consult on UI/UX, designs and accessibility and can project
-        manage small teams.
+        Consultance for your current UI/UX project? Need answers for design or
+        accessibility questions? Or even someone that can manage a small team
+        while designing and coding?
+        <br />
+        <br />
+        You're in luck{' '}
+        <span className="emoji" role="img" aria-label="party face">
+          {' '}
+          🥳
+        </span>{' '}
+        that's exactly what I can help you with.
       </p>
 
       <p>
