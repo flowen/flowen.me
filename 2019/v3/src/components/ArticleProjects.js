@@ -77,11 +77,11 @@ const ArticleProjects = () => {
         <li className="projects__listitem">
           <a
             className="anchor anchor--hot js--hot"
-            href="https://mevish-aslam.netlify.com"
+            href="https://problem.studio/"
             target="_blank"
             rel="noopener noreferrer external"
           >
-            Mevish Aslam portfolio website
+            Problem Studio
             <span
               className="emoji emoji--fire"
               role="img"
@@ -108,32 +108,42 @@ const ArticleProjects = () => {
         <li className="projects__listitem">
           <a
             className="anchor anchor--hot js--hot"
+            href="https://mevishaslam.com/"
+            target="_blank"
+            rel="noopener noreferrer external"
+          >
+            Mevish Aslam Business coach
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+            <span
+              className="emoji emoji--fire"
+              role="img"
+              aria-label="hot hot hot"
+            >
+              🔥
+            </span>
+          </a>
+        </li>
+        <li className="projects__listitem">
+          <a
+            className="anchor"
             href="https://theatrejs-demo.netlify.com"
             target="_blank"
             rel="noopener noreferrer external"
           >
-            Audiovisual demo for TheatreJS
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
+            Audiovisual animation for TheatreJS
           </a>
         </li>
         <li className="projects__listitem">
@@ -143,28 +153,7 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            Studio Mirabeau website
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
+            Studio Mirabeau
           </a>
         </li>
         <li className="projects__listitem">
@@ -174,7 +163,7 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            Huisartsen pensioen website
+            Huisartsen pensioen
           </a>
         </li>
         <li className="projects__listitem">
@@ -184,14 +173,29 @@ const ArticleProjects = () => {
             target="_blank"
             rel="noopener noreferrer external"
           >
-            VVV cadeaubonnen website
+            VVV cadeaubonnen
+          </a>
+        </li>
+        <li className="projects__listitem">
+          <a
+            className="anchor"
+            href="https://shinbyeong.com"
+            target="_blank"
+            rel="noopener noreferrer external"
+          >
+            Oh yea I wrote a fiction book once
           </a>
         </li>
       </ul>
 
       <p>
-        I work with agile, remote and waterfall methods. Sprints, estimation (of
-        stories) and managing junior developers are part of my experience.
+        I've worked with agile, remote and waterfall methods. Sprints,
+        estimation of stories and project managing a small team including junior
+        developers are part of my experience.
+        <br /> <br />
+        My favorite approach to doing project management is a Kanban style. I
+        keep it simple and minimal. For larger projects obviously some form for
+        sprints are required.
       </p>
 
       <p>

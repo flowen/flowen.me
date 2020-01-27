@@ -79,8 +79,8 @@ const Hi = () => {
           </span>
         </p>
         <p>
-          I work remotely with international clients from all over the world.
-          And can usually be found in Europe or Asia.
+          I travel between Europe and Asia while succesfully remotely working
+          with clients.
         </p>
 
         <p>
@@ -106,21 +106,8 @@ const Hi = () => {
         </p>
 
         <p>
-          As a developer I love typography, design, 3d and animation. I also
-          love collaborating with others.
-        </p>
-
-        <p>
-          I've written{' '}
-          <a
-            className="anchor anchor--underlined"
-            href="https://shinbyeong.com"
-            target="_blank"
-            rel="noopener noreferrer external"
-          >
-            a book
-          </a>{' '}
-          once .
+          I love Interactivity, animation &amp; design and mix them creatively
+          with my technical skills as a front-end developer.
         </p>
 
         <DrawBoxLines />
