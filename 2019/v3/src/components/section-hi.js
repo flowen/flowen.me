@@ -79,8 +79,23 @@ const Hi = () => {
           </span>
         </p>
         <p>
-          I travel between Europe and Asia while succesfully remotely working
-          with clients.
+          I love{' '}
+          <span className="emoji emoji--peace" role="img" aria-label="mountain">
+            🏔
+          </span>{' '}
+          mountains,{' '}
+          <span className="emoji emoji--peace" role="img" aria-label="coffee">
+            ☕️
+          </span>{' '}
+          coffee and{' '}
+          <span
+            className="emoji emoji--peace"
+            role="img"
+            aria-label="bouldering"
+          >
+            🧗‍♀️
+          </span>{' '}
+          bouldering.
         </p>
 
         <p>
@@ -106,7 +121,7 @@ const Hi = () => {
         </p>
 
         <p>
-          I love Interactivity, animation &amp; design and mix them creatively
+          I love interactivity, animation &amp; design and mix them creatively
           with my technical skills as a front-end developer.
         </p>
 

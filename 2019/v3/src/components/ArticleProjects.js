@@ -189,18 +189,12 @@ const ArticleProjects = () => {
       </ul>
 
       <p>
-        I've worked with agile, remote and waterfall methods. Sprints,
-        estimation of stories and project managing a small team including junior
-        developers are part of my experience.
+        I've worked with agile, remote and waterfall methods. Sprints, story
+        estimation and project managing a small team including junior developers
+        are part of my experience.
         <br /> <br />
-        My favorite approach to doing project management is a Kanban style. I
-        keep it simple and minimal. For larger projects obviously some form for
-        sprints are required.
-      </p>
-
-      <p>
-        I also work with a group of freelancers and can help fulfill your
-        business goals and needs
+        As a senior developer I also lead projects and can help managing small
+        to mid-size projects.
       </p>
     </article>
   )

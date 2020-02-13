@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
-import { TweenLite, TimelineLite } from 'gsap';
-import { ease } from '../utils/ease';
-import useIntersection from '../hooks/useIntersectionobserver';
-import logger from '../utils/logger';
+import React, { useEffect } from 'react'
+import { TweenLite, TimelineLite } from 'gsap'
+import { ease } from '../utils/ease'
+import useIntersection from '../hooks/useIntersectionobserver'
+import logger from '../utils/logger'
 
-import Nr0 from './characters/0';
-import Nr3 from './characters/3';
-import Dot from './characters/dot';
-import Gridlines from './gridlines';
+import Nr0 from './characters/0'
+import Nr3 from './characters/3'
+import Dot from './characters/dot'
+import Gridlines from './gridlines'
 
 if (typeof window !== `undefined`) {
   // eslint-disable-next-line
-  require('../lib/DrawSVGPlugin.js');
+  require('../lib/DrawSVGPlugin.js')
 }
 
 const Outro = () => {
@@ -20,23 +20,23 @@ const Outro = () => {
     onComplete: () =>
       logger({
         category: 'Outro section',
-        action: 'User viewed section Outro'
-      })
-  });
-  const PARAGRAPH = '.outro__paragraph';
-  const ANCHOR = '.outro__anchor';
-  const EMOJI = '.emoji--point';
+        action: 'User viewed section Outro',
+      }),
+  })
+  const PARAGRAPH = '.outro__paragraph'
+  const ANCHOR = '.outro__anchor'
+  const EMOJI = '.emoji--point'
 
-  const { observerEntry, elRef } = useIntersection({ threshold: 0.5 });
+  const { observerEntry, elRef } = useIntersection({ threshold: 0.5 })
 
   useEffect(() => {
-    TweenLite.set(PARAGRAPH, { opacity: 0 });
-    TweenLite.set(ANCHOR, { opacity: 0 });
-    TweenLite.set(EMOJI, { opacity: 0 });
-  }, []);
+    TweenLite.set(PARAGRAPH, { opacity: 0 })
+    TweenLite.set(ANCHOR, { opacity: 0 })
+    TweenLite.set(EMOJI, { opacity: 0 })
+  }, [])
 
   if (observerEntry.isIntersecting) {
-    document.querySelector('.outro').setAttribute('data-visible', true);
+    document.querySelector('.outro').setAttribute('data-visible', true)
 
     tl.to('.outro .js--0', 0.5, { drawSVG: '0% 100%', ease })
       .to('.outro .js--3', 0.5, { drawSVG: '0% 100%', ease })
@@ -44,7 +44,7 @@ const Outro = () => {
       .to(PARAGRAPH, 0.5, { opacity: 1, ease })
       .to(ANCHOR, 0.5, { opacity: 1, ease })
       .to(EMOJI, 0.5, { opacity: 1, ease })
-      .play();
+      .play()
   }
 
   return (
@@ -57,8 +57,7 @@ const Outro = () => {
 
       <article className="outro__article">
         <p className="outro__paragraph">
-          I am available for remote development, design and consulting gigs -
-          big and small.
+          Let me solve your design, front-end or other web-challenges
         </p>
         <span
           className="emoji emoji--point"
@@ -77,7 +76,7 @@ const Outro = () => {
 
       <Gridlines />
     </section>
-  );
-};
+  )
+}
 
-export default Outro;
+export default Outro
