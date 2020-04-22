@@ -33,20 +33,21 @@ const ArticleTools = () => {
       <h1 className="tools__title">Some of my favorite tools</h1>
 
       <ul className="tools__list">
-        <li className="tools__listitem">Javascript es6</li>
-        <li className="tools__listitem">React / Gatsby</li>
+        <li className="tools__listitem">Javascript</li>
+        <li className="tools__listitem">React</li>
+        <li className="tools__listitem">Gatsby</li>
         <li className="tools__listitem">SCSS</li>
+        <li className="tools__listitem">Utility first CSS</li>
         <li className="tools__listitem">SVG</li>
         <li className="tools__listitem">GSAP</li>
-        <li className="tools__listitem">three.js</li>
       </ul>
 
       <ul className="tools__list">
+        <li className="tools__listitem">VScode</li>
         <li className="tools__listitem">Figma</li>
         <li className="tools__listitem">Sketch</li>
         <li className="tools__listitem">Photoshop</li>
         <li className="tools__listitem">Illustrator</li>
-        <li className="tools__listitem">Invision Studio</li>
       </ul>
 
       <ul className="tools__list">

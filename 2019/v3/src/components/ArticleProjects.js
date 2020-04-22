@@ -169,16 +169,6 @@ const ArticleProjects = () => {
         <li className="projects__listitem">
           <a
             className="anchor"
-            href="https://vvvcadeaubonnen.nl/"
-            target="_blank"
-            rel="noopener noreferrer external"
-          >
-            VVV cadeaubonnen
-          </a>
-        </li>
-        <li className="projects__listitem">
-          <a
-            className="anchor"
             href="https://shinbyeong.com"
             target="_blank"
             rel="noopener noreferrer external"
