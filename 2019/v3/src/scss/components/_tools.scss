@@ -12,7 +12,12 @@
     margin: 0 1vh 3vh 0;
 
     @include tablet-portrait-up {
-      width: $col * 1.5;
+      width: $col * 2;
+      margin-right: 0;
     }
+  }
+
+  &__description {
+    max-width: $col * 6;
   }
 }

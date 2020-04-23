@@ -20,6 +20,7 @@
       margin-left: $col;
 
       @include tablet-portrait-up {
+        width: $col * 5;
         margin-left: $col * 3;
       }
     }
@@ -28,7 +29,6 @@
       margin-left: $col;
 
       @include tablet-portrait-up {
-        width: $col * 5;
         margin-left: $col * 2;
       }
     }

@@ -105,35 +105,25 @@ const ArticleProjects = () => {
             </span>
           </a>
         </li>
+        <li className="projects__listitem">Dashboard designs for Migros</li>
         <li className="projects__listitem">
           <a
-            className="anchor anchor--hot js--hot"
+            className="anchor"
+            href="http://nieuwe.jaarbeurs.nl/"
+            target="_blank"
+            rel="noopener noreferrer external"
+          >
+            Static frontpage for Jaarbeurs.nl
+          </a>
+        </li>
+        <li className="projects__listitem">
+          <a
+            className="anchor"
             href="https://mevishaslam.com/"
             target="_blank"
             rel="noopener noreferrer external"
           >
             Mevish Aslam Business coach
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
-            <span
-              className="emoji emoji--fire"
-              role="img"
-              aria-label="hot hot hot"
-            >
-              🔥
-            </span>
           </a>
         </li>
         <li className="projects__listitem">
@@ -178,7 +168,7 @@ const ArticleProjects = () => {
         </li>
       </ul>
 
-      <p>
+      <p class="projects__description">
         I've worked with agile, remote and waterfall methods. Sprints, story
         estimation and project managing a small team including junior developers
         are part of my experience.

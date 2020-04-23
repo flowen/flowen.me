@@ -1,6 +1,7 @@
 .projects {
   &__list {
     @extend %list-reset;
+    width: $col * 5;
     margin-bottom: 6vh;
 
     .emoji--fire {
@@ -55,6 +56,12 @@
     }
   }
 
+  &__listitem {
+    display: block;
+    margin: $sp-xs 0;
+    text-transform: uppercase;
+  }
+
   .anchor {
     white-space: nowrap;
 
@@ -63,5 +70,10 @@
       background: none;
       white-space: nowrap;
     }
+  }
+
+  &__description {
+    width: $col * 4;
+    margin-left: $col * 1;
   }
 }

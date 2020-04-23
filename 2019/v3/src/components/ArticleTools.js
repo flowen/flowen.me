@@ -33,13 +33,14 @@ const ArticleTools = () => {
       <h1 className="tools__title">Some of my favorite tools</h1>
 
       <ul className="tools__list">
-        <li className="tools__listitem">Javascript</li>
+        <li className="tools__listitem">Javascript ES6</li>
         <li className="tools__listitem">React</li>
         <li className="tools__listitem">Gatsby</li>
-        <li className="tools__listitem">SCSS</li>
-        <li className="tools__listitem">Utility first CSS</li>
-        <li className="tools__listitem">SVG</li>
         <li className="tools__listitem">GSAP</li>
+        <li className="tools__listitem">Styled components</li>
+        <li className="tools__listitem">SCSS</li>
+        <li className="tools__listitem">Tachyon</li>
+        <li className="tools__listitem">SVG</li>
       </ul>
 
       <ul className="tools__list">
@@ -55,6 +56,11 @@ const ArticleTools = () => {
         <li className="tools__listitem">GIT</li>
         <li className="tools__listitem">Notion</li>
       </ul>
+
+      <p className="tools__description">
+        * I don't work with Bootstrap. Have always done everything custom-made
+        with proper methodologies such as BEM, ITCSS, etc
+      </p>
     </article>
   )
 }

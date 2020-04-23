@@ -68,7 +68,10 @@ const Intro = () => {
           <N />
         </div>
 
-        <p className="occupation">Creative developer with great taste.</p>
+        <p className="occupation">
+          Fan of you!
+          <br /> &amp; front-end UI developer
+        </p>
       </div>
     </section>
   )
