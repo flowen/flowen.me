@@ -1,0 +1,22 @@
+{
+  "fonts": [
+    {
+      "src": "../../assets/fonts/rubik-regular.woff2"
+    },
+    {
+      "src": "../../assets/fonts/rubik-medium.woff2"
+    },
+    {
+      "src": "../../assets/fonts/rubik-bold.woff2"
+    },
+    {
+      "src": "../../assets/fonts/rubik-black.woff2"
+    },
+    {
+      "src": "../../assets/fonts/andale-mono.woff2"
+    },
+    {
+      "src": "../../assets/fonts/chronicledisplay-xlight.woff2"
+    }
+  ]
+}

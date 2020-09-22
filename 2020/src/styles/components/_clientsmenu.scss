@@ -1,0 +1,43 @@
+.clientsmenu {
+  position: relative;
+
+  .clients-list {
+    list-style: none;
+
+    .client-item {
+      text-align: center;
+    }
+
+    .client-name {
+      font-size: 80px;
+      margin-bottom: 0;
+      transform: translate3d(0, 100%, 0);
+      transition: transform $d-slow $ease-out;
+      color: $color-white;
+    }
+
+    .is-inview .client-name {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .poster {
+    $w: 600px;
+    $h: 300px;
+    pointer-events: none;
+    position: absolute;
+    left: -$w / 2;
+    top: -$h / 2;
+    width: $w;
+    height: $h;
+
+    &-image {
+      opacity: 0;
+      transition: opacity $d-slower $ease-out;
+
+      &.-current {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+---
+pagination:
+  data: clients
+  size: 1
+  alias: client
+permalink: = client.slug +".html"
+title: = client.name
+layout: "../_includes/layout/_client.pug"
+---
+
+block append variables
+  - siteTitle= client.slug
+

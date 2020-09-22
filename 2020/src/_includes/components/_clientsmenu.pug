@@ -1,0 +1,45 @@
+.clientsmenu
+  ul.clients-list
+    each client in clients
+      li.client-item(data-scroll="" data-scroll-offset="5%")
+        .mask
+          a.h1.client-name(href=client.slug +".html")= client.name
+
+    svg.poster(width="300" height="200" viewBox="0 0 300 200")
+      filter#distortionFilter
+        feTurbulence(
+          type="turbulence"
+          baseFrequency="0.07 0.01"
+          numOctaves="5"
+          seed="2"
+          stitchTiles="stitch"
+          result="noise"
+          x="0%"
+          y="0%"
+          width="100%"
+          height="100%")
+        feDisplacementMap(
+          in="SourceGraphic"
+          in2="noise"
+          scale="0"
+          xChannelSelector="R"
+          yChannelSelector="B"
+          x="0%"
+          y="0%"
+          width="100%"
+          height="100%"
+          filterUnits="userSpaceOnUse")
+
+      g(filter="url(#distortionFilter)")
+        each client in clients
+          image.poster-image(x="0" y="0" xlink:href=client.poster width="300" height="200")
+
+block append head
+  each client in clients
+    link(
+      rel="preload"
+      type="image/jpeg"
+      as="image"
+      href=client.poster
+      crossorigin="anonymous"
+    )
