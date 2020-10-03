@@ -1,19 +1,24 @@
+const htmlmin = require('html-minifier');
+
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats(["pug", "md", "css", "html", "yml"]);
+  eleventyConfig.setUseGitIgnore(false);
+  eleventyConfig.addWatchTarget('./_tmp/style.css');
+  eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './style.css' });
+  ``;
+  eleventyConfig.addShortcode('version', function () {
+    return String(Date.now());
+  });
 
-  eleventyConfig.addPassthroughCopy("src/assets");
-  eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("fonts");
-  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
+    if (process.env.ELEVENTY_PRODUCTION && outputPath && outputPath.endsWith('.html')) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
 
-  return {
-    dir: {
-      input: "src",
-      output: "dist",
-      data: "_data",
-    },
-    passthroughFileCopy: true,
-    // templateFormats: ["pug", "md", "css", "html", "yml"],
-    htmlTemplateEngine: "pug",
-  };
+    return content;
+  });
 };

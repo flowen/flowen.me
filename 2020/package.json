@@ -1,53 +1,13 @@
 {
-  "name": "interflow",
-  "version": "0.1.0",
-  "description": "An opinionated 11ty starter with modern tools, based on Deventy starter",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf dist",
-    "eleventy:default": "npx eleventy",
-    "eleventy:watch": "npx eleventy --watch",
-    "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
-    "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
-    "scripts:prod": "webpack --mode=production",
-    "scripts:dev": "webpack --mode=development",
-    "serve": "light-server -c .lightserverrc",
-    "develop": "npm-run-all clean styles:dev scripts:dev eleventy:default --parallel eleventy:watch serve --print-label",
-    "develop:debug": "DEBUG=* npm run develop",
-    "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label"
+    "develop": "eleventy --serve & postcss tailwind/tailwind.css --o _tmp/style.css --watch",
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss tailwind/tailwind.css --o _site/style.css"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/flowen/interflow.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/flowen/interflow/issues"
-  },
-  "homepage": "https://github.com/flowen/interflow#readme",
   "devDependencies": {
-    "light-server": "2.6.4"
-  },
-  "dependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@dogstudio/highway": "^2.2.1",
-    "acorn": "^7.1.1",
-    "autoprefixer": "^9.7.6",
-    "babel-loader": "^8.1.0",
-    "cssnano": "^4.1.10",
-    "cssnano-preset-advanced": "^4.0.7",
-    "cursor-position": "^1.0.1",
-    "fontfaceobserver": "^2.1.0",
-    "gsap": "file:gsap-bonus.tgz",
-    "locomotive-scroll": "^3.3.11",
-    "node-sass": "^4.14.0",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.9"
+    "@11ty/eleventy": "^0.11.0",
+    "html-minifier": "^4.0.0",
+    "postcss-clean": "^1.1.0",
+    "postcss-cli": "^7.1.2",
+    "tailwindcss": "^1.8.5"
   }
 }
