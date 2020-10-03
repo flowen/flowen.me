@@ -1,0 +1,147 @@
+/**
+ * Hide content
+ * {@link https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/}
+ */
+*[hidden] {
+  display: none !important;
+}
+
+/**
+ * Inheriting box sizing
+ * {@link https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/}
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  cursor: default;
+
+  &.is-loading {
+    cursor: wait;
+  }
+
+  &.has-scroll-smooth {
+    overflow: hidden;
+  }
+
+  &.has-scroll-dragging {
+    user-select: none;
+  }
+
+  &.has-scroll-lock {
+    overflow: hidden;
+    max-height: 100vh;
+  }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 1.7rem;
+  background-color: $color-dark;
+  color: $color-off-white;
+  scroll-behavior: smooth;
+
+  @include tablet-portrait-up {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .has-scroll-smooth & {
+    overflow: hidden;
+  }
+}
+
+/**
+ * Make the image auto resize to the max width of the boundary
+ */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+  color: $color-off-white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+}
+
+button {
+  @include button-reset;
+  color: $color-off-white;
+}
+
+nav {
+  ul,
+  ol {
+    @extend %list-reset;
+  }
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  @extend %list-reset;
+}
+
+/* Remove default margin */
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+figcaption {
+  font-style: italic;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

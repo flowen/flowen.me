@@ -1,0 +1,74 @@
+@import "../common";
+
+.home {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 200px;
+
+  .blackhole {
+    --radius: 300px;
+    position: relative;
+    margin: 0 auto 32px;
+    min-width: var(--radius);
+    min-height: var(--radius);
+    width: calc(100vw / 3);
+    height: calc(100vw / 3);
+    margin-top: calc(100vh / 3);
+    margin-bottom: calc(100vh / 3);
+
+    h1,
+    .circle-gradient {
+      position: absolute;
+      border-radius: 100%;
+      min-width: var(--radius);
+      min-height: var(--radius);
+      width: calc(100vw / 3);
+      height: calc(100vw / 3);
+    }
+
+    .circle-gradient {
+      --scale: 1.15;
+
+      position: absolute;
+      top: 2.5%;
+
+      min-width: calc(var(--radius) * var(--scale));
+      min-height: calc(var(--radius) * var(--scale));
+      width: calc(100vw / 3 * var(--scale));
+      height: calc(100vw / 3 * var(--scale));
+      background: var(--color);
+      background: radial-gradient(
+        circle,
+        var(--color) 0%,
+        rgba(0, 0, 0, 0) 60%
+      );
+
+      &.-green {
+        --color: #26bda0;
+        left: 0;
+      }
+
+      &.-purple {
+        --color: #8759f7;
+        left: -10%;
+      }
+    }
+
+    h1 {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      padding: 8px 12px;
+      background: $color-dark;
+      font-size: 40px;
+      font-weight: $fw-bold;
+      text-align: center;
+      color: $color-white;
+    }
+  }
+
+  .client-list {
+    position: relative;
+    top: 50px;
+  }
+}

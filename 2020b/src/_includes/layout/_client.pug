@@ -1,0 +1,41 @@
+extends _main.pug
+
+block main
+  main(class="client client-" + client.slug, data-router-view="client")
+    header
+      h1(data-number=client.number)= client.name
+      blockquote
+        q= client.quote
+        span.quotee= client.quotee
+      a.return(href="/clients") Back to projects
+
+    div.hero-container
+      img(src=client.hero, alt=client.name).hero
+      a.see-live(href=client.liveUrl target="_blank" rel="noopener noreferrer")
+
+    p= client.descr1
+
+    figure.laptop
+      img(src=client.figure1 alt=client.figure1Description)
+      figdescription= client.figure1Description
+
+    figure.laptop
+      img(src=client.figure2 alt=client.figure2Description)
+      figdescription= client.figure2Description
+
+    p= client.descr2
+
+    q.big-quote=quote2
+
+    img(src=client.img1)
+    img(src=client.img2)
+
+    h3=client.header3
+    p=client.descr3
+
+    figure.phone
+      img(src=client.figureSmall1)
+
+    figure.phone
+      img(src=client.figureSmall2)
+
