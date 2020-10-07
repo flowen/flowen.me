@@ -13,9 +13,11 @@
     <link rel="stylesheet" href="/style.css?v={% version %}"/>
     {% block head %}{% endblock %}
   </head>
-  <body>
+  <body class={{ bodyClass }}>
     {% block content %}
+      
       {{ content | safe }}
+      
     {% endblock %}
   </body>
 </html>

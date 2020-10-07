@@ -1,0 +1,23 @@
+@tailwind base;
+
+html,
+body {
+  @apply .bg-light;
+  height: 100%;
+}
+
+main {
+  min-height: 100%;
+  background: dark;
+}
+
+.frontpage header {
+  padding: 30vh 0;
+}
+
+.hd header {
+  @apply .p-64;
+}
+
+@tailwind components;
+@tailwind utilities;

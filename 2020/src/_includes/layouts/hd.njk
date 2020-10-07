@@ -1,0 +1,39 @@
+{% extends "./base.njk" %}
+
+{% set bodyClass = 'hd' %}
+
+{% block title %}Rou Hun's HD{% endblock %}
+
+{% block content %}
+
+  {% include '../components/header.njk' %}
+
+  <main class="bg-light">
+
+    <article>
+      <h1>
+        {{title}}
+      </h1>
+
+      {{ content | safe }}
+    </article>
+
+    <nav class="my-4">
+      {# Use breadcrumb and only render the last path, which is the parent #}
+      {% set path = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+      {% set parent = path | last %}
+
+      {% if parent %}
+        <a href="{{ parent.url }}">.. ☝️</a>
+      {% endif %}
+
+      <hr>
+      {# filter on current key and only show items 1 level deeper #}
+      {% set listing = collections.all | eleventyNavigation(eleventyNavigation.key) %}
+      {%- for item in listing %}
+        <a href="{{ item.url }}" class="block">{{ item.title }}</a>
+      {%- endfor %}
+    </nav>
+
+  </main>
+{% endblock %}
