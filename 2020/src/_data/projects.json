@@ -1,0 +1,123 @@
+{
+  "projects": [
+    {
+      "title": "Countme for Richner Stutz",
+      "excerpt": "Design (branding & prototype) + project management + testing + frontend(React, SCSS)",
+      "year": 2020,
+      "url": null,
+      "case-study-url": null
+    },
+    {
+      "title": "Backhub.co",
+      "excerpt": "frontend: port over existing jekyll templates into the Hubspot CMS and work on a small React App",
+      "year": 2020,
+      "url": "https://www.backhub.co/",
+      "case-study-url": null
+    },
+    {
+      "title": "",
+      "excerpt": "",
+      "year": 20,
+      "url": "https://",
+      "case-study-url": null
+    },
+    {
+      "title": "Guildconferences.com",
+      "excerpt": "Design + frontend (html, css, js) + wordpress theme",
+      "year": 2020,
+      "url": "https://guildconferences.com",
+      "case-study-url": null
+    },
+    {
+      "title": "Migros analytics",
+      "excerpt": "Design (branding, figma) + project management",
+      "year": 2019,
+      "url": null,
+      "case-study-url": null
+    },
+    {
+      "title": "Problem.studio",
+      "excerpt": "Design (branding, concept, figma) + project management + testing + frontend (React, gatsby, greensock, web-audio, SCSS)",
+      "year": 2019,
+      "url": "https://problem.studio",
+      "case-study-url": null
+    },
+    {
+      "title": "Testguild.com",
+      "excerpt": "Design (branding, concept, figma) + project management + frontend (wordpress, html, css, js)",
+      "year": 2019,
+      "url": "https://",
+      "case-study-url": null
+    },
+    {
+      "title": "Principles of wealth",
+      "excerpt": "Design (branding, concept, figma) + (copy-)writing + frontend (react, gatsby, animation, page-transitions, markdown)",
+      "year": 2019,
+      "url": "https://principlesofwealth.net",
+      "case-study-url": null
+    },
+    {
+      "title": "Mevish Aslam - Business coach",
+      "excerpt": "Design (branding, concept, figma) + frontend (react, gatsby, animation, canvas, web-audio)",
+      "year": 2019,
+      "url": "https://mevishaslam.com",
+      "case-study-url": null
+    },
+    {
+      "title": "Audioreactive visual demo for Theatre.js",
+      "excerpt": "Concept, design, frontend: three.js, web-audio, theatre.js library",
+      "year": 2019,
+      "url": "https://https://theatrejs-demo.netlify.app/",
+      "case-study-url": null
+    },
+    {
+      "title": "Mirabeau.nl",
+      "excerpt": "frontend: html templating, scss, javascript",
+      "year": 2018,
+      "url": "https://mirabeau.nl",
+      "case-study-url": null
+    },
+    {
+      "title": "Huisartsen pensioen",
+      "excerpt": "frontend: html templating, scss, javascript",
+      "year": 2018,
+      "url": "https://www.huisartsenpensioen.nl/",
+      "case-study-url": null
+    },
+    {
+      "title": "Audiovisual demo for the ‘looking glass factory’",
+      "excerpt": "Concept, design, frontend: three.js, web-audio, looking-glass API",
+      "year": 2018,
+      "url": "https://get-rekt-av.netlify.app/",
+      "case-study-url": null
+    },
+    {
+      "title": "Shinbyeong: fiction book",
+      "excerpt": "written the book :) frontend: react, gatsby, greensock, parallax",
+      "year": 2018,
+      "url": "https://shinbyeong.com",
+      "case-study-url": null
+    },
+    {
+      "title": "Sprint summit event website",
+      "excerpt": "frontend: nuxtjs, scss, greensock, web audio api",
+      "year": 2018,
+      "url": "https://sprint-summit-2018.netlify.app/",
+      "case-study-url": null
+    },
+    {
+      "title": "Audiovisual experiments",
+      "excerpt": "Small learning journey: frontend: three.js, webaudio api, animation",
+      "year": 2017,
+      "url": "https://audiovisuals.netlify.app/",
+      "case-study-url": null
+    },
+    {
+      "title": "Whitestone audiovisual contest - won! github instagram",
+      "excerpt": "Won a audioreactive-visuals contest - made with three.js, webaudio API",
+      "year": 2017,
+      "url": "https://medium.com/@flowen/bridging-the-gap-between-design-and-code-and-learn-three-js-in-less-than-4-days-f67d258244cb",
+      "case-study-url": null
+    }
+  ]
+}
