@@ -1,0 +1,87 @@
+{
+  "availability": "October 3days/week",
+  "projects": [
+    {
+      "title": "problem.studio",
+      "url": "https://problem.studio/"
+    },
+    {
+      "title": "principlesofwealth",
+      "url": "https://principlesofwealth.net/"
+    },
+    {
+      "title": "mevishaslam",
+      "url": "https://mevishaslam.com/"
+    },
+    {
+      "title": "theatrejs AV",
+      "url": "https://theatrejs-demo.netlify.app/"
+    },
+    {
+      "title": "mirabeau",
+      "url": "https://mirabeau.nl/"
+    },
+    {
+      "title": "huisartsenpensioen",
+      "url": "https://huisartsenpensioen.nl/"
+    },
+    {
+      "title": "shinbyeong",
+      "url": "https://shinbyeong.com/"
+    }
+  ],
+  "contact": [
+    {
+      "title": "twitter",
+      "url": "https://www.twitter.com/flowen_nl"
+    },
+    {
+      "title": "linkedIn",
+      "url": "https://linkedin/in/flowen"
+    },
+    {
+      "title": "telegram",
+      "url": "https://t.me/flowen "
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Rou Hun is a unicorn indeed. Armed with a startup mentality. Not only did he design our application, he assisted us at Richnerstutz by managing our team of developers, Manual frontend testing and occasionally jumped in the code & styles himself.",
+      "quotee": "Michael Freund, Lead innovation @ Richner Stutz",
+      "quotee-url": "https://richnerstutz.ch/"
+    },
+    {
+      "quote": "Rou Hun is a multi-skilled powerhouse. When I hire him to code the front-end I know I'm saving time on design instructions & decisions. There's no friction in collaboration and he adds extra value to our business and operations this way",
+      "quotee": "Daniel Heitz, Cofounder @ Gebrueders GEheitz",
+      "quotee-url": "http://dnlhtz.de/"
+    }
+  ],
+  "toolsMarquee": [
+    "Javascript",
+    "Vanilla",
+    "React",
+    "Gatsby",
+    "SCSS",
+    "Utility first",
+    "CSS",
+    "SVG",
+    "Greensock",
+    "VScode",
+    "Figma",
+    "Photoshop",
+    "Illustrator",
+    "Terminal",
+    "Git",
+    "frontend development",
+    "UI designing",
+    "UI Development",
+    "Interactivity",
+    "Animations",
+    "Project management",
+    "Agile",
+    "Jira",
+    "Trello",
+    "Kanban",
+    "and freestyling it into oblivion and wow did you watch this till the end? :)"
+  ]
+}
