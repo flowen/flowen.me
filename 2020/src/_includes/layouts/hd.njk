@@ -8,32 +8,40 @@
 
   {% include '../components/header.njk' %}
 
-  <main class="bg-light">
+  <main class="bg-light pt-32 pl-48">
 
-    <article>
-      <h1>
-        {{title}}
-      </h1>
+    <section>
+      <header></header>
 
-      {{ content | safe }}
-    </article>
+      <article>
+        <h1>
+          {{title}}
+        </h1>
 
-    <nav class="my-4">
-      {# Use breadcrumb and only render the last path, which is the parent #}
-      {% set path = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
-      {% set parent = path | last %}
+        {{ content | safe }}
+      </article>
 
-      {% if parent %}
-        <a href="{{ parent.url }}">.. ☝️</a>
-      {% endif %}
+      <footer>
+        <nav class="my-4">
+          {# Use breadcrumb and only render the last path, which is the parent #}
+          {% set path = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+          {% set parent = path | last %}
 
-      <hr>
-      {# filter on current key and only show items 1 level deeper #}
-      {% set listing = collections.all | eleventyNavigation(eleventyNavigation.key) %}
-      {%- for item in listing %}
-        <a href="{{ item.url }}" class="block">{{ item.title }}</a>
-      {%- endfor %}
-    </nav>
+          {% if parent %}
+            <a href="{{ parent.url }}">.. ☝️</a>
+          {% endif %}
+
+          <hr>
+          {# filter on current key and only show items 1 level deeper #}
+          {% set listing = collections.all | eleventyNavigation(eleventyNavigation.key) %}
+          {%- for item in listing %}
+            <a href="{{ item.url }}" class="block">{{ item.title }}</a>
+          {%- endfor %}
+        </nav>
+      </footer>
+    </section>
 
   </main>
+
+  {% include '../components/footer.njk' %}
 {% endblock %}
