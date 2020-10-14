@@ -15,10 +15,24 @@
       "case-study-url": null
     },
     {
+      "title": "Uprightlabs",
+      "excerpt": "frontend (gatsby, react, scss)",
+      "year": 2020,
+      "url": "https://www.uprightlabs.com/",
+      "case-study-url": null
+    },
+    {
       "title": "Guildconferences.com",
       "excerpt": "Design + frontend (html, css, js) + wordpress theme",
       "year": 2020,
       "url": "https://guildconferences.com",
+      "case-study-url": null
+    },
+    {
+      "title": "De nieuwe Jaarbeurs homepage",
+      "excerpt": "frontend (html, css, js, animations, parallax)",
+      "year": 2019,
+      "url": "http://nieuwe.jaarbeurs.nl/",
       "case-study-url": null
     },
     {
