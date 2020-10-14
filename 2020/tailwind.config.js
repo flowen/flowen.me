@@ -18,13 +18,14 @@ module.exports = {
         xl: '1280px',
       },
       fontFamily: {
-        display: ['NeueMetana', 'sans-serif'],
-        body: ['ReemKufi', 'sans-serif'],
+        display: ['NeueMetanaVariable', 'sans-serif'],
+        body: ['IsidoraAlt', 'sans-serif'],
       },
       colors: {
         transparent: 'transparent',
         dark: '#202020',
-        light: '#F8F6F0',
+        darkred: '#402832',
+        light: '#F9F9F8',
         gray: '#8C8B88',
       },
     },
