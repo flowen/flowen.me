@@ -32,27 +32,15 @@
 html,
 body {
   height: 100%;
+  font-size: 18px;
 }
 
 main {
-  /* min-height: 100%; */
+  min-height: 100%;
 }
 
-header h1 {
-  letter-spacing: 10vw;
-}
-
-.frontpage header {
-  @apply .py-64;
-}
-
-.hd header,
-footer {
-  @apply .py-16;
-}
-
-main {
-  max-width: 782px;
+h1 {
+  font-family: 'NeueMetanaVariable', sans-serif;
 }
 
 @tailwind components;

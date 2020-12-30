@@ -2,5 +2,5 @@
 title: 'Work'
 eleventyNavigation:
   key: Work
-  parent: HD
+  parent: Garden
 ---

@@ -18,8 +18,15 @@ module.exports = {
         xl: '1280px',
       },
       fontFamily: {
-        display: ['NeueMetanaVariable', 'sans-serif'],
+        heading: ['NeueMetanaVariable', 'sans-serif'],
         body: ['IsidoraAlt', 'sans-serif'],
+      },
+      fontSize: {
+        xs: '0.75rem',
+        sm: '0.875rem',
+        base: '1rem',
+        lg: '1.5rem',
+        xl: '2.25rem',
       },
       colors: {
         transparent: 'transparent',

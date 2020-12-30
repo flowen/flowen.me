@@ -1,5 +1,5 @@
 ---
-title: "Rouhun's HD"
+title: 'garden index'
 eleventyNavigation:
-  key: HD
+  key: Garden
 ---
