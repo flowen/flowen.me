@@ -1,0 +1,18 @@
+// must be first file to be included
+
+@font-face {
+  font-family: "NeueMetana-Regular";
+  src: local("NeueMetana-Regular"),
+    url("~assets/fonts/NeueMetana-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TulpenOne";
+  src: local("TulpenOne"), url("~assets/fonts/TulpenOne.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,133 @@
+/**
+ * Hide content
+ * {@link https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/}
+ */
+*[hidden] {
+  display: none !important;
+}
+
+/**
+ * Inheriting box sizing
+ * {@link https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/}
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  // -webkit-tap-highlight-color: transparent;
+  // cursor: default;
+}
+
+body {
+  background-color: var(--dark);
+  font-family: var(--font-base);
+  font-size: 16px;
+  line-height: (20/16);
+  text-transform: uppercase;
+  color: var(--off-white);
+}
+
+/**
+ * Make the image auto resize to the max width of the boundary
+ */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+  line-height: 1;
+  font-weight: 400;
+  color: var(--yellow);
+}
+
+h1 {
+  font-size: 46px;
+}
+
+h2,
+h3 {
+  font-size: 42px;
+}
+
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 20px; // same as base line-height
+}
+
+button {
+  @include button-reset;
+  color: var(--off-white);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+nav {
+  ul,
+  ol {
+    @extend %list-reset;
+  }
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  @extend %list-reset;
+}
+
+input,
+button,
+textarea,
+select {
+  font: var(--font-base);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
