@@ -1,0 +1,26 @@
+-
+  var nav = [
+    {
+      title: 'home',
+      href: '/'
+    },
+    {
+      title: 'about us',
+      href: '/about/'
+    },
+    {
+      title: 'contact',
+      href: '/contact/'
+    },
+    {
+      title: 'all html elements',
+      href: '/all-html-elements/'
+    }
+  ]
+
+nav.nav-main
+  ul
+    each item in nav
+      li
+        a(href=item.href)= item.title
+

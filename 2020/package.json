@@ -1,14 +1,59 @@
 {
+  "name": "interflow",
+  "version": "0.1.0",
+  "description": "An opinionated 11ty starter with modern tools, based on Deventy starter",
+  "main": "index.js",
   "scripts": {
-    "develop": "eleventy --serve & postcss src/styles/tailwind.css --o _tmp/style.css --watch",
-    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss src/styles/tailwind.css --o dist/style.css"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "eleventy:default": "npx eleventy",
+    "eleventy:watch": "npx eleventy --watch",
+    "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
+    "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
+    "scripts:prod": "webpack --mode=production",
+    "scripts:dev": "webpack --mode=development",
+    "serve": "light-server -c .lightserverrc",
+    "develop": "npm-run-all clean styles:dev scripts:dev eleventy:default --parallel eleventy:watch serve --print-label",
+    "develop:debug": "DEBUG=* npm run dev",
+    "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flowen/interflow.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flowen/interflow/issues"
+  },
+  "homepage": "https://github.com/flowen/interflow#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@11ty/eleventy-navigation": "^0.1.6",
-    "html-minifier": "^4.0.0",
-    "postcss-clean": "^1.1.0",
-    "postcss-cli": "^7.1.2",
-    "tailwindcss": "^1.8.5"
+    "light-server": "2.9.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@dogstudio/highway": "^2.1.3",
+    "acorn": "^8.0.4",
+    "autoprefixer": "^10.2.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "fontfaceobserver": "^2.1.0",
+    "gsap": "^3.1.1",
+    "locomotive-scroll": "^4.0.6",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.2.1",
+    "webpack": "^5.12.3",
+    "webpack-cli": "^4.3.1"
   }
 }

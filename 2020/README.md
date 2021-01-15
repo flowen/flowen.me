@@ -1,47 +1,54 @@
-# eleventy-tailwindcss-alpinejs-starter
+# interflow
 
-A starter repository showing how to build a website with the [Eleventy](https://www.11ty.dev), [Tailwind CSS](https://tailwindcss.com), and [Alpine.js](https://github.com/alpinejs/alpine).
+An opinionated 11ty starting point for building static websites with modern tools. 
+
+Based on [Deventy](https://github.com/ianrose/deventy) by @ianrose
+
+Features:
+- [11ty](https://www.11ty.io/)
+- [Sass/SCSS](https://github.com/sass/node-sass)
+- [Webpack](https://webpack.js.org/)
+- [Babel](https://babeljs.io/)
+- [light-server](https://github.com/txchen/light-server)
+- [PostCSS](https://postcss.org/)
+- [CSSnano](https://cssnano.co/)
+- [Autoprefixer](https://github.com/postcss/autoprefixer)
+
+Added:
+- Highwayjs
+- Locomotive-scroll
+- pug templates
+
 
 ## Getting Started
 
-### 1. Clone this Repository
+Install all dependencies using npm:
 
 ```
-git clone https://github.com/gregwolanski/eleventy-tailwindcss-alpinejs-starter.git my-website-name
+$ nvm use
+$ npm install
 ```
 
-### 2. Navigate to the directory
+### To Develop
 
 ```
-cd my-website-name
+$ npm run dev
+```
+ And in debug mode:
+ 
+```
+$ npm run dev:debug
 ```
 
-### 3. Install dependencies
-
+You can view the website at the given access URL:
 ```
-npm install
+$ light-server is listening at http://localhost:4000
 ```
 
-### 4. Build the project to generate the first CSS
+The local url is configured in `.lightserverrc`
 
-This step is only required the very first time.
+### To Build
 
 ```
 npm run build
 ```
-
-### 5. Run Eleventy
-
-```
-npm run start
-```
-
-## Author
-
-[Greg Wolanski](https://gregwolanski.com)
-
-## License
-
-MIT
-
-See `LICENSE` for more information.
