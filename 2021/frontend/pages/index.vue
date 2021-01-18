@@ -1,10 +1,10 @@
 <template>
   <main class="main">
     <Intro />
-    <Testimonials />
+    <!-- <Testimonials />
     <SalesCopy />
     <Projects />
-    <ContactHero />
+    <ContactHero /> -->
   </main>
 </template>
 
@@ -22,12 +22,26 @@ export default {
     Testimonials,
     SalesCopy,
     Projects
+  },
+  beforeMount() {
+    document.documentElement.addEventListener("mousemove", this.mousePos);
+    window.addEventListener("resize", this.handleResize);
+    this.handleResize();
+  },
+  beforeDestroy() {
+    document.documentElement.removeEventListener("mousemove", this.mousePos);
+  },
+  methods: {
+    mousePos(e) {
+      document.documentElement.style.setProperty("--mx", e.clientX + "px");
+      document.documentElement.style.setProperty("--my", e.clientY + "px");
+    },
+    handleResize() {
+      document.documentElement.style.setProperty("--ww", `${window.innerWidth}px`);
+      document.documentElement.style.setProperty("--wh", `${window.innerHeight}px`);
+    }
   }
 };
 </script>
 
-<style lang="scss" scoped>
-.main {
-  min-height: 100%;
-}
-</style>
+<style lang="scss" scoped></style>

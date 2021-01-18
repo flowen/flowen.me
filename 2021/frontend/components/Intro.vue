@@ -2,14 +2,17 @@
   <section class="intro">
     <div class="logo">
       <h1>R&ndash;H&ndash;F</h1>
-      <a href="mailto:b34ff8ed-85b6-49ff-877f-c72d181b4396@flowen.anonaddy.me"
-        >E-mail</a
-      >
-      <a href="https://twitter.com/flowen_nl">twitter</a>
+      <nav class="nav">
+        <a href="mailto:b34ff8ed-85b6-49ff-877f-c72d181b4396@flowen.anonaddy.me">E-mail</a>
+        <a href="https://twitter.com/flowen_nl">Twitter</a>
+        <a href="https://t.me/flowen">Telegram</a>
+        <a href="/projects/">Projects</a>
+        <a href="/blog/">Blog</a>
+      </nav>
     </div>
 
     <p class="about h1">
-      ROUHUN FAN <small>works as a</small> <br />
+      RouHun Fan <small>works as a</small> <br />
       Freelance developer <small>specialized in </small> <br />
       Frontend - Animation - Interaction <br />
       and loves to work with agencies, studios <small>anywhere</small><br />
@@ -21,7 +24,7 @@
     <figure class="climbing">
       <img src="~assets/img/climbing.jpg" alt="Climbing" />
 
-      <figcaption>
+      <figcaption class="speakin">
         Hi
       </figcaption>
     </figure>
@@ -34,15 +37,26 @@
 import FanStamp from "@/components/FanStamp.vue";
 
 export default {
-  components: { FanStamp }
+  components: { FanStamp },
+  data() {
+    return {
+      chats: ["hi", "Always reaching for the top", "yo", "climb w me", "its lonely at the top"]
+    };
+  },
+  created() {
+    // use gsap text plugin to animate per character for the chats array
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .intro {
+  --margin: 2.5vw;
   position: relative;
-  margin: 10px 10px 30vh;
-  min-height: 98vh;
+  margin: var(--margin);
+  height: calc(var(--wh) - var(--margin) * 2);
+  display: flex;
+  justify-content: center;
 
   > * {
     position: absolute;
@@ -66,11 +80,17 @@ export default {
 }
 
 .logo {
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: var(--margin);
+  right: var(--margin);
   display: flex;
   flex-direction: column;
   text-align: right;
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
 
   h1 {
     -webkit-text-fill-color: transparent;
@@ -88,6 +108,11 @@ export default {
   }
 }
 
+.fan-stamp {
+  right: 0;
+  bottom: 0;
+}
+
 .about {
   z-index: z("intro-about");
   left: 0;
@@ -95,22 +120,31 @@ export default {
   margin-bottom: 0;
 }
 
-.availability h1 {
-  position: absolute;
-  font-family: var(--font-title);
-  color: var(--yellow);
+.availability {
+  top: 0;
+  left: 0;
+  h1 {
+    font-family: var(--font-title);
+    color: var(--yellow);
+  }
 }
 
 .climbing {
   z-index: z("intro-climbing");
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, 0);
+  position: relative;
+  max-width: 50%;
+  margin-top: 10%;
 
-  .figcaption {
-    top: 50%;
+  img {
+    transform: rotate(-7deg);
+  }
+
+  figcaption {
+    position: absolute;
+    top: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
+    color: var(--magenta);
   }
 }
 </style>
