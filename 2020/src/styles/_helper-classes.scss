@@ -1,0 +1,27 @@
+button.button,
+a.button {
+  display: inline-flex;
+  padding: 18px 19px 17px;
+  border: 1px solid var(--off-white);
+  color: var(--off-white);
+  text-decoration: none;
+
+  &::after {
+    content: url("~assets/img/arrow.svg");
+    display: inline-block;
+    margin: 0 0 0 10px;
+    transform: rotate(-90deg);
+  }
+}
+
+.hide-mobile {
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.hide-desktop {
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}

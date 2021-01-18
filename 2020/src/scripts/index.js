@@ -1,3 +1,3 @@
-import "./utils/fontfaceobserver";
+// import "./utils/fontfaceobserver";
 
 import "./highway/Core";

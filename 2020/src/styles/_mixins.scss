@@ -16,9 +16,15 @@
 * bg-color: CSS variable (see _vars.scss)
 * dot-color: CSS variable (see _vars.scss)
 */
-@mixin dotsBackground($dot-size: 12px, $bg-color: red, $dot-color: off-white) {
+@mixin dotsBackground(
+  $dot-size: 12px,
+  // $dot-space: 50px,
+  $bg-color: red,
+  $dot-color: off-white
+) {
   background-image: radial-gradient(var(--$dot-color) 10%, transparent 0%);
   background-color: var(--$bg-color);
+  // background-position: 0 0, $dot-space $dot-space;
   background-size: $dot-size $dot-size;
 }
 
@@ -76,9 +82,7 @@
  }
 */
 $z-layers: (
-  "intro-climbing": 10,
-  "intro-about": 20,
-  "on-top": 9999
+  "on-top": 9999,
 );
 
 // get z-index from z-layers

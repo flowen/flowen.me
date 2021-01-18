@@ -1,27 +1,33 @@
 <template>
   <main class="main">
-    <Header />
-    <Footer />
+    <Intro />
+    <Testimonials />
+    <SalesCopy />
+    <Projects />
+    <ContactHero />
   </main>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
+import Intro from "@/components/Intro.vue";
+import Testimonials from "@/components/Testimonials.vue";
+import SalesCopy from "@/components/SalesCopy.vue";
+import Projects from "@/components/Projects.vue";
+import ContactHero from "@/components/ContactHero.vue";
 
 export default {
   components: {
-    Header,
-    Footer
+    Intro,
+    ContactHero,
+    Testimonials,
+    SalesCopy,
+    Projects
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .main {
-  @media only screen and (min-width: 1200px) {
-    position: relative;
-    width: 50%;
-  }
+  min-height: 100%;
 }
 </style>
