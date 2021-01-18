@@ -3,7 +3,7 @@ const PROJECT_TITLE = "RH Fan 2021";
 const PROJECT_DESCRIPTION = "description";
 const PROJECT_KEYWORDS = "keywords";
 const PROJECT_DOMAIN = "https://rouhun.fan";
-const GA_ID = "";
+// const GA_ID = "";
 
 export default {
   target: "static",
@@ -86,7 +86,7 @@ export default {
     ],
     script: [
       {
-        src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
+        // src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
       }
     ],
     link: [
@@ -180,11 +180,11 @@ export default {
    ** Plugins to load before mounting the App
    */
   env: {
-    GA_ID
+    // GA_ID
   },
   plugins: [
     // "~/plugins/vue-analytics.js",
-    { src: "~plugins/vue-scroll-lock.js", ssr: false }
+    // { src: "~plugins/vue-scroll-lock.js", ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -194,9 +194,9 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    "@nuxtjs/device",
-    "@nuxtjs/axios",
-    "cookie-universal-nuxt"
+    // "@nuxtjs/device",
+    // "@nuxtjs/axios",
+    // "cookie-universal-nuxt"
     // "nuxt-stripe-module"
   ],
   /*

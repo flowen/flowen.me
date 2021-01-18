@@ -26,7 +26,6 @@ export default {
   flex-wrap: wrap;
   padding: 4px 5px;
   border: 1px solid var(--dark-grey);
-  border-color: #fff;
 
   .fan {
     width: 50%;
