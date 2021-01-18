@@ -1,5 +1,5 @@
 :root {
-  /* colors  */
+  /* colors */
   --yellow: #f0f26a;
   --magenta: #e82f5c;
   --pink: #ffa8a8;
@@ -7,10 +7,10 @@
   --dark: #161b1b;
   --grey: #b3aba4;
 
-  --font-base: "NeueMetana-Regular", "Courier", "Courier New", monospace, Arial,
-    -apple-system, BlinkMacSystemFont;
-  --font-title: "TulpenOne", "Impact", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-base: "NeueMetana-Regular", "Courier", "Courier New", monospace, Arial, -apple-system,
+    BlinkMacSystemFont;
+  --font-title: "TulpenOne", "Impact", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 
   /* Easings */
   --ease-in: cubic-bezier(0.895, 0.03, 0.685, 0.22);
@@ -24,4 +24,7 @@
   --d-slow: 0.5s;
   --d-slower: 1.5s;
   --d-slowest: 2.25s;
+
+  /* custom */
+  --margin: 2.5vw;
 }
