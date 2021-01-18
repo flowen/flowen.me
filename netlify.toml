@@ -13,6 +13,8 @@
   publish = "2021/frontend/dist"
   command = "yarn generate"
 
+[build.environment]
+  NODE_VERSION = "v12.18.0"
 
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
