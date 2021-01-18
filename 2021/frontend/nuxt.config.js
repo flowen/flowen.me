@@ -6,6 +6,7 @@ const PROJECT_DOMAIN = "https://rouhun.fan";
 const GA_ID = "";
 
 export default {
+  target: "static",
   /*
    ** Headers of the page
    */
@@ -86,7 +87,7 @@ export default {
     script: [
       {
         src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
-      },
+      }
     ],
     link: [
       {
@@ -173,10 +174,7 @@ export default {
    ** Share variables, mixins, functions across all style files (no @import needed)
    */
   styleResources: {
-    scss: [
-      "./assets/scss/_breakpoint-mixins.scss",
-      "./assets/scss/_mixins.scss"
-    ]
+    scss: ["./assets/scss/_breakpoint-mixins.scss", "./assets/scss/_mixins.scss"]
   },
   /*
    ** Plugins to load before mounting the App
@@ -198,7 +196,7 @@ export default {
   modules: [
     "@nuxtjs/device",
     "@nuxtjs/axios",
-    "cookie-universal-nuxt",
+    "cookie-universal-nuxt"
     // "nuxt-stripe-module"
   ],
   /*
