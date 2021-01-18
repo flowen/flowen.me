@@ -5,26 +5,34 @@
 <script>
 export default {
   name: "Mousecursor",
+  mounted() {
+    const mousecursor = document.querySelector(".mousecursor");
+    mousecursor.classList.add("show");
+  },
 };
 </script>
 
 <style lang="scss">
 .mousecursor {
-  --radius: 6vw;
-  --border: 2px;
+  --radius: 5vw;
+  --border: 1px;
   z-index: z("on-top");
   pointer-events: none;
   position: fixed;
   top: calc(var(--radius) / -2);
   left: calc(var(--radius) / -2);
-  /* opacity: 0; */
+  opacity: 0;
   width: var(--radius);
   height: var(--radius);
-  border: var(--border) solid rgba(255, 255, 255, 0.3);
+  border: var(--border) solid rgba(255, 255, 255, 0.2);
   border-radius: 100%;
   background: rgba(255, 255, 255, 0.1);
   transform: translate(var(--mx), var(--my));
-  transition: transform var(--d-normal) var(--ease-out);
+  transition: transform var(--d-slow) var(--ease-out), opacity var(--d-slow);
+
+  &.show {
+    opacity: 1;
+  }
 
   &::before {
     content: "";
