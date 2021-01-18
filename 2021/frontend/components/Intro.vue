@@ -22,7 +22,7 @@
     <div class="availability h1">15.01.2021 <small>availability</small></div>
 
     <figure class="climbing">
-      <img src="~assets/img/climbing.jpg" alt="Climbing" />
+      <img src="~assets/img/climbing.jpg" alt="Climbing" width="590" height="394" />
 
       <figcaption class="speakin">
         Hi
@@ -133,7 +133,7 @@ export default {
   z-index: z("intro-climbing");
   position: relative;
   max-width: 50%;
-  margin-top: 10%;
+  margin-top: 15vh;
 
   img {
     transform: rotate(-7deg);
