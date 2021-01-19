@@ -35,7 +35,7 @@ html {
   overflow-x: hidden;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
-  cursor: default;
+  cursor: none;
 }
 
 body {
@@ -58,7 +58,7 @@ img {
 }
 
 a {
-  cursor: pointer;
+  // cursor: none;
   &:hover {
     text-decoration: none;
   }
@@ -96,8 +96,8 @@ h1,
 }
 
 h2,
-.h2,
 h3,
+.h2,
 .h3 {
   font-size: 42px;
 }

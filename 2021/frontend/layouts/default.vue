@@ -29,6 +29,7 @@ export default {
 
 <style lang="scss">
 .logo {
+  z-index: z("logo");
   position: fixed;
   top: var(--margin);
   right: var(--margin);

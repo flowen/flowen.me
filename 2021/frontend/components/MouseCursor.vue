@@ -1,20 +1,42 @@
 <template>
-  <div class="mousecursor"></div>
+  <div ref="cursor" class="mousecursor"></div>
 </template>
 
 <script>
 export default {
   name: "Mousecursor",
   mounted() {
-    const mousecursor = document.querySelector(".mousecursor");
-    mousecursor.classList.add("show");
+    setTimeout(this.$refs["cursor"].classList.add("show"), 2500);
+    document.addEventListener("click", this.handleClick);
+    document.addEventListener("mouseenter", this.show);
+    document.addEventListener("mouseleave", this.hide);
+  },
+  beforeDestroy() {
+    this.$refs["cursor"].classList.remove("show");
+
+    document.removeEventListener("click", this.handleClick);
+    document.removeEventListener("mouseenter", this.show);
+    document.removeEventListener("mouseleave", this.hide);
+  },
+  methods: {
+    show() {
+      this.$refs["cursor"].classList.add("show");
+    },
+    hide() {
+      this.$refs["cursor"].classList.remove("show");
+    },
+    handleClick() {
+      this.$refs["cursor"].classList.add("-click");
+      // timeout should be at least as long as the 'pulse' animation
+      setTimeout(() => this.$refs["cursor"].classList.remove("-click"), 400);
+    },
   },
 };
 </script>
 
 <style lang="scss">
 .mousecursor {
-  --radius: 5vw;
+  --radius: 3.5vw;
   --border: 1px;
   z-index: z("on-top");
   pointer-events: none;
@@ -28,22 +50,32 @@ export default {
   border-radius: 100%;
   background: rgba(255, 255, 255, 0.1);
   transform: translate(var(--mx), var(--my));
-  transition: transform var(--d-slow) var(--ease-out), opacity var(--d-slow);
+  transition: transform var(--d-normal) var(--ease-out), opacity var(--d-slow);
 
   &.show {
     opacity: 1;
   }
 
-  &::before {
-    content: "";
+  &::before,
+  &::after {
+    content: " ";
     position: absolute;
     top: calc(var(--border) * -1);
     left: calc(var(--border) * -1);
     width: var(--radius);
     height: var(--radius);
     border-radius: 100%;
-    box-shadow: 0 0 0 var(--radius) rgba(var(--yellow), 1);
+    box-shadow: 0 0 1px var(--radius) var(--yellow);
     opacity: 0;
+    /* animation: pulse 0.35s infinite; */
+  }
+
+  &::before {
+    border: 1px solid var(--yellow);
+  }
+
+  &::after {
+    box-shadow: inset 0 0 0 var(--radius) var(--yellow);
   }
 
   &.-click::before {
@@ -57,11 +89,11 @@ export default {
     }
     70% {
       opacity: 0.4;
-      transform: scale(0.4);
+      transform: scale(0.2);
     }
     100% {
       opacity: 0;
-      transform: scale(1);
+      transform: scale(0.6);
     }
   }
 }
