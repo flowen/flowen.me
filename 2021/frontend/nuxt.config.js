@@ -169,7 +169,8 @@ export default {
   /*
    ** Global CSS
    */
-  css: ["@/assets/scss/main.scss"],
+  css: ["@/assets/scss/main.scss", "splitting/dist/splitting.css"],
+  
   /*
    ** Share variables, mixins, functions across all style files (no @import needed)
    */
@@ -182,10 +183,11 @@ export default {
   env: {
     // GA_ID
   },
-  plugins: [
+  // plugins: [
     // "~/plugins/vue-analytics.js",
     // { src: "~plugins/vue-scroll-lock.js", ssr: false }
-  ],
+  // ],
+  plugins: [{ src: "~/plugins/splitting.client.js", ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */
