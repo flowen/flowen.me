@@ -24,10 +24,29 @@ import MouseCursor from "@/components/MouseCursor.vue";
 
 export default {
   components: { FanStamp, MouseCursor },
+  beforeMount() {
+    document.addEventListener("mousemove", this.handleMouseMove);
+    window.addEventListener("resize", this.handleResize);
+    this.handleResize();
+  },
+  beforeDestroy() {
+    document.removeEventListener("mousemove", this.handleMouseMove);
+    window.removeEventListener("resize", this.handleResize);
+  },
+  methods: {
+    handleMouseMove(e) {
+      document.documentElement.style.setProperty("--mx", `${e.clientX}px`);
+      document.documentElement.style.setProperty("--my", `${e.clientY}px`);
+    },
+    handleResize() {
+      document.documentElement.style.setProperty("--ww", `${window.innerWidth}px`);
+      document.documentElement.style.setProperty("--wh", `${window.innerHeight}px`);
+    },
+  },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .logo {
   z-index: z("logo");
   position: fixed;
@@ -63,7 +82,7 @@ export default {
   right: var(--margin);
   bottom: var(--margin);
 
-  @media screen and (max-width: 599px) {
+  @media screen and (max-width: 379px) {
     display: none;
   }
 }
