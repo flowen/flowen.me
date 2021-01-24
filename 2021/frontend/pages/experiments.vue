@@ -1,10 +1,10 @@
 <template>
   <div class="experiments">
     <input class="toggle" type="checkbox" />
-    <div class="cyberpunk">
+    <div class="title">
       <div class="translate">
         <div class="rotate">
-          <div class="scale" v-html="cyberpunk"></div>
+          <div class="scale" v-html="title"></div>
         </div>
       </div>
     </div>
@@ -15,8 +15,8 @@
 export default {
   name: "Experiment",
   computed: {
-    cyberpunk: function () {
-      const text = `Cyberpunk`;
+    title: function () {
+      const text = `Rou Hun Fan <br> Developer`;
 
       if (typeof window !== `undefined` || typeof document !== `undefined`) {
         const Splitting = require("splitting");
@@ -29,7 +29,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .experiments {
   position: relative;
   display: flex;
@@ -47,22 +47,23 @@ export default {
   height: 20px;
 }
 
-.cyberpunk {
+.title {
   --multi: 0.5s;
+  --tsa: 0;
   --sat: 0%;
   --lgt: 0%;
-  font-size: 35vw;
+  font-size: 12vw;
   font-family: var(--font-title);
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 2px var(--yellow);
-  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke: 1px var(--yellow);
+  -webkit-text-stroke-width: 1px;
   text-transform: uppercase;
-  text-shadow: 0 0 5vw hsl(61, var(--sat), var(--lgt));
-  transition: text-shadow var(--slowest) var(--ease-out);
-}
+  text-align: center;
+  text-shadow: 0 0 var(--tsa) hsl(61, var(--sat), var(--lgt));
+  transition: text-shadow 10s var(--ease-out);
 
-.cyberpunk .char {
-  /* --scale: 1;
+  .char {
+    /* --scale: 1;
   --translate-x: 0;
   --translate-y: 0;
   --rot: 0deg;
@@ -71,39 +72,47 @@ export default {
   transition-delay: calc(var(--char-index) * 0.035s);
   transform: translate(var(--translate-x), var(--translate-y)) rotate(var(--rot))
   scale(var(--scale)); */
-  display: inline-block;
-  transform-origin: center center;
-  animation-delay: calc(var(--char-index) * 0.035s);
+    display: inline-block;
+    transform: scale(0);
+    transform-origin: center center;
+    animation-delay: calc(var(--char-index) * 0.035s);
+  }
 }
 
-.toggle + .cyberpunk .char {
-  transform: scale(0);
-}
-
-.toggle:checked + .cyberpunk {
+.toggle:checked + .title {
   --sat: 84%;
   --lgt: 68%;
-}
+  --tsa: 5vw;
 
-.toggle:checked + .cyberpunk .char {
-  animation-play-state: running;
-  animation-fill-mode: forwards;
-}
+  .char {
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
 
-.toggle:checked + .cyberpunk .rotate {
-  animation: rotate calc(0.1s + var(--multi)) ease-out forwards;
-  animation-delay: calc(var(--char-index) * 0.035s);
-}
+  .rotate {
+    animation: rotate calc(0.1s + var(--multi)) ease-out forwards;
+    animation-delay: calc(var(--char-index) * 0.035s);
+  }
 
-.toggle:checked + .cyberpunk .scale .char {
-  animation: scale calc(0.2s + var(--multi)) ease-out forwards;
-  animation-delay: calc(var(--char-index) * 0.035s);
-  transform-origin: center bottom;
-}
+  .scale .char {
+    animation: scale calc(0.2s + var(--multi)) ease-out forwards;
+    animation-delay: calc(var(--char-index) * 0.035s);
+    transform-origin: center bottom;
 
-.toggle:checked + .cyberpunk .translate {
-  animation: translate 0.2s ease-out infinite alternate paused;
-  animation-delay: calc(var(--char-index) * 0.035s);
+    &:nth-child(4),
+    &:nth-child(6) {
+      animation-duration: 0.4s;
+    }
+    &:nth-child(3),
+    &:nth-child(7) {
+      animation-duration: 0.2s;
+    }
+  }
+
+  .translate {
+    animation: translate 0.2s ease-out infinite alternate paused;
+    animation-delay: calc(var(--char-index) * 0.035s);
+  }
 }
 
 @keyframes translate {
