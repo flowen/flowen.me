@@ -1,6 +1,6 @@
 <template>
   <section class="intro">
-    <p class="about h1">
+    <p class="about h1" [data-animation]>
       RouHun Fan <small>works as a</small> <br />
       Freelance developer <small>specialized in </small> <br />
       Frontend - Animation - Interaction <br />
@@ -13,20 +13,50 @@
     <figure class="climbing">
       <img src="~assets/img/climbing.jpg" alt="Climbing" width="590" height="394" />
 
-      <figcaption class="chats">Hi</figcaption>
+      <figcaption ref="chatting" class="chatting"></figcaption>
     </figure>
   </section>
 </template>
 
 <script>
+import gsap from "gsap";
+import { TextPlugin } from "gsap/TextPlugin";
+
 export default {
   data() {
     return {
-      chats: ["hi", "Always reaching for the top", "yo", "climb w me", "its lonely at the top"],
+      chats: [
+        "hi",
+        "Always reach for the top, as they say",
+        "yolo",
+        "climb w me",
+        "its lonely at the top",
+      ],
+      masterTL: gsap.timeline({ repeat: -1, paused: true, ease: "linear" }),
     };
   },
-  created() {
-    // use gsap text plugin to animate per character for the chats array
+  beforeMount() {
+    if (process.client) {
+      gsap.registerPlugin(TextPlugin);
+    }
+  },
+  mounted() {
+    const domChat = this.$refs.chatting;
+
+    this.chats.forEach((chat) => {
+      let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 2 });
+
+      tl.to(domChat, chat.length * 0.1, {
+        text: chat,
+      });
+      this.masterTL.add(tl);
+    });
+
+    gsap.to(domChat, 0.3, {
+      delay: 1,
+      opacity: 1,
+      onComplete: () => this.masterTL.play(),
+    });
   },
 };
 </script>
@@ -45,7 +75,7 @@ export default {
 
   h1,
   .h1 {
-    font-size: clamp(44px, 4.25vw, 72px);
+    font-size: clamp(22px, 4.25vw, 72px);
   }
 
   small {
@@ -64,6 +94,7 @@ export default {
 .availability {
   top: 0;
   left: 0;
+
   h1 {
     font-family: var(--font-title);
     color: var(--yellow);
@@ -82,10 +113,15 @@ export default {
 
   figcaption {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, 0);
     color: var(--magenta);
   }
+}
+
+.chatting {
+  text-align: center;
+  opacity: 0;
 }
 </style>

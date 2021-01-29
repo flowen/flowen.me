@@ -1,7 +1,7 @@
 <template>
   <div class="experiments">
     <input class="toggle" type="checkbox" />
-    <div class="title">
+    <div class="title" data-animation>
       <div class="translate">
         <div class="rotate">
           <div class="scale" v-html="title"></div>
@@ -47,7 +47,7 @@ export default {
   height: 20px;
 }
 
-.title {
+[data-animation] {
   --multi: 0.5s;
   --tsa: 0;
   --sat: 0%;
@@ -63,15 +63,6 @@ export default {
   transition: text-shadow 10s var(--ease-out);
 
   .char {
-    /* --scale: 1;
-  --translate-x: 0;
-  --translate-y: 0;
-  --rot: 0deg;
-
-  transition: transform 0.5s ease-in-out;
-  transition-delay: calc(var(--char-index) * 0.035s);
-  transform: translate(var(--translate-x), var(--translate-y)) rotate(var(--rot))
-  scale(var(--scale)); */
     display: inline-block;
     transform: scale(0);
     transform-origin: center center;
@@ -79,7 +70,7 @@ export default {
   }
 }
 
-.toggle:checked + .title {
+.toggle:checked + [data-animation] {
   --sat: 84%;
   --lgt: 68%;
   --tsa: 5vw;
