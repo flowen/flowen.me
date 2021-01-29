@@ -1,6 +1,6 @@
 <template>
   <section class="intro">
-    <p class="about h1" [data-animation]>
+    <p class="about h1" data-animation>
       RouHun Fan <small>works as a</small> <br />
       Freelance developer <small>specialized in </small> <br />
       Frontend - Animation - Interaction <br />
@@ -10,11 +10,11 @@
 
     <div class="availability h1">Availability <small>from</small> 1 feb</div>
 
-    <figure class="climbing">
+    <div class="climbing">
       <img src="~assets/img/climbing.jpg" alt="Climbing" width="590" height="394" />
 
-      <figcaption ref="chatting" class="chatting"></figcaption>
-    </figure>
+      <div ref="chatting" class="chatting"></div>
+    </div>
   </section>
 </template>
 
@@ -111,17 +111,14 @@ export default {
     transform: rotate(-7deg);
   }
 
-  figcaption {
+  .chatting {
     position: absolute;
     top: 5%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0) rotate(-7deg);
     color: var(--magenta);
+    opacity: 0;
+    text-align: center;
   }
-}
-
-.chatting {
-  text-align: center;
-  opacity: 0;
 }
 </style>
