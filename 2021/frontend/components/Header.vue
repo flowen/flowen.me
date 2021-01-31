@@ -17,12 +17,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.js.header {
-  transform: rotate(-7.4) scale(0);
-}
-</style>
-
 <style lang="scss" scoped>
 .header {
   z-index: z("header");

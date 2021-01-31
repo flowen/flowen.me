@@ -24,8 +24,8 @@ export default {
     pagewrapper.classList.add("js");
 
     const fanstamp = document.querySelector(".fan-stamp");
-
     const header = document.querySelector(".header");
+
     gsap
       .timeline()
       .delay(0.2)
@@ -75,13 +75,22 @@ export default {
   position: fixed;
   right: var(--margin);
   bottom: var(--margin);
+  transform: rotate(-7.4deg) scale(0);
 
   @media screen and (max-width: 379px) {
     display: none;
   }
 
-  .js & {
-    transform: rotate(-7.4deg) scale(0);
+  .no-js & {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.header {
+  transform: rotate(-7.4) scale(0);
+
+  .no-js & {
+    transform: rotate(0deg) scale(1);
   }
 }
 </style>

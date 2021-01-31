@@ -98,20 +98,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.js {
-  .availability {
-    transform: scale(0);
-  }
-  .about {
-    transform: scale(0);
-  }
-  .climbing {
-    transform: rotate(-14.4deg) scale(0);
-  }
-}
-</style>
-
 <style lang="scss" scoped>
 .intro {
   position: relative;
@@ -140,11 +126,21 @@ export default {
   left: 0;
   bottom: 0;
   margin-bottom: 0;
+  transform: scale(0);
+
+  .no-js & {
+    transform: scale(1);
+  }
 }
 
 .availability {
   top: 0;
   left: 0;
+  transform: scale(0);
+
+  .no-js & {
+    transform: scale(1);
+  }
 
   h1 {
     font-family: var(--font-title);
@@ -157,6 +153,10 @@ export default {
   position: relative;
   max-width: 80%;
   margin-top: 8vh;
+  transform: rotate(-14.4deg) scale(0);
+  .no-js & {
+    transform: rotate(0deg) scale(1);
+  }
 
   img {
     transform: rotate(-7deg);
