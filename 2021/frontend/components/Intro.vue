@@ -62,18 +62,26 @@ export default {
         rotate: 0,
         scale: 1,
       })
-      .to(about, {
-        duration: 0.35,
-        ease: "power2.out",
-        rotate: 0,
-        scale: 1,
-      })
-      .to(climbing, {
-        duration: 0.35,
-        ease: "power2.out",
-        rotate: 0,
-        scale: 1,
-      });
+      .to(
+        about,
+        {
+          duration: 0.35,
+          ease: "power2.out",
+          rotate: 0,
+          scale: 1,
+        },
+        "-=.2"
+      )
+      .to(
+        climbing,
+        {
+          duration: 0.35,
+          ease: "power2.out",
+          rotate: 0,
+          scale: 1,
+        },
+        "-=.2.5"
+      );
 
     const domChat = this.$refs.chatting;
 
