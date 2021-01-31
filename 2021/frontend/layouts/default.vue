@@ -19,10 +19,6 @@ import gsap from "gsap";
 export default {
   components: { Header, FanStamp, MouseCursor },
   mounted() {
-    const html = document.documentElement;
-    html.classList.remove("no-js");
-    html.classList.add("js");
-
     const fanstamp = document.querySelector(".fan-stamp");
     const header = document.querySelector(".header");
 

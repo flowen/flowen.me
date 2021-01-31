@@ -19,6 +19,7 @@ export default {
       lang: "en",
       class: "no-js",
     },
+    script: [{ src: "/head.js" }],
     title: PROJECT_TITLE,
     meta: [
       { charset: "utf-8" },
