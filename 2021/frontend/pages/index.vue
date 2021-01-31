@@ -23,8 +23,11 @@ export default {
     Testimonials,
     SalesCopy,
     Projects,
-  }
+  },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.main {
+}
+</style>

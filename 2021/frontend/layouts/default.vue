@@ -1,16 +1,7 @@
 <template>
   <div>
     <MouseCursor />
-    <div class="logo">
-      <h1>R&ndash;H&ndash;F</h1>
-      <nav class="nav">
-        <a href="mailto:b34ff8ed-85b6-49ff-877f-c72d181b4396@flowen.anonaddy.me">E-mail</a>
-        <a href="https://twitter.com/flowen_nl">Twitter</a>
-        <a href="https://t.me/flowen">Telegram</a>
-        <!-- <a href="/projects/">Projects</a>
-        <a href="/blog/">Blog</a> -->
-      </nav>
-    </div>
+    <Header />
 
     <FanStamp />
 
@@ -19,11 +10,47 @@
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
 import FanStamp from "@/components/FanStamp.vue";
 import MouseCursor from "@/components/MouseCursor.vue";
 
+import gsap from "gsap";
+
 export default {
-  components: { FanStamp, MouseCursor },
+  components: { Header, FanStamp, MouseCursor },
+  mounted() {
+    const header = document.querySelector(".header");
+    gsap.set(header, {
+      rotate: -7.4,
+      scale: 0,
+    });
+
+    const fanstamp = document.querySelector(".fan-stamp");
+    gsap.set(fanstamp, {
+      rotate: -7.4,
+      scale: 0,
+    });
+
+    gsap
+      .timeline()
+      .delay(0.2)
+      .to(header, {
+        duration: 0.35,
+        ease: "power2.out",
+        rotate: 0,
+        scale: 1,
+      })
+      .to(
+        fanstamp,
+        {
+          duration: 0.35,
+          ease: "power2.out",
+          rotate: 0,
+          scale: 1,
+        },
+        "-=.2"
+      );
+  },
   beforeMount() {
     document.addEventListener("mousemove", this.handleMouseMove);
     window.addEventListener("resize", this.handleResize);
@@ -47,36 +74,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.logo {
-  z-index: z("logo");
-  position: fixed;
-  top: var(--margin);
-  right: var(--margin);
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-
-  .nav {
-    display: flex;
-    flex-direction: column;
-  }
-
-  h1 {
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px var(--yellow);
-    -webkit-text-stroke-width: 1px;
-    margin: 0 0 1vh;
-    font-size: clamp(72px, 4.25vw, 104px);
-  }
-
-  a {
-    color: var(--yellow);
-    text-decoration: none;
-    font-family: var(--font-title);
-    font-size: clamp(12px, 5vw, 24px);
-  }
-}
-
 .fan-stamp {
   position: fixed;
   right: var(--margin);

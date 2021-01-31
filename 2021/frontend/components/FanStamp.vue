@@ -9,6 +9,7 @@
 
 <script>
 import Fan from "../assets/img/fan.svg?inline";
+
 export default {
   components: { Fan },
 };

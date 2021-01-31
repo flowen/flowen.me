@@ -45,6 +45,36 @@ export default {
     }
   },
   mounted() {
+    const availability = document.querySelector(".availability");
+    const about = document.querySelector(".about");
+    const climbing = document.querySelector(".climbing");
+
+    gsap.set(availability, { scale: 0 });
+    gsap.set(about, { scale: 0 });
+    gsap.set(climbing, { rotate: -14.4, scale: 0 });
+
+    gsap
+      .timeline({ onComplete: () => this.masterTL.play() })
+      .delay(0.3)
+      .to(availability, {
+        duration: 0.35,
+        ease: "power2.out",
+        rotate: 0,
+        scale: 1,
+      })
+      .to(about, {
+        duration: 0.35,
+        ease: "power2.out",
+        rotate: 0,
+        scale: 1,
+      })
+      .to(climbing, {
+        duration: 0.35,
+        ease: "power2.out",
+        rotate: 0,
+        scale: 1,
+      });
+
     const domChat = this.$refs.chatting;
 
     this.chats.forEach((chat) => {
@@ -59,7 +89,6 @@ export default {
     gsap.to(domChat, 0.25, {
       delay: 0.7,
       opacity: 1,
-      onComplete: () => this.masterTL.play(),
     });
   },
 };
