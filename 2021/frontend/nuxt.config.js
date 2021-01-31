@@ -17,6 +17,7 @@ export default {
   head: {
     htmlAttrs: {
       lang: "en",
+      class: "no-js",
     },
     title: PROJECT_TITLE,
     meta: [
