@@ -1,7 +1,11 @@
 // TODO: (Ramdane) read this from a custom config file, with environment configuration
-const PROJECT_TITLE = "RH Fan 2021";
-const PROJECT_DESCRIPTION = "description";
-const PROJECT_KEYWORDS = "keywords";
+const AUTHOR_NAME = "Rou Hun Fan";
+const TWITTER_HANDLE = "@flowen_nl";
+const PROJECT_TITLE = "Freelance frontend UI developer and designer, Rou Hun Fan";
+const PROJECT_DESCRIPTION =
+  "Freelance frontend UI developer and designer, Rou Hun Fan, working remotely for international clients";
+const PROJECT_KEYWORDS =
+  "Remote, remote developer, front-end developer, front-end, creative developer, creative, designer, front-end designer, remote, freelancer, the Netherlands, Holland, Nederland";
 const PROJECT_DOMAIN = "https://rouhun.fan";
 // const GA_ID = "";
 
@@ -40,7 +44,7 @@ export default {
         name: "twitter:card",
         content: "summary_large_image",
       },
-      { name: "twitter:site", content: "@mschfxyz" },
+      { name: "twitter:site", content: TWITTER_HANDLE },
       {
         name: "twitter:title",
         content: PROJECT_TITLE,
@@ -79,7 +83,7 @@ export default {
         property: "og:site_name",
         content: PROJECT_TITLE,
       },
-      { name: "author", content: "MSCHF" },
+      { name: "author", content: AUTHOR_NAME },
       { meta: "msapplication-TileColor", content: "#ffffff" },
       { meta: "msapplication-TileImage", content: "/ms-icon-144x144.png" },
       { meta: "theme-color", content: "#ffffff" },
