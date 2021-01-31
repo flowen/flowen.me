@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pagewrapper no-js">
     <MouseCursor />
     <Header />
 
@@ -19,34 +19,32 @@ import gsap from "gsap";
 export default {
   components: { Header, FanStamp, MouseCursor },
   mounted() {
+    const pagewrapper = document.querySelector(".pagewrapper");
+    pagewrapper.classList.remove("no-js");
+    pagewrapper.classList.add("js");
+
+    const fanstamp = document.querySelector(".fan-stamp");
+
     const header = document.querySelector(".header");
-    gsap.set(header, {
-      rotate: -7.4,
-      scale: 0,
-    });
-
-    // const fanstamp = document.querySelector(".fan-stamp");
-    // gsap.set(fanstamp, {
-    //   rotate: -7.4,
-    //   scale: 0,
-    // });
-
-    gsap.timeline().delay(0.2).to(header, {
-      duration: 0.35,
-      ease: "power2.out",
-      rotate: 0,
-      scale: 1,
-    });
-    // .to(
-    //   fanstamp,
-    //   {
-    //     duration: 0.35,
-    //     ease: "power2.out",
-    //     rotate: 0,
-    //     scale: 1,
-    //   },
-    //   "-=.2"
-    // );
+    gsap
+      .timeline()
+      .delay(0.2)
+      .to(header, {
+        duration: 0.35,
+        ease: "power2.out",
+        rotate: 0,
+        scale: 1,
+      })
+      .to(
+        fanstamp,
+        {
+          duration: 0.35,
+          ease: "power2.out",
+          rotate: 0,
+          scale: 1,
+        },
+        "-=.2"
+      );
   },
   beforeMount() {
     document.addEventListener("mousemove", this.handleMouseMove);
@@ -69,6 +67,12 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.js .fanstamp {
+  transform: rotate(-7.4) scale(0);
+}
+</style>
 
 <style lang="scss" scoped>
 .fan-stamp {

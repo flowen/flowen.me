@@ -49,10 +49,6 @@ export default {
     const about = document.querySelector(".about");
     const climbing = document.querySelector(".climbing");
 
-    gsap.set(availability, { scale: 0 });
-    gsap.set(about, { scale: 0 });
-    gsap.set(climbing, { rotate: -14.4, scale: 0 });
-
     gsap
       .timeline({ onComplete: () => this.masterTL.play() })
       .delay(0.3)
@@ -101,6 +97,20 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.js {
+  .availability {
+    transform: scale(0);
+  }
+  .about {
+    transform: scale(0);
+  }
+  .climbing {
+    transform: rotate(-14.4) scale(0);
+  }
+}
+</style>
 
 <style lang="scss" scoped>
 .intro {
