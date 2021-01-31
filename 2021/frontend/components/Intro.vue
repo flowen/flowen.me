@@ -26,13 +26,17 @@ export default {
   data() {
     return {
       chats: [
-        "hi",
-        "Always reach for the top, as they say",
-        "yolo",
-        "climb w me",
-        "its lonely at the top",
+        "Hi, I 💙 helping businesses with code &amp; design",
+        "Rou Hun is pronounced as Lowen",
+        "🏔👨‍💻🚂🏋🈯✍️🐈🎧☕🥩",
+        "It's lonely at the top #messageme",
+        "BTC to da moooooooon!~~",
+        "📍 Birmingham",
+        "Been working remotely the last 5+ years",
+        "Where's my Bitcoin Emoji?",
+        "Yolo means Yo Lo(wen) to me",
       ],
-      masterTL: gsap.timeline({ repeat: -1, paused: true, ease: "linear" }),
+      masterTL: gsap.timeline({ repeat: -1, paused: true }),
     };
   },
   beforeMount() {
@@ -44,16 +48,16 @@ export default {
     const domChat = this.$refs.chatting;
 
     this.chats.forEach((chat) => {
-      let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 2 });
+      let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 2, ease: "none" });
 
-      tl.to(domChat, chat.length * 0.1, {
+      tl.to(domChat, chat.length * 0.05, {
         text: chat,
       });
       this.masterTL.add(tl);
     });
 
-    gsap.to(domChat, 0.3, {
-      delay: 1,
+    gsap.to(domChat, 0.25, {
+      delay: 0.7,
       opacity: 1,
       onComplete: () => this.masterTL.play(),
     });
@@ -75,7 +79,7 @@ export default {
 
   h1,
   .h1 {
-    font-size: clamp(22px, 4.25vw, 72px);
+    font-size: clamp(22px, 7.25vh, 62px);
   }
 
   small {
@@ -104,8 +108,8 @@ export default {
 .climbing {
   z-index: z("intro-climbing");
   position: relative;
-  max-width: 50%;
-  margin-top: 15vh;
+  max-width: 80%;
+  margin-top: 8vh;
 
   img {
     transform: rotate(-7deg);
