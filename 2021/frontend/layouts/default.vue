@@ -25,31 +25,28 @@ export default {
       scale: 0,
     });
 
-    const fanstamp = document.querySelector(".fan-stamp");
-    gsap.set(fanstamp, {
-      rotate: -7.4,
-      scale: 0,
-    });
+    // const fanstamp = document.querySelector(".fan-stamp");
+    // gsap.set(fanstamp, {
+    //   rotate: -7.4,
+    //   scale: 0,
+    // });
 
-    gsap
-      .timeline()
-      .delay(0.2)
-      .to(header, {
-        duration: 0.35,
-        ease: "power2.out",
-        rotate: 0,
-        scale: 1,
-      })
-      .to(
-        fanstamp,
-        {
-          duration: 0.35,
-          ease: "power2.out",
-          rotate: 0,
-          scale: 1,
-        },
-        "-=.2"
-      );
+    gsap.timeline().delay(0.2).to(header, {
+      duration: 0.35,
+      ease: "power2.out",
+      rotate: 0,
+      scale: 1,
+    });
+    // .to(
+    //   fanstamp,
+    //   {
+    //     duration: 0.35,
+    //     ease: "power2.out",
+    //     rotate: 0,
+    //     scale: 1,
+    //   },
+    //   "-=.2"
+    // );
   },
   beforeMount() {
     document.addEventListener("mousemove", this.handleMouseMove);
