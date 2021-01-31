@@ -68,11 +68,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.js .fanstamp {
-  transform: rotate(-7.4) scale(0);
-}
-</style>
+<style lang="scss"></style>
 
 <style lang="scss" scoped>
 .fan-stamp {
@@ -82,6 +78,10 @@ export default {
 
   @media screen and (max-width: 379px) {
     display: none;
+  }
+
+  .js & {
+    transform: rotate(-7.4deg) scale(0);
   }
 }
 </style>

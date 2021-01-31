@@ -107,7 +107,7 @@ export default {
     transform: scale(0);
   }
   .climbing {
-    transform: rotate(-14.4) scale(0);
+    transform: rotate(-14.4deg) scale(0);
   }
 }
 </style>
