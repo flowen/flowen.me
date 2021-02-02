@@ -97,7 +97,7 @@ export default {
     flex-direction: column;
 
     &__project-link {
-      font-size: clamp(22px, 5vw, 32px);
+      font-size: clamp(26px, 5vw, 44px);
     }
   }
 
