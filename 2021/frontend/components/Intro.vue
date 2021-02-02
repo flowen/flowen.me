@@ -168,7 +168,13 @@ export default {
 
   h1,
   .h1 {
-    font-size: clamp(22px, 7.25vh, 62px);
+    --min: 22px;
+    --max: 72px;
+    font-size: clamp(var(--min), 6.5vw, var(--max));
+
+    @media (max-aspect-ratio: 3/5) {
+      font-size: 36px;
+    }
   }
 
   small {
@@ -214,21 +220,20 @@ export default {
     position: absolute;
     top: 5%;
     left: 50%;
-    transform: translate(-50%, 0) rotate(-7deg);
+    transform: translate(-50%, 0) rotate(-14.4deg);
     color: var(--magenta);
     opacity: 0;
     text-align: center;
-    font-size: clamp(18px, 5vw, 24px);
-    font-weight: 800;
+    font-size: clamp(12px, 2.5vw, 24px);
+    font-weight: 600;
+    width: 80%;
   }
 }
 
-@media screen and (max-width: 499px) {
-  .intro {
-    h1,
-    .h1 {
-      font-size: clamp(18px, 7.25vh, 24px);
-    }
+@media (max-aspect-ratio: 1000/1414) {
+  .climbing {
+    width: 100%;
+    margin-top: 20vh;
   }
 }
 </style>

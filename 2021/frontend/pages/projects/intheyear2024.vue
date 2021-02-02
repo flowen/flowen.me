@@ -6,8 +6,7 @@
     <div class="project-page__project-url">
       <img src="~assets/img/arrow.svg" alt="arrow" />
       <a href="https://intheyear2024.com" target="_blank" rel="noopener noreferrer"
-        >I can start posting screenshots and video's, but it's best you see the actual product
-        live</a
+        >I can post screenshots &amp; videos, but it's best you see the actual product live</a
       >
     </div>
 
@@ -30,7 +29,7 @@
     </p>
 
     <figure>
-      <figcaption>k k k, just 1 for layout's sake:</figcaption>
+      <figcaption>k k, just 1 for layout's sake:</figcaption>
       <video class="video" autoplay loop muted plays-inline>
         <source src="~assets/img/intheyear2024/mschf.mp4" type="video/mp4" />
       </video>
@@ -74,4 +73,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+figcaption {
+  margin-bottom: 1.25vh;
+}
+</style>

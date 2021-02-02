@@ -8,9 +8,11 @@
           </div>
         </NuxtLink>
       </h1>
+
       <nav ref="nav" class="nav">
-        <NuxtLink to="/about/" data-a-scale> about</NuxtLink>
-        <NuxtLink to="/projects/intheyear2024" data-a-scale>intheyear2024</NuxtLink>
+        <NuxtLink to="/projects/intheyear2024" class="nav__project-link" data-a-scale
+          >in the year 2024</NuxtLink
+        >
         <br />
         <a
           data-a-scale
@@ -29,6 +31,8 @@
         <a data-a-scale target="_blank" rel="noopener noreferrer" href="https://t.me/flowen"
           >Telegram</a
         >
+        <br />
+        <NuxtLink to="/about/" data-a-scale>about</NuxtLink>
       </nav>
     </header>
   </transition>
@@ -91,6 +95,10 @@ export default {
   .nav {
     display: flex;
     flex-direction: column;
+
+    &__project-link {
+      font-size: clamp(22px, 5vw, 32px);
+    }
   }
 
   h1 a {
@@ -105,7 +113,12 @@ export default {
     color: var(--yellow);
     text-decoration: none;
     font-family: var(--font-title);
-    font-size: clamp(12px, 5vw, 24px);
+    font-size: clamp(16px, 5vw, 24px);
+    transition: letter-spacing var(--d-slow) var(--ease-out);
+
+    &:hover {
+      letter-spacing: 5px;
+    }
   }
 }
 </style>
