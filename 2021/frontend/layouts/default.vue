@@ -60,9 +60,7 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
-
-<style lang="scss" scoped>
+<style lang="scss">
 .fan-stamp {
   position: fixed;
   right: var(--margin);
@@ -77,7 +75,9 @@ export default {
     transform: rotate(0deg) scale(1);
   }
 }
+</style>
 
+<style lang="scss" scoped>
 .header {
   transform: rotate(-7.4) scale(0);
 

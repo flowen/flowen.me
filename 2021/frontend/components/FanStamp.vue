@@ -15,7 +15,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+// something wrong with this being scoped
 .fan-stamp {
   --w: 12.5vw;
   width: clamp(86px, var(--w), 172px);
