@@ -21,6 +21,7 @@ export default {
     },
     script: [{ src: "/head.js" }],
     title: PROJECT_TITLE,
+    titleTemplate: `${PROJECT_TITLE} | %s`,
     meta: [
       { charset: "utf-8" },
       {

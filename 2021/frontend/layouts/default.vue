@@ -19,9 +19,10 @@ import gsap from "gsap";
 export default {
   components: { Header, FanStamp, MouseCursor },
   mounted() {
-    const fanstamp = document.querySelector(".fan-stamp");
     const header = document.querySelector(".header");
+    const fanstamp = document.querySelector(".fan-stamp");
 
+    console.log("hoi");
     gsap
       .timeline()
       .delay(0.2)
