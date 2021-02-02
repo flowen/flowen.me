@@ -6,7 +6,7 @@
   }
 }
 
-[data-animation] {
+[data-a-split] {
   --multi: 0.5s;
   --tsa: 0;
   --sat: 0%;
@@ -23,8 +23,8 @@
   }
 }
 
-[data-animation].js--show,
-.toggle:checked + [data-animation] {
+.js--show[data-a-split],
+.toggle:checked + [data-a-split] {
   --sat: 84%;
   --lgt: 68%;
   --tsa: 5vw;

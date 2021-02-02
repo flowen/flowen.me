@@ -30,13 +30,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 499px) {
+    display: block;
+  }
 }
 
 article {
   position: relative;
   z-index: z("copy");
   width: clamp(300px, 50vw, 650px);
-  margin-left: -10vw;
+  margin-left: -15vw;
   padding-right: 5vw;
   font-size: clamp(16px, 4vw, 24px);
 

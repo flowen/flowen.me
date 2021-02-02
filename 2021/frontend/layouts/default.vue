@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="hi-thx-4-checkin-ma-code-hf">
     <MouseCursor />
     <Header />
 

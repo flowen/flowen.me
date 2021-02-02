@@ -47,9 +47,12 @@ export default {
   flex-direction: column;
   justify-content: center;
 
-  section,
-  .fan-stamp {
+  section {
     margin: 15vh auto;
+  }
+
+  .fan-stamp {
+    margin: 50vh auto;
   }
 }
 </style>

@@ -1,5 +1,13 @@
 <template>
-  <transition :css="false" appear @enter="enter" @leave="leave">
+  <transition
+    :css="false"
+    appear
+    @enter="enter"
+    @before-leave="beforeLeave"
+    @leave="leave"
+    @after-leave="afterLeave"
+    @leave-cancelled="leaveCancelled"
+  >
     <section class="intro">
       <p ref="about" class="about h1" data-a-scale>
         RouHun Fan <small>works as a</small> <br />
@@ -32,6 +40,7 @@ export default {
       chats: [
         "Hi, I 💙 helping businesses with code &amp; design",
         "Rou Hun is pronounced as Lo wen",
+        "This site is W.I.P. ad infinitum",
         "🏔👨‍💻🚂🏋🈯✍️🐈🎧☕🥩",
         "It's lonely at the top #messageme",
         "BTC to da moooooooon!~~",
@@ -50,6 +59,15 @@ export default {
     }
   },
   methods: {
+    beforeLeave: function (el) {
+      console.log("beforeLeave");
+    },
+    afterLeave: function (el) {
+      console.log("afterLeave");
+    },
+    leaveCancelled: function (el) {
+      console.log("leaveCancelled");
+    },
     leave: function (el, done) {
       console.log("leave");
       this.masterTL.kill();
@@ -89,8 +107,10 @@ export default {
       gsap
         .timeline({
           onComplete: () => {
-            done();
-            this.masterTL.play();
+            setTimeout(() => {
+              this.masterTL.play();
+              done();
+            }, 200);
           },
         })
         .delay(0.3)
@@ -141,7 +161,6 @@ export default {
   margin: var(--margin);
   height: calc(var(--wh) - var(--margin) * 2);
   display: flex;
-  justify-content: center;
 
   > * {
     position: absolute;
@@ -180,7 +199,9 @@ export default {
   position: relative;
   max-width: 80%;
   margin-top: 8vh;
+  margin-left: 10vw;
   transform: rotate(-14.4deg) scale(0);
+
   .no-js & {
     transform: rotate(0deg) scale(1);
   }
@@ -199,6 +220,15 @@ export default {
     text-align: center;
     font-size: clamp(18px, 5vw, 24px);
     font-weight: 800;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .intro {
+    h1,
+    .h1 {
+      font-size: clamp(18px, 7.25vh, 24px);
+    }
   }
 }
 </style>

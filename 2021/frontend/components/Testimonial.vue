@@ -54,7 +54,7 @@ export default {
 <style lang="scss">
 .testimonial {
   display: grid;
-  grid-template-columns: clamp(80px, 120px) minmax(60%, 1fr);
+  grid-template-columns: minmax(80px, 120px) minmax(60%, 1fr);
   grid-gap: 2.5vw;
   align-items: center;
   width: clamp(280px, 75vw, 70vw);
@@ -79,6 +79,10 @@ export default {
       margin: 1vh 0;
       font-size: clamp(16px, 5vw, 24px);
     }
+  }
+
+  @media screen and (max-width: 499px) {
+    display: block;
   }
 }
 </style>

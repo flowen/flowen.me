@@ -35,12 +35,24 @@
   }
 
   &__summary {
-    margin: 2.5vh 0 2.5vh 2.5vw;
-    width: 500px;
     display: grid;
-    grid-template-columns: 15% 1fr;
+    grid-template-columns: 25% 1fr;
     grid-gap: 20px;
+    margin: 2.5vh 0 12.5vh 2.5vw;
+    max-width: 500px;
     text-transform: none;
+
+    dt {
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 499px) {
+      display: block;
+
+      dt {
+        margin-bottom: 2.5vh;
+      }
+    }
   }
 
   video {

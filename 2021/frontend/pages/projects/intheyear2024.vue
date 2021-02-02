@@ -1,6 +1,6 @@
 <template>
   <section class="project-page">
-    <h1 class="project-page__title">In the year 2024</h1>
+    <h1 class="project-page__title">Drop #38: In the year 2024</h1>
     <h2 class="project-page__subtitle">Made for MSCHF</h2>
 
     <div class="project-page__project-url">
@@ -60,6 +60,11 @@
         >
       </dt>
     </dl>
+
+    <p>
+      Obviously I've made many more projects, but I'm short on time. Hit me up, if you want to know
+      more
+    </p>
   </section>
 </template>
 

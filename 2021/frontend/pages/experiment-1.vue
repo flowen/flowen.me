@@ -1,7 +1,8 @@
 <template>
   <div class="experiments">
     <input class="toggle" type="checkbox" />
-    <div class="title" data-animation>
+    <div class=""></div>
+    <div class="title js--show" data-a-split>
       <div class="translate">
         <div class="rotate">
           <div class="scale" v-html="title"></div>
@@ -47,7 +48,7 @@ export default {
   height: 20px;
 }
 
-[data-animation] {
+[data-a-split] {
   font-size: 12vw;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px var(--yellow);
