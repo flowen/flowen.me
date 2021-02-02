@@ -1,6 +1,6 @@
 <template>
   <div class="hi-thx-4-checkin-ma-code-hf">
-    <MouseCursor />
+    <!-- <MouseCursor /> -->
     <Header />
 
     <FanStamp />
@@ -69,7 +69,7 @@ export default {
   bottom: var(--margin);
   transform: rotate(-7.4deg) scale(0);
 
-  @media screen and (max-width: 379px) {
+  @media (max-aspect-ratio: 3/5) {
     display: none;
   }
 

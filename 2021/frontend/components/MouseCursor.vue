@@ -50,7 +50,8 @@ export default {
   border-radius: 100%;
   background: rgba(255, 255, 255, 0.1);
   transform: translate(var(--mx), var(--my));
-  transition: transform var(--d-normal) var(--ease-out), opacity var(--d-slow);
+  transition: transform var(--d-fast) var(--ease-out), opacity var(--d-slow);
+  /* transition: opacity var(--d-slow); */
 
   &.show {
     opacity: 1;
@@ -79,7 +80,7 @@ export default {
   }
 
   &.-click::before {
-    animation: pulse 0.35s;
+    animation: pulse 0.5s;
   }
 
   @keyframes pulse {
@@ -87,7 +88,7 @@ export default {
       opacity: 0;
       transform: scale(0);
     }
-    70% {
+    50% {
       opacity: 0.4;
       transform: scale(0.2);
     }

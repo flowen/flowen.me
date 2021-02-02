@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .fan-stamp {
-  --w: 20vw;
+  --w: 12.5vw;
   width: clamp(86px, var(--w), 172px);
   height: clamp(86px, var(--w), 172px);
 
