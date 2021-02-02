@@ -21,8 +21,8 @@
         Availability <small>from</small> 1 feb
       </div>
 
-      <div ref="climbing" class="climbing">
-        <img src="~assets/img/climbing.jpg" alt="Climbing" width="590" height="394" />
+      <div class="climbing">
+        <img ref="me" src="~assets/img/climbing.jpg" alt="Climbing" width="590" height="394" />
 
         <div ref="chatting" class="chatting"></div>
       </div>
@@ -39,16 +39,16 @@ export default {
     return {
       chats: [
         "Hi, I 💙 helping businesses with code &amp; design",
-        "Rou Hun is pronounced as Lo wen",
+        "Rou Hun <br> is pronounced as <br> Lo wen",
         "This site is W.I.P. ad infinitum",
         "🏔👨‍💻🚂🏋🈯✍️🐈🎧☕🥩",
         "It's lonely at the top #messageme",
         "BTC to da moooooooon!~~",
-        "📍 Birmingham",
+        "📍 Birmingham, UK & Utrecht, NL",
         "Been working remotely the last 5+ years",
         "Where's my Bitcoin Emoji?",
         "'Yo Lo' is how some peeps greet me",
-        "Bottom right is my family's name",
+        "Bottom right is my family's namestamp: Fan",
       ],
       masterTL: gsap.timeline({ repeat: -1, paused: true }),
     };
@@ -74,7 +74,7 @@ export default {
 
       const availability = this.$refs.availability;
       const about = this.$refs.about;
-      const climbing = this.$refs.climbing;
+      const me = this.$refs.me;
 
       gsap
         .timeline({ onComplete: done })
@@ -91,7 +91,7 @@ export default {
           "-=.2"
         )
         .to(
-          climbing,
+          me,
           {
             rotate: -14.4,
             scale: 0,
@@ -102,7 +102,7 @@ export default {
     enter: function (el, done) {
       const availability = this.$refs.availability;
       const about = this.$refs.about;
-      const climbing = this.$refs.climbing;
+      const me = this.$refs.me;
 
       gsap
         .timeline({
@@ -127,12 +127,12 @@ export default {
           "-=.2"
         )
         .to(
-          climbing,
+          me,
           {
-            rotate: 0,
-            scale: 1,
+            rotate: -14.4,
+            y: 0,
           },
-          "-=.2.5"
+          "-=.7"
         );
 
       const domChat = this.$refs.chatting;
@@ -197,17 +197,17 @@ export default {
 .climbing {
   z-index: z("intro-climbing");
   position: relative;
+  width: 50vw;
   max-width: 80%;
-  margin-top: 8vh;
-  margin-left: 10vw;
-  transform: rotate(-14.4deg) scale(0);
-
-  .no-js & {
-    transform: rotate(0deg) scale(1);
-  }
+  margin: 8vh auto;
 
   img {
-    transform: rotate(-7deg);
+    width: 100%;
+    transform: rotate(0) translateY(200vh);
+
+    .no-js & {
+      transform: translateY(0);
+    }
   }
 
   .chatting {

@@ -55,7 +55,7 @@ export default {
     enter: function (el, done) {
       gsap
         .timeline({ onComplete: done })
-        .delay(0.35)
+        .delay(0.75)
         .to(el, {
           scale: 1,
         })
