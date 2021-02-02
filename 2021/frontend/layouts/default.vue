@@ -22,21 +22,16 @@ export default {
     const header = document.querySelector(".header");
     const fanstamp = document.querySelector(".fan-stamp");
 
-    console.log("hoi");
     gsap
       .timeline()
       .delay(0.2)
       .to(header, {
-        duration: 0.35,
-        ease: "power2.out",
         rotate: 0,
         scale: 1,
       })
       .to(
         fanstamp,
         {
-          duration: 0.35,
-          ease: "power2.out",
           rotate: 0,
           scale: 1,
         },

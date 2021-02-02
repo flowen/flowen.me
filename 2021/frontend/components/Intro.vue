@@ -1,21 +1,25 @@
 <template>
-  <section class="intro">
-    <p class="about h1" data-animation>
-      RouHun Fan <small>works as a</small> <br />
-      Freelance developer <small>specialized in </small> <br />
-      Frontend - Animation - Interaction <br />
-      and loves to work with agencies, studios <small>anywhere</small><br />
-      and individuals all over the world.
-    </p>
+  <transition :css="false" appear @enter="enter" @leave="leave">
+    <section class="intro">
+      <p ref="about" class="about h1" data-a-scale>
+        RouHun Fan <small>works as a</small> <br />
+        Freelance developer <small>specialized in </small> <br />
+        Frontend - Animation - Interaction <br />
+        and loves to work with agencies, studios <small>anywhere</small><br />
+        and individuals all over the world.
+      </p>
 
-    <div class="availability h1">Availability <small>from</small> 1 feb</div>
+      <div ref="availability" class="availability h1" data-a-scale>
+        Availability <small>from</small> 1 feb
+      </div>
 
-    <div class="climbing">
-      <img src="~assets/img/climbing.jpg" alt="Climbing" width="590" height="394" />
+      <div ref="climbing" class="climbing">
+        <img src="~assets/img/climbing.jpg" alt="Climbing" width="590" height="394" />
 
-      <div ref="chatting" class="chatting"></div>
-    </div>
-  </section>
+        <div ref="chatting" class="chatting"></div>
+      </div>
+    </section>
+  </transition>
 </template>
 
 <script>
@@ -27,14 +31,15 @@ export default {
     return {
       chats: [
         "Hi, I 💙 helping businesses with code &amp; design",
-        "Rou Hun is pronounced as Lowen",
+        "Rou Hun is pronounced as Lo wen",
         "🏔👨‍💻🚂🏋🈯✍️🐈🎧☕🥩",
         "It's lonely at the top #messageme",
         "BTC to da moooooooon!~~",
         "📍 Birmingham",
         "Been working remotely the last 5+ years",
         "Where's my Bitcoin Emoji?",
-        "Yolo means Yo Lo(wen) to me",
+        "'Yo Lo' is how some peeps greet me",
+        "Bottom right is my family's name",
       ],
       masterTL: gsap.timeline({ repeat: -1, paused: true }),
     };
@@ -44,56 +49,88 @@ export default {
       gsap.registerPlugin(TextPlugin);
     }
   },
-  mounted() {
-    const availability = document.querySelector(".availability");
-    const about = document.querySelector(".about");
-    const climbing = document.querySelector(".climbing");
+  methods: {
+    leave: function (el, done) {
+      console.log("leave");
+      this.masterTL.kill();
 
-    gsap
-      .timeline({ onComplete: () => this.masterTL.play() })
-      .delay(0.3)
-      .to(availability, {
-        duration: 0.35,
-        ease: "power2.out",
-        rotate: 0,
-        scale: 1,
-      })
-      .to(
-        about,
-        {
-          duration: 0.35,
-          ease: "power2.out",
+      const availability = this.$refs.availability;
+      const about = this.$refs.about;
+      const climbing = this.$refs.climbing;
+
+      gsap
+        .timeline({ onComplete: done })
+        .to(availability, {
+          rotate: -14.4,
+          scale: 0,
+        })
+        .to(
+          about,
+          {
+            rotate: -14.4,
+            scale: 0,
+          },
+          "-=.2"
+        )
+        .to(
+          climbing,
+          {
+            rotate: -14.4,
+            scale: 0,
+          },
+          "-=.2.5"
+        );
+    },
+    enter: function (el, done) {
+      const availability = this.$refs.availability;
+      const about = this.$refs.about;
+      const climbing = this.$refs.climbing;
+
+      gsap
+        .timeline({
+          onComplete: () => {
+            done();
+            this.masterTL.play();
+          },
+        })
+        .delay(0.3)
+        .to(availability, {
           rotate: 0,
           scale: 1,
-        },
-        "-=.2"
-      )
-      .to(
-        climbing,
-        {
-          duration: 0.35,
-          ease: "power2.out",
-          rotate: 0,
-          scale: 1,
-        },
-        "-=.2.5"
-      );
+        })
+        .to(
+          about,
+          {
+            rotate: 0,
+            scale: 1,
+          },
+          "-=.2"
+        )
+        .to(
+          climbing,
+          {
+            rotate: 0,
+            scale: 1,
+          },
+          "-=.2.5"
+        );
 
-    const domChat = this.$refs.chatting;
+      const domChat = this.$refs.chatting;
 
-    this.chats.forEach((chat) => {
-      let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 2, ease: "none" });
+      this.chats.forEach((chat) => {
+        let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 2, ease: "none" });
 
-      tl.to(domChat, chat.length * 0.05, {
-        text: chat,
+        tl.to(domChat, chat.length * 0.05, {
+          text: chat,
+        });
+        this.masterTL.add(tl);
       });
-      this.masterTL.add(tl);
-    });
 
-    gsap.to(domChat, 0.25, {
-      delay: 0.7,
-      opacity: 1,
-    });
+      gsap.to(domChat, 0.25, {
+        delay: 0.7,
+        opacity: 1,
+      });
+    },
   },
 };
 </script>
@@ -126,21 +163,11 @@ export default {
   left: 0;
   bottom: 0;
   margin-bottom: 0;
-  transform: scale(0);
-
-  .no-js & {
-    transform: scale(1);
-  }
 }
 
 .availability {
   top: 0;
   left: 0;
-  transform: scale(0);
-
-  .no-js & {
-    transform: scale(1);
-  }
 
   h1 {
     font-family: var(--font-title);
@@ -170,6 +197,8 @@ export default {
     color: var(--magenta);
     opacity: 0;
     text-align: center;
+    font-size: clamp(18px, 5vw, 24px);
+    font-weight: 800;
   }
 }
 </style>

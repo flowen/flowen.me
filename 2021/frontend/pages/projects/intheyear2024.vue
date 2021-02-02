@@ -3,6 +3,14 @@
     <h1 class="project-page__title">In the year 2024</h1>
     <h2 class="project-page__subtitle">Made for MSCHF</h2>
 
+    <div class="project-page__project-url">
+      <img src="~assets/img/arrow.svg" alt="arrow" />
+      <a href="https://intheyear2024.com" target="_blank" rel="noopener noreferrer"
+        >I can start posting screenshots and video's, but it's best you see the actual product
+        live</a
+      >
+    </div>
+
     <p class="project-page__description">
       A crowd-sourced domain-squatting webshop. Visitors were able to buy shares of a squatted
       domain for $1 per share with a 100 shares per URL. This is just one of the many crazy concepts
@@ -21,6 +29,14 @@
       realtime on the site.
     </p>
 
+    <figure>
+      <figcaption>k k k, just 1 for layout's sake:</figcaption>
+      <video class="video" autoplay loop muted plays-inline>
+        <source src="~assets/img/intheyear2024/mschf.mp4" type="video/mp4" />
+      </video>
+    </figure>
+
+    <h3>page__summary</h3>
     <dl class="project-page__summary">
       <dd>For:</dd>
       <dt><a href="https://mschf.xyz">MSCHF</a></dt>
@@ -44,29 +60,13 @@
         >
       </dt>
     </dl>
-
-    <!-- <NuxtLink to="/projects/intheyear2024">intheyear 2024</NuxtLink>
-    <NuxtLink to="/projects/theatrejs">Theatre.js</NuxtLink>
-    <NuxtLink to="/projects/jaarbeurs">Jaarbeurs</NuxtLink>
-    <NuxtLink to="/projects/mirabeau">Mirabeau</NuxtLink>
-    <NuxtLink to="/projects/principlesofwealth">principlesofwealth</NuxtLink> -->
   </section>
 </template>
 
 <script>
 export default {
   name: "Intheyear2024",
-  // head() {},
-  // scrollToTop: true
 };
 </script>
 
-<style lang="scss">
-.project-page {
-  &__description {
-  }
-
-  &__summary {
-  }
-}
-</style>
+<style lang="scss" scoped></style>

@@ -1,22 +1,44 @@
 <template>
-  <header class="header">
-    <h1><a href="/">R&ndash;H&ndash;F</a></h1>
-    <nav class="nav">
-      <NuxtLink to="mailto:b34ff8ed-85b6-49ff-877f-c72d181b4396@flowen.anonaddy.me"
-        >E-mail</NuxtLink
-      >
-      <NuxtLink to="https://twitter.com/flowen_nl">Twitter</NuxtLink>
-      <NuxtLink to="https://t.me/flowen">Telegram</NuxtLink>
-      <NuxtLink to="/projects/">Projects</NuxtLink>
-      <NuxtLink to="/projects/intheyear2024">intheyear2024</NuxtLink>
-      <NuxtLink to="/about/">about</NuxtLink>
-    </nav>
-  </header>
+  <transition :css="false" appear @enter="enter" @leave="leave">
+    <header class="header">
+      <h1><a href="/">R&ndash;H&ndash;F</a></h1>
+      <nav ref="nav" class="nav">
+        <NuxtLink to="/about/" data-a-scale> about</NuxtLink>
+        <NuxtLink to="/projects/intheyear2024" data-a-scale>intheyear2024</NuxtLink>
+        <br />
+        <a data-a-scale to="mailto:b34ff8ed-85b6-49ff-877f-c72d181b4396@flowen.anonaddy.me"
+          >E-mail</a
+        >
+        <a data-a-scale to="https://twitter.com/flowen_nl">Twitter</a>
+        <a data-a-scale to="https://t.me/flowen">Telegram</a>
+      </nav>
+    </header>
+  </transition>
 </template>
 
 <script>
+import gsap from "gsap";
+
 export default {
   name: "Header",
+  methods: {
+    enter: function (el, done) {
+      gsap
+        .timeline({ onComplete: done })
+        .to(el, {
+          scale: 1,
+        })
+        .to(this.$refs.nav.children, {
+          scale: 1,
+          stagger: 0.05,
+        });
+      done();
+    },
+    leave: function (el, done) {
+      console.log("leave");
+      done();
+    },
+  },
 };
 </script>
 

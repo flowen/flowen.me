@@ -194,7 +194,10 @@ export default {
   // "~/plugins/vue-analytics.js",
   // { src: "~plugins/vue-scroll-lock.js", ssr: false }
   // ],
-  plugins: [{ src: "~/plugins/splitting.client.js", ssr: false }],
+  plugins: [
+    { src: "~/plugins/splitting.client.js", ssr: false },
+    { src: "~/plugins/gsap.client.js", ssr: false },
+  ],
   /*
    ** Nuxt.js dev-modules
    */

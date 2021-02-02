@@ -1,3 +1,11 @@
+[data-a-scale] {
+  transform: scale(0);
+
+  .no-js & {
+    transform: scale(1);
+  }
+}
+
 [data-animation] {
   --multi: 0.5s;
   --tsa: 0;

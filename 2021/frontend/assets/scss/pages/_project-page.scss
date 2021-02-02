@@ -1,24 +1,50 @@
 .project-page {
-  width: 70%;
+  width: 80vw;
   margin: 0 auto 0 5%;
+  padding: 12.5vh 5vw;
 
   &__title {
-    font-size: 126px;
-    margin-left: 12vw;
+    font-size: clamp(48px, 10vw, 128px);
+    margin: 7.5vh 0 5vh 5vw;
   }
+
   &__subtitle {
-    font-size: 48px;
-    margin-left: 5vw;
+    margin-left: 10vw;
+    margin-bottom: 5vh;
+    font-family: var(--font-body);
+    font-size: clamp(24px, 4.5vw, 48px);
+    color: var(--off-white);
+    text-transform: none;
   }
+
+  &__project-url {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 5vw;
+      margin: 0 2.5vw;
+    }
+  }
+
   &__description {
-    margin: 2.5vh 0 2.5vh 12vw;
-    width: 500px;
+    margin: 2.5vh 0 12.5vh 12vw;
+    max-width: 500px;
+    text-transform: none;
   }
+
   &__summary {
-    margin: 2.5vh 0 2.5vh 5vw;
+    margin: 2.5vh 0 2.5vh 2.5vw;
     width: 500px;
     display: grid;
     grid-template-columns: 15% 1fr;
     grid-gap: 20px;
+    text-transform: none;
+  }
+
+  video {
+    max-width: 55vw;
+    margin: 0 0 12.5vh;
   }
 }
