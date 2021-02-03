@@ -1,12 +1,9 @@
 <template>
   <div class="experiments">
     <input class="toggle" type="checkbox" />
-    <div class=""></div>
-    <div class="title js--show" data-a-split>
-      <div class="translate">
-        <div class="rotate">
-          <div class="scale" v-html="title"></div>
-        </div>
+    <div class="title" data-a-split>
+      <div class="rotate">
+        <div class="scale" v-html="title"></div>
       </div>
     </div>
   </div>

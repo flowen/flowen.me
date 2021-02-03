@@ -1,21 +1,225 @@
 <template>
   <main class="main">
-    <Intro />
+    <section class="intro">
+      <p class="about h1" data-a-scale>
+        RouHun Fan <small>works as a</small> <br />
+        Freelance developer <small>specialized in </small> <br />
+        Frontend - Animation - Interaction <br />
+        and loves to work with agencies, studios <small>anywhere</small><br />
+        and individuals all over the world.
+      </p>
+
+      <div class="availability h1" data-a-scale>Availability <small>from</small> 1 feb</div>
+
+      <div class="climbing">
+        <img
+          ref="me"
+          class="me"
+          src="~assets/img/climbing.jpg"
+          alt="Climbing"
+          width="590"
+          height="394"
+        />
+
+        <div class="chatting"></div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
-import Intro from "@/components/Intro.vue";
+import gsap from "gsap";
+import { TextPlugin } from "gsap/TextPlugin";
 
 export default {
-  nane: "Index",
-  components: {
-    Intro,
+  transition: {
+    css: false,
+    mode: "out-in",
+    appear: true,
+    enter: function (el, done) {
+      const availability = el.querySelector(".availability");
+      const about = el.querySelector(".about");
+      const me = el.querySelector(".me");
+
+      gsap
+        .timeline({
+          onComplete: () => {
+            setTimeout(() => {
+              masterTL.play();
+              done();
+            }, 200);
+          },
+        })
+        .delay(0.3)
+        .to(availability, {
+          rotate: 0,
+          scale: 1,
+        })
+        .to(
+          about,
+          {
+            rotate: 0,
+            scale: 1,
+          },
+          "-=.2"
+        )
+        .to(
+          me,
+          {
+            rotate: -14.4,
+            y: 0,
+          },
+          "-=.7"
+        );
+
+      const domChat = el.querySelector(".chatting");
+      const masterTL = gsap.timeline({ repeat: -1, paused: true });
+      const chats = [
+        "Hi, I 💙 helping businesses with code &amp; design",
+        "Rou Hun <br> is pronounced as <br> Lo wen",
+        "This site is W.I.P. ad infinitum",
+        "🏔👨‍💻🚂🏋🈯✍️🐈🎧☕🥩",
+        "It's lonely at the top #messageme",
+        "BTC to da moooooooon!~~",
+        "📍 Birmingham, UK & Utrecht, NL",
+        "Been working remotely the last 5+ years",
+        "Where's my Bitcoin Emoji?",
+        "'Yo Lo' is how some peeps greet me",
+        "Bottom right is my family's namestamp: Fan",
+      ];
+
+      chats.forEach((chat) => {
+        let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 2, ease: "none" });
+
+        tl.to(domChat, chat.length * 0.05, {
+          text: chat,
+        });
+        masterTL.add(tl);
+      });
+
+      gsap.to(domChat, 0.25, {
+        delay: 0.7,
+        opacity: 1,
+      });
+    },
+    leave: function (el, done) {
+      const availability = el.querySelector(".availability");
+      const about = el.querySelector(".about");
+      const climbing = el.querySelector(".climbing");
+
+      gsap
+        .timeline({ onComplete: done })
+        .addLabel("start")
+        .to(availability, { scale: 0 }, "start")
+        .to(about, { scale: 0 }, "start")
+        .to(climbing, { y: "-100vh" }, "start+=.2");
+    },
+  },
+  // data() {
+  //   return {
+  //     chats: [
+  //       "Hi, I 💙 helping businesses with code &amp; design",
+  //       "Rou Hun <br> is pronounced as <br> Lo wen",
+  //       "This site is W.I.P. ad infinitum",
+  //       "🏔👨‍💻🚂🏋🈯✍️🐈🎧☕🥩",
+  //       "It's lonely at the top #messageme",
+  //       "BTC to da moooooooon!~~",
+  //       "📍 Birmingham, UK & Utrecht, NL",
+  //       "Been working remotely the last 5+ years",
+  //       "Where's my Bitcoin Emoji?",
+  //       "'Yo Lo' is how some peeps greet me",
+  //       "Bottom right is my family's namestamp: Fan",
+  //     ],
+  //     masterTL: gsap.timeline({ repeat: -1, paused: true }),
+  //   };
+  // },
+  beforeMount() {
+    if (process.client) {
+      gsap.registerPlugin(TextPlugin);
+    }
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.main {
+.intro {
+  position: relative;
+  margin: var(--margin);
+  height: calc(var(--wh) - var(--margin) * 2);
+  display: flex;
+
+  > * {
+    position: absolute;
+  }
+
+  h1,
+  .h1 {
+    --min: 22px;
+    --max: 72px;
+    font-size: clamp(var(--min), 6.5vw, var(--max));
+
+    @media (max-aspect-ratio: 3/5) {
+      font-size: 36px;
+    }
+  }
+
+  small {
+    font-size: clamp(12px, 5vw, 24px);
+    text-transform: lowercase;
+  }
+}
+
+.about {
+  z-index: z("intro-about");
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+.availability {
+  top: 0;
+  left: 0;
+
+  h1 {
+    font-family: var(--font-title);
+    color: var(--yellow);
+  }
+}
+
+.climbing {
+  z-index: z("intro-climbing");
+  position: relative;
+  width: 50vw;
+  max-width: 80%;
+  margin: 8vh auto;
+
+  img {
+    width: 100%;
+    transform: rotate(0) translateY(200vh);
+
+    .no-js & {
+      transform: translateY(0);
+    }
+  }
+
+  .chatting {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(-14.4deg);
+    color: var(--magenta);
+    opacity: 0;
+    text-align: center;
+    font-size: clamp(12px, 2.5vw, 24px);
+    font-weight: 600;
+    width: 80%;
+  }
+}
+
+@media (max-aspect-ratio: 1000/1414) {
+  .climbing {
+    width: 100%;
+    margin-top: 20vh;
+  }
 }
 </style>

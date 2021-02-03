@@ -1,17 +1,16 @@
 <template>
   <transition :css="false" appear @enter="enter" @beforeleave="leave">
     <header class="header" data-a-scale>
-      <h1 ref="title" data-a-split>
-        <NuxtLink to="/" class="translate">
-          <div class="rotate">
-            <div class="scale" v-html="title"></div>
-          </div>
+      <h1 ref="title" data-a-split data-splitting="chars">
+        <NuxtLink exact to="/" class="rotate">
+          <div class="scale" v-html="title">R&ndash;H&ndash;F</div>
         </NuxtLink>
       </h1>
 
       <nav ref="nav" class="nav">
-        <NuxtLink to="/projects/intheyear2024" class="nav__project-link" data-a-scale
-          >in the year 2024</NuxtLink
+        <br />
+        <NuxtLink to="/intheyear2024/" class="nav__project-link" data-a-scale
+          >intheyear2024.com</NuxtLink
         >
         <br />
         <a
@@ -31,8 +30,6 @@
         <a data-a-scale target="_blank" rel="noopener noreferrer" href="https://t.me/flowen"
           >Telegram</a
         >
-        <br />
-        <NuxtLink to="/about/" data-a-scale>about</NuxtLink>
       </nav>
     </header>
   </transition>
@@ -72,11 +69,21 @@ export default {
           },
           "-=.25"
         );
-      done();
     },
     leave: function (el, done) {
-      console.log("leave");
-      done();
+      gsap
+        .timeline({ onComplete: done })
+        .to(el, {
+          scale: 0,
+        })
+        .to(
+          this.$refs.nav.children,
+          {
+            scale: 0,
+            stagger: 0.05,
+          },
+          "-=.25"
+        );
     },
   },
 };
@@ -116,6 +123,7 @@ export default {
     font-size: clamp(16px, 5vw, 24px);
     transition: letter-spacing var(--d-slow) var(--ease-out);
 
+    &[aria-current="page"],
     &:hover {
       letter-spacing: 5px;
     }

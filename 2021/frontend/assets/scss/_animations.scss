@@ -53,30 +53,8 @@
       animation-duration: 0.2s;
     }
   }
-
-  .translate {
-    animation: translate 0.2s ease-out infinite alternate paused;
-    animation-delay: calc(var(--char-index) * 0.035s);
-  }
 }
 
-@keyframes translate {
-  0% {
-    transform: translate(0, 0);
-  }
-  20% {
-    transform: translate(-15%, -30%);
-  }
-  40% {
-    transform: translate(-23%, -21%);
-  }
-  80% {
-    transform: translate(6%, -2%);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
 @keyframes rotate {
   0% {
     transform: rotate(0);

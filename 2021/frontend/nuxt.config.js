@@ -190,13 +190,10 @@ export default {
   env: {
     // GA_ID
   },
-  // plugins: [
-  // "~/plugins/vue-analytics.js",
-  // { src: "~plugins/vue-scroll-lock.js", ssr: false }
-  // ],
   plugins: [
-    { src: "~/plugins/splitting.client.js", ssr: false },
-    { src: "~/plugins/gsap.client.js", ssr: false },
+    // "~/plugins/vue-analytics.js",
+    { src: "~/plugins/splitting.client.js", mode: "client" },
+    { src: "~/plugins/gsap.client.js", mode: "client" },
   ],
   /*
    ** Nuxt.js dev-modules

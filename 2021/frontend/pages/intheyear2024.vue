@@ -1,6 +1,10 @@
 <template>
   <section class="project-page">
-    <h1 class="project-page__title">Drop #38: In the year 2024</h1>
+    <h1 class="project-page__title" data-a-split data-splitting="chars">
+      <div class="rotate">
+        <div class="scale">Drop #38: In the year 2024</div>
+      </div>
+    </h1>
     <h2 class="project-page__subtitle">Made for MSCHF</h2>
 
     <div class="project-page__project-url">
@@ -60,20 +64,69 @@
       </dt>
     </dl>
 
-    <p>
-      Obviously I've made many more projects, but I'm short on time. Hit me up, if you want to know
-      more
-    </p>
+    <p>Still working on this website, expect more work to come soon or else hit me up!</p>
   </section>
 </template>
 
 <script>
+import gsap from "gsap";
+
 export default {
   name: "Intheyear2024",
+  scrollToTop: true,
+  transition: {
+    css: false,
+    mode: "out-in",
+    appear: true,
+    enter: function (el, done) {
+      const title = el.querySelector(".project-page__title");
+      gsap
+        .timeline({ onComplete: done })
+        .addLabel("start")
+        .to(
+          el,
+          {
+            opacity: 1,
+          },
+          "start"
+        )
+        .to(
+          el,
+          {
+            duration: 1.5,
+            y: 0,
+          },
+          "start"
+        )
+        .add(() => title.classList.add("js--show"), "-=1");
+    },
+    leave: function (el, done) {
+      gsap.timeline({ onComplete: done }).to(el, {
+        duration: 1,
+        yPercent: -50,
+        opacity: 0,
+      });
+    },
+  },
+  mounted() {
+    if (typeof window !== `undefined` || typeof document !== `undefined`) {
+      const Splitting = require("splitting");
+      Splitting();
+    }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+.project-page {
+  opacity: 0;
+  transform: translateY(200vh);
+
+  .no-js & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 figcaption {
   margin-bottom: 1.25vh;
 }
