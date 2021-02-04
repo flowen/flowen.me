@@ -101,11 +101,13 @@ export default {
         .add(() => title.classList.add("js--show"), "-=1");
     },
     leave: function (el, done) {
+      const video = el.querySelector(".video");
+      video.pause();
+
       gsap.timeline({ onComplete: done }).to(el, {
-        eaes: "power2.in",
-        duration: 1,
-        yPercent: -50,
-        opacity: 0,
+        duration: 1.5,
+        ease: "power4.in",
+        yPercent: -100,
       });
     },
   },

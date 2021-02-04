@@ -108,7 +108,7 @@ export default {
       const climbing = el.querySelector(".climbing");
 
       gsap
-        .timeline({ defaults: { ease: "power2.in" }, onComplete: done })
+        .timeline({ defaults: { ease: "power4.in" }, onComplete: done })
         .addLabel("start")
         .to(availability, { scale: 0 }, "start")
         .to(about, { scale: 0 }, "start")
