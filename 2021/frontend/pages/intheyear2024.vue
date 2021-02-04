@@ -33,7 +33,7 @@
     </p>
 
     <figure>
-      <figcaption>k k, just 1 for layout's sake:</figcaption>
+      <figcaption>k k, just 1 for teh layouts:</figcaption>
       <video class="video" autoplay loop muted playsinline>
         <source src="~assets/img/intheyear2024/mschf.mp4" type="video/mp4" />
       </video>
@@ -102,6 +102,7 @@ export default {
     },
     leave: function (el, done) {
       gsap.timeline({ onComplete: done }).to(el, {
+        eaes: "power2.in",
         duration: 1,
         yPercent: -50,
         opacity: 0,
