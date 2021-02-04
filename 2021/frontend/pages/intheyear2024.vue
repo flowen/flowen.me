@@ -34,7 +34,7 @@
 
     <figure>
       <figcaption>k k, just 1 for layout's sake:</figcaption>
-      <video class="video" autoplay loop muted plays-inline>
+      <video class="video" autoplay loop muted playsinline>
         <source src="~assets/img/intheyear2024/mschf.mp4" type="video/mp4" />
       </video>
     </figure>
