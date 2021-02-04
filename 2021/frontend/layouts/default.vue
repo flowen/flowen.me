@@ -1,6 +1,6 @@
 <template>
   <div class="hi-thx-4-checkin-ma-code-hf">
-    <!-- <MouseCursor /> -->
+    <MouseCursor />
     <Header />
 
     <FanStamp />
