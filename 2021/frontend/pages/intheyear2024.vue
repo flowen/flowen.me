@@ -64,7 +64,7 @@
       </dt>
     </dl>
 
-    <p>Still working on this website, expect more work to come soon or else hit me up!</p>
+    <p>Still working on this website, expect more work to come soon. Hit me up for more!</p>
   </section>
 </template>
 
@@ -73,7 +73,6 @@ import gsap from "gsap";
 
 export default {
   name: "Intheyear2024",
-  scrollToTop: true,
   transition: {
     css: false,
     mode: "out-in",

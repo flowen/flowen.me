@@ -14,6 +14,7 @@ export default {
   /*
    ** Headers of the page
    */
+  scrollToTop: true,
   head: {
     htmlAttrs: {
       lang: "en",

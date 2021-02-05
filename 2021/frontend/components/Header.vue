@@ -30,6 +30,8 @@
         <a data-a-scale target="_blank" rel="noopener noreferrer" href="https://t.me/flowen"
           >Telegram</a
         >
+        <br />
+        <nuxt-link data-a-scale to="/about/">about</nuxt-link>
       </nav>
     </header>
   </transition>

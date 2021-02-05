@@ -28,8 +28,9 @@
 import Testimonial from "~/components/Testimonial.vue";
 import SalesCopy from "@/components/SalesCopy.vue";
 import ContactHero from "@/components/ContactHero.vue";
-
 import FanStamp from "@/components/FanStamp.vue";
+
+import gsap from "gsap";
 
 export default {
   components: {
@@ -37,6 +38,38 @@ export default {
     SalesCopy,
     ContactHero,
     FanStamp,
+  },
+  transition: {
+    css: false,
+    mode: "out-in",
+    appear: true,
+    enter: function (el, done) {
+      gsap
+        .timeline({ onComplete: done })
+        .addLabel("start")
+        .to(
+          el,
+          {
+            opacity: 1,
+          },
+          "start"
+        )
+        .to(
+          el,
+          {
+            duration: 1.5,
+            y: 0,
+          },
+          "start"
+        );
+    },
+    leave: function (el, done) {
+      gsap.timeline({ onComplete: done }).to(el, {
+        duration: 1.5,
+        ease: "power4.in",
+        yPercent: -100,
+      });
+    },
   },
 };
 </script>
@@ -46,6 +79,13 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  transform: translateY(200vh);
+
+  .no-js & {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   section {
     margin: 15vh auto;

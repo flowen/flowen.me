@@ -5,17 +5,33 @@
         Perhaps You’re not sure why these popular frameworks like React, Vue, etc. are necessary for
         your business goals?
       </p>
+
       <p>Find animations beautiful but you’re unable to justify its costs?</p>
 
       <p>Struggling to communicate your business goals to a (team of) developer(s)?</p>
 
-      <p>
-        Not sure if the quality of the interface of your new app is as good as you’re being told?
-      </p>
-
       <p>Need an assessment or looking for unbiased, nonpartisan advice?</p>
 
-      <p>You're in luck. <a href="">That's exactly what I can help you with.</a></p>
+      <p>Or just looking for an addition to your team on design and frontend?</p>
+
+      <p>
+        You're in luck.
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="mailto:b34ff8ed-85b6-49ff-877f-c72d181b4396@flowen.anonaddy.me?subject=[inquiry for work]&body=Tell me about your project in 3 sentences: %0D%0A%0D%0ATell me when you consider your project a success: %0D%0A%0D%0ADo you have wireframes, designs, other assets ready? %0D%0A%0D%0AHow did you find me:"
+        >
+          Let me help you out.
+        </a>
+
+        <br />
+        <br />
+
+        <small>
+          ps: I give a 10% discount when paid in bitcoin. Would love to work with any
+          crypto-startups.
+        </small>
+      </p>
     </article>
 
     <figure>
