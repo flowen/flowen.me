@@ -10,18 +10,32 @@
     <div class="project-page__project-url">
       <img src="~assets/img/arrow.svg" alt="arrow" />
       <a href="https://theatrejs-demo.netlify.app/" target="_blank" rel="noopener noreferrer"
-        >It's you experience this live with good headphones</a
+        >It's best you experience this with good headphones</a
       >
     </div>
 
-    <p class="project-page__description"></p>
+    <p class="project-page__description">
+      Theatre.js is a JavaScript animation library with a GUI. It animates the DOM, WebGL, and any
+      other JavaScript variable.
+      <br /><br />
+      Aria, the developer behind TheatreJS, contacted me to create a creative demo and show the
+      capabilities of TheatreJS. I was free to create anything. <br /><br />
+      I asked Mert to create the audio and help with art-direction.
+    </p>
 
-    <!-- <figure>
-      <figcaption>k k, just 1 for teh layouts:</figcaption>
+    <figure style="margin-left: 15vw">
       <video class="video" autoplay loop muted playsinline>
-        <source src="~assets/img/intheyear2024/mschf.mp4" type="video/mp4" />
+        <source src="~assets/img/theatrejs/wip-1.mp4" type="video/mp4" />
       </video>
-    </figure> -->
+      <figcaption>WIP: experimenting with particle-system</figcaption>
+    </figure>
+
+    <figure>
+      <video class="video" autoplay loop muted playsinline>
+        <source src="~assets/img/theatrejs/wip-2.mp4" type="video/mp4" />
+      </video>
+      <figcaption>Sneak peak of TheatreJS's power</figcaption>
+    </figure>
 
     <h3>page__summary</h3>
     <dl class="project-page__summary">
@@ -76,15 +90,24 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .project-page {
   transform: translateY(200vh);
 
   .no-js & {
     transform: translateY(0);
   }
-}
-figcaption {
-  margin-bottom: 1.25vh;
+
+  figure {
+    margin: 0 0 12.5vh;
+  }
+
+  figcaption {
+    margin-bottom: 1.25vh;
+  }
+
+  .video {
+    margin-bottom: 0;
+  }
 }
 </style>
