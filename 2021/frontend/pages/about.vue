@@ -5,18 +5,24 @@
       citee="Michael Freund, Lead innovation"
       :citee-image="require('~/assets/img/testimonial-michael.jpg')"
       citee-company="Richner Stutz"
-      citee-company-u-r-l="https://richnerstutz.ch/en/"
+      citee-company-url="https://richnerstutz.ch/en/"
     />
 
     <SalesCopy />
 
     <Testimonial
-      quote="Rou Hun is a multi-skilled powerhouse. When I hire him to code the front-end I know I'm saving time on design instructions & decisions. There's no friction in collaboration and he adds extra value to our business and operations this way"
+      quote="Rou Hun is a multi-skilled powerhouse. When I hire him to code the front-end I know I'm saving time on design instructions &amp; decisions. There's no friction in collaboration and he adds extra value to our business and operations this way"
       citee="Daniel Heitz, Cofounder"
       :citee-image="require('~/assets/img/testimonial-daniel.jpg')"
       citee-company="Gebrueders Heitz"
-      citee-company-u-r-l="https://gebruederheitz.de/"
+      citee-company-url="https://gebruederheitz.de/"
     />
+
+    <p class="problems">
+      A good friend and I also run a small coding studio and
+      <a href="https://problem.studio"> we fix problems 💙 in proper fashion </a>. We’re a tiny
+      full-stack team that operates on quick scale and with a focus on quality.
+    </p>
 
     <ContactHero />
 
@@ -93,6 +99,13 @@ export default {
 
   .fan-stamp {
     margin: 50vh auto;
+  }
+
+  .problems {
+    max-width: 500px;
+    margin: 5vh auto;
+    font-size: clamp(20px, 4.5vw, 28px);
+    text-align: center;
   }
 }
 </style>
