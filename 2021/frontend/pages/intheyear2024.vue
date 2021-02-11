@@ -1,6 +1,6 @@
 <template>
   <section class="project-page">
-    <h1 class="project-page__title" data-a-split data-splitting="chars">
+    <h1 class="project-page__title" data-splitting="chars">
       <div class="rotate">
         <div class="scale">Drop #38: In the year 2024</div>
       </div>
@@ -64,39 +64,31 @@
       </dt>
     </dl>
 
-    <p>Still working on this website, expect more work to come soon. Hit me up for more!</p>
+    <Footer />
   </section>
 </template>
 
 <script>
+import Footer from "@/components/Footer";
+import mountSplitting from "@/mixins/mountSplitting";
 import gsap from "gsap";
 
 export default {
   name: "Intheyear2024",
+  components: { Footer },
+  mixins: [mountSplitting],
   transition: {
     css: false,
     mode: "out-in",
     appear: true,
     enter: function (el, done) {
       const title = el.querySelector(".project-page__title");
+
       gsap
         .timeline({ onComplete: done })
         .addLabel("start")
-        .to(
-          el,
-          {
-            opacity: 1,
-          },
-          "start"
-        )
-        .to(
-          el,
-          {
-            duration: 1.5,
-            y: 0,
-          },
-          "start"
-        )
+        .to(el, { opacity: 1 }, "start")
+        .to(el, { duration: 1.5, y: 0 }, "start")
         .add(() => title.classList.add("js--show"), "-=1");
     },
     leave: function (el, done) {
@@ -110,22 +102,14 @@ export default {
       });
     },
   },
-  mounted() {
-    if (typeof window !== `undefined` || typeof document !== `undefined`) {
-      const Splitting = require("splitting");
-      Splitting();
-    }
-  },
 };
 </script>
 
 <style lang="scss" scoped>
 .project-page {
-  opacity: 0;
   transform: translateY(200vh);
 
   .no-js & {
-    opacity: 1;
     transform: translateY(0);
   }
 }

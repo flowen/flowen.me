@@ -6,7 +6,7 @@
   }
 }
 
-[data-a-split] {
+[data-splitting~="chars"] {
   --multi: 0.5s;
   --tsa: 0;
   --sat: 0%;
@@ -16,15 +16,14 @@
   transition: text-shadow 10s var(--ease-out);
 
   .char {
-    display: inline-block;
     transform: scale(0);
     transform-origin: center center;
     animation-delay: calc(var(--char-index) * 0.035s);
   }
 }
 
-.js--show[data-a-split],
-.toggle:checked + [data-a-split] {
+.js--show[data-splitting~="chars"],
+.toggle:checked + [data-splitting~="chars"] {
   --sat: 84%;
   --lgt: 68%;
   --tsa: 5vw;
