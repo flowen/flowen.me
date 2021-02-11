@@ -1,9 +1,9 @@
 <template>
-  <transition :css="false" appear @enter="enter" @beforeleave="leave">
+  <transition :css="false" appear @enter="enter" @leave="leave">
     <header class="header" data-a-scale>
-      <h1 ref="title" data-a-split data-splitting="chars">
+      <h1 ref="title" data-splitting="chars">
         <NuxtLink exact to="/" class="rotate">
-          <div class="scale" v-html="title">R&ndash;H&ndash;F</div>
+          <div class="scale" v-html="splitTitle">R&ndash;H&ndash;F</div>
         </NuxtLink>
       </h1>
 
@@ -12,25 +12,12 @@
         <NuxtLink to="/intheyear2024/" class="nav__project-link" data-a-scale
           >intheyear2024.com</NuxtLink
         >
-        <br />
-        <a
-          data-a-scale
-          target="_blank"
-          rel="noopener noreferrer"
-          href="mailto:b34ff8ed-85b6-49ff-877f-c72d181b4396@flowen.anonaddy.me?subject=[inquiry for work]&body=Tell me about your project in 3 sentences: %0D%0A%0D%0ATell me when you consider your project a success: %0D%0A%0D%0ADo you have wireframes, designs, other assets ready? %0D%0A%0D%0AHow did you find me:"
-          >E-mail</a
-        >
-        <a
-          data-a-scale
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://twitter.com/flowen_nl"
-          >Twitter</a
-        >
-        <a data-a-scale target="_blank" rel="noopener noreferrer" href="https://t.me/flowen"
-          >Telegram</a
+        <NuxtLink to="/theatrejs/" class="nav__project-link" data-a-scale
+          >Theatrejs AV demo</NuxtLink
         >
         <br />
+
+        <nuxt-link data-a-scale to="/contact/">contact</nuxt-link>
         <nuxt-link data-a-scale to="/about/">about</nuxt-link>
       </nav>
     </header>
@@ -39,21 +26,11 @@
 
 <script>
 import gsap from "gsap";
+import charsplitTitle from "@/mixins/charsplitTitle";
 
 export default {
   name: "Header",
-  computed: {
-    title: function () {
-      const text = `R&ndash;H&ndash;F`;
-
-      if (typeof window !== `undefined` || typeof document !== `undefined`) {
-        const Splitting = require("splitting");
-        return Splitting.html({ content: text, by: "chars" });
-      }
-
-      return null;
-    },
-  },
+  mixins: [charsplitTitle(`R&ndash;H&ndash;F`)],
   methods: {
     enter: function (el, done) {
       gsap
