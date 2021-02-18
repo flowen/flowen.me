@@ -103,9 +103,9 @@ export default {
       });
     },
     leave: function (el, done) {
-      const availability = el.querySelector(".availability");
-      const about = el.querySelector(".about");
-      const climbing = el.querySelector(".climbing");
+      const availability = el.querySelector(".intro__availability");
+      const about = el.querySelector(".intro__about");
+      const climbing = el.querySelector(".intro__climbing");
 
       gsap
         .timeline({ defaults: { ease: "power4.in" }, onComplete: done })
