@@ -1,7 +1,7 @@
 <template>
   <main class="main">
     <section class="intro">
-      <p class="about h1" data-a-scale>
+      <p class="intro__about h1" data-a-scale>
         RouHun Fan <small>works as a</small> <br />
         Freelance developer <small>specialized in </small> <br />
         Frontend - Animation - Interaction <br />
@@ -9,19 +9,19 @@
         and individuals all over the world.
       </p>
 
-      <div class="availability h1" data-a-scale>Availability <small>from</small> 1 feb</div>
+      <div class="intro__availability h1" data-a-scale>Availability <small>from</small> 1 feb</div>
 
-      <div class="climbing">
+      <div class="intro__climbing">
         <img
           ref="me"
-          class="me"
+          class="intro__me"
           src="~assets/img/climbing.jpg"
           alt="Climbing"
           width="590"
           height="394"
         />
 
-        <div class="chatting"></div>
+        <div class="intro__chatting"></div>
       </div>
     </section>
   </main>
@@ -37,9 +37,9 @@ export default {
     mode: "out-in",
     appear: true,
     enter: function (el, done) {
-      const availability = el.querySelector(".availability");
-      const about = el.querySelector(".about");
-      const me = el.querySelector(".me");
+      const availability = el.querySelector(".intro__availability");
+      const about = el.querySelector(".intro__about");
+      const me = el.querySelector(".intro__me");
 
       gsap
         .timeline({
@@ -72,7 +72,7 @@ export default {
           "-=.7"
         );
 
-      const domChat = el.querySelector(".chatting");
+      const domChat = el.querySelector(".intro__chatting");
       const masterTL = gsap.timeline({ repeat: -1, paused: true });
       const chats = [
         "Hi, I 💙 helping businesses with code &amp; design",
@@ -141,7 +141,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .intro {
   position: relative;
   margin: var(--margin);
@@ -169,14 +169,14 @@ export default {
   }
 }
 
-.about {
+.intro__about {
   z-index: z("intro-about");
   left: 0;
   bottom: 0;
   margin-bottom: 0;
 }
 
-.availability {
+.intro__availability {
   top: 0;
   left: 0;
 
@@ -186,12 +186,17 @@ export default {
   }
 }
 
-.climbing {
+.intro__climbing {
   z-index: z("intro-climbing");
   position: relative;
   width: 50vw;
   max-width: 80%;
   margin: 8vh auto;
+
+  @media (max-aspect-ratio: 1000/1414) {
+    width: 100%;
+    margin-top: 20vh;
+  }
 
   img {
     width: 100%;
@@ -201,25 +206,17 @@ export default {
       transform: translateY(0);
     }
   }
-
-  .chatting {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, 0) rotate(-14.4deg);
-    color: var(--magenta);
-    opacity: 0;
-    text-align: center;
-    font-size: clamp(12px, 2.5vw, 24px);
-    font-weight: 600;
-    width: 80%;
-  }
 }
-
-@media (max-aspect-ratio: 1000/1414) {
-  .climbing {
-    width: 100%;
-    margin-top: 20vh;
-  }
+.intro__chatting {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(-14.4deg);
+  color: var(--magenta);
+  opacity: 0;
+  text-align: center;
+  font-size: clamp(12px, 2.5vw, 24px);
+  font-weight: 600;
+  width: 80%;
 }
 </style>
