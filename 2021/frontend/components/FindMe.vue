@@ -8,6 +8,6 @@
 
 <style lang="scss">
 .find-me {
-  margin: 12.5vh 0;
+  margin: 0 0 12.5vh 0;
 }
 </style>
