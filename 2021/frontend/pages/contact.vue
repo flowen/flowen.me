@@ -33,24 +33,16 @@
         </svg>
       </div>
 
-      <ul class="contact__hype">
-        <li>Hire me for Campaign &amp; micro-sites, jam-stack, motion and interactivity.</li>
-        <li>
-          I often work in multidisciplinary teams to build websites and apps. Integrating front-end
-          code into backend frameworks or Headless solutions.
-        </li>
-        <li>Strong communicator in a team between PM, design and backend.</li>
-        <li>
-          I can do Frontend-end scoping/feasability, full redesigns or front-end wrtites of existing
-          sites/apps
-        </li>
-        <li>Help find product improvements and critique</li>
-        <li>
-          10% discount when paid in Bitcoin
-          <br /><br />
-          I dream in CSS
-        </li>
-      </ul>
+      <p class="contact__hype">
+        >Hire me for Campaign &amp; micro-sites, jam-stack, motion and interactivity. I often work
+        in multidisciplinary teams to build websites and apps. Integrating front-end code into
+        backend frameworks or Headless solutions. Strong communicator in a team between PM, design
+        and backend.
+        <br /><br />
+        10% discount when paid in Bitcoin ✌️
+        <br /><br />
+        I dream in CSS
+      </p>
 
       <p class="asking-for-problems">
         I also run a small coding studio with a good friend and
