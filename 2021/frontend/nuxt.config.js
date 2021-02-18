@@ -6,7 +6,7 @@ const PROJECT_DESCRIPTION =
   "Freelance frontend UI developer and designer, Rou Hun Fan, working remotely for international clients";
 const PROJECT_KEYWORDS =
   "Remote, remote developer, front-end developer, front-end, creative developer, creative, designer, front-end designer, remote, freelancer, the Netherlands, Holland, Nederland";
-const PROJECT_DOMAIN = "https://rouhun.fan";
+const PROJECT_DOMAIN = "https://flowen.me";
 // const GA_ID = "";
 
 export default {
