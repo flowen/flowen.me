@@ -8,6 +8,8 @@
       citee-company-url="https://richnerstutz.ch/en/"
     />
 
+    <BGROU ref="svg" class="bg-svg" />
+
     <SalesCopy />
 
     <Testimonial
@@ -21,7 +23,7 @@
     <p class="problems">
       A good friend and I also run a small coding studio and
       <a href="https://problem.studio"> we fix problems 💙 in proper fashion </a>. We’re a tiny
-      full-stack team that operates on quick scale and with a focus on quality.
+      full-stack team focus on quality fun.
     </p>
 
     <ContactHero />
@@ -31,16 +33,18 @@
 </template>
 
 <script>
-import Testimonial from "~/components/Testimonial.vue";
-import SalesCopy from "@/components/SalesCopy.vue";
-import ContactHero from "@/components/ContactHero.vue";
-import FanStamp from "@/components/FanStamp.vue";
+import Testimonial from "@/components/Testimonial";
+import SalesCopy from "@/components/SalesCopy";
+import ContactHero from "@/components/ContactHero";
+import FanStamp from "@/components/FanStamp";
 
+import BGROU from "@/assets/img/bg-ROU.svg?inline";
 import gsap from "gsap";
 
 export default {
   components: {
     Testimonial,
+    BGROU,
     SalesCopy,
     ContactHero,
     FanStamp,
@@ -50,24 +54,14 @@ export default {
     mode: "out-in",
     appear: true,
     enter: function (el, done) {
+      const svg = el.querySelector(".bg-svg");
+
       gsap
         .timeline({ onComplete: done })
+        .to(svg, { y: "-150vh" })
         .addLabel("start")
-        .to(
-          el,
-          {
-            opacity: 1,
-          },
-          "start"
-        )
-        .to(
-          el,
-          {
-            duration: 1.5,
-            y: 0,
-          },
-          "start"
-        );
+        .to(el, { y: 0 }, "start")
+        .to(svg, { y: 0 }, "start");
     },
     leave: function (el, done) {
       gsap.timeline({ onComplete: done }).to(el, {
@@ -80,17 +74,31 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .about {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 12.5vh;
 
   transform: translateY(200vh);
 
   .no-js & {
-    opacity: 1;
     transform: translateY(0);
+  }
+
+  .bg-svg {
+    pointer-events: none;
+    z-index: z("behind");
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    transform: translateY(-100vh);
+
+    .no-js & {
+      transform: translateY(0);
+    }
   }
 
   section {

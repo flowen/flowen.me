@@ -76,9 +76,11 @@
  }
 */
 $z-layers: (
+  "behind": -10,
   "intro-climbing": 10,
   "intro-about": 20,
   "header": 100,
+  "hype": 100,
   "copy": 100,
   "on-top": 9999,
 );

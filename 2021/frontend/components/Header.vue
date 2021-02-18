@@ -17,8 +17,8 @@
         >
         <br />
 
-        <nuxt-link data-a-scale to="/contact/">contact</nuxt-link>
         <nuxt-link data-a-scale to="/about/">about</nuxt-link>
+        <nuxt-link data-a-scale to="/contact/">contact</nuxt-link>
       </nav>
     </header>
   </transition>
