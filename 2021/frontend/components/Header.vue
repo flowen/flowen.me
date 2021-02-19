@@ -1,7 +1,7 @@
 <template>
   <transition :css="false" appear @enter="enter" @leave="leave">
     <header class="header" data-a-scale>
-      <h1 ref="title" data-splitting="chars">
+      <h1 ref="title" class="title" data-splitting="chars">
         <NuxtLink exact to="/" class="rotate">
           <div class="scale" v-html="splitTitle">R&ndash;H&ndash;F</div>
         </NuxtLink>
@@ -36,39 +36,21 @@ export default {
       gsap
         .timeline({ onComplete: done })
         .delay(0.75)
-        .to(el, {
-          scale: 1,
-        })
+        .to(el, { scale: 1 })
         .add(() => this.$refs.title.classList.add("js--show"))
-        .to(
-          this.$refs.nav.children,
-          {
-            scale: 1,
-            stagger: 0.05,
-          },
-          "-=.25"
-        );
+        .to(this.$refs.nav.children, { scale: 1, stagger: 0.05 }, "-=.25");
     },
     leave: function (el, done) {
       gsap
         .timeline({ onComplete: done })
-        .to(el, {
-          scale: 0,
-        })
-        .to(
-          this.$refs.nav.children,
-          {
-            scale: 0,
-            stagger: 0.05,
-          },
-          "-=.25"
-        );
+        .to(el, { scale: 0 })
+        .to(this.$refs.nav.children, { scale: 0, stagger: 0.05 }, "-=.25");
     },
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .header {
   z-index: z("header");
   position: fixed;
@@ -87,7 +69,7 @@ export default {
     }
   }
 
-  h1 a {
+  .title a {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px var(--yellow);
     -webkit-text-stroke-width: 1px;
