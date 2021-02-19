@@ -64,11 +64,12 @@ export default {
         .to(svg, { y: 0 }, "start");
     },
     leave: function (el, done) {
-      gsap.timeline({ onComplete: done }).to(el, {
-        duration: 1.5,
-        ease: "power4.in",
-        yPercent: -100,
-      });
+      const svg = el.querySelector(".bg-svg");
+
+      gsap
+        .timeline({ onComplete: done, defaults: { ease: "power4.in", duration: 1.5 } })
+        .to(svg, { yPercent: -100 })
+        .to(el, { yPercent: -100 }, "-=1.25");
     },
   },
 };

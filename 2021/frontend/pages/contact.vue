@@ -39,10 +39,14 @@
         frameworks or Headless solutions. Strong communicator in a team between PM, design and
         backend.
         <br /><br />
-        10% discount when paid in Bitcoin ✌️
+        ✌️ 10% discount when paid in Bitcoin
         <br /><br />
-        I dream in CSS
+        📍 Birmingham, UK &amp; Utrecht, NL
+        <br /><br />
+        🎨 I dream in CSS
       </p>
+
+      <BGFAN ref="svg" class="bg-svg" />
 
       <p class="asking-for-problems">
         I also run a small coding studio with a good friend and
@@ -63,6 +67,7 @@
 <script>
 import FindMe from "@/components/FindMe.vue";
 import FanStamp from "@/components/FanStamp.vue";
+import BGFAN from "@/assets/img/bg-FAN.svg?inline";
 
 import gsap from "gsap";
 
@@ -70,6 +75,7 @@ export default {
   components: {
     FindMe,
     FanStamp,
+    BGFAN,
   },
   transition: {
     css: false,
@@ -77,20 +83,23 @@ export default {
     appear: true,
     enter: function (el, done) {
       const visual = el.querySelector(".contact__visual");
+      const svg = el.querySelector(".bg-svg");
 
       gsap
         .timeline({ onComplete: done })
-        .addLabel("start")
-        .to(el, { opacity: 1 }, "start")
-        .to(el, { duration: 1.5, y: 0 }, "start")
-        .add(() => visual.classList.add("js--on"), "-=1.2");
+        .to(svg, { y: "-200vh" })
+        .addLabel("start-=0.25")
+        .to(el, { y: 0 }, "start")
+        .to(svg, { y: "0vh" }, "start")
+        .add(() => visual.classList.add("js--on"), "-=.8");
     },
     leave: function (el, done) {
-      gsap.timeline({ onComplete: done }).to(el, {
-        duration: 1.5,
-        ease: "power4.in",
-        yPercent: -100,
-      });
+      const svg = el.querySelector(".bg-svg");
+
+      gsap
+        .timeline({ onComplete: done, defaults: { ease: "power4.in", duration: 1.5 } })
+        .to(svg, { yPercent: -100 })
+        .to(el, { yPercent: -100 }, "-=1.25");
     },
   },
 };
@@ -113,6 +122,15 @@ export default {
     line-height: 1.1;
     color: var(--yellow);
     text-align: center;
+  }
+
+  .bg-svg {
+    pointer-events: none;
+    z-index: z("behind");
+    position: absolute;
+    top: 30vh;
+    left: 10%;
+    width: 80%;
   }
 
   &__visual {

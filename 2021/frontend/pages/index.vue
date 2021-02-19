@@ -51,26 +51,9 @@ export default {
           },
         })
         .delay(0.3)
-        .to(availability, {
-          rotate: 0,
-          scale: 1,
-        })
-        .to(
-          about,
-          {
-            rotate: 0,
-            scale: 1,
-          },
-          "-=.2"
-        )
-        .to(
-          me,
-          {
-            rotate: -14.4,
-            y: 0,
-          },
-          "-=.7"
-        );
+        .to(availability, { rotate: 0, scale: 1 })
+        .to(about, { rotate: 0, scale: 1 }, "-=.2")
+        .to(me, { rotate: -14.4, y: 0 }, "-=.7");
 
       const domChat = el.querySelector(".intro__chatting");
       const masterTL = gsap.timeline({ repeat: -1, paused: true });
