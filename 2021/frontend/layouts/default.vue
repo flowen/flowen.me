@@ -16,27 +16,23 @@ import MouseCursor from "@/components/MouseCursor.vue";
 
 import gsap from "gsap";
 
+import visual from "assets/img/visual.jpg";
+import climbing from "assets/img/climbing.jpg";
+import testimonial from "assets/img/testimonial-michael.jpg";
+
 export default {
   components: { Header, FanStamp, MouseCursor },
-  mounted() {
+  async mounted() {
+    await this.$imagePreload([visual, climbing, testimonial], (e) => console.log(e)); // element, loaded src, src index, loaded count, src list length, progress
+
     const header = document.querySelector(".header");
     const fanstamp = document.querySelector(".fan-stamp");
 
     gsap
       .timeline()
       .delay(0.2)
-      .to(header, {
-        rotate: 0,
-        scale: 1,
-      })
-      .to(
-        fanstamp,
-        {
-          rotate: 0,
-          scale: 1,
-        },
-        "-=.2"
-      );
+      .to(header, { rotate: 0, scale: 1 })
+      .to(fanstamp, { rotate: 0, scale: 1 }, "-=.2");
   },
   beforeMount() {
     document.addEventListener("mousemove", this.handleMouseMove);

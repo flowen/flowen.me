@@ -89,8 +89,8 @@ export default {
         .timeline({ onComplete: done })
         .to(svg, { y: "-200vh" })
         .addLabel("start")
-        .to(el, { y: 0 }, "start-=0.5")
-        .to(svg, { y: "0vh" }, "start-=0.5")
+        .to(el, { y: 0 }, "start-=0.4")
+        .to(svg, { y: "0vh" }, "start-=0.4")
         .add(() => visual.classList.add("js--on"), "-=.8");
     },
     leave: function (el, done) {

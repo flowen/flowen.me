@@ -195,6 +195,7 @@ export default {
     // "~/plugins/vue-analytics.js",
     { src: "~/plugins/splitting.client.js", mode: "client" },
     { src: "~/plugins/gsap.client.js", mode: "client" },
+    { src: "~/plugins/vue-image-preloader.js", ssr: false },
   ],
   /*
    ** Nuxt.js dev-modules
@@ -213,7 +214,7 @@ export default {
    ** Build configuration
    */
   build: {
-    transpile: ["gsap"],
+    transpile: ["gsap", "vue-image-preloader"],
     postcss: {
       preset: {
         features: {
