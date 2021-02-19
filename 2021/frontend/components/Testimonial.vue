@@ -71,7 +71,7 @@ export default {
   grid-gap: 2.5vw;
   align-items: center;
   width: clamp(280px, 75vw, 70vw);
-  max-width: 840px;
+  max-width: 640px;
   margin: 5vh auto;
 
   &__title {
@@ -100,7 +100,7 @@ export default {
     cite {
       display: block;
       margin: 1vh 0;
-      font-size: clamp(16px, 5vw, 24px);
+      font-size: clamp(14px, 4.5vw, 16px);
     }
 
     q::before,

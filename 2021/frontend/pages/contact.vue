@@ -88,9 +88,9 @@ export default {
       gsap
         .timeline({ onComplete: done })
         .to(svg, { y: "-200vh" })
-        .addLabel("start-=0.25")
-        .to(el, { y: 0 }, "start")
-        .to(svg, { y: "0vh" }, "start")
+        .addLabel("start")
+        .to(el, { y: 0 }, "start-=0.5")
+        .to(svg, { y: "0vh" }, "start-=0.5")
         .add(() => visual.classList.add("js--on"), "-=.8");
     },
     leave: function (el, done) {

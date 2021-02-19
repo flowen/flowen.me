@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <section class="about">
     <Testimonial
       quote="Rou Hun does it all. Armed with a startup mentality. Not only did he design our application, he also assisted us by managing our team of developers, perform Manual frontend-testing and occasionally jumped in the code &amp; styles himself."
       citee="Michael Freund, Lead innovation"
@@ -8,7 +8,7 @@
       citee-company-url="https://richnerstutz.ch/en/"
     />
 
-    <BGROU ref="svg" class="bg-svg" />
+    <BGROU ref="svg" class="bg-svg bg-svg--rou" />
 
     <SalesCopy />
 
@@ -20,16 +20,12 @@
       citee-company-url="https://gebruederheitz.de/"
     />
 
-    <p class="problems">
-      A good friend and I also run a small coding studio and
-      <a href="https://problem.studio"> we fix problems 💙 in proper fashion </a>. We’re a tiny
-      full-stack team focus on quality fun.
-    </p>
+    <BGHUN class="bg-svg bg-svg--hun" />
 
     <ContactHero />
 
     <FanStamp />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -39,12 +35,14 @@ import ContactHero from "@/components/ContactHero";
 import FanStamp from "@/components/FanStamp";
 
 import BGROU from "@/assets/img/bg-ROU.svg?inline";
+import BGHUN from "@/assets/img/bg-HUN.svg?inline";
 import gsap from "gsap";
 
 export default {
   components: {
     Testimonial,
     BGROU,
+    BGHUN,
     SalesCopy,
     ContactHero,
     FanStamp,
@@ -54,7 +52,7 @@ export default {
     mode: "out-in",
     appear: true,
     enter: function (el, done) {
-      const svg = el.querySelector(".bg-svg");
+      const svg = el.querySelector(".bg-svg--rou");
 
       gsap
         .timeline({ onComplete: done })
@@ -64,7 +62,7 @@ export default {
         .to(svg, { y: 0 }, "start");
     },
     leave: function (el, done) {
-      const svg = el.querySelector(".bg-svg");
+      const svg = el.querySelector(".bg-svg--hun");
 
       gsap
         .timeline({ onComplete: done, defaults: { ease: "power4.in", duration: 1.5 } })
@@ -81,36 +79,50 @@ export default {
   flex-direction: column;
   justify-content: center;
   padding: 12.5vh;
-
   transform: translateY(200vh);
 
   .no-js & {
     transform: translateY(0);
   }
 
+  .testimonial {
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+  }
+
   .bg-svg {
     pointer-events: none;
     z-index: z("behind");
     position: absolute;
-    top: 0;
     left: 10%;
     width: 80%;
-    transform: translateY(-100vh);
 
-    .no-js & {
-      transform: translateY(0);
+    &--rou {
+      top: 0;
+
+      transform: translateY(-100vh);
+
+      .no-js & {
+        transform: translateY(0);
+      }
+    }
+
+    &--hun {
+      left: 20vw;
+      max-width: 60vw;
+      top: 200vh;
     }
   }
 
-  section {
-    margin: 15vh auto;
+  .holder {
+    position: relative;
   }
 
   .fan-stamp {
     margin: 50vh auto;
   }
 
-  .problems {
+  &__problems {
     max-width: 500px;
     margin: 5vh auto;
     font-size: clamp(20px, 4.5vw, 28px);
