@@ -34,10 +34,10 @@
       </div>
 
       <p class="contact__hype">
-        >Hire me for Campaign &amp; micro-sites, jam-stack, motion and interactivity. I often work
-        in multidisciplinary teams to build websites and apps. Integrating front-end code into
-        backend frameworks or Headless solutions. Strong communicator in a team between PM, design
-        and backend.
+        Hire me for campaign &amp; micro-sites, jam-stack, motion and interactivity. I often work in
+        multidisciplinary teams to build websites and apps. Integrating front-end code into backend
+        frameworks or Headless solutions. Strong communicator in a team between PM, design and
+        backend.
         <br /><br />
         10% discount when paid in Bitcoin ✌️
         <br /><br />
