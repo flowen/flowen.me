@@ -62,12 +62,15 @@ export default {
         .to(svg, { y: 0 }, "start");
     },
     leave: function (el, done) {
-      const svg = el.querySelector(".bg-svg--hun");
+      const rou = el.querySelector(".bg-svg--rou");
+      const hun = el.querySelector(".bg-svg--hun");
 
       gsap
         .timeline({ onComplete: done, defaults: { ease: "power4.in", duration: 1.5 } })
-        .to(svg, { yPercent: -100 })
-        .to(el, { yPercent: -100 }, "-=1.25");
+        .addLabel("start")
+        .to(rou, { y: -150 }, "start")
+        .to(hun, { y: -150 }, "start")
+        .to(el, { yPercent: -100 }, "-=.5");
     },
   },
 };
