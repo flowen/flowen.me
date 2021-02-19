@@ -9,7 +9,7 @@
         and individuals all over the world.
       </p>
 
-      <div class="intro__availability h1" data-a-scale>Availability <small>from</small> 1 feb</div>
+      <div class="intro__availability h1" data-a-scale>Availability <small>from</small> 1 apr</div>
 
       <div class="intro__climbing">
         <img
