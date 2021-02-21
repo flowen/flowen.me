@@ -57,6 +57,11 @@ export default {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    &::before,
+    &::after {
+      animation: pulse 0.35s infinite;
+    }
   }
 
   &.show {
