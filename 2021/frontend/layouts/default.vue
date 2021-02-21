@@ -1,8 +1,6 @@
 <template>
   <div class="hi-thx-4-checkin-ma-code-hf">
-    <!-- <div v-if="!finishedLoading" ref="preloader" class="preloader">loading images</div> -->
     <MouseCursor ref="preloader" class="preloading" />
-    <!-- :class="{ preloading: !finishedLoading }" /> -->
 
     <div if="finishedLoading">
       <Header />

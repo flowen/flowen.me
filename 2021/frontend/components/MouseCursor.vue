@@ -53,7 +53,7 @@ export default {
   transition: transform var(--d-fast) var(--ease-out), opacity var(--d-slow);
 
   &.preloading {
-    animation: preloading 1.25s infinite;
+    animation: preloading 0.35s infinite;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
