@@ -1,11 +1,16 @@
 <template>
   <div class="hi-thx-4-checkin-ma-code-hf">
-    <MouseCursor />
-    <Header />
+    <!-- <div v-if="!finishedLoading" ref="preloader" class="preloader">loading images</div> -->
+    <MouseCursor ref="preloader" class="preloading" />
+    <!-- :class="{ preloading: !finishedLoading }" /> -->
 
-    <FanStamp />
+    <div if="finishedLoading">
+      <Header />
 
-    <nuxt />
+      <FanStamp />
+
+      <nuxt />
+    </div>
   </div>
 </template>
 
@@ -16,23 +21,36 @@ import MouseCursor from "@/components/MouseCursor.vue";
 
 import gsap from "gsap";
 
-import visual from "assets/img/visual.jpg";
-import climbing from "assets/img/climbing.jpg";
-import testimonial from "assets/img/testimonial-michael.jpg";
+import visual from "@/assets/img/visual.jpg";
+import climbing from "@/assets/img/climbing.jpg";
+import testimonial1 from "@/assets/img/testimonial-michael.jpg";
+import testimonial2 from "@/assets/img/testimonial-daniel.jpg";
+import coder from "@/assets/img/creative-coder-hero.jpg";
+import sweatin from "@/assets/img/sweatin-in-taiwan.jpg";
 
 export default {
   components: { Header, FanStamp, MouseCursor },
+  data() {
+    return {
+      imagesPreload: [visual, climbing, testimonial1, testimonial2, coder, sweatin],
+      finishedLoading: false,
+    };
+  },
   async mounted() {
-    await this.$imagePreload([visual, climbing, testimonial], (e) => console.log(e)); // element, loaded src, src index, loaded count, src list length, progress
-
-    const header = document.querySelector(".header");
-    const fanstamp = document.querySelector(".fan-stamp");
-
-    gsap
-      .timeline()
-      .delay(0.2)
-      .to(header, { rotate: 0, scale: 1 })
-      .to(fanstamp, { rotate: 0, scale: 1 }, "-=.2");
+    await this.$imagePreload(this.imagesPreload, async (e) => {
+      if (e.progress === 100) {
+        await gsap
+          .timeline({
+            onComplete: () => {
+              this.finishedLoading = true;
+              setTimeout(this.enter, 200);
+            },
+          })
+          .add(() => {
+            this.$refs.preloader.$el.classList.remove("preloading");
+          });
+      }
+    });
   },
   beforeMount() {
     document.addEventListener("mousemove", this.handleMouseMove);
@@ -44,6 +62,16 @@ export default {
     window.removeEventListener("resize", this.handleResize);
   },
   methods: {
+    enter() {
+      const header = document.querySelector(".header");
+      const fanstamp = document.querySelector(".fan-stamp");
+
+      gsap
+        .timeline()
+        .delay(0.2)
+        .to(header, { rotate: 0, scale: 1 })
+        .to(fanstamp, { rotate: 0, scale: 1 }, "-=.2");
+    },
     handleMouseMove(e) {
       document.documentElement.style.setProperty("--mx", `${e.clientX}px`);
       document.documentElement.style.setProperty("--my", `${e.clientY}px`);
@@ -57,6 +85,16 @@ export default {
 </script>
 
 <style lang="scss">
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: firebrick;
+}
+
 .fan-stamp {
   position: fixed;
   right: var(--margin);

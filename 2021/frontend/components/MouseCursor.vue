@@ -51,7 +51,13 @@ export default {
   background: rgba(255, 255, 255, 0.1);
   transform: translate(var(--mx), var(--my));
   transition: transform var(--d-fast) var(--ease-out), opacity var(--d-slow);
-  /* transition: opacity var(--d-slow); */
+
+  &.preloading {
+    animation: preloading 1.25s infinite;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   &.show {
     opacity: 1;
@@ -68,7 +74,6 @@ export default {
     border-radius: 100%;
     box-shadow: 0 0 1px var(--radius) var(--yellow);
     opacity: 0;
-    /* animation: pulse 0.35s infinite; */
   }
 
   &::before {
@@ -95,6 +100,20 @@ export default {
     100% {
       opacity: 0;
       transform: scale(0.6);
+    }
+  }
+
+  @keyframes preloading {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2.4);
     }
   }
 }
