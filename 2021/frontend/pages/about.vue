@@ -70,7 +70,7 @@ export default {
         .addLabel("start")
         .to(rou, { y: -150 }, "start")
         .to(hun, { y: -150 }, "start")
-        .to(el, { yPercent: -100 }, "-=.5");
+        .to(el, { yPercent: -100 }, "-=.9");
     },
   },
 };
