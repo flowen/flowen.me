@@ -61,6 +61,18 @@
           rel="noopener noreferrer"
           >Forbes</a
         >
+        <a
+          href="https://domainnamewire.com/2021/01/26/mschfs-latest-marketing-stunt-uses-domain-names-to-target-presidential-candidates/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Domainname wire</a
+        >
+        <a
+          href="https://www.dailydot.com/debug/mschf-in-the-year-2024/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Daily dot</a
+        >
       </dt>
     </dl>
 
