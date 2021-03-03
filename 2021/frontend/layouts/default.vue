@@ -5,7 +5,7 @@
     <div if="finishedLoading">
       <Header />
 
-      <FanStamp />
+      <FanStamp ref="fanstamp" />
 
       <nuxt />
     </div>
@@ -34,19 +34,22 @@ export default {
       finishedLoading: false,
     };
   },
-  async mounted() {
-    await this.$imagePreload(this.imagesPreload, async (e) => {
+  mounted() {
+    this.$imagePreload(this.imagesPreload, async (e) => {
       if (e.progress === 100) {
         await gsap
           .timeline({
             onComplete: () => {
+              console.log("mounted oncomplete");
               this.finishedLoading = true;
               setTimeout(this.enter, 200);
             },
           })
+          .to(this.$refs.preloader.$el, { autoAlpha: 0 })
           .add(() => {
             this.$refs.preloader.$el.classList.remove("preloading");
-          });
+          })
+          .to(this.$refs.preloader.$el, { autoAlpha: 1 });
       }
     });
   },
@@ -61,14 +64,7 @@ export default {
   },
   methods: {
     enter() {
-      const header = document.querySelector(".header");
-      const fanstamp = document.querySelector(".fan-stamp");
-
-      gsap
-        .timeline()
-        .delay(0.2)
-        .to(header, { rotate: 0, scale: 1 })
-        .to(fanstamp, { rotate: 0, scale: 1 }, "-=.2");
+      gsap.to(this.$refs.fanstamp.$el, { rotate: 0, scale: 1 });
     },
     handleMouseMove(e) {
       document.documentElement.style.setProperty("--mx", `${e.clientX}px`);
