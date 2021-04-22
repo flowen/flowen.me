@@ -9,6 +9,7 @@
 
       <nav ref="nav" class="nav">
         <br />
+        <small class="nav__label">Projects:</small>
         <NuxtLink to="/intheyear2024/" class="nav__project-link" data-a-scale
           >intheyear2024.com</NuxtLink
         >
@@ -64,6 +65,9 @@ export default {
     display: flex;
     flex-direction: column;
 
+    &__label {
+      text-transform: none;
+    }
     &__project-link {
       font-size: clamp(26px, 5vw, 44px);
     }
