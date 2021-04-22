@@ -1,4 +1,3 @@
-// TODO: (Ramdane) read this from a custom config file, with environment configuration
 const AUTHOR_NAME = "Rou Hun Fan";
 const TWITTER_HANDLE = "@flowen_nl";
 const PROJECT_TITLE = "Freelance frontend UI developer and designer, Rou Hun Fan";
@@ -11,9 +10,6 @@ const PROJECT_DOMAIN = "https://flowen.me";
 
 export default {
   target: "static",
-  /*
-   ** Headers of the page
-   */
   scrollToTop: true,
   head: {
     htmlAttrs: {
@@ -188,9 +184,9 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  env: {
-    // GA_ID
-  },
+  // env: {
+  // GA_ID
+  // },
   plugins: [
     // "~/plugins/vue-analytics.js",
     { src: "~/plugins/splitting.client.js", mode: "client" },
@@ -201,6 +197,11 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: ["@nuxtjs/style-resources", "@nuxtjs/svg"],
+  pwa: {
+    workbox: {
+      clientsClaim: false,
+    },
+  },
   /*
    ** Nuxt.js modules
    */
