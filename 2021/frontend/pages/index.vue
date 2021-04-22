@@ -59,16 +59,13 @@ export default {
       const masterTL = gsap.timeline({ repeat: -1, paused: true });
       const chats = [
         "Hi, I 💙 helping businesses with code &amp; design",
-        "Rou Hun <br> is pronounced as <br> Lo wen",
-        "This site is W.I.P. ad infinitum",
+        "Rou Hun <br> is pronounced as <br> LoWen",
+        "📍 Birmingham, UK & Utrecht, NL",
         "🏔👨‍💻🚂🏋🈯✍️🐈🎧☕🥩",
         "It's lonely at the top #messageme",
-        "BTC to da moooooooon!~~",
-        "📍 Birmingham, UK & Utrecht, NL",
         "Been working remotely the last 5+ years",
-        "Where's my Bitcoin Emoji?",
-        "'Yo Lo' is how some peeps greet me",
         "Bottom right is my family's namestamp: Fan",
+        "BTC to da moooooooon!~~",
       ];
 
       chats.forEach((chat) => {
@@ -98,24 +95,6 @@ export default {
         .to(climbing, { y: "-100vh" }, "start+=.2");
     },
   },
-  // data() {
-  //   return {
-  //     chats: [
-  //       "Hi, I 💙 helping businesses with code &amp; design",
-  //       "Rou Hun <br> is pronounced as <br> Lo wen",
-  //       "This site is W.I.P. ad infinitum",
-  //       "🏔👨‍💻🚂🏋🈯✍️🐈🎧☕🥩",
-  //       "It's lonely at the top #messageme",
-  //       "BTC to da moooooooon!~~",
-  //       "📍 Birmingham, UK & Utrecht, NL",
-  //       "Been working remotely the last 5+ years",
-  //       "Where's my Bitcoin Emoji?",
-  //       "'Yo Lo' is how some peeps greet me",
-  //       "Bottom right is my family's namestamp: Fan",
-  //     ],
-  //     masterTL: gsap.timeline({ repeat: -1, paused: true }),
-  //   };
-  // },
   beforeMount() {
     if (process.client) {
       gsap.registerPlugin(TextPlugin);
@@ -190,6 +169,7 @@ export default {
     }
   }
 }
+
 .intro__chatting {
   position: absolute;
   top: 5%;
