@@ -2,7 +2,11 @@
   <section class="contact">
     <div class="contact__blabla">
       <div class="contact__visual">
-        <img class="contact__visual-img" src="~assets/img/visual.jpg" alt="" />
+        <img
+          class="contact__visual-img"
+          src="~assets/img/visual.jpg"
+          alt="Won the ADE Hackaton 2017"
+        />
 
         <svg
           class="contact__visual-svg"
