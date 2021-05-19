@@ -7,20 +7,7 @@
         </NuxtLink>
       </h1>
 
-      <nav ref="nav" class="nav">
-        <br />
-        <small class="nav__label">Projects:</small>
-        <NuxtLink to="/intheyear2024/" class="nav__project-link" data-a-scale
-          >intheyear2024.com</NuxtLink
-        >
-        <NuxtLink to="/theatrejs/" class="nav__project-link" data-a-scale
-          >Theatrejs AV demo</NuxtLink
-        >
-        <br />
-
-        <nuxt-link data-a-scale to="/about/">about</nuxt-link>
-        <nuxt-link data-a-scale to="/contact/">contact</nuxt-link>
-      </nav>
+      <Menu />
     </header>
   </transition>
 </template>
@@ -28,9 +15,11 @@
 <script>
 import gsap from "gsap";
 import charsplitTitle from "@/mixins/charsplitTitle";
+import Menu from "@/components/Menu";
 
 export default {
   name: "Header",
+  components: { Menu },
   mixins: [charsplitTitle(`R&ndash;H&ndash;F`)],
   methods: {
     enter: function (el, done) {
@@ -38,14 +27,10 @@ export default {
         .timeline({ onComplete: done })
         .delay(0.75)
         .to(el, { scale: 1 })
-        .add(() => this.$refs.title.classList.add("js--show"))
-        .to(this.$refs.nav.children, { scale: 1, stagger: 0.05 }, "-=.25");
+        .add(() => this.$refs.title.classList.add("js--show"));
     },
     leave: function (el, done) {
-      gsap
-        .timeline({ onComplete: done })
-        .to(el, { scale: 0 })
-        .to(this.$refs.nav.children, { scale: 0, stagger: 0.05 }, "-=.25");
+      gsap.timeline({ onComplete: done }).to(el, { scale: 0 });
     },
   },
 };
@@ -60,18 +45,6 @@ export default {
   display: flex;
   flex-direction: column;
   text-align: right;
-
-  .nav {
-    display: flex;
-    flex-direction: column;
-
-    &__label {
-      text-transform: none;
-    }
-    &__project-link {
-      font-size: clamp(26px, 5vw, 44px);
-    }
-  }
 
   .title a {
     -webkit-text-fill-color: transparent;

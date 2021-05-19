@@ -25,14 +25,14 @@
 
     <figure style="margin-left: 15vw">
       <video class="video" autoplay loop muted playsinline>
-        <source src="~assets/img/theatrejs/wip-1.mp4" type="video/mp4" />
+        <source src="~assets/video/theatrejs/wip-1.mp4" type="video/mp4" />
       </video>
       <figcaption>WIP: experimenting with particle-system</figcaption>
     </figure>
 
     <figure>
       <video class="video" autoplay loop muted playsinline>
-        <source src="~assets/img/theatrejs/wip-2.mp4" type="video/mp4" />
+        <source src="~assets/video/theatrejs/wip-2.mp4" type="video/mp4" />
       </video>
       <figcaption>Sneak peak of TheatreJS's power</figcaption>
     </figure>

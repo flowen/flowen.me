@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Still working on this website, expect more work to come soon. Hit me up for more!</p>
+    <p>Loads of projects that I haven't added. Hit me up for more!</p>
   </footer>
 </template>
 

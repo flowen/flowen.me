@@ -9,9 +9,9 @@
 
     <div class="project-page__project-url">
       <img src="~assets/img/arrow.svg" alt="arrow" />
-      <a href="https://intheyear2024.com" target="_blank" rel="noopener noreferrer"
-        >I can post screenshots &amp; videos, but it's best you see the actual product live</a
-      >
+      <a href="https://intheyear2024.com" target="_blank" rel="noopener noreferrer">
+        Open the live website
+      </a>
     </div>
 
     <p class="project-page__description">
@@ -35,7 +35,7 @@
     <figure>
       <figcaption>k k, just 1 for teh layouts:</figcaption>
       <video class="video" autoplay loop muted playsinline>
-        <source src="~assets/img/intheyear2024/mschf.mp4" type="video/mp4" />
+        <source src="~assets/video/intheyear2024/mschf.mp4" type="video/mp4" />
       </video>
     </figure>
 
