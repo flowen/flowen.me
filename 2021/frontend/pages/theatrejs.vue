@@ -9,9 +9,10 @@
 
     <div class="project-page__project-url">
       <img src="~assets/img/arrow.svg" alt="arrow" />
-      <a href="https://theatrejs-demo.netlify.app/" target="_blank" rel="noopener noreferrer"
-        >It's best you experience this with good headphones</a
-      >
+      <a href="https://theatrejs-demo.netlify.app/" target="_blank" rel="noopener noreferrer">
+        It's best you experience this with good headphones
+        <span role="img" aria-label="heapdhones">🎧</span>
+      </a>
     </div>
 
     <p class="project-page__description">

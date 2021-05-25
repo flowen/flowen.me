@@ -3,7 +3,9 @@
     <nav ref="nav" class="nav">
       <br />
 
-      <small class="nav__label">projects:</small>
+      <small class="nav__label"
+        >Select a project <span role="img" aria-label="down">🔽</span></small
+      >
       <nuxt-link to="/fauxmegle/" class="nav__project-link" data-a-scale>fauxmegle.com</nuxt-link>
       <nuxt-link to="/intheyear2024/" class="nav__project-link" data-a-scale>
         intheyear2024.com

@@ -43,11 +43,10 @@
         frameworks or Headless solutions. Strong communicator in a team between PM, design and
         backend.
         <br /><br />
-        ✌️ 10% discount when paid in Bitcoin
+        <span role="img" aria-label="peace">✌️</span> 10% discount when paid in Bitcoin <br /><br />
+        <span role="img" aria-label="location pin">📍</span> Birmingham, UK &amp; Utrecht, NL
         <br /><br />
-        📍 Birmingham, UK &amp; Utrecht, NL
-        <br /><br />
-        🎨 I dream in CSS
+        <span role="img" aria-label="painting palette">🎨</span> I dream in CSS
       </p>
 
       <BGFAN ref="svg" class="bg-svg" />
