@@ -173,7 +173,8 @@ export default {
 
   &__hype {
     position: relative;
-    z-index: ("hype");
+    z-index: z("hype");
+    text-transform: none;
   }
 }
 
