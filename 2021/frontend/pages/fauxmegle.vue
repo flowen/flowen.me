@@ -2,7 +2,7 @@
   <section class="project-page">
     <h1 class="project-page__title" data-splitting="chars">
       <div class="rotate">
-        <div class="scale">fauxmegle.com</div>
+        <div class="scale">Drop #46: fauxmegle.com</div>
       </div>
     </h1>
     <h2 class="project-page__subtitle">Made for MSCHF</h2>
@@ -25,20 +25,6 @@
       rubbed off on us, and by our action to make it in some small way true. The labor of clout
       production is the process of finding content in the wild. Omegle is Pokemon Snap, where
       Pikachu is an influencer, and the Tall Grass is a waving sea of genitalia.
-
-      <br /><br />A MILLION YEARS AGO PEOPLE LAMENTED THAT REAL LIFE HAD BECOME A PERFORMANCE DONE
-      PURELY AS THE GROUNDWORK FOR THE ONLINE REPRESENTATION OF THAT LIFE. TODAY, WITH OUR BRAINS
-      GROWN LARGE ENOUGH TO SIT ON, OUR ACTIONS ONLINE ARE ALSO A PERFORMANCE DONE FOR THE PURPOSE
-      OF ONLINE RE-PRESENTATION. AS A PARTING THOUGHT, LET US MARVEL AT THE LASTING APPEAL OF JANKY
-      WEB PLATFORMS. HOW DID OMEGLE SURVIVE TO FIND NEW LIFE WITH A NEW GENERATION, WHEN CHAT
-      ROULETTE AND SO MANY OTHER RANDOM CONNECTION PLATFORMS OF SIMILAR PREMISE FELL BY THE WAYSIDE?
-      CLEARLY THIS IS NOT THE PRODUCT OF FINESSE OR UNIQUE CAPABILITY. THE SITE WAS CREATED BY A
-      TEENAGER IN THE LATE AUGHTS, AND LOOKS AND FEELS EXACTLY AS IT ALWAYS DID: LIKE A WEBSITE
-      CREATED BY A TEENAGER IN THE LATE AUGHTS. AND YET HERE IT IS, THE WILDS IN WHICH TIKTOK
-      CONTENT IS BORN. FAUXMEGLE IS MSCHF DROP #46. *
-
-      <br />
-      * fauxmegle.com manifesto
     </p>
 
     <figure>
@@ -47,6 +33,22 @@
         <source src="~assets/video/fauxmegle/fauxmegle.mp4" type="video/mp4" />
       </video>
     </figure>
+
+    <p>
+      A MILLION YEARS AGO PEOPLE LAMENTED THAT REAL LIFE HAD BECOME A PERFORMANCE DONE PURELY AS THE
+      GROUNDWORK FOR THE ONLINE REPRESENTATION OF THAT LIFE. TODAY, WITH OUR BRAINS GROWN LARGE
+      ENOUGH TO SIT ON, OUR ACTIONS ONLINE ARE ALSO A PERFORMANCE DONE FOR THE PURPOSE OF ONLINE
+      RE-PRESENTATION. AS A PARTING THOUGHT, LET US MARVEL AT THE LASTING APPEAL OF JANKY WEB
+      PLATFORMS. HOW DID OMEGLE SURVIVE TO FIND NEW LIFE WITH A NEW GENERATION, WHEN CHAT ROULETTE
+      AND SO MANY OTHER RANDOM CONNECTION PLATFORMS OF SIMILAR PREMISE FELL BY THE WAYSIDE? CLEARLY
+      THIS IS NOT THE PRODUCT OF FINESSE OR UNIQUE CAPABILITY. THE SITE WAS CREATED BY A TEENAGER IN
+      THE LATE AUGHTS, AND LOOKS AND FEELS EXACTLY AS IT ALWAYS DID: LIKE A WEBSITE CREATED BY A
+      TEENAGER IN THE LATE AUGHTS. AND YET HERE IT IS, THE WILDS IN WHICH TIKTOK CONTENT IS BORN.
+      FAUXMEGLE IS MSCHF DROP #46. *
+
+      <br /><br />
+      * fauxmegle.com manifesto
+    </p>
 
     <h3>page__summary</h3>
     <dl class="project-page__summary">
@@ -58,15 +60,6 @@
       <dt>Static frontend in Nuxt</dt>
       <dd>Tech:</dd>
       <dt>Vue, Nuxt, styling web 1.0 websites is hard</dt>
-      <!-- <dd>Press:</dd>
-      <dt>
-        <a
-          href="https://mashable.com/article/mschf-in-the-year-2024-election-campaign-domain-squatting"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Mashable</a
-        >
-      </dt> -->
     </dl>
 
     <Footer />
@@ -120,6 +113,6 @@ export default {
 }
 
 figcaption {
-  margin-bottom: 1.25vh;
+  /* margin-bottom: 1.25vh; */
 }
 </style>
