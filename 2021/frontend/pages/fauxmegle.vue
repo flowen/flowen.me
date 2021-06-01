@@ -2,7 +2,7 @@
   <section class="project-page">
     <h1 class="project-page__title" data-splitting="chars">
       <div class="rotate">
-        <div class="scale">fauxmegle.com, an omegle.com clone with a twist</div>
+        <div class="scale">fauxmegle.com</div>
       </div>
     </h1>
     <h2 class="project-page__subtitle">Made for MSCHF</h2>
