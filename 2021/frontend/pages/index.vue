@@ -2,9 +2,9 @@
   <main class="main">
     <section class="intro">
       <p class="intro__about h1" data-a-scale>
-        RouHun Fan <small>works as a</small> <br />
+        RouHun Fan <small>works 10+ years as a </small> <br />
         Freelance developer <small>specialized in </small> <br />
-        Frontend - Animation - Interaction <br />
+        Frontend - Animation - Interaction <small>💙</small><br />
         and loves to work with agencies, studios <small>anywhere</small><br />
         and individuals all over the world.
       </p>
@@ -136,6 +136,7 @@ export default {
   left: 0;
   bottom: 0;
   margin-bottom: 0;
+  mix-blend-mode: exclusion;
 }
 
 .intro__availability {
