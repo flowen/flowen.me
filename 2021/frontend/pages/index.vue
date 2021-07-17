@@ -5,8 +5,8 @@
         RouHun Fan <small>works 10+ years as a </small> <br />
         Freelance developer <small>specialized in </small> <br />
         Frontend - Animation - Interaction <small>💙</small><br />
-        and loves to work with agencies, studios <small>anywhere</small><br />
-        and individuals all over the world.
+        and loves to work with agencies, studios <small>remotely</small><br />
+        and individuals all over the world. <small>🌍</small>
       </p>
 
       <div class="intro__availability h1" data-a-scale>Availability <small>from</small> 1 June</div>

@@ -12,9 +12,9 @@
     <div>
       <img src="~assets/img/arrow.svg" alt="arrow" />
       <p>
-        Let me solve your <br />
-        design and frontend <br />
-        challenges.
+        E-mail me and let me solve <br />
+        your design and <br />
+        frontend challenges.
       </p>
     </div>
   </a>

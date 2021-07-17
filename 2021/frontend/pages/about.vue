@@ -81,8 +81,13 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 12.5vh;
+  padding: 12.5vh 5vw;
   transform: translateY(200vh);
+
+  @media (min-width: 375px) {
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+  }
 
   .no-js & {
     transform: translateY(0);
