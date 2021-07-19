@@ -9,7 +9,9 @@
         and individuals all over the world. <small>🌍</small>
       </p>
 
-      <div class="intro__availability h1" data-a-scale>Availability <small>from</small> 1 June</div>
+      <div class="intro__availability h1" data-a-scale>
+        Available <small>for part-time and small projects</small>
+      </div>
 
       <div class="intro__climbing">
         <img
