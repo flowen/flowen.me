@@ -34,7 +34,14 @@
 
     <figure>
       <figcaption>k k, just 1 for teh layouts:</figcaption>
-      <video class="video" autoplay loop muted playsinline>
+      <video
+        class="video"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="~assets/video/intheyear2024/poster.png"
+      >
         <source src="~assets/video/intheyear2024/mschf.mp4" type="video/mp4" />
       </video>
     </figure>

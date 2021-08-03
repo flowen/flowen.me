@@ -53,18 +53,5 @@ export default {
     margin: 0 0 1vh;
     font-size: clamp(72px, 4.25vw, 104px);
   }
-
-  a {
-    color: var(--yellow);
-    text-decoration: none;
-    font-family: var(--font-title);
-    font-size: clamp(16px, 5vw, 24px);
-    transition: letter-spacing var(--d-slow) var(--ease-out);
-
-    &[aria-current="page"],
-    &:hover {
-      letter-spacing: 5px;
-    }
-  }
 }
 </style>
