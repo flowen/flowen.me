@@ -25,14 +25,28 @@
     </p>
 
     <figure style="margin-left: 15vw">
-      <video class="video" autoplay loop muted playsinline>
+      <video
+        class="video"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="~assets/video/theatrejs/wip-1.png"
+      >
         <source src="~assets/video/theatrejs/wip-1.mp4" type="video/mp4" />
       </video>
       <figcaption>WIP: experimenting with particle-system</figcaption>
     </figure>
 
     <figure>
-      <video class="video" autoplay loop muted playsinline>
+      <video
+        class="video"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="~assets/video/theatrejs/wip-2.png"
+      >
         <source src="~assets/video/theatrejs/wip-2.mp4" type="video/mp4" />
       </video>
       <figcaption>Sneak peak of TheatreJS's power</figcaption>
@@ -93,18 +107,8 @@ export default {
 
 <style lang="scss">
 .project-page {
-  transform: translateY(200vh);
-
-  .no-js & {
-    transform: translateY(0);
-  }
-
   figure {
     margin: 0 0 12.5vh;
-  }
-
-  figcaption {
-    margin-bottom: 1.25vh;
   }
 
   .video {

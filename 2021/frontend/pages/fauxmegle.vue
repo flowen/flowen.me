@@ -29,7 +29,14 @@
 
     <figure>
       <figcaption>This is not an advert:</figcaption>
-      <video class="video" autoplay loop muted playsinline>
+      <video
+        class="video"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="~assets/video/fauxmegle/poster.jpg"
+      >
         <source src="~assets/video/fauxmegle/fauxmegle.mp4" type="video/mp4" />
       </video>
     </figure>
@@ -104,15 +111,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.project-page {
-  transform: translateY(200vh);
-
-  .no-js & {
-    transform: translateY(0);
-  }
-}
-
 figcaption {
-  /* margin-bottom: 1.25vh; */
+  margin-bottom: 0;
 }
 </style>

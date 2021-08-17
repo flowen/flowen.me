@@ -124,15 +124,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.project-page {
-  transform: translateY(200vh);
-
-  .no-js & {
-    transform: translateY(0);
-  }
-}
-figcaption {
-  margin-bottom: 1.25vh;
-}
-</style>
+<style lang="scss" scoped></style>
