@@ -1,12 +1,6 @@
 <template>
   <transition :css="false" appear @enter="enter" @leave="leave">
     <nav ref="nav" class="nav">
-      <br />
-
-      <small class="nav__label">Select a project</small>
-
-      <br />
-
       <nuxt-link to="/fauxmegle/" class="nav__project-link" data-a-scale>fauxmegle.com</nuxt-link>
       <nuxt-link to="/intheyear2024/" class="nav__project-link" data-a-scale>
         intheyear2024.com
@@ -17,6 +11,8 @@
       <nuxt-link to="/theatrejs/" class="nav__project-link" data-a-scale>
         Theatrejs AV demo
       </nuxt-link>
+
+      <small class="nav__hint">Select a project</small>
 
       <br />
 
@@ -33,17 +29,21 @@ export default {
   name: "Menu",
   methods: {
     enter: function (el, done) {
+      const navLinks = this.$refs.nav.querySelectorAll("[data-a-scale]");
+
       gsap
         .timeline({ onComplete: done })
         .delay(0.75)
         .to(el, { scale: 1 })
-        .to(this.$refs.nav.children, { scale: 1, stagger: 0.05 }, "-=.25");
+        .to(navLinks, { scale: 1, stagger: 0.05 }, "-=.25");
     },
     leave: function (el, done) {
+      const navLinks = this.$refs.nav.querySelectorAll("[data-a-scale]");
+
       gsap
         .timeline({ onComplete: done })
         .to(el, { scale: 0 })
-        .to(this.$refs.nav.children, { scale: 0, stagger: 0.05 }, "-=.25");
+        .to(navLinks, { scale: 0, stagger: 0.05 }, "-=.25");
     },
   },
 };
@@ -53,16 +53,33 @@ export default {
 .nav {
   display: flex;
   flex-direction: column;
+  margin: var(--margin) 0 0;
 
-  &__label {
-    margin-right: calc(var(--margin) / 2 * -1);
+  &__hint {
+    opacity: 0;
+    margin: 12px 0 3px;
     text-transform: none;
+    animation: blink 1.5s running;
+    animation-timing-function: steps(1);
+    animation-iteration-count: 3;
+    animation-delay: 3s;
 
-    &::before,
+    .no-js & {
+      opacity: 1;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
     &::after {
-      content: "⭣";
-      font-size: 20px;
-      vertical-align: -4px;
+      content: "☝️";
+      font-size: 18px;
     }
   }
 
