@@ -1,74 +1,76 @@
 <template>
-  <section class="project-page">
-    <h1 class="project-page__title" data-splitting="chars">
-      <div class="rotate">
-        <div class="scale">Theatre JS Audiovisuals</div>
+  <client-only>
+    <section class="project-page">
+      <h1 class="project-page__title" data-splitting="chars">
+        <div class="rotate">
+          <div class="scale">Theatre JS Audiovisuals</div>
+        </div>
+      </h1>
+      <h2 class="project-page__subtitle">Made for TheatreJS</h2>
+
+      <div class="project-page__project-url">
+        <img src="~assets/img/arrow.svg" alt="arrow" />
+        <a href="https://theatrejs-demo.netlify.app/" target="_blank" rel="noopener noreferrer">
+          It's best you experience this with good headphones
+          <span role="img" aria-label="heapdhones">🎧</span>
+        </a>
       </div>
-    </h1>
-    <h2 class="project-page__subtitle">Made for TheatreJS</h2>
 
-    <div class="project-page__project-url">
-      <img src="~assets/img/arrow.svg" alt="arrow" />
-      <a href="https://theatrejs-demo.netlify.app/" target="_blank" rel="noopener noreferrer">
-        It's best you experience this with good headphones
-        <span role="img" aria-label="heapdhones">🎧</span>
-      </a>
-    </div>
+      <p class="project-page__description">
+        Theatre.js is a JavaScript animation library with a GUI. It animates the DOM, WebGL, and any
+        other JavaScript variable.
+        <br /><br />
+        Aria, the developer behind TheatreJS, contacted me to create a creative demo and show the
+        capabilities of TheatreJS. I was free to create anything. <br /><br />
+        I asked Mert to create the audio and help with art-direction.
+      </p>
 
-    <p class="project-page__description">
-      Theatre.js is a JavaScript animation library with a GUI. It animates the DOM, WebGL, and any
-      other JavaScript variable.
-      <br /><br />
-      Aria, the developer behind TheatreJS, contacted me to create a creative demo and show the
-      capabilities of TheatreJS. I was free to create anything. <br /><br />
-      I asked Mert to create the audio and help with art-direction.
-    </p>
+      <figure style="margin-left: 15vw">
+        <video
+          class="video"
+          autoplay
+          loop
+          muted
+          playsinline
+          poster="~assets/video/theatrejs/wip-1.png"
+        >
+          <source src="~assets/video/theatrejs/wip-1.mp4" type="video/mp4" />
+        </video>
+        <figcaption>WIP: experimenting with particle-system</figcaption>
+      </figure>
 
-    <figure style="margin-left: 15vw">
-      <video
-        class="video"
-        autoplay
-        loop
-        muted
-        playsinline
-        poster="~assets/video/theatrejs/wip-1.png"
-      >
-        <source src="~assets/video/theatrejs/wip-1.mp4" type="video/mp4" />
-      </video>
-      <figcaption>WIP: experimenting with particle-system</figcaption>
-    </figure>
+      <figure>
+        <video
+          class="video"
+          autoplay
+          loop
+          muted
+          playsinline
+          poster="~assets/video/theatrejs/wip-2.png"
+        >
+          <source src="~assets/video/theatrejs/wip-2.mp4" type="video/mp4" />
+        </video>
+        <figcaption>Sneak peak of TheatreJS's power</figcaption>
+      </figure>
 
-    <figure>
-      <video
-        class="video"
-        autoplay
-        loop
-        muted
-        playsinline
-        poster="~assets/video/theatrejs/wip-2.png"
-      >
-        <source src="~assets/video/theatrejs/wip-2.mp4" type="video/mp4" />
-      </video>
-      <figcaption>Sneak peak of TheatreJS's power</figcaption>
-    </figure>
+      <h3>page__summary</h3>
+      <dl class="project-page__summary">
+        <dd>For:</dd>
+        <dt><a href="https://www.theatrejs.com/">TheatreJS</a></dt>
+        <dd>Created:</dd>
+        <dt>
+          Art directed and coded an audio-visual experience for Aria, the developer behind
+          TheatreJS. I hired
+          <a href="http://mert.audio" target="_blank" rel="nooper nofollow noreferrer">Mert</a> to
+          create the audio.
+        </dt>
+        <dd>Tech:</dd>
+        <dt>Three.js, Web audio API, particle-systems</dt>
+      </dl>
 
-    <h3>page__summary</h3>
-    <dl class="project-page__summary">
-      <dd>For:</dd>
-      <dt><a href="https://www.theatrejs.com/">TheatreJS</a></dt>
-      <dd>Created:</dd>
-      <dt>
-        Art directed and coded an audio-visual experience for Aria, the developer behind TheatreJS.
-        I hired
-        <a href="http://mert.audio" target="_blank" rel="nooper nofollow noreferrer">Mert</a> to
-        create the audio.
-      </dt>
-      <dd>Tech:</dd>
-      <dt>Three.js, Web audio API, particle-systems</dt>
-    </dl>
-
-    <Footer />
-  </section>
+      <Footer />
+    </section>
+  </client-only>
 </template>
 
 <script>

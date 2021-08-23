@@ -40,7 +40,6 @@ export default {
         await gsap
           .timeline({
             onComplete: () => {
-              console.log("mounted oncomplete");
               this.finishedLoading = true;
               setTimeout(this.enter, 200);
             },
