@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /**
  * Hide content
  * {@link https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/}
@@ -42,7 +44,7 @@ body {
   background-color: var(--dark);
   font-family: var(--font-base);
   font-size: 16px;
-  line-height: (20/16);
+  line-height: math.div(20, 16);
   text-transform: uppercase;
   color: var(--off-white);
 }

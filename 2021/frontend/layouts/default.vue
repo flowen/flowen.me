@@ -4,7 +4,6 @@
 
     <div if="finishedLoading">
       <Header />
-
       <FanStamp ref="fanstamp" />
 
       <nuxt />
@@ -40,7 +39,6 @@ export default {
         await gsap
           .timeline({
             onComplete: () => {
-              console.log("mounted oncomplete");
               this.finishedLoading = true;
               setTimeout(this.enter, 200);
             },
