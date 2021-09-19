@@ -41,8 +41,8 @@ export default {
   z-index: z("on-top");
   pointer-events: none;
   position: fixed;
-  top: calc(var(--radius) / -2);
-  left: calc(var(--radius) / -2);
+  top: unquote("calc(var(--radius) / -2)");
+  left: unquote("calc(var(--radius) / -2)");
   opacity: 0;
   width: var(--radius);
   height: var(--radius);
@@ -72,8 +72,8 @@ export default {
   &::after {
     content: " ";
     position: absolute;
-    top: calc(var(--border) * -1);
-    left: calc(var(--border) * -1);
+    top: unquote("calc(var(--border) * -1)");
+    left: unquote("calc(var(--border) * -1)");
     width: var(--radius);
     height: var(--radius);
     border-radius: 100%;
