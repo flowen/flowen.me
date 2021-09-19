@@ -9,8 +9,8 @@
 # Settings in the [build] context are global and are applied to all contexts 
 # unless otherwise overridden by more specific contexts.  
 [build]
-  base = "2021/frontend"
-  publish = "2021/frontend/dist"
+  base = "2021/frontend/"
+  publish = "dist"
   command = "npm run generate"
 
 [build.environment]
