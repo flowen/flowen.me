@@ -1,5 +1,5 @@
 const AUTHOR_NAME = "Rou Hun Fan";
-const TWITTER_HANDLE = "@flowen_nl";
+const TWITTER_HANDLE = "@flowen_af";
 const PROJECT_TITLE = "Freelance frontend UI developer and designer, Rou Hun Fan";
 const PROJECT_DESCRIPTION =
   "Freelance frontend UI developer and designer, Rou Hun Fan, working remotely for international clients";
