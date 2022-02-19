@@ -14,6 +14,7 @@
     "deploy": "nuxt generate && aws s3 sync dist/. s3://rouhun.fan/ --delete --profile flowen"
   },
   "dependencies": {
+    "@gsap/shockingly": "3.9.1",
     "@nuxtjs/style-resources": "^1.2.1",
     "gsap": "npm:@gsap/shockingly",
     "nuxt": "^2.15.8",
