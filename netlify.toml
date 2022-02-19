@@ -9,9 +9,9 @@
 # Settings in the [build] context are global and are applied to all contexts 
 # unless otherwise overridden by more specific contexts.  
 [build]
-  base = "2021/frontend/"
+  base = "/2021/frontend/"
   publish = "dist"
-  command = "npm run generate"
+  command = "yarn run generate"
 
 [build.environment]
   NODE_VERSION = "v12.18.0"
@@ -36,7 +36,7 @@
 # Specific branch context: Deploys from this branch
 # will take these settings and override their
 # current ones.
-[context.develop]
-  base = "2021/frontend"
-  publish = "2021/frontend/dist"
-  command = "npm run build"
+# [context.develop]
+#   base = "2021/frontend"
+#   publish = "2021/frontend/dist"
+#   command = "npm run build"
