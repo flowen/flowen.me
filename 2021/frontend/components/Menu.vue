@@ -1,6 +1,8 @@
 <template>
   <transition :css="false" appear @enter="enter" @leave="leave">
     <nav ref="nav" class="nav">
+      <nuxt-link to="/soundxyz/" class="nav__project-link" data-a-scale>sound.xyz</nuxt-link>
+      <nuxt-link to="/molabs/" class="nav__project-link" data-a-scale>molabs.ai</nuxt-link>
       <nuxt-link to="/fauxmegle/" class="nav__project-link" data-a-scale>fauxmegle.com</nuxt-link>
       <nuxt-link to="/intheyear2024/" class="nav__project-link" data-a-scale>
         intheyear2024.com

@@ -15,8 +15,25 @@
     </div>
 
     <p class="project-page__description">
-      A quick 6 week rendes-vouz working on the launch MVP of sound.xyz
+      A quick 6 week rendes-vouz working on the launch MVP of sound.xyz.<br />
+      Worked on the prelaunch of sound.xyz. The NFT platform for artists to actually earn money vs
+      bs Spotify streaming pennies by selling parts of their song as NFTs in which in a
+      Soundcloud-manner the owners of the NFT can add a comment.
     </p>
+
+    <figure>
+      <figcaption>Previous homepage:</figcaption>
+      <video
+        class="video"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="~assets/video/soundxyz/poster.jpg"
+      >
+        <source src="~assets/video/soundxyz/soundxyz.mp4" type="video/mp4" />
+      </video>
+    </figure>
 
     <h3>page__summary</h3>
     <dl class="project-page__summary">

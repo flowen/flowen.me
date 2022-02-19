@@ -23,6 +23,13 @@
       Finalized by migrating the product to react-three-fiber in Nextjs.
     </p>
 
+    <figure>
+      <figcaption>SO UHMM, there's this egg you can tickle:</figcaption>
+      <video class="video" autoplay loop muted playsinline poster="~assets/video/molabs/poster.jpg">
+        <source src="~assets/video/molabs/molabs.mp4" type="video/mp4" />
+      </video>
+    </figure>
+
     <h3>page__summary</h3>
     <dl class="project-page__summary">
       <dd>For:</dd>
