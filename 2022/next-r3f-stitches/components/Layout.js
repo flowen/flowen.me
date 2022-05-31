@@ -15,6 +15,7 @@ const LayoutStyles = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
+  maxWidth: "664px",
   margin: "0 auto",
   padding: "10vmin 0 15vmin",
 });

@@ -1,62 +1,68 @@
 import Link from "next/link";
 import { styled } from "stitches.config";
 
-import Layout from "@/components/Layout";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WordMask from "@/components/WordMask";
 
-export const timeline = {
-  rou: 0,
-  hun: 0.1,
-  fan: 0.2,
+const timeline = {
+  header: {
+    rou: 0,
+    hun: 0.1,
+    fan: 0.2,
+  },
   uiDev: 0.35,
   motion: 0.5,
   ampersand: 0.7,
   frontend: 0.85,
   creative: 0.9,
   coding: 1.05,
-  dob: 1.15,
-  contact: 1.3,
-  arrow: 1.35,
-  cv: 1.45,
-  tg: 1.5,
-  tw: 1.55,
+  footer: {
+    dob: 1.15,
+    contact: 1.3,
+    arrow: 1.35,
+    cv: 1.45,
+    tg: 1.5,
+    tw: 1.55,
+  },
 };
 
 export default function Index() {
   return (
-    <main>
-      <h1>
-        <Flex>
-          <div>
-            <WordMask direction="top" delay={timeline.uiDev}>
-              UI dev
+    <>
+      <Header timeline={timeline.header} />
+      <main>
+        <h1>
+          <Row>
+            <div>
+              <WordMask direction="top" delay={timeline.uiDev}>
+                UI dev
+              </WordMask>
+              <WordMask direction="right" delay={timeline.motion}>
+                Motion
+              </WordMask>
+            </div>
+
+            <Link href="/projects">
+              <AnchorProjects>
+                <img src="/assets/img/fx.jpg" alt="coolshit" />
+              </AnchorProjects>
+            </Link>
+          </Row>
+
+          <Row>
+            <WordMask direction="top" delay={timeline.ampersand}>
+              <Ampersand>&amp;</Ampersand>
             </WordMask>
-            <WordMask direction="right" delay={timeline.motion}>
-              Motion
+            &nbsp;
+            <WordMask direction="top" delay={timeline.frontend}>
+              Frontend
             </WordMask>
-          </div>
+          </Row>
+        </h1>
+      </main>
 
-          <Link href="/projects">
-            <AnchorProjects>
-              <img src="/assets/img/fx.jpg" alt="coolshit" />
-            </AnchorProjects>
-          </Link>
-        </Flex>
-
-        <Flex>
-          <WordMask direction="top" delay={timeline.ampersand}>
-            <Ampersand>&amp;</Ampersand>
-          </WordMask>
-          &nbsp;
-          <WordMask direction="top" delay={timeline.frontend}>
-            Frontend
-          </WordMask>
-        </Flex>
-      </h1>
-
-      <Me>
+      <Row>
         <Link href="/me">
           <LinkMe>
             <Overlay />
@@ -72,24 +78,15 @@ export default function Index() {
             Coding
           </WordMask>
         </CreativeCoding>
-      </Me>
-    </main>
+      </Row>
+      <Footer timeline={timeline.footer} />
+    </>
   );
 }
 
-Index.getLayout = function getLayout(page) {
-  return (
-    <Layout>
-      <Header />
-      <main>{page}</main>
-      <Footer />
-    </Layout>
-  );
-};
-
-export const Flex = styled("div", {
+export const Row = styled("div", {
   display: "flex",
-  // justifyContent: "space-between",
+  justifyContent: "space-between",
 });
 
 const AnchorProjects = styled("a", {
@@ -105,11 +102,6 @@ const AnchorProjects = styled("a", {
     display: "block",
     height: "100%",
   },
-});
-
-const Me = styled("div", {
-  display: "flex",
-  alignItems: "center",
 });
 
 const LinkMe = styled("a", {
