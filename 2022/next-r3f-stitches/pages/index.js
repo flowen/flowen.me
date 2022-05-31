@@ -22,6 +22,10 @@ export default function Index() {
 
             <img src="/assets/img/fx.jpg" alt="coolshit" />
           </Flex>
+
+          <div>
+            <Ampersand>&amp;</Ampersand> <span>Frontend</span>
+          </div>
         </h1>
 
         <Me>
@@ -61,7 +65,6 @@ const MeImage = styled("div", {
 
   "& img": {
     display: "block",
-    height: "calc(13vmin * 2)",
   },
 });
 
@@ -77,5 +80,9 @@ const Overlay = styled("div", {
 });
 
 const CreativeCoding = styled("div", {
+  fontFamily: "$fontAlt",
+});
+
+const Ampersand = styled("span", {
   fontFamily: "$fontAlt",
 });

@@ -1,62 +1,48 @@
 {
 	"compilerOptions": {
-		"moduleResolution": "node",
 		"baseUrl": ".",
 		"paths": {
-			"@/assets/*": [
-				"/assets/*"
+			"@/*": [
+				"./*"
 			],
-			"@/content/*": [
-				"/content/*"
+			"~/*": [
+				"./*"
 			],
-			"@/components/*": [
-				"/components/*"
-			],
-			"@/highway/*": [
-				"/highway/*"
-			],
-			"@/layout/*": [
-				"/layout/*"
-			],
-			"@/pages/*": [
-				"/pages/*"
-			],
-			"@/styles/*": [
-				"/styles/*"
-			],
-			"@/utils/*": [
-				"/utils/*"
-			]
 		},
-		"target": "es6",
-		"lib": [
-			"dom",
-			"dom.iterable",
-			"esnext"
-		],
 		"allowJs": true,
-		"skipLibCheck": true,
+		// "allowSyntheticDefaultImports": true,
+		// "esModuleInterop": true,
+		// "forceConsistentCasingInFileNames": true,
+		// "incremental": true,
+		// "isolatedModules": true,
+		"jsx": "react",
+		"module": "commonjs",
+		// "noEmit": true,
+		// "resolveJsonModule": true,
+		// "skipLibCheck": true,
+		// "sourceMap": true,
 		"strict": true,
 		"strictNullChecks": true,
-		"forceConsistentCasingInFileNames": true,
-		"noEmit": true,
-		"esModuleInterop": true,
-		"module": "esnext",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"jsx": "preserve",
-		"incremental": true
+		"target": "es5",
 	},
+	"include": [
+		"**/*",
+		"**/*.json"
+	],
 	"exclude": [
+		"out",
+		".git",
+		".app-cache",
+		".npm",
+		".npm-tmp",
+		"dist",
+		"dist*",
 		"node_modules",
+		"subfolder/dist",
+		"subfolder/node_modules",
+		"**/dist/*",
+		"**/node_modules/*",
 		".next",
 		".vscode",
-		"out"
 	],
-	"include": [
-		"next-env.d.ts",
-		"**/*.ts",
-		"**/*.tsx",
-		"**/*.js",
-	]
 }
