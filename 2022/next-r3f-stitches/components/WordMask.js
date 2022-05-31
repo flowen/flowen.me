@@ -29,6 +29,5 @@ export default function WordMask({ children, direction, delay = 0 }) {
 }
 
 const Mask = styled("div", {
-  display: "flex-inline",
   overflow: "hidden",
 });

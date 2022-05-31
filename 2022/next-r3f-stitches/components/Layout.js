@@ -15,5 +15,6 @@ const LayoutStyles = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  margin: "10vmin auto 15vmin",
+  margin: "0 auto",
+  padding: "10vmin 0 15vmin",
 });
