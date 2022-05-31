@@ -1,0 +1,30 @@
+:root {
+  --yellow: #f0f26a;
+  --magenta: #e82f5c;
+  --pink: #ffa8a8;
+  --white: #fff;
+  --dark: #161b1b;
+  --grey: #b3aba4;
+
+  --font-base: "AzeretMono Black", monospace, Arial, -apple-system,
+    BlinkMacSystemFont;
+  --font-alt: "Ephidona", monospace, Arial, -apple-system, BlinkMacSystemFont;
+
+  /* Easings */
+  --ease-in: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  --ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-in-out: cubic-bezier(0.64, 0.04, 0.35, 1);
+  --ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* Durations */
+  --d-fast: 0.125s;
+  --d-normal: 0.25s;
+  --d-slow: 0.5s;
+  --d-slower: 1.5s;
+  --d-slowest: 2.25s;
+
+  /* custom */
+  --font-size: 13vmin;
+
+  --margin: 2.5vw;
+}

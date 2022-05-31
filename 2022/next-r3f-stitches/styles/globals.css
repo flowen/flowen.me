@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "AzeretMono Black";
+  src: local("AzeretMono Black"), local("AzeretMono-Black"),
+    url("/assets/fonts/AzeretMono-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AzeretMono BlackItalic";
+  src: local("AzeretMono BlackItalic"), local("AzeretMono-BlackItalic"),
+    url("/assets/fonts/AzeretMono-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Ephidona";
+  src: local("Ephidona"), local("Ephidona"),
+    url("/assets/fonts/Ephidona.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body,
+#__next,
+[data-reactroot] {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--dark);
+  font-family: var(--font-base);
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+a {
+  color: var(--white);
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.6rem;
+}
+a:hover {
+  text-decoration-thickness: 0.7rem;
+  text-underline-offset: 0.5rem;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size);
+  line-height: 1.1;
+}
+
+.font-alt {
+  font-family: var(--font-alt);
+  font-weight: 400;
+}
+.font-line-through {
+  text-decoration-line: line-through;
+}
+
+/* input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: black;
+  border-radius: 5px;
+  width: 100%;
+  height: 2px;
+  outline: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #000;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1);
+} */
