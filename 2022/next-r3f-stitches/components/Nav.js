@@ -6,8 +6,6 @@ export default function Nav() {
     <NavStyles>
       <Link href="/">home</Link>&nbsp;
       <Link href="/404">404</Link>&nbsp;
-      <Link href="/projects">projects</Link>&nbsp;
-      <Link href="/test-design">design</Link>&nbsp;
       <Link href="/test-three">three</Link>&nbsp;
     </NavStyles>
   );

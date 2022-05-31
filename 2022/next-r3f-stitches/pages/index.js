@@ -1,9 +1,12 @@
+import Link from "next/link";
 import { styled } from "stitches.config";
+
+import Layout from "@/components/Layout";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WordMask from "@/components/WordMask";
 
-const timeline = {
+export const timeline = {
   rou: 0,
   hun: 0.1,
   fan: 0.2,
@@ -23,64 +26,84 @@ const timeline = {
 
 export default function Index() {
   return (
-    <div>
-      <Header timeline={timeline} />
-
-      <main>
-        <h1>
-          <Flex>
-            <div>
-              <WordMask direction="top" delay={timeline.uiDev}>
-                UI dev
-              </WordMask>
-              <WordMask direction="right" delay={timeline.motion}>
-                Motion
-              </WordMask>
-            </div>
-
-            <img src="/assets/img/fx.jpg" alt="coolshit" />
-          </Flex>
-
-          <Flex>
-            <WordMask direction="top" delay={timeline.ampersand}>
-              <Ampersand>&amp;</Ampersand>
+    <main>
+      <h1>
+        <Flex>
+          <div>
+            <WordMask direction="top" delay={timeline.uiDev}>
+              UI dev
             </WordMask>
-            &nbsp;
-            <WordMask direction="top" delay={timeline.frontend}>
-              Frontend
+            <WordMask direction="right" delay={timeline.motion}>
+              Motion
             </WordMask>
-          </Flex>
-        </h1>
+          </div>
 
-        <Me>
-          <MeImage>
+          <Link href="/projects">
+            <AnchorProjects>
+              <img src="/assets/img/fx.jpg" alt="coolshit" />
+            </AnchorProjects>
+          </Link>
+        </Flex>
+
+        <Flex>
+          <WordMask direction="top" delay={timeline.ampersand}>
+            <Ampersand>&amp;</Ampersand>
+          </WordMask>
+          &nbsp;
+          <WordMask direction="top" delay={timeline.frontend}>
+            Frontend
+          </WordMask>
+        </Flex>
+      </h1>
+
+      <Me>
+        <Link href="/me">
+          <LinkMe>
             <Overlay />
-            <img src="/assets/img/me.jpg" />
-          </MeImage>
+            <img src="/assets/img/me.jpg" alt="me" />
+          </LinkMe>
+        </Link>
 
-          <CreativeCoding>
-            <WordMask direction="top" delay={timeline.creative}>
-              Creative
-            </WordMask>
-            <WordMask direction="bottom" delay={timeline.creative}>
-              Coding
-            </WordMask>
-          </CreativeCoding>
-        </Me>
-      </main>
-
-      <Footer timeline={timeline} />
-    </div>
+        <CreativeCoding>
+          <WordMask direction="top" delay={timeline.creative}>
+            Creative
+          </WordMask>
+          <WordMask direction="bottom" delay={timeline.creative}>
+            Coding
+          </WordMask>
+        </CreativeCoding>
+      </Me>
+    </main>
   );
 }
+
+Index.getLayout = function getLayout(page) {
+  return (
+    <Layout>
+      <Header />
+      <main>{page}</main>
+      <Footer />
+    </Layout>
+  );
+};
 
 export const Flex = styled("div", {
   display: "flex",
   // justifyContent: "space-between",
+});
+
+const AnchorProjects = styled("a", {
+  display: "block",
+  margin: "2vmin 0 0 7vmin",
+  height: "calc(var(--font-size) * 2)",
+
+  "&:hover": {
+    cursor: "pointer",
+  },
 
   "& img": {
-    height: "calc(13vmin * 2)",
-    margin: "2vmin 0 0 7vmin",
+    display: "block",
+    height: "100%",
   },
 });
 
@@ -89,12 +112,18 @@ const Me = styled("div", {
   alignItems: "center",
 });
 
-const MeImage = styled("div", {
+const LinkMe = styled("a", {
   position: "relative",
   margin: "0 7vmin 0 0",
+  height: "calc(var(--font-size) * 2)",
+
+  "&:hover": {
+    "& > div": {
+      opacity: 0,
+    },
+  },
 
   "& img": {
-    display: "block",
     height: "calc(var(--font-size) * 2)",
   },
 });
@@ -108,6 +137,7 @@ const Overlay = styled("div", {
 
   background: "#E75A5A",
   mixBlendMode: "lighten",
+  transition: "opacity var(--d-slower) var(--ease-out)",
 });
 
 const CreativeCoding = styled("h1", {

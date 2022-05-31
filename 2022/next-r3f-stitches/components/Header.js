@@ -1,25 +1,31 @@
+import Link from "next/link";
 import { styled } from "stitches.config";
-import WordMask from "@/components/WordMask";
 
-export default function Header({ timeline }) {
+import WordMask from "@/components/WordMask";
+import { timeline } from "@/pages/index";
+
+export default function Header() {
   return (
-    <header className="header">
-      <Wrapper>
+    <HeaderStyles>
+      <h1>
         <WordMask direction="top" delay={timeline.rou}>
-          Rou
+          <Link href="/">Rou</Link>
         </WordMask>
         <WordMask direction="top" delay={timeline.hun}>
-          Hun
+          <Link href="/">Hun</Link>
         </WordMask>
         <WordMask direction="top" delay={timeline.fan}>
-          Fan
+          <Link href="/">Fan</Link>
         </WordMask>
-      </Wrapper>
-    </header>
+      </h1>
+    </HeaderStyles>
   );
 }
 
-const Wrapper = styled("h1", {
+const HeaderStyles = styled("header", {
   display: "flex",
-  justifyContent: "space-between",
+  "& h1": {
+    display: "flex",
+    justifyContent: "space-between",
+  },
 });

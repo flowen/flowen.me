@@ -1,9 +1,9 @@
 import { styled } from "stitches.config";
 
 import WordMask from "@/components/WordMask";
-import { Flex } from "@/pages/index";
+import { Flex, timeline } from "@/pages/index";
 
-export default function Footer({ timeline }) {
+export default function Footer() {
   return (
     <footer className="footer">
       <h1>

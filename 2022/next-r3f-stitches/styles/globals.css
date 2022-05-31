@@ -50,7 +50,9 @@ a {
   text-decoration-thickness: 0.2rem;
   text-underline-offset: 0.6rem;
 }
+
 a:hover {
+  cursor: pointer;
   text-decoration-thickness: 0.7rem;
   text-underline-offset: 0.5rem;
 }
