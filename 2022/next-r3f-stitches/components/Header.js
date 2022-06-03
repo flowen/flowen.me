@@ -1,12 +1,13 @@
 import Link from "next/link";
 
-import { Row } from "@/pages/index";
+import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 
 export default function Header({ timeline }) {
   return (
     <Row
       css={{
+        width: "100%",
         "& a": {
           textDecoration: "none",
         },

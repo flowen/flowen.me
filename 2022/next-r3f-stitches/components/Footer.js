@@ -58,5 +58,6 @@ export default function Footer({ timeline }) {
 const Wrapper = styled("div", {
   display: "flex",
   fontFamily: "$fontAlt",
+  fontFeatureSettings: '"aalt" on',
   fontWeight: "400",
 });

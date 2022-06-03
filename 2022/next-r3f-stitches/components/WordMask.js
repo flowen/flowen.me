@@ -2,7 +2,12 @@ import { styled, theme } from "stitches.config";
 import { motion } from "framer-motion";
 import { easeOut } from "@/utils/easing";
 
-export default function WordMask({ children, direction, delay = 0 }) {
+export default function WordMask({
+  children,
+  direction,
+  delay = 0,
+  altFont = false,
+}) {
   return (
     <Mask>
       <motion.div
@@ -22,7 +27,7 @@ export default function WordMask({ children, direction, delay = 0 }) {
           delay: delay,
         }}
       >
-        {children}
+        {altFont ? <AltFont>{children}</AltFont> : children}
       </motion.div>
     </Mask>
   );
@@ -30,4 +35,10 @@ export default function WordMask({ children, direction, delay = 0 }) {
 
 const Mask = styled("div", {
   overflow: "hidden",
+});
+
+const AltFont = styled("span", {
+  fontFamily: "$fontAlt",
+  fontFeatureSettings: '"aalt" on',
+  fontWeight: "400",
 });

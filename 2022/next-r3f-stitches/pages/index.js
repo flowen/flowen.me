@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { styled } from "stitches.config";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
+import MeImage from "@/components/MeImage";
 
 const timeline = {
   header: {
@@ -29,46 +29,38 @@ const timeline = {
 
 export default function Index() {
   return (
-    <>
-      <Header timeline={timeline.header} />
-      <main>
-        <h1>
-          <Row>
-            <div>
-              <WordMask direction="top" delay={timeline.uiDev}>
-                UI dev
-              </WordMask>
-              <WordMask direction="right" delay={timeline.motion}>
-                Motion
-              </WordMask>
-            </div>
-
-            <Link href="/projects">
-              <AnchorProjects>
-                <img src="/assets/img/fx.jpg" alt="coolshit" />
-              </AnchorProjects>
-            </Link>
-          </Row>
-
-          <Row>
-            <WordMask direction="top" delay={timeline.ampersand}>
-              <Ampersand>&amp;</Ampersand>
+    <main>
+      <h1>
+        <Row>
+          <div>
+            <WordMask direction="top" delay={timeline.uiDev}>
+              UI dev
             </WordMask>
-            &nbsp;
-            <WordMask direction="top" delay={timeline.frontend}>
-              Frontend
+            <WordMask direction="right" delay={timeline.motion}>
+              Motion
             </WordMask>
-          </Row>
-        </h1>
-      </main>
+          </div>
+
+          <Link href="/projects">
+            <AnchorProjects>
+              <img src="/assets/img/fx.jpg" alt="coolshit" />
+            </AnchorProjects>
+          </Link>
+        </Row>
+
+        <Row>
+          <WordMask direction="top" delay={timeline.ampersand}>
+            <Ampersand>&amp;</Ampersand>
+          </WordMask>
+          &nbsp;
+          <WordMask direction="top" delay={timeline.frontend}>
+            Frontend
+          </WordMask>
+        </Row>
+      </h1>
 
       <Row>
-        <Link href="/me">
-          <LinkMe>
-            <Overlay />
-            <img src="/assets/img/me.jpg" alt="me" />
-          </LinkMe>
-        </Link>
+        <MeImage />
 
         <CreativeCoding>
           <WordMask direction="top" delay={timeline.creative}>
@@ -79,15 +71,15 @@ export default function Index() {
           </WordMask>
         </CreativeCoding>
       </Row>
-      <Footer timeline={timeline.footer} />
-    </>
+
+      <Row>
+        <WordMask direction="top" delay={timeline.creative}>
+          Designurt
+        </WordMask>
+      </Row>
+    </main>
   );
 }
-
-export const Row = styled("div", {
-  display: "flex",
-  justifyContent: "space-between",
-});
 
 const AnchorProjects = styled("a", {
   display: "block",
@@ -104,39 +96,13 @@ const AnchorProjects = styled("a", {
   },
 });
 
-const LinkMe = styled("a", {
-  position: "relative",
-  margin: "0 7vmin 0 0",
-  height: "calc(var(--font-size) * 2)",
-
-  "&:hover": {
-    "& > div": {
-      opacity: 0,
-    },
-  },
-
-  "& img": {
-    height: "calc(var(--font-size) * 2)",
-  },
-});
-
-const Overlay = styled("div", {
-  position: "absolute",
-  top: 0,
-  left: 0,
-  width: "100%",
-  height: "100%",
-
-  background: "#E75A5A",
-  mixBlendMode: "lighten",
-  transition: "opacity var(--d-slower) var(--ease-out)",
-});
-
 const CreativeCoding = styled("h1", {
   fontFamily: "$fontAlt",
+  fontFeatureSettings: '"aalt" on',
   fontWeight: "400",
 });
 
 const Ampersand = styled("span", {
   fontFamily: "$fontAlt",
+  fontWeight: "400",
 });

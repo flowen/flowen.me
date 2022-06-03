@@ -1,7 +1,10 @@
 import { styled } from "stitches.config";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+
+import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
+import MeImage from "@/components/MeImage";
+
+import Logo from "@/assets/svg/logo.svg";
 
 const timeline = {
   header: {
@@ -24,25 +27,23 @@ const timeline = {
 export default function Me() {
   return (
     <main>
-      <Header timeline={timeline.header} />
-      <div>
-        <img src="/assets/img/me.jpg" alt="me" />
+      <Row>
+        <MeImage />
+        <LogoSVG />
+      </Row>
 
-        <h1>
-          <WordMask direction="top" delay={timeline.now}>
-            /NOW
-          </WordMask>
-          <WordMaskAlt direction="top" delay={timeline.nowContent} alt>
-            Enjoying my son &amp; looking for a job
-          </WordMaskAlt>
-        </h1>
-      </div>
-
-      <Footer timeline={timeline.footer} />
+      <h1>
+        <WordMask direction="top" delay={timeline.now}>
+          /NOW
+        </WordMask>
+        <WordMask direction="top" delay={timeline.nowContent} altFont={true}>
+          Enjoying my son &amp; looking for a job
+        </WordMask>
+      </h1>
     </main>
   );
 }
 
-const WordMaskAlt = styled(WordMask, {
-  fontFamily: "$fontAlt",
+const LogoSVG = styled(Logo, {
+  height: "calc(var(--font-size) * 2)",
 });
