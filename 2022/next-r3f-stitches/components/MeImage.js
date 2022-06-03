@@ -1,12 +1,22 @@
 import Link from "next/link";
 import { styled } from "stitches.config";
 
-export default function MeImage() {
+export default function MeImage({ heightMultiplier = 2, showOverlay = true }) {
   return (
     <Link href="/me">
-      <LinkMe>
-        <Overlay />
-        <img src="/assets/img/me.jpg" alt="me" />
+      <LinkMe
+        style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
+      >
+        <Overlay
+          style={{
+            opacity: showOverlay ? 1 : 0,
+          }}
+        />
+        <img
+          src="/assets/img/me.jpg"
+          alt="me"
+          style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
+        />
       </LinkMe>
     </Link>
   );
@@ -14,7 +24,7 @@ export default function MeImage() {
 
 const LinkMe = styled("a", {
   position: "relative",
-  margin: "0 7vmin 0 0",
+  margin: "0 7vmin 2vmin 0",
   height: "calc(var(--font-size) * 2)",
 
   "&:hover": {

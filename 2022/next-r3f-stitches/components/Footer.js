@@ -8,7 +8,7 @@ export default function Footer({ timeline }) {
     <footer>
       <h1>
         <WordMask direction="top" delay={timeline.dob}>
-          <span className="font-line-through">0000</span>‘831229
+          <Zeroes>0000</Zeroes>‘831229
         </WordMask>
       </h1>
 
@@ -60,4 +60,10 @@ const Wrapper = styled("div", {
   fontFamily: "$fontAlt",
   fontFeatureSettings: '"aalt" on',
   fontWeight: "400",
+});
+
+const Zeroes = styled("span", {
+  fontFeatureSettings: '"aalt" on',
+  fontWeight: "400",
+  textDecoration: "line-through",
 });

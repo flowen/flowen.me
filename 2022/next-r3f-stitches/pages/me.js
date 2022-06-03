@@ -27,8 +27,8 @@ const timeline = {
 export default function Me() {
   return (
     <main>
-      <Row>
-        <MeImage />
+      <Row css={{ position: "relative" }}>
+        <MeImage heightMultiplier={3} showOverlay={false} />
         <LogoSVG />
       </Row>
 
@@ -45,5 +45,8 @@ export default function Me() {
 }
 
 const LogoSVG = styled(Logo, {
-  height: "calc(var(--font-size) * 2)",
+  position: "absolute",
+  top: "5vw",
+  right: "5vw",
+  height: "calc(var(--font-size) * 3)",
 });

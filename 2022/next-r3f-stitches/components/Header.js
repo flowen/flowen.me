@@ -8,6 +8,7 @@ export default function Header({ timeline }) {
     <Row
       css={{
         width: "100%",
+        justifyContent: "space-between",
         "& a": {
           textDecoration: "none",
         },

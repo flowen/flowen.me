@@ -17,6 +17,8 @@ const timeline = {
   frontend: 0.85,
   creative: 0.9,
   coding: 1.05,
+  available: 1.15,
+  availableAnswer: 1.15,
   footer: {
     dob: 1.15,
     contact: 1.3,
@@ -43,7 +45,7 @@ export default function Index() {
 
           <Link href="/projects">
             <AnchorProjects>
-              <img src="/assets/img/fx.jpg" alt="coolshit" />
+              <img src="/assets/img/fx2.jpg" alt="coolshit" />
             </AnchorProjects>
           </Link>
         </Row>
@@ -59,7 +61,7 @@ export default function Index() {
         </Row>
       </h1>
 
-      <Row>
+      <Row css={{ position: "relative" }}>
         <MeImage />
 
         <CreativeCoding>
@@ -73,8 +75,15 @@ export default function Index() {
       </Row>
 
       <Row>
-        <WordMask direction="top" delay={timeline.creative}>
-          Designurt
+        <WordMask direction="right" delay={timeline.available}>
+          Available:
+        </WordMask>
+        <WordMask
+          direction="left"
+          delay={timeline.availableAnswer}
+          altFont={true}
+        >
+          Yes
         </WordMask>
       </Row>
     </main>
