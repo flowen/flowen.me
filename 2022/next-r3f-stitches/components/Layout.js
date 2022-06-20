@@ -40,8 +40,7 @@ export default function Layout({ children }) {
 const Wrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
-  // alignItems: "center",
   maxWidth: "720px",
   margin: "0 auto",
-  padding: "10vmin 0 15vmin",
+  padding: "10vh 0 15vh",
 });

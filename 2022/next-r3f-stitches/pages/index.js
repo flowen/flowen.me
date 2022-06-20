@@ -5,6 +5,8 @@ import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 import MeImage from "@/components/MeImage";
 
+import { useRouter } from "next/router";
+
 const timeline = {
   header: {
     rou: 0,
@@ -30,6 +32,13 @@ const timeline = {
 };
 
 export default function Index() {
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log("click");
+  };
+
   return (
     <main>
       <h1>
@@ -44,8 +53,8 @@ export default function Index() {
           </div>
 
           <Link href="/projects">
-            <AnchorProjects>
-              <img src="/assets/img/fx2.jpg" alt="coolshit" />
+            <AnchorProjects onClick={handleClick}>
+              <img src="/assets/img/fx.jpg" alt="coolshit" />
             </AnchorProjects>
           </Link>
         </Row>
@@ -62,7 +71,7 @@ export default function Index() {
       </h1>
 
       <Row css={{ position: "relative" }}>
-        <MeImage />
+        <MeImage layout transition={{ duration: 0.3 }} />
 
         <CreativeCoding>
           <WordMask direction="top" delay={timeline.creative}>
@@ -91,9 +100,13 @@ export default function Index() {
 }
 
 const AnchorProjects = styled("a", {
-  display: "block",
-  margin: "2vmin 0 0 7vmin",
+  position: "relative",
+  zIndex: "999",
+
+  flex: 1,
+  margin: "1rem 0 1rem 3rem",
   height: "calc(var(--font-size) * 2)",
+  overflow: "hidden",
 
   "&:hover": {
     cursor: "pointer",
@@ -101,7 +114,7 @@ const AnchorProjects = styled("a", {
 
   "& img": {
     display: "block",
-    height: "100%",
+    width: "100%",
   },
 });
 

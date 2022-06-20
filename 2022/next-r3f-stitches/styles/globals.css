@@ -38,12 +38,36 @@ body,
 }
 
 body {
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: var(--dark);
   font-family: var(--font-base);
-  font-size: 16px;
   line-height: 1.5;
   text-transform: uppercase;
   color: var(--white);
+
+  --font-size: max(7vmin, 85px);
+  font-size: var(--font-size);
+}
+
+/* custom */
+
+@media (max-aspect-ratio: 4/5) {
+  body {
+    --font-size: 12vw;
+  }
+}
+@media (min-aspect-ratio: 1/1) {
+  body {
+    /* --color: green; */
+    /* --font-size: max(5vh, 55px); */
+  }
+}
+@media (min-aspect-ratio: 5/6) {
+  body {
+    /* --color: purple; */
+    /* --font-size: max(7.5vw, 85px); */
+  }
 }
 
 a {
@@ -66,7 +90,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0.25vmin 0;
+  margin: 0.25vh 0;
   font-size: var(--font-size);
   line-height: 1.2;
 }

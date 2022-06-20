@@ -1,7 +1,5 @@
 import { styled } from "stitches.config";
-
 import WordMask from "@/components/WordMask";
-import { Row } from "@/pages/index";
 
 export default function Footer({ timeline }) {
   return (

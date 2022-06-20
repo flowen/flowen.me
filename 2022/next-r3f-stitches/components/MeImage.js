@@ -1,40 +1,39 @@
 import Link from "next/link";
 import { styled } from "stitches.config";
+import { motion } from "framer-motion";
 
 export default function MeImage({ heightMultiplier = 2, showOverlay = true }) {
   return (
-    <Link href="/me">
-      <LinkMe
-        style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
-      >
-        <Overlay
-          style={{
-            opacity: showOverlay ? 1 : 0,
-          }}
-        />
-        <img
-          src="/assets/img/me.jpg"
-          alt="me"
+    <motion.div layout transition={{ duration: 0.3 }}>
+      <Link href="/me">
+        <LinkMe
           style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
-        />
-      </LinkMe>
-    </Link>
+        >
+          <Overlay
+            style={{
+              opacity: showOverlay ? 1 : 0,
+            }}
+          />
+          <img
+            src="/assets/img/me.jpg"
+            alt="me"
+            style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
+          />
+        </LinkMe>
+      </Link>
+    </motion.div>
   );
 }
 
 const LinkMe = styled("a", {
   position: "relative",
-  margin: "0 7vmin 2vmin 0",
-  height: "calc(var(--font-size) * 2)",
+  display: "block",
+  margin: "0 7vh 2vh 0",
 
   "&:hover": {
     "& > div": {
       opacity: 0,
     },
-  },
-
-  "& img": {
-    height: "calc(var(--font-size) * 2)",
   },
 });
 

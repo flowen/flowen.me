@@ -24,7 +24,7 @@
   --d-slowest: 2.25s;
 
   /* custom */
-  --font-size: 13vmin;
+  --font-size: max(7vmin, 85px);
 
-  --margin: 2.5vw;
+  --margin: 2.5vmin;
 }
