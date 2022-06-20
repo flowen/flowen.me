@@ -1,6 +1,6 @@
 import { styled, theme } from "stitches.config";
 import { motion } from "framer-motion";
-import { easeOut } from "@/utils/easing";
+import { easeIn, easeOut } from "@/utils/easing";
 
 export default function WordMask({
   children,
@@ -20,6 +20,17 @@ export default function WordMask({
         animate={{
           x: 0,
           y: 0,
+        }}
+        exit={{
+          x:
+            direction === "left" ? "100%" : direction === "right" ? "-100%" : 0,
+          y:
+            direction === "top" ? "100%" : direction === "bottom" ? "-100%" : 0,
+          transition: {
+            delay: 0.2,
+            duration: 0.5,
+            ease: easeIn,
+          },
         }}
         transition={{
           ease: easeOut,

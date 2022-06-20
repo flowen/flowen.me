@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function MeImage({ heightMultiplier = 2, showOverlay = true }) {
   return (
     <motion.div layout transition={{ duration: 0.3 }}>
-      <Link href="/me">
+      <Link href="/me" scroll={false}>
         <LinkMe
           style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
         >

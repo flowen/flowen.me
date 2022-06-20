@@ -5,14 +5,7 @@ import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 import MeImage from "@/components/MeImage";
 
-import { useRouter } from "next/router";
-
 const timeline = {
-  header: {
-    rou: 0,
-    hun: 0.1,
-    fan: 0.2,
-  },
   uiDev: 0.35,
   motion: 0.5,
   ampersand: 0.7,
@@ -21,26 +14,11 @@ const timeline = {
   coding: 1.05,
   available: 1.15,
   availableAnswer: 1.15,
-  footer: {
-    dob: 1.15,
-    contact: 1.3,
-    arrow: 1.35,
-    cv: 1.45,
-    tg: 1.5,
-    tw: 1.55,
-  },
 };
 
 export default function Index() {
-  const router = useRouter();
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    console.log("click");
-  };
-
   return (
-    <main>
+    <>
       <h1>
         <Row>
           <div>
@@ -52,8 +30,8 @@ export default function Index() {
             </WordMask>
           </div>
 
-          <Link href="/projects">
-            <AnchorProjects onClick={handleClick}>
+          <Link href="/projects" scroll={false}>
+            <AnchorProjects>
               <img src="/assets/img/fx.jpg" alt="coolshit" />
             </AnchorProjects>
           </Link>
@@ -95,7 +73,7 @@ export default function Index() {
           Yes
         </WordMask>
       </Row>
-    </main>
+    </>
   );
 }
 

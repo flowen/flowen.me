@@ -6,6 +6,7 @@ import WordMask from "@/components/WordMask";
 export default function Header({ timeline }) {
   return (
     <Row
+      as="header"
       css={{
         width: "100%",
         justifyContent: "space-between",
