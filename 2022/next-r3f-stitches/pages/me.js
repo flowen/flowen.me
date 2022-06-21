@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
 
@@ -39,14 +38,13 @@ export default function Me() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0 }}
             exit={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
           />
           <motion.img
             src="/assets/img/me.jpg"
             alt="me"
             style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
             layoutId="me-image"
-            transition={{ duration: 0.3 }}
+            whileHover={{ scale: 1.2 }}
           />
         </Wrapper>
 

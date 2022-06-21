@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
@@ -31,12 +32,15 @@ export default function Index() {
             </WordMask>
           </div>
 
-          <Link href="/projects" scroll={false}>
+          <Link href="/projects">
             <AnchorProjects>
-              <img
+              <motion.img
                 src="/assets/img/fx.jpg"
                 alt="coolshit"
                 style={{ marginTop: "-43px" }}
+                initial={{ y: "-100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-100%" }}
               />
             </AnchorProjects>
           </Link>
@@ -55,22 +59,17 @@ export default function Index() {
 
       <Row css={{ position: "relative" }}>
         <Link href="/me" scroll={false}>
-          <LinkMe
-            style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
-          >
+          <LinkMe>
             <MotionOverlay
               layoutId="overlay"
-              initial={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
             />
             <motion.img
               src="/assets/img/me.jpg"
               alt="me"
               style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
               layoutId="me-image"
-              transition={{ duration: 0.3 }}
             />
           </LinkMe>
         </Link>
@@ -103,12 +102,11 @@ export default function Index() {
 
 const AnchorProjects = styled("a", {
   position: "relative",
-  zIndex: "999",
+  overflow: "hidden",
 
   flex: 1,
   margin: "1rem 0 1rem 3rem",
   height: "calc(var(--font-size) * 2)",
-  overflow: "hidden",
 
   "&:hover": {
     cursor: "pointer",
@@ -132,12 +130,15 @@ const Ampersand = styled("span", {
 });
 
 const LinkMe = styled("a", {
+  overflow: "hidden",
   position: "relative",
   display: "block",
   margin: "0 7vh 2vh 0",
+  height: `calc(var(--font-size) * ${heightMultiplier})`,
 });
 
 const Overlay = styled("div", {
+  zIndex: 100,
   position: "absolute",
   top: 0,
   left: 0,
