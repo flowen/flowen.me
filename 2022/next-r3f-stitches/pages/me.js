@@ -1,12 +1,13 @@
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
 
+import { MotionOverlay } from "@/pages/index";
 import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
-import MeImage from "@/components/MeImage";
 import Logo from "@/assets/svg/logo.svg";
 
-const MotionMeImage = motion(MeImage);
+const heightMultiplier = 3;
 
 const timeline = {
   header: {
@@ -28,15 +29,27 @@ const timeline = {
 
 export default function Me() {
   return (
-    <>
+    <motion.div layout>
       <Row css={{ position: "relative" }}>
-        <MotionMeImage
-          layout
-          layoutId="me-image"
-          transition={{ duration: 0.3 }}
-          heightMultiplier={3}
-          showOverlay={false}
-        />
+        <Wrapper
+          style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
+        >
+          <MotionOverlay
+            layoutId="overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0 }}
+            exit={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          />
+          <motion.img
+            src="/assets/img/me.jpg"
+            alt="me"
+            style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
+            layoutId="me-image"
+            transition={{ duration: 0.3 }}
+          />
+        </Wrapper>
+
         <LogoSVG />
       </Row>
 
@@ -48,9 +61,14 @@ export default function Me() {
           Enjoying my son &amp; looking for a job
         </WordMask>
       </h1>
-    </>
+    </motion.div>
   );
 }
+
+const Wrapper = styled("div", {
+  display: "block",
+  position: "relative",
+});
 
 const LogoSVG = styled(Logo, {
   position: "absolute",

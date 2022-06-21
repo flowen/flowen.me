@@ -4,10 +4,8 @@ import { styled } from "stitches.config";
 
 import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
-import MeImage from "@/components/MeImage";
 
-const MotionMeImage = motion(MeImage);
-
+const heightMultiplier = 2;
 const timeline = {
   uiDev: 0.35,
   motion: 0.5,
@@ -21,7 +19,7 @@ const timeline = {
 
 export default function Index() {
   return (
-    <>
+    <motion.div layout>
       <h1>
         <Row>
           <div>
@@ -56,12 +54,26 @@ export default function Index() {
       </h1>
 
       <Row css={{ position: "relative" }}>
-        <MotionMeImage
-          layout
-          layoutId="me-image"
-          transition={{ duration: 0.3 }}
-          setShowIndex={setShowIndex}
-        />
+        <Link href="/me" scroll={false}>
+          <LinkMe
+            style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
+          >
+            <MotionOverlay
+              layoutId="overlay"
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            />
+            <motion.img
+              src="/assets/img/me.jpg"
+              alt="me"
+              style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
+              layoutId="me-image"
+              transition={{ duration: 0.3 }}
+            />
+          </LinkMe>
+        </Link>
 
         <CreativeCoding>
           <WordMask direction="top" delay={timeline.creative}>
@@ -85,7 +97,7 @@ export default function Index() {
           Yes
         </WordMask>
       </Row>
-    </>
+    </motion.div>
   );
 }
 
@@ -118,3 +130,25 @@ const Ampersand = styled("span", {
   fontFamily: "$fontAlt",
   fontWeight: "400",
 });
+
+const LinkMe = styled("a", {
+  position: "relative",
+  display: "block",
+  margin: "0 7vh 2vh 0",
+});
+
+const Overlay = styled("div", {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+
+  background: "#E75A5A",
+  mixBlendMode: "lighten",
+  transition: "opacity var(--d-slower) var(--ease-out)",
+});
+
+const MotionOverlay = motion(Overlay);
+
+export { MotionOverlay };
