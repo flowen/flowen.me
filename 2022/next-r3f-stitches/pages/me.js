@@ -1,10 +1,12 @@
+import { motion } from "framer-motion";
 import { styled } from "stitches.config";
 
 import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 import MeImage from "@/components/MeImage";
-
 import Logo from "@/assets/svg/logo.svg";
+
+const MotionMeImage = motion(MeImage);
 
 const timeline = {
   header: {
@@ -26,9 +28,15 @@ const timeline = {
 
 export default function Me() {
   return (
-    <main>
+    <>
       <Row css={{ position: "relative" }}>
-        <MeImage heightMultiplier={3} showOverlay={false} />
+        <MotionMeImage
+          layout
+          layoutId="me-image"
+          transition={{ duration: 0.3 }}
+          heightMultiplier={3}
+          showOverlay={false}
+        />
         <LogoSVG />
       </Row>
 
@@ -40,7 +48,7 @@ export default function Me() {
           Enjoying my son &amp; looking for a job
         </WordMask>
       </h1>
-    </main>
+    </>
   );
 }
 

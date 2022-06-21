@@ -1,29 +1,35 @@
+import React from "react";
 import Link from "next/link";
 import { styled } from "stitches.config";
-import { motion } from "framer-motion";
 
-export default function MeImage({ heightMultiplier = 2, showOverlay = true }) {
-  return (
-    <motion.div layout transition={{ duration: 0.3 }}>
-      <Link href="/me" scroll={false}>
-        <LinkMe
-          style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
-        >
-          <Overlay
-            style={{
-              opacity: showOverlay ? 1 : 0,
-            }}
-          />
-          <img
-            src="/assets/img/me.jpg"
-            alt="me"
+const MeImage = React.forwardRef(
+  ({ heightMultiplier = 2, showOverlay = true }, ref) => {
+    return (
+      <div ref={ref}>
+        <Link href="/me" scroll={false}>
+          <LinkMe
+            onClick={handleClick}
             style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
-          />
-        </LinkMe>
-      </Link>
-    </motion.div>
-  );
-}
+          >
+            <Overlay
+              style={{
+                opacity: showOverlay ? 1 : 0,
+              }}
+            />
+            <img
+              src="/assets/img/me.jpg"
+              alt="me"
+              style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
+            />
+          </LinkMe>
+        </Link>
+      </div>
+    );
+  }
+);
+
+MeImage.displayName = "MeImage";
+export default MeImage;
 
 const LinkMe = styled("a", {
   position: "relative",

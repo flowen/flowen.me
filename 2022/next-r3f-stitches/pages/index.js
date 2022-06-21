@@ -1,9 +1,12 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { styled } from "stitches.config";
 
 import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 import MeImage from "@/components/MeImage";
+
+const MotionMeImage = motion(MeImage);
 
 const timeline = {
   uiDev: 0.35,
@@ -32,7 +35,11 @@ export default function Index() {
 
           <Link href="/projects" scroll={false}>
             <AnchorProjects>
-              <img src="/assets/img/fx.jpg" alt="coolshit" />
+              <img
+                src="/assets/img/fx.jpg"
+                alt="coolshit"
+                style={{ marginTop: "-43px" }}
+              />
             </AnchorProjects>
           </Link>
         </Row>
@@ -49,7 +56,12 @@ export default function Index() {
       </h1>
 
       <Row css={{ position: "relative" }}>
-        <MeImage layout transition={{ duration: 0.3 }} />
+        <MotionMeImage
+          layout
+          layoutId="me-image"
+          transition={{ duration: 0.3 }}
+          setShowIndex={setShowIndex}
+        />
 
         <CreativeCoding>
           <WordMask direction="top" delay={timeline.creative}>
