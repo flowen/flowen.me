@@ -27,7 +27,7 @@ const timeline = {
   },
 };
 
-export default function Me() {
+export default function Me({ now }) {
   return (
     <motion.div>
       <Row css={{ position: "relative" }}>
@@ -58,9 +58,12 @@ export default function Me() {
         <WordMask direction="top" delay={timeline.now}>
           /NOW
         </WordMask>
-        <WordMask direction="top" delay={timeline.nowContent} altFont={true}>
-          Enjoying my son &amp; looking for a job
-        </WordMask>
+        <WordMask
+          direction="top"
+          delay={timeline.nowContent}
+          altFont
+          html={now}
+        />
       </h1>
     </motion.div>
   );
@@ -76,3 +79,17 @@ const LogoSVG = styled(Logo, {
   right: "5vw",
   height: "calc(var(--font-size) * 3)",
 });
+
+// Fetching data from the JSON file
+import fsPromises from "fs/promises";
+import path from "path";
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), "data.json");
+  const jsonData = await fsPromises.readFile(filePath);
+  const data = JSON.parse(jsonData);
+
+  return {
+    props: data,
+  };
+}

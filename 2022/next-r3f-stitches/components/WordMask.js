@@ -7,6 +7,7 @@ export default function WordMask({
   direction,
   delay = 0,
   altFont = false,
+  html,
 }) {
   return (
     <Mask>
@@ -38,7 +39,19 @@ export default function WordMask({
           delay: delay,
         }}
       >
-        {altFont ? <AltFont>{children}</AltFont> : children}
+        {html ? (
+          altFont ? (
+            <AltFont>
+              <span dangerouslySetInnerHTML={{ __html: html }} />
+            </AltFont>
+          ) : (
+            <span dangerouslySetInnerHTML={{ __html: html }} />
+          )
+        ) : altFont ? (
+          <AltFont>{children}</AltFont>
+        ) : (
+          children
+        )}
       </motion.div>
     </Mask>
   );
