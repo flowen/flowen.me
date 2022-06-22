@@ -36,7 +36,6 @@ export default function Me({ now }) {
           exit={{ overflow: "hidden" }}
         >
           <Overlay
-            initial={{ opacity: 0 }}
             animate={{ opacity: 0 }}
             exit={{ opacity: 1, y: "-100%" }}
             layoutId="overlay"
@@ -51,7 +50,12 @@ export default function Me({ now }) {
             exit={{ y: "-100%" }}
           />
         </Wrapper>
-        <LogoSVG />
+
+        <MotionLogo
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        />
       </Row>
 
       <h1>
@@ -79,6 +83,8 @@ const LogoSVG = styled(Logo, {
   right: "5vw",
   height: "calc(var(--font-size) * 3)",
 });
+
+const MotionLogo = motion(LogoSVG);
 
 // Fetching data from the JSON file
 import fsPromises from "fs/promises";

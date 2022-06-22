@@ -17,6 +17,15 @@ const timeline = {
   availableAnswer: 1.15,
 };
 
+const linkVariants = {
+  tap: {
+    scale: 0.95,
+  },
+  hover: {
+    scale: 1.05,
+  },
+};
+
 export default function Index() {
   return (
     <motion.div>
@@ -32,7 +41,11 @@ export default function Index() {
           </div>
 
           <Link href="/projects">
-            <AnchorProjects>
+            <AnchorProjects
+              whileTap="tap"
+              whileHover="hover"
+              variants={linkVariants}
+            >
               <motion.img
                 src="/assets/img/fx.jpg"
                 alt="coolshit"
@@ -58,7 +71,7 @@ export default function Index() {
 
       <Row css={{ position: "relative" }}>
         <Link href="/me" scroll={false}>
-          <LinkMe>
+          <LinkMe whileTap="tap" whileHover="hover" variants={linkVariants}>
             <Overlay
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -101,7 +114,7 @@ export default function Index() {
   );
 }
 
-const AnchorProjects = styled("a", {
+const AnchorProjects = styled(motion.a, {
   position: "relative",
   overflow: "hidden",
 
@@ -130,7 +143,7 @@ const Ampersand = styled("span", {
   fontWeight: "400",
 });
 
-const LinkMe = styled("a", {
+const LinkMe = styled(motion.a, {
   overflow: "hidden",
   position: "relative",
   display: "block",

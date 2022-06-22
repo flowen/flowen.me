@@ -1,17 +1,22 @@
+import { styled } from "stitches.config";
+import Image from "next/image";
+
 export default function Projects({ projects }) {
   return (
-    <div className="wrapper">
+    <Wrapper>
       {projects.map((project, index) => {
         return (
-          <div className="project" key={project.name}>
-            <img src={project.image} alt={project.title} />
+          <Project key={project.name}>
+            <Image
+              src={`/assets/img/${project.image}`}
+              alt={project.name}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center center"
+            />
 
             <div className="project-name">
               <h2>{project.name}</h2>
-            </div>
-
-            <div className="project-description">
-              <p>{project.description}</p>
             </div>
 
             <div className="project-url">
@@ -39,12 +44,29 @@ export default function Projects({ projects }) {
                 ))}
               </div>
             )}
-          </div>
+          </Project>
         );
       })}
-    </div>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+});
+
+const Project = styled("div", {
+  position: "relative",
+
+  "& img": {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+  },
+});
 
 // Fetching data from the JSON file
 import fsPromises from "fs/promises";
