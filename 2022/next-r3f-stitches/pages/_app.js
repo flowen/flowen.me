@@ -57,7 +57,7 @@ function App({ Component, pageProps, router }) {
       initial={{ scale: scale }}
       style={{ scale: scale }}
       animate={controls}
-      transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.5 }}
+      transition={{ ease: easeOut, duration: 1.5 }}
     >
       <Header timeline={timeline.header} />
 

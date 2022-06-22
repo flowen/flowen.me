@@ -1,7 +1,8 @@
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
 
-import { MotionOverlay } from "@/pages/index";
+import { Overlay } from "@/pages/index";
 import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 import Logo from "@/assets/svg/logo.svg";
@@ -28,26 +29,28 @@ const timeline = {
 
 export default function Me() {
   return (
-    <motion.div layout>
+    <motion.div>
       <Row css={{ position: "relative" }}>
         <Wrapper
           style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
+          exit={{ overflow: "hidden" }}
         >
-          <MotionOverlay
-            layoutId="overlay"
+          <Overlay
             initial={{ opacity: 0 }}
             animate={{ opacity: 0 }}
-            exit={{ opacity: 1 }}
+            exit={{ opacity: 1, y: "-100%" }}
+            layoutId="overlay"
           />
           <motion.img
             src="/assets/img/me.jpg"
             alt="me"
-            style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
+            style={{
+              height: `calc(var(--font-size) * ${heightMultiplier})`,
+            }}
             layoutId="me-image"
-            whileHover={{ scale: 1.2 }}
+            exit={{ y: "-100%" }}
           />
         </Wrapper>
-
         <LogoSVG />
       </Row>
 
@@ -63,8 +66,7 @@ export default function Me() {
   );
 }
 
-const Wrapper = styled("div", {
-  display: "block",
+const Wrapper = styled(motion.div, {
   position: "relative",
 });
 

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
@@ -20,7 +19,7 @@ const timeline = {
 
 export default function Index() {
   return (
-    <motion.div layout>
+    <motion.div>
       <h1>
         <Row>
           <div>
@@ -60,15 +59,17 @@ export default function Index() {
       <Row css={{ position: "relative" }}>
         <Link href="/me" scroll={false}>
           <LinkMe>
-            <MotionOverlay
-              layoutId="overlay"
+            <Overlay
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
+              layoutId="overlay"
             />
             <motion.img
               src="/assets/img/me.jpg"
               alt="me"
-              style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
+              style={{
+                height: `calc(var(--font-size) * ${heightMultiplier})`,
+              }}
               layoutId="me-image"
             />
           </LinkMe>
@@ -137,7 +138,7 @@ const LinkMe = styled("a", {
   height: `calc(var(--font-size) * ${heightMultiplier})`,
 });
 
-const Overlay = styled("div", {
+const Overlay = styled(motion.div, {
   zIndex: 100,
   position: "absolute",
   top: 0,
@@ -150,6 +151,4 @@ const Overlay = styled("div", {
   transition: "opacity var(--d-slower) var(--ease-out)",
 });
 
-const MotionOverlay = motion(Overlay);
-
-export { MotionOverlay };
+export { Overlay };
