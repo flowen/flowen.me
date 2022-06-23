@@ -1,7 +1,10 @@
+import Link from "next/link";
 import { styled } from "stitches.config";
 import WordMask from "@/components/WordMask";
+import { useRouter } from "next/router";
 
 export default function Footer({ timeline }) {
+  const router = useRouter();
   return (
     <footer>
       <h1>
@@ -49,6 +52,14 @@ export default function Footer({ timeline }) {
           </a>
         </WordMask>
       </Wrapper>
+
+      {router.pathname !== "/" && (
+        <WordMask direction="bottom" altFont>
+          <Link href="/">
+            <a>Return to index</a>
+          </Link>
+        </WordMask>
+      )}
     </footer>
   );
 }

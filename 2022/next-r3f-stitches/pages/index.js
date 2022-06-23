@@ -71,7 +71,7 @@ export default function Index() {
 
       <Row css={{ position: "relative" }}>
         <Link href="/me" scroll={false}>
-          <LinkMe whileTap="tap" whileHover="hover" variants={linkVariants}>
+          <LinkMe>
             <Overlay
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

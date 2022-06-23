@@ -33,9 +33,13 @@ const timeline = {
 function App({ Component, pageProps, router }) {
   const controls = useAnimation();
   const [scale, setScale] = useState();
+  const [introIsDone, setIntroIsDone] = useState(false);
 
   useLayoutEffect(() => {
     const { innerWidth: width, innerHeight: height } = window;
+    // lock scrolling
+    const body = document.querySelector("body");
+    body.style.overflow = "hidden";
 
     const wrapper = document.querySelector(".wrapper");
     const wrapperHeight = wrapper.offsetHeight;
@@ -48,6 +52,10 @@ function App({ Component, pageProps, router }) {
 
     setTimeout(() => {
       controls.start(() => ({ scale: 1 }));
+      setIntroIsDone(true);
+
+      //unlock
+      body.style.overflow = "";
     }, timeline.footer.tw * 1000 + 1000);
   }, [controls]);
 
@@ -64,7 +72,11 @@ function App({ Component, pageProps, router }) {
       <main>
         <MotionConfig transition={{ ease: easeIn, duration: 0.6 }}>
           <AnimatePresence exitBeforeEnter>
-            <Component {...pageProps} key={router.route} />
+            <Component
+              {...pageProps}
+              key={router.route}
+              introIsDone={introIsDone}
+            />
           </AnimatePresence>
         </MotionConfig>
       </main>
