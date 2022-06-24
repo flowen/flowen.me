@@ -11,6 +11,8 @@ const timeline = {
   motion: 0.5,
   ampersand: 0.7,
   frontend: 0.85,
+  imgProjects: 1.05,
+  imgMe: 1.1,
   creative: 0.9,
   coding: 1.05,
   available: 1.15,
@@ -48,11 +50,12 @@ export default function Index() {
             >
               <motion.img
                 src="/assets/img/fx.jpg"
-                alt="coolshit"
+                alt="projects"
                 style={{ marginTop: "-43px" }}
                 initial={{ y: "-100%" }}
                 animate={{ y: 0 }}
                 exit={{ y: "-100%" }}
+                transition={{ delay: timeline.imgProjects }}
               />
             </AnchorProjects>
           </Link>
@@ -75,6 +78,7 @@ export default function Index() {
             <Overlay
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
+              transition={{ delay: timeline.imgMe }}
               layoutId="overlay"
             />
             <motion.img
@@ -83,6 +87,9 @@ export default function Index() {
               style={{
                 height: `calc(var(--font-size) * ${heightMultiplier})`,
               }}
+              initial={{ y: "-100%" }}
+              animate={{ y: 0 }}
+              transition={{ delay: timeline.imgMe }}
               layoutId="me-image"
             />
           </LinkMe>
