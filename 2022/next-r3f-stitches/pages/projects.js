@@ -224,10 +224,8 @@ const Shadow = styled(motion.div, {
   mixBlendMode: "difference",
 });
 
-// Fetching data from the JSON file
 import fsPromises from "fs/promises";
 import path from "path";
-import Link from "next/link";
 
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), "data.json");
