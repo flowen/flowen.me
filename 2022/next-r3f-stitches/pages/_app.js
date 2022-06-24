@@ -33,7 +33,6 @@ const timeline = {
 function App({ Component, pageProps, router }) {
   const controls = useAnimation();
   const [scale, setScale] = useState();
-  const [introIsDone, setIntroIsDone] = useState(false);
 
   useLayoutEffect(() => {
     const { innerWidth: width, innerHeight: height } = window;
@@ -52,7 +51,6 @@ function App({ Component, pageProps, router }) {
 
     setTimeout(() => {
       controls.start(() => ({ scale: 1 }));
-      setIntroIsDone(true);
 
       //unlock
       body.style.overflow = "";
@@ -72,11 +70,7 @@ function App({ Component, pageProps, router }) {
       <main>
         <MotionConfig transition={{ ease: easeIn, duration: 0.6 }}>
           <AnimatePresence exitBeforeEnter>
-            <Component
-              {...pageProps}
-              key={router.route}
-              introIsDone={introIsDone}
-            />
+            <Component {...pageProps} key={router.route} />
           </AnimatePresence>
         </MotionConfig>
       </main>

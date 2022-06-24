@@ -57,16 +57,11 @@ const wrapVariants = {
   }),
 };
 
-export default function Projects({ projects, introIsDone }) {
-  // useLayoutEffect(() => {
-  //   // always start at top of the page
-  //   window.scrollTo(0, 0);
-  // }, []);
-
+export default function Projects({ projects }) {
   return (
     <Wrapper>
       {projects.map((project, index) => (
-        <InView key={index} threshold={1} triggerOnce={introIsDone}>
+        <InView key={index} threshold={1} triggerOnce>
           {({ ref, inView }) => {
             return (
               <motion.div
