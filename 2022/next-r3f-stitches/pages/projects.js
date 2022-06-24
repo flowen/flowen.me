@@ -91,7 +91,7 @@ export default function Projects({ projects }) {
                         alt={project.name}
                         layout="fill"
                         objectFit="cover"
-                        objectPosition="center center"
+                        objectPosition={project.imagePosition}
                       />
                     </motion.div>
 
@@ -158,6 +158,10 @@ const _Project = styled(motion.div, {
     left: 0,
     width: "100%",
     height: "100%",
+  },
+
+  "@media (min-width: 72.5em)": {
+    minHeight: "450px",
   },
 });
 

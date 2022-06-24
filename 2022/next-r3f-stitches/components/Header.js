@@ -17,15 +17,21 @@ export default function Header({ timeline }) {
         }}
       >
         <WordMask direction="top" delay={timeline.rou}>
-          <Link href="/">Rou</Link>
+          <Link href="/" scroll={false}>
+            Rou
+          </Link>
         </WordMask>
         &nbsp;
         <WordMask direction="top" delay={timeline.hun}>
-          <Link href="/">Hun</Link>
+          <Link href="/" scroll={false}>
+            Hun
+          </Link>
         </WordMask>
         &nbsp;
         <WordMask direction="top" delay={timeline.fan}>
-          <Link href="/">Fan</Link>
+          <Link href="/" scroll={false}>
+            Fan
+          </Link>
         </WordMask>
       </Row>
     </header>

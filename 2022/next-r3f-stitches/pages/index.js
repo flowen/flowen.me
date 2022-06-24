@@ -4,6 +4,7 @@ import { styled } from "stitches.config";
 
 import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
+import { easeInOut } from "@/utils/easing";
 
 const heightMultiplier = 2;
 const timeline = {
@@ -42,7 +43,7 @@ export default function Index() {
             </WordMask>
           </div>
 
-          <Link href="/projects">
+          <Link href="/projects" scroll={false}>
             <AnchorProjects
               whileTap="tap"
               whileHover="hover"
@@ -55,7 +56,7 @@ export default function Index() {
                 initial={{ y: "-100%" }}
                 animate={{ y: 0 }}
                 exit={{ y: "-100%" }}
-                transition={{ delay: timeline.imgProjects }}
+                transition={{ delay: timeline.imgProjects, ease: easeInOut }}
               />
             </AnchorProjects>
           </Link>
@@ -87,9 +88,7 @@ export default function Index() {
               style={{
                 height: `calc(var(--font-size) * ${heightMultiplier})`,
               }}
-              initial={{ y: "-100%" }}
-              animate={{ y: 0 }}
-              transition={{ delay: timeline.imgMe }}
+              transition={{ delay: timeline.imgMe, ease: easeInOut }}
               layoutId="me-image"
             />
           </LinkMe>
@@ -150,7 +149,7 @@ const Ampersand = styled("span", {
   fontWeight: "400",
 });
 
-const LinkMe = styled(motion.a, {
+const LinkMe = styled("a", {
   overflow: "hidden",
   position: "relative",
   display: "block",

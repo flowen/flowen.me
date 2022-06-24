@@ -22,9 +22,4 @@
   --d-slow: 0.5s;
   --d-slower: 1.5s;
   --d-slowest: 2.25s;
-
-  /* custom */
-  --font-size: max(7vmin, 85px);
-
-  --margin: 2.5vmin;
 }
