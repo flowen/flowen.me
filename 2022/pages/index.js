@@ -80,7 +80,7 @@ export default function Index({ projects }) {
             Creative
           </WordMask>
           <WordMask direction="bottom" delay={timeline.creative}>
-            Coding
+            Coder
           </WordMask>
         </CreativeCoding>
       </Row>
