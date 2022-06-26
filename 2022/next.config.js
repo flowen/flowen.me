@@ -1,5 +1,4 @@
 module.exports = {
-  distDir: "dist",
   reactStrictMode: true,
   webpack(config) {
     config.module.rules.push({

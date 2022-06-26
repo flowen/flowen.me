@@ -10,7 +10,7 @@
 # unless otherwise overridden by more specific contexts.  
 [build]
   base = "/2022/"
-  publish = "dist"
+  publish = ".next"
   command = "yarn build"
 
 [build.environment]
