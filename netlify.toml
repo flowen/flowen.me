@@ -16,6 +16,9 @@
 [build.environment]
   NODE_VERSION = "v16.4.0"
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
 # [context.development]
