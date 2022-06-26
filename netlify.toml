@@ -10,8 +10,8 @@
 # unless otherwise overridden by more specific contexts.  
 [build]
   base = "/2022/"
-  publish = ".next"
-  command = "yarn build"
+  publish = "out"
+  command = "next build"
 
 [build.environment]
   NODE_VERSION = "v16.4.0"
