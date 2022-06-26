@@ -39,6 +39,7 @@ export default function Me({ now }) {
             exit={{ opacity: 1, y: "-100%" }}
             layoutId="overlay"
           />
+
           <motion.img
             src="/assets/img/me.jpg"
             alt="me"
@@ -46,7 +47,7 @@ export default function Me({ now }) {
               height: `calc(var(--font-size) * ${heightMultiplier})`,
             }}
             layoutId="me-image"
-            exit={{ y: "-100%" }}
+            exit={{ y: "-100%", opacity: 0 }}
           />
         </Wrapper>
 

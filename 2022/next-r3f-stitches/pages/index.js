@@ -1,9 +1,11 @@
 import Link from "next/link";
+
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
 
 import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
+import Carousel from "@/components/Carousel";
 import { easeInOut } from "@/utils/easing";
 
 const heightMultiplier = 2;
@@ -20,16 +22,7 @@ const timeline = {
   availableAnswer: 1.15,
 };
 
-const linkVariants = {
-  tap: {
-    scale: 0.95,
-  },
-  hover: {
-    scale: 1.05,
-  },
-};
-
-export default function Index() {
+export default function Index({ projects }) {
   return (
     <motion.div>
       <h1>
@@ -44,20 +37,8 @@ export default function Index() {
           </div>
 
           <Link href="/projects" scroll={false}>
-            <AnchorProjects
-              whileTap="tap"
-              whileHover="hover"
-              variants={linkVariants}
-            >
-              <motion.img
-                src="/assets/img/fx.jpg"
-                alt="projects"
-                style={{ marginTop: "-43px" }}
-                initial={{ y: "-100%" }}
-                animate={{ y: 0 }}
-                exit={{ y: "-100%" }}
-                transition={{ delay: timeline.imgProjects, ease: easeInOut }}
-              />
+            <AnchorProjects>
+              <Carousel projects={projects} delay={timeline.imgProjects} />
             </AnchorProjects>
           </Link>
         </Row>
@@ -171,3 +152,17 @@ const Overlay = styled(motion.div, {
 });
 
 export { Overlay };
+
+// Fetching data from the JSON file
+import fsPromises from "fs/promises";
+import path from "path";
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), "data.json");
+  const jsonData = await fsPromises.readFile(filePath);
+  const data = JSON.parse(jsonData);
+
+  return {
+    props: data,
+  };
+}

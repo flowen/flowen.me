@@ -55,8 +55,8 @@ export default function Footer({ timeline }) {
 
       {router.pathname !== "/" && (
         <WordMask direction="bottom" altFont>
-          <Link href="/">
-            <a>Return to index</a>
+          <Link href="/" scroll={false}>
+            Return to index
           </Link>
         </WordMask>
       )}

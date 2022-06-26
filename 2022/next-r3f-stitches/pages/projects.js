@@ -6,9 +6,10 @@ import { styled } from "stitches.config";
 import { easeInOut } from "@/utils/easing";
 
 const projectVariants = {
-  initial: { y: "200vh" },
+  initial: { y: "100%", opacity: 0 },
   animate: (index) => ({
     y: 0,
+    opacity: 1,
     transition: {
       duration: 0.5,
       delay: index * 0.1,
@@ -16,7 +17,8 @@ const projectVariants = {
     },
   }),
   exit: (index) => ({
-    y: "200vh",
+    y: "100%",
+    opacity: 0,
     transition: {
       duration: 0.5,
       delay: index * 0.1,
@@ -84,7 +86,7 @@ export default function Projects({ projects }) {
                       initial="initial"
                       animate="animate"
                       style={{ height: "100%" }}
-                      whileHover={{ scale: 1.05 }}
+                      whileHover={{ scale: 1.1 }}
                     >
                       <Image
                         src={`/assets/img/${project.image}`}
