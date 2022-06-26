@@ -9,12 +9,12 @@
 # Settings in the [build] context are global and are applied to all contexts 
 # unless otherwise overridden by more specific contexts.  
 [build]
-  base = "/2021/frontend/"
+  base = "/2022/"
   publish = "dist"
-  command = "yarn run generate"
+  command = "yarn build"
 
 [build.environment]
-  NODE_VERSION = "v12.18.0"
+  NODE_VERSION = "v16.4.0"
 
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
