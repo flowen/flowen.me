@@ -68,11 +68,13 @@ export default function Me({ now }) {
         <WordMask direction="top" delay={timeline.now}>
           /NOW
         </WordMask>
+
         <WordMask
           direction="top"
           delay={timeline.nowContent}
           altFont
           html={now}
+          css={{ fontSize: "9vw", marginBottom: "5vh" }}
         />
       </h1>
     </motion.div>

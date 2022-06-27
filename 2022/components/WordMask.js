@@ -8,9 +8,10 @@ export default function WordMask({
   delay = 0,
   altFont = false,
   html,
+  ...props
 }) {
   return (
-    <Mask>
+    <Mask {...props}>
       <motion.div
         initial={{
           x:
