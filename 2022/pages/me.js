@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
 
@@ -29,6 +31,10 @@ const timeline = {
 export default function Me({ now }) {
   return (
     <motion.div>
+      <Head>
+        <title>Freelance frontend UI developer and designer, Rou Hun Fan</title>
+      </Head>
+
       <Row css={{ position: "relative" }}>
         <Wrapper
           style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}

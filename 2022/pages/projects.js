@@ -1,4 +1,6 @@
+import Head from "next/head";
 import Image from "next/image";
+
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
 
@@ -62,6 +64,12 @@ const wrapVariants = {
 export default function Projects({ projects }) {
   return (
     <Wrapper>
+      <Head>
+        <title>
+          Freelance frontend UI developer and designer, Rou Hun Fan - projects
+        </title>
+      </Head>
+
       {projects.map((project, index) => (
         <InView key={index} threshold={1} triggerOnce>
           {({ ref, inView }) => {

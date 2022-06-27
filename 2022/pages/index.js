@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
@@ -25,6 +26,10 @@ const timeline = {
 export default function Index({ projects }) {
   return (
     <motion.div>
+      <Head>
+        <title>Freelance frontend UI developer and designer, Rou Hun Fan</title>
+      </Head>
+
       <h1>
         <Row>
           <div>

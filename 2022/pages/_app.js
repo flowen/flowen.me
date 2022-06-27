@@ -35,6 +35,23 @@ function App({ Component, pageProps, router }) {
   const [scale, setScale] = useState();
 
   useLayoutEffect(() => {
+    if (console && console.log) {
+      const message = `%c
+      
+        ███████╗██╗      ██████╗ ██╗    ██╗███████╗███╗   ██╗   ███╗   ███╗███████╗
+        ██╔════╝██║     ██╔═══██╗██║    ██║██╔════╝████╗  ██║   ████╗ ████║██╔════╝
+        █████╗  ██║     ██║   ██║██║ █╗ ██║█████╗  ██╔██╗ ██║   ██╔████╔██║█████╗
+        ██╔══╝  ██║     ██║   ██║██║███╗██║██╔══╝  ██║╚██╗██║   ██║╚██╔╝██║██╔══╝
+        ██║     ███████╗╚██████╔╝╚███╔███╔╝███████╗██║ ╚████║██╗██║ ╚═╝ ██║███████╗
+        ╚═╝     ╚══════╝ ╚═════╝  ╚══╝╚══╝ ╚══════╝╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝╚══════╝
+      `;
+      console.log(
+        message,
+        "font-family:monospace, background: #111; color: #aaa;"
+      );
+    }
+    // ASCII ART GENERATOR http://patorjk.com/software/taag/#p=display&h=1&v=0&f=ANSI%20Shadow&t=flowen.me
+
     const { innerWidth: width, innerHeight: height } = window;
     // lock scrolling
     const body = document.querySelector("body");
