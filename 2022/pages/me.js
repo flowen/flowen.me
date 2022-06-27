@@ -57,11 +57,13 @@ export default function Me({ now }) {
           />
         </Wrapper>
 
-        <MotionLogo
+        <LogoSVG
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-        />
+        >
+          <Logo />
+        </LogoSVG>
       </Row>
 
       <h1>
@@ -85,14 +87,15 @@ const Wrapper = styled(motion.div, {
   position: "relative",
 });
 
-const LogoSVG = styled(Logo, {
+const LogoSVG = styled(motion.div, {
   position: "absolute",
   top: "5vw",
   right: "5vw",
-  height: "calc(var(--font-size) * 3)",
-});
 
-const MotionLogo = motion(LogoSVG);
+  "& svg": {
+    height: "calc(var(--font-size) * 3)",
+  },
+});
 
 // Fetching data from the JSON file
 import fsPromises from "fs/promises";

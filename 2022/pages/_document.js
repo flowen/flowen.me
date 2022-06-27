@@ -22,7 +22,7 @@ export default class Document extends NextDocument {
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
 
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
 
           <meta
             content={SITE_DESCRIPTION}
