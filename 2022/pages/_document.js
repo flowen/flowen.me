@@ -43,7 +43,7 @@ export default class Document extends NextDocument {
           <meta content={SITE_NAME} property="og:title" />
           <meta content={SITE_DOMAIN} property="og:url" />
           <meta content={SITE_DESCRIPTION} property="og:description" />
-          <meta content={OGCARD} property="og:image" />
+          <meta content={`${SITE_DOMAIN}${OGCARD}`} property="og:image" />
           <meta content={SITE_NAME} property="og:site_name" />
           <meta content="website" property="og:type" />
 
@@ -58,7 +58,10 @@ export default class Document extends NextDocument {
           <meta content={TWITTER_HANDLE} name="twitter:creator" />
           <meta content={SITE_NAME} name="twitter:title" />
           <meta content={SITE_DESCRIPTION} name="twitter:description" />
-          <meta content={TWITTERCARD} name="twitter:image:src" />
+          <meta
+            content={`${SITE_DOMAIN}${TWITTERCARD}`}
+            name="twitter:image:src"
+          />
           <meta content={SITE_DOMAIN} name="twitter:url" />
 
           <link
