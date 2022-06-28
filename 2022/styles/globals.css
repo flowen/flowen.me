@@ -45,7 +45,7 @@ body {
   text-transform: uppercase;
   color: var(--white);
 
-  --font-size: 11.5vw;
+  --font-size: 7vw;
   font-size: var(--font-size);
 }
 
