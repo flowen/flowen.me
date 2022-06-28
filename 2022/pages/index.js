@@ -108,7 +108,6 @@ export default function Index({ projects }) {
 
 const AnchorProjects = styled(motion.a, {
   position: "relative",
-  overflow: "hidden",
 
   flex: 1,
   margin: "1rem 0 1rem 3rem",
@@ -121,6 +120,10 @@ const AnchorProjects = styled(motion.a, {
   "& img": {
     display: "block",
     width: "100%",
+  },
+
+  "& + h2": {
+    color: "red",
   },
 });
 
