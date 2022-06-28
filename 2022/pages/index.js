@@ -9,7 +9,7 @@ import WordMask from "@/components/WordMask";
 import Carousel from "@/components/Carousel";
 import { easeInOut } from "@/utils/easing";
 
-const heightMultiplier = 2;
+const heightMultiplier = 2.25;
 const timeline = {
   uiDev: 0.35,
   motion: 0.5,
@@ -68,6 +68,7 @@ export default function Index({ projects }) {
               transition={{ delay: timeline.imgMe }}
               layoutId="overlay"
             />
+
             <motion.img
               src="/assets/img/me.jpg"
               alt="me"
@@ -108,10 +109,9 @@ export default function Index({ projects }) {
 
 const AnchorProjects = styled(motion.a, {
   position: "relative",
-
   flex: 1,
   margin: "1rem 0 1rem 3rem",
-  height: "calc(var(--font-size) * 2)",
+  height: `calc(var(--font-size) * ${heightMultiplier})`,
 
   "&:hover": {
     cursor: "pointer",

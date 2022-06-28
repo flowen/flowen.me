@@ -1,11 +1,10 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
 
 import { easeOut, easeInOut } from "@/utils/easing";
-import { useEffect } from "react";
 
 export default function Carousel({ projects, delay }) {
   const ref = useRef(null);
@@ -82,7 +81,7 @@ const CarouselTitle = styled(motion.h2, {
   position: "absolute",
   bottom: "-5vh",
   left: "-1vw",
-  fontSize: "7vw",
+  fontSize: "5vw",
   fontFamily: "$fontAlt",
   fontFeatureSettings: '"aalt" on',
   fontWeight: "400",

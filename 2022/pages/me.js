@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import Head from "next/head";
 
 import { motion } from "framer-motion";
@@ -8,7 +9,7 @@ import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 import Logo from "@/assets/svg/logo.svg";
 
-const heightMultiplier = 3;
+const heightMultiplier = 3.25;
 
 const timeline = {
   header: {
@@ -29,6 +30,8 @@ const timeline = {
 };
 
 export default function Me({ now }) {
+  const meImgRef = useRef(null);
+
   return (
     <motion.div>
       <Head>
@@ -47,6 +50,7 @@ export default function Me({ now }) {
           />
 
           <motion.img
+            ref={meImgRef}
             src="/assets/img/me.jpg"
             alt="me"
             style={{
@@ -88,12 +92,12 @@ const Wrapper = styled(motion.div, {
 });
 
 const LogoSVG = styled(motion.div, {
-  position: "absolute",
-  top: "5vw",
-  right: "5vw",
+  position: "relative",
+  top: "7.5vw",
+  left: "-7.5vw",
 
   "& svg": {
-    height: "calc(var(--font-size) * 3)",
+    height: `calc(var(--font-size) * ${heightMultiplier})`,
   },
 });
 
