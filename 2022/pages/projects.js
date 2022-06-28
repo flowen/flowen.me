@@ -74,7 +74,11 @@ export default function Projects({ projects }) {
         <InView key={index} threshold={1} triggerOnce>
           {({ ref, inView }) => {
             return (
-              <motion.div
+              <motion.a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={project.name}
                 variants={wrapVariants}
                 initial="initial"
                 animate="animate"
@@ -114,22 +118,6 @@ export default function Projects({ projects }) {
                     >
                       {project.name}
                     </Name>
-
-                    <URL
-                      variants={yVariants}
-                      initial="initial"
-                      animate="animate"
-                      transition={{ delay: 1.5 }}
-                    >
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        key={project.name}
-                      >
-                        OPEN URL
-                      </a>
-                    </URL>
                   </Inner>
 
                   <Shadow
@@ -139,7 +127,7 @@ export default function Projects({ projects }) {
                     custom={inView}
                   />
                 </_Project>
-              </motion.div>
+              </motion.a>
             );
           }}
         </InView>
@@ -180,15 +168,6 @@ const Inner = styled("div", {
   overflow: "hidden",
   width: "100%",
   height: "100%",
-});
-
-const URL = styled(motion.h3, {
-  position: "absolute",
-  top: "1rem",
-  right: "1rem",
-  fontSize: "2.5vw",
-  mixBlendMode: "difference",
-  whiteSpace: "nowrap",
 });
 
 const Name = styled(motion.h2, {
