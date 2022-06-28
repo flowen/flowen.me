@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
 
-import { easeInOut } from "@/utils/easing";
+import { easeOut, easeInOut } from "@/utils/easing";
 import { useEffect } from "react";
 
 export default function Carousel({ projects, delay }) {
@@ -53,8 +53,8 @@ export default function Carousel({ projects, delay }) {
       <CarouselTitle
         initial={{ y: "-100%", opacity: 0 }}
         animate={{ y: 0, rotate: -10, opacity: 1 }}
-        exit={{ y: "100%", opacity: 0 }}
-        transition={{ delay: delay + 0.2 }}
+        exit={{ y: "25%", opacity: 0 }}
+        transition={{ ease: easeOut, delay: delay + 0.2 }}
       >
         Projects
       </CarouselTitle>
