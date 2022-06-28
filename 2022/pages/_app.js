@@ -56,6 +56,7 @@ function App({ Component, pageProps, router }) {
     // lock scrolling
     const body = document.querySelector("body");
     body.style.overflow = "hidden";
+    body.style.pointerEvents = "none";
 
     const wrapper = document.querySelector(".wrapper");
     const wrapperHeight = wrapper.offsetHeight;
@@ -73,8 +74,8 @@ function App({ Component, pageProps, router }) {
     setTimeout(() => {
       controls.start(() => ({ scale: 1 }));
 
-      //unlock
       body.style.overflow = "";
+      body.style.pointerEvents = "";
     }, timeline.footer.tw * 1000 + 1000);
   }, [controls]);
 
