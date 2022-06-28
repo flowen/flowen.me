@@ -62,7 +62,11 @@ function App({ Component, pageProps, router }) {
 
     // if wrapperHeight larger than height, scale down whole wrapper
     if (wrapperHeight > height) {
-      setScale(height / wrapperHeight);
+      const scaleT = Math.max(height / wrapperHeight, 0.5);
+      // set scale with number not smaller than 0.5
+      setScale(scaleT);
+
+      console.log(scaleT);
       wrapper.style.transform = `scale(${height / wrapperHeight})`;
     }
 
