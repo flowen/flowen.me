@@ -90,7 +90,7 @@ function App({ Component, pageProps, router }) {
       <main>
         <MotionConfig transition={{ ease: easeIn, duration: 0.6 }}>
           <AnimatePresence exitBeforeEnter>
-            <Component {...pageProps} key={router.route} />
+            <Component {...pageProps} key={router.route} timeline={timeline} />
           </AnimatePresence>
         </MotionConfig>
       </main>

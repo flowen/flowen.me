@@ -9,21 +9,27 @@ import WordMask from "@/components/WordMask";
 import Carousel from "@/components/Carousel";
 import { easeInOut } from "@/utils/easing";
 
-const heightMultiplier = 2.5;
-const timeline = {
-  uiDev: 0.35,
-  motion: 0.5,
-  ampersand: 0.7,
-  frontend: 0.85,
-  imgProjects: 1.05,
-  imgMe: 1.1,
-  creative: 0.9,
-  coding: 1.05,
-  available: 1.15,
-  availableAnswer: 1.15,
-};
+const HEIGHTMULTIPLIER = 2.5;
 
-export default function Index({ projects, available }) {
+export default function Index({ projects, available, timeline }) {
+  const start = tl.header.fan;
+  const difference = 0.025;
+  const tlIndex = {
+    uiDev: start,
+    design: start + difference,
+    motion: start + difference * 2,
+    ampersand: start + difference * 3,
+    frontend: start + difference * 4,
+    imgProjects: start + difference * 5,
+    imgMe: start + difference * 6,
+    creative: start + difference * 7,
+    coding: start + difference * 8,
+    available: start + difference * 9,
+    availableAnswer: start + difference * 10,
+  };
+
+  const tl = { ...timeline, ...tlIndex };
+
   return (
     <motion.div>
       <Head>
@@ -33,13 +39,13 @@ export default function Index({ projects, available }) {
       <h1>
         <Row>
           <div>
-            <WordMask direction="top" delay={timeline.motion}>
+            <WordMask direction="top" delay={timeline.uiDev}>
               UI dev
             </WordMask>
-            <WordMask direction="left" delay={timeline.motion}>
+            <WordMask direction="left" delay={timeline.design}>
               Design
             </WordMask>
-            <WordMask direction="bottom" delay={timeline.uiDev}>
+            <WordMask direction="bottom" delay={timeline.motion}>
               Motion
             </WordMask>
           </div>
@@ -76,7 +82,7 @@ export default function Index({ projects, available }) {
               src="/assets/img/me.jpg"
               alt="me"
               style={{
-                height: `calc(var(--font-size) * ${heightMultiplier})`,
+                height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
               }}
               transition={{ delay: timeline.imgMe, ease: easeInOut }}
               layoutId="me-image"
@@ -146,7 +152,7 @@ const LinkMe = styled("a", {
   position: "relative",
   display: "block",
   margin: "0 7vh 2vh 0",
-  height: `calc(var(--font-size) * ${heightMultiplier})`,
+  height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
 });
 
 const Overlay = styled(motion.div, {

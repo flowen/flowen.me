@@ -9,28 +9,18 @@ import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 import Logo from "@/assets/svg/logo.svg";
 
-const heightMultiplier = 3.25;
+const HEIGHTMULTIPLIER = 3.25;
 
-const timeline = {
-  header: {
-    rou: 0,
-    hun: 0.1,
-    fan: 0.2,
-  },
-  now: 0.35,
-  nowContent: 0.5,
-  footer: {
-    dob: 1.15,
-    contact: 1.3,
-    arrow: 1.35,
-    cv: 1.45,
-    tg: 1.5,
-    tw: 1.55,
-  },
-};
-
-export default function Me({ now }) {
+export default function Me({ now, timeline }) {
   const meImgRef = useRef(null);
+
+  const tlMe = {
+    now: 0.35,
+    nowContent: 0.5,
+  };
+
+  // merge timeline object with new object with tl2
+  const tl = { ...timeline, ...tlMe };
 
   return (
     <motion.div>
@@ -40,7 +30,7 @@ export default function Me({ now }) {
 
       <Row css={{ position: "relative" }}>
         <Wrapper
-          style={{ height: `calc(var(--font-size) * ${heightMultiplier})` }}
+          style={{ height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})` }}
           exit={{ overflow: "hidden" }}
         >
           <Overlay
@@ -54,7 +44,7 @@ export default function Me({ now }) {
             src="/assets/img/me.jpg"
             alt="me"
             style={{
-              height: `calc(var(--font-size) * ${heightMultiplier})`,
+              height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
             }}
             layoutId="me-image"
             exit={{ y: "-100%", opacity: 0 }}
@@ -71,13 +61,13 @@ export default function Me({ now }) {
       </Row>
 
       <h1>
-        <WordMask direction="top" delay={timeline.now}>
+        <WordMask direction="top" delay={tl.now}>
           /NOW
         </WordMask>
 
         <WordMask
           direction="top"
-          delay={timeline.nowContent}
+          delay={tl.nowContent}
           altFont
           html={now}
           css={{ fontSize: "5vw", marginBottom: "5vh" }}
@@ -97,7 +87,7 @@ const LogoSVG = styled(motion.div, {
   left: "-7.5vw",
 
   "& svg": {
-    height: `calc(var(--font-size) * ${heightMultiplier})`,
+    height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
   },
 });
 

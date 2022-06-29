@@ -46,6 +46,7 @@ export default function Carousel({ projects, delay }) {
             layout="fill"
             objectFit="cover"
             objectPosition={project.imagePosition}
+            priority={true}
           />
         ))}
       </_Carousel>
