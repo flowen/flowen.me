@@ -9,7 +9,7 @@ import WordMask from "@/components/WordMask";
 import Carousel from "@/components/Carousel";
 import { easeInOut } from "@/utils/easing";
 
-const heightMultiplier = 3.25;
+const heightMultiplier = 2.5;
 const timeline = {
   uiDev: 0.35,
   motion: 0.5,
@@ -106,7 +106,7 @@ export default function Index({ projects, available }) {
           delay={timeline.availableAnswer}
           altFont={true}
         >
-          {available ? "Yes" : "No"}
+          {available}
         </WordMask>
       </Row>
     </motion.div>
@@ -117,7 +117,7 @@ const AnchorProjects = styled(motion.a, {
   position: "relative",
   flex: 1,
   margin: "1rem 0 1rem 3rem",
-  height: `calc(var(--font-size) * ${heightMultiplier})`,
+  height: `calc(var(--font-size) * ${2.5})`,
 
   "&:hover": {
     cursor: "pointer",
