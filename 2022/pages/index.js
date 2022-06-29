@@ -9,7 +9,7 @@ import WordMask from "@/components/WordMask";
 import Carousel from "@/components/Carousel";
 import { easeInOut } from "@/utils/easing";
 
-const heightMultiplier = 2.25;
+const heightMultiplier = 3.25;
 const timeline = {
   uiDev: 0.35,
   motion: 0.5,
@@ -23,7 +23,7 @@ const timeline = {
   availableAnswer: 1.15,
 };
 
-export default function Index({ projects }) {
+export default function Index({ projects, available }) {
   return (
     <motion.div>
       <Head>
@@ -33,10 +33,13 @@ export default function Index({ projects }) {
       <h1>
         <Row>
           <div>
-            <WordMask direction="top" delay={timeline.uiDev}>
+            <WordMask direction="top" delay={timeline.motion}>
               UI dev
             </WordMask>
-            <WordMask direction="right" delay={timeline.motion}>
+            <WordMask direction="left" delay={timeline.motion}>
+              Design
+            </WordMask>
+            <WordMask direction="bottom" delay={timeline.uiDev}>
               Motion
             </WordMask>
           </div>
@@ -83,10 +86,13 @@ export default function Index({ projects }) {
 
         <CreativeCoding>
           <WordMask direction="top" delay={timeline.creative}>
-            Creative
+            Helping biz,
           </WordMask>
           <WordMask direction="bottom" delay={timeline.creative}>
-            Coder
+            individuals,
+          </WordMask>
+          <WordMask direction="bottom" delay={timeline.creative}>
+            10+ years
           </WordMask>
         </CreativeCoding>
       </Row>
@@ -100,7 +106,7 @@ export default function Index({ projects }) {
           delay={timeline.availableAnswer}
           altFont={true}
         >
-          Yes
+          {available ? "Yes" : "No"}
         </WordMask>
       </Row>
     </motion.div>
@@ -128,14 +134,11 @@ const AnchorProjects = styled(motion.a, {
 });
 
 const CreativeCoding = styled("h1", {
-  fontFamily: "$fontAlt",
-  fontFeatureSettings: '"aalt" on',
-  fontWeight: "400",
+  include: "fontAlt",
 });
 
 const Ampersand = styled("span", {
-  fontFamily: "$fontAlt",
-  fontWeight: "400",
+  include: "fontAlt",
 });
 
 const LinkMe = styled("a", {

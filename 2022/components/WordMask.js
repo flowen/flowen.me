@@ -63,7 +63,5 @@ const Mask = styled("div", {
 });
 
 const AltFont = styled("span", {
-  fontFamily: "$fontAlt",
-  fontFeatureSettings: '"aalt" on',
-  fontWeight: "400",
+  include: "fontAlt",
 });

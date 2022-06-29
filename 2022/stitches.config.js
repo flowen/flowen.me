@@ -1,4 +1,5 @@
 import { createStitches } from "@stitches/react";
+import { mixins } from "stitches-mixins";
 
 export const { styled, getCssText, theme } = createStitches({
   media: {
@@ -57,6 +58,16 @@ export const { styled, getCssText, theme } = createStitches({
     marginY: (value) => ({
       marginTop: value,
       marginBottom: value,
+    }),
+
+    // with custom mixins
+    include: mixins({
+      fontAlt: {
+        fontFamily:
+          '"Ephidona", monospace, Arial, -apple-system, BlinkMacSystemFont',
+        fontFeatureSettings: '"aalt" on',
+        fontWeight: "400",
+      },
     }),
   },
 });

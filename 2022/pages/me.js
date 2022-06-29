@@ -45,7 +45,7 @@ export default function Me({ now }) {
         >
           <Overlay
             animate={{ opacity: 0 }}
-            exit={{ opacity: 1, y: "-100%" }}
+            exit={{ opacity: 1, y: "-101%" }}
             layoutId="overlay"
           />
 
