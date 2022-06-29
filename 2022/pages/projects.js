@@ -151,8 +151,7 @@ const Anchor = styled(motion.a, {
 const _Project = styled(motion.div, {
   position: "relative",
   width: "100%",
-  height: "35vh",
-  minHeight: "300px",
+  height: "24vh",
   margin: "5vh 0",
   border: "3px solid #fff",
 
@@ -163,8 +162,13 @@ const _Project = styled(motion.div, {
     width: "100%",
     height: "100%",
   },
-
-  "@media (min-width: 72.5em)": {
+  "@tabletLandscape": {
+    height: "35vh",
+  },
+  "@tablet": {
+    minHeight: "300px",
+  },
+  "@laptop": {
     minHeight: "450px",
   },
 });
