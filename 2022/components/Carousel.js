@@ -49,11 +49,12 @@ export default function Carousel({ projects, delay }) {
           />
         ))}
       </_Carousel>
+
       <CarouselTitle
         initial={{ y: "-100%", opacity: 0 }}
         animate={{ y: 0, rotate: -10, opacity: 1 }}
-        exit={{ y: "25%", opacity: 0 }}
-        transition={{ ease: easeOut, delay: delay + 0.2 }}
+        exit={{ y: "-25%", opacity: 0 }}
+        transition={{ ease: easeOut, delay: delay - 0.2 }}
       >
         Projects
       </CarouselTitle>
@@ -82,8 +83,10 @@ const CarouselTitle = styled(motion.h2, {
   bottom: "-5vh",
   left: "-1vw",
   fontSize: "5vw",
-  fontFamily: "$fontAlt",
-  fontFeatureSettings: '"aalt" on',
-  fontWeight: "400",
+  include: "fontAlt",
   mixBlendMode: "difference",
+});
+
+const ImageWrapper = styled("div", {
+  position: "relative",
 });

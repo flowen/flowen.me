@@ -1,5 +1,6 @@
 {
-  "now": "Finished new portfolio w/ Next.js + framer motion. Open for new projects",
+  "available": true,
+  "now": "Finished new portfolio w/ Next.js + framer motion + stitches. Open for new projects",
   "projects": [
     {
       "name": "Sound.xyz",

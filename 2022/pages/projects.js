@@ -50,7 +50,7 @@ const shadowVariants = {
   }),
 };
 
-const wrapVariants = {
+const linkVariant = {
   initial: { y: 0 },
   animate: (inView) => ({
     y: inView ? -30 : 0,
@@ -74,12 +74,12 @@ export default function Projects({ projects }) {
         <InView key={index} threshold={1} triggerOnce>
           {({ ref, inView }) => {
             return (
-              <motion.a
+              <Anchor
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={project.name}
-                variants={wrapVariants}
+                variants={linkVariant}
                 initial="initial"
                 animate="animate"
                 custom={inView}
@@ -127,7 +127,7 @@ export default function Projects({ projects }) {
                     custom={inView}
                   />
                 </_Project>
-              </motion.a>
+              </Anchor>
             );
           }}
         </InView>
@@ -140,6 +140,12 @@ const Wrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
   margin: "2.5vh 0",
+});
+
+const Anchor = styled(motion.a, {
+  display: "flex",
+  aspectRatio: "20 / 9",
+  width: "100%",
 });
 
 const _Project = styled(motion.div, {

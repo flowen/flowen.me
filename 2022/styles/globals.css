@@ -43,7 +43,7 @@ body {
   padding-right: 20px;
   background-color: var(--dark);
   font-family: var(--font-base);
-  font-size: max(var(--font-size), 140px);
+  font-size: min(var(--font-size), 140px);
   line-height: 1.5;
   text-transform: uppercase;
   color: var(--white);
@@ -78,7 +78,7 @@ h4,
 h5,
 h6 {
   margin: 0.25vh 0;
-  font-size: max(var(--font-size), 100px);
+  font-size: min(var(--font-size), 100px);
   line-height: 1.2;
 }
 
