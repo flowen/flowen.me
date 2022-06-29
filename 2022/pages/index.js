@@ -12,8 +12,8 @@ import { easeInOut } from "@/utils/easing";
 const HEIGHTMULTIPLIER = 2.5;
 
 export default function Index({ projects, available, timeline }) {
-  const start = tl.header.fan;
-  const difference = 0.025;
+  const start = timeline.header.fan;
+  const difference = 0.1;
   const tlIndex = {
     uiDev: start,
     design: start + difference,
@@ -39,30 +39,30 @@ export default function Index({ projects, available, timeline }) {
       <h1>
         <Row>
           <div>
-            <WordMask direction="top" delay={timeline.uiDev}>
+            <WordMask direction="top" delay={tl.uiDev}>
               UI dev
             </WordMask>
-            <WordMask direction="left" delay={timeline.design}>
+            <WordMask direction="left" delay={tl.design}>
               Design
             </WordMask>
-            <WordMask direction="bottom" delay={timeline.motion}>
+            <WordMask direction="bottom" delay={tl.motion}>
               Motion
             </WordMask>
           </div>
 
           <Link href="/projects" scroll={false}>
             <AnchorProjects>
-              <Carousel projects={projects} delay={timeline.imgProjects} />
+              <Carousel projects={projects} delay={tl.imgProjects} />
             </AnchorProjects>
           </Link>
         </Row>
 
         <Row>
-          <WordMask direction="top" delay={timeline.ampersand}>
+          <WordMask direction="top" delay={tl.ampersand}>
             <Ampersand>&amp;</Ampersand>
           </WordMask>
           &nbsp;
-          <WordMask direction="top" delay={timeline.frontend}>
+          <WordMask direction="top" delay={tl.frontend}>
             Frontend
           </WordMask>
         </Row>
@@ -74,7 +74,7 @@ export default function Index({ projects, available, timeline }) {
             <Overlay
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: timeline.imgMe }}
+              transition={{ delay: tl.imgMe }}
               layoutId="overlay"
             />
 
@@ -84,34 +84,30 @@ export default function Index({ projects, available, timeline }) {
               style={{
                 height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
               }}
-              transition={{ delay: timeline.imgMe, ease: easeInOut }}
+              transition={{ delay: tl.imgMe, ease: easeInOut }}
               layoutId="me-image"
             />
           </LinkMe>
         </Link>
 
         <CreativeCoding>
-          <WordMask direction="top" delay={timeline.creative}>
+          <WordMask direction="top" delay={tl.creative}>
             Helping biz,
           </WordMask>
-          <WordMask direction="bottom" delay={timeline.creative}>
+          <WordMask direction="bottom" delay={tl.creative}>
             individuals,
           </WordMask>
-          <WordMask direction="bottom" delay={timeline.creative}>
+          <WordMask direction="bottom" delay={tl.creative}>
             10+ years
           </WordMask>
         </CreativeCoding>
       </Row>
 
       <Row>
-        <WordMask direction="right" delay={timeline.available}>
+        <WordMask direction="right" delay={tl.available}>
           Available:
         </WordMask>
-        <WordMask
-          direction="left"
-          delay={timeline.availableAnswer}
-          altFont={true}
-        >
+        <WordMask direction="left" delay={tl.availableAnswer} altFont={true}>
           {available}
         </WordMask>
       </Row>

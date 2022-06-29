@@ -21,12 +21,12 @@ const timeline = {
     fan: 0.2,
   },
   footer: {
-    dob: 1.15,
-    contact: 1.3,
-    arrow: 1.35,
-    cv: 1.45,
-    tg: 1.5,
-    tw: 1.55,
+    dob: 1.25,
+    contact: 1.5,
+    arrow: 1.55,
+    cv: 1.6,
+    tg: 1.65,
+    tw: 1.7,
   },
 };
 
