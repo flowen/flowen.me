@@ -32,9 +32,9 @@ export default function Carousel({ projects, delay }) {
     <Wrapper>
       <_Carousel
         ref={ref}
-        initial={{ y: "-100%" }}
+        initial={{ y: "-101%" }}
         animate={{ y: 0 }}
-        exit={{ y: "-100%" }}
+        exit={{ y: "-101%" }}
         transition={{ delay, ease: easeInOut }}
       >
         {projects.map((project, index) => (

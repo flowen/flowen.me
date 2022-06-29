@@ -37,16 +37,24 @@ body,
 }
 
 body {
+  --font-size: 9vw;
+
   padding-left: 20px;
   padding-right: 20px;
   background-color: var(--dark);
   font-family: var(--font-base);
+  font-size: max(var(--font-size), 140px);
   line-height: 1.5;
   text-transform: uppercase;
   color: var(--white);
+}
 
-  --font-size: 7vw;
-  font-size: var(--font-size);
+@media screen and (min-width: 425px) {
+  --font-size: 10vw;
+}
+
+@media screen and (min-width: 768px) {
+  --font-size: 11vw;
 }
 
 a {
@@ -70,7 +78,7 @@ h4,
 h5,
 h6 {
   margin: 0.25vh 0;
-  font-size: var(--font-size);
+  font-size: max(var(--font-size), 100px);
   line-height: 1.2;
 }
 
