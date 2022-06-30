@@ -87,7 +87,3 @@ const CarouselTitle = styled(motion.h2, {
   include: "fontAlt",
   mixBlendMode: "difference",
 });
-
-const ImageWrapper = styled("div", {
-  position: "relative",
-});
