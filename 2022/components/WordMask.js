@@ -58,7 +58,7 @@ export default function WordMask({
   );
 }
 
-const Mask = styled("div", {
+const Mask = styled(motion.div, {
   overflow: "hidden",
 });
 
