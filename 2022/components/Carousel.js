@@ -81,8 +81,8 @@ const _Carousel = styled(motion.div, {
 
 const CarouselTitle = styled(motion.h2, {
   position: "absolute",
-  bottom: "-5vh",
-  left: "-1vw",
+  bottom: "-20px",
+  left: "-10px",
   fontSize: "5vw",
   include: "fontAlt",
   mixBlendMode: "difference",
