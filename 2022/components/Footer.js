@@ -2,6 +2,7 @@ import Link from "next/link";
 import { styled } from "stitches.config";
 import WordMask from "@/components/WordMask";
 import { useRouter } from "next/router";
+import { AnimatePresence } from "framer-motion";
 
 export default function Footer({ timeline }) {
   const router = useRouter();
@@ -53,13 +54,15 @@ export default function Footer({ timeline }) {
         </WordMask>
       </Wrapper>
 
-      {router.pathname !== "/" && (
-        <WordMask direction="bottom" altFont>
-          <Link href="/" scroll={false}>
-            Return to index
-          </Link>
-        </WordMask>
-      )}
+      <AnimatePresence exitBeforeEnter>
+        {router.pathname !== "/" && (
+          <WordMask direction="bottom" altFont>
+            <Link href="/" scroll={false}>
+              Return to index
+            </Link>
+          </WordMask>
+        )}
+      </AnimatePresence>
     </footer>
   );
 }
