@@ -53,7 +53,10 @@ function App({ Component, pageProps, router }) {
     // ASCII ART GENERATOR http://patorjk.com/software/taag/#p=display&h=1&v=0&f=ANSI%20Shadow&t=flowen.me
 
     const { innerWidth: width, innerHeight: height } = window;
-    // lock scrolling
+    // make sure we're at the top of the page so the animation will be correctly shown
+    window.scrollTo(0, 0);
+
+    // lock scrolling and clicking
     const body = document.querySelector("body");
     body.style.overflow = "hidden";
     body.style.pointerEvents = "none";
