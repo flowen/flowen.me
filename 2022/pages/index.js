@@ -92,13 +92,13 @@ export default function Index({ projects, available, timeline }) {
 
         <CreativeCoding>
           <WordMask direction="top" delay={tl.creative}>
-            Helping biz,
-          </WordMask>
-          <WordMask direction="bottom" delay={tl.creative}>
-            individuals,
-          </WordMask>
-          <WordMask direction="bottom" delay={tl.creative}>
             10+ years
+          </WordMask>
+          <WordMask direction="bottom" delay={tl.creative}>
+            of helping
+          </WordMask>
+          <WordMask direction="bottom" delay={tl.creative}>
+            biz grow
           </WordMask>
         </CreativeCoding>
       </Row>
@@ -159,7 +159,7 @@ const Overlay = styled(motion.div, {
   width: "100%",
   height: "100%",
 
-  background: "#E75A5A",
+  background: "rgb(189 179 187)",
   mixBlendMode: "lighten",
   transition: "opacity var(--d-slower) var(--ease-out)",
 });
