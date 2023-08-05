@@ -11,7 +11,7 @@
 [build]
   base = "/2022/"
   publish = ".next"
-  command = "yarn build"
+  command = "npm run build"
 
 [build.environment]
   NODE_VERSION = "v16.4.0"
