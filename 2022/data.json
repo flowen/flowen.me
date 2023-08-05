@@ -1,26 +1,34 @@
 {
-  "available": false,
-  "now": "Jamming fulltime /w hifilabs.co fam",
+  "available": "maybe",
+  "now": "Jamming part-time /w hifilabs.co fam",
   "projects": [
     {
       "name": "Sound.xyz",
-      "image": "project-sound.jpg",
+      "image": "sound.xyz.jpg",
       "imagePosition": "center center",
       "description": "A quick 6 week rendes-vouz working on the launch MVP of sound.xyz. Worked on the prelaunch of sound.xyz. The NFT platform for artists to actually earn money vs bs Spotify streaming pennies by selling parts of their song as NFTs in which in a Soundcloud-manner the owners of the NFT can add a comment.",
       "url": "https://sound.xyz",
       "tech": "React, Nextjs, Framer, Typescript"
     },
     {
-      "name": "molabs.ai",
-      "image": "project-molabs.jpg",
-      "imagePosition": "center 20%",
-      "description": "Early startup around MO - Metaverse Organism. Mysterious, cute-looking creature from a secret lab. Worked on the prototype in a Ruby environment, using three.js, and react-spring to create components and UIs. Finalized by migrating the product to react-three-fiber in Nextjs.",
-      "url": "https://molabs.ai",
-      "tech": "threejs, react, react-spring, react-three-fiber, zustand"
+      "name": "hifilabs.co",
+      "image": "hifilabs.co.jpg",
+      "imagePosition": "center center",
+      "description": "My first project for HIFI Labs. This one won <a href=\"https://enter.amcpros.com/hermes/entry/hifi-labs-is-a-creative-incubator-and-artist-mentorship-collective-building-an-artist-owned-community-powered-future-for-musicians-the-company-uses-web3-technology-to-create-custom-digital-platforms/\" target=\"_blank\" rel=\"noopener noreferrer\">the Hermes Creative awards</a> ✌️ ",
+      "url": "https://hifilabs.co",
+      "tech": "React, Nextjs, Framer motion, Firebase"
     },
     {
-      "name": "intheyear2024",
-      "image": "project-2024.jpg",
+      "name": "daktyl.xyz",
+      "image": "daktyl.xyz.jpg",
+      "imagePosition": "center center",
+      "description": "Lead dev for once again my homies @ HIFI Labs. Integrated music player, ",
+      "url": "https://daktyl.xyz/",
+      "tech": "React, Nextjs, Firebase, Framer motion, Notion CMS integration"
+    },
+    {
+      "name": "intheyear2024.com",
+      "image": "intheyear2024.com.jpg",
       "imagePosition": "center top",
       "description": "In the universe of the modern internet, the shitty metaverse in which we live our lives, clout is the equivalent of a natural resource. It is both commodity and currency. By this same token, celebrities function like mines or natural mineral deposits: they are sources of clout that can be tapped via proximity. As a guy* on the internet once said: move content from one platform to another; get famous. Celebrity encounters are pseudo-chance occurrences that can (and must!) be leveraged. When we encounter a celebrity we are compelled to post video or screenshots of the encounter far and wide, to shout at the top of our lungs that fame has rubbed off on us, and by our action to make it in some small way true. The labor of clout production is the process of finding content in the wild. Omegle is Pokemon Snap, where Pikachu is an influencer, and the Tall Grass is a waving sea of genitalia.",
       "url": "https://intheyear2024.com",
@@ -45,8 +53,32 @@
       ]
     },
     {
-      "name": "fauxmegle",
-      "image": "project-fauxmegle.jpg",
+      "name": "musicos.xyz",
+      "image": "musicos.xyz.jpg",
+      "imagePosition": "center center",
+      "description": "Jamming with HIFI Labs on one of their flagship products. Featuring an OS-UI, web3 music player, streaming, guestbook, and indexing all web3 nfts. ",
+      "url": "https://musicos.xyz/",
+      "tech": "React, Nextjs, Firebase"
+    },
+    {
+      "name": "nvakcollective.xyz",
+      "image": "nvakcollective.xyz.jpg",
+      "imagePosition": "center center",
+      "description": "Another project with HIFI Labs. Working on NVAK's main website and their NFT releases on <a href=\"https://nvakcollective.xyz/bruises\" target=\"_blank\" rel=\"noopener noreferrer\">/bruises</a>",
+      "url": "https://nvakcollective.xyz/",
+      "tech": "React, Nextjs, Notion CMS integration"
+    },
+    {
+      "name": "molabs.ai",
+      "image": "molabs.ai.jpg",
+      "imagePosition": "center 20%",
+      "description": "Early startup around MO - Metaverse Organism. Mysterious, cute-looking creature from a secret lab. Worked on the prototype in a Ruby environment, using three.js, and react-spring to create components and UIs. Finalized by migrating the product to react-three-fiber in Nextjs.",
+      "url": null,
+      "tech": "threejs, react, react-spring, react-three-fiber, zustand"
+    },
+    {
+      "name": "fauxmegle.com",
+      "image": "fauxmegle.com.jpg",
       "imagePosition": "center 25%",
       "description": "In the universe of the modern internet, the shitty metaverse in which we live our lives, clout is the equivalent of a natural resource. It is both commodity and currency. By this same token, celebrities function like mines or natural mineral deposits: they are sources of clout that can be tapped via proximity. As a guy* on the internet once said: move content from one platform to another; get famous. Celebrity encounters are pseudo-chance occurrences that can (and must!) be leveraged. When we encounter a celebrity we are compelled to post video or screenshots of the encounter far and wide, to shout at the top of our lungs that fame has rubbed off on us, and by our action to make it in some small way true. The labor of clout production is the process of finding content in the wild. Omegle is Pokemon Snap, where Pikachu is an influencer, and the Tall Grass is a waving sea of genitalia.",
       "url": "https://fauxmegle.com",
@@ -54,7 +86,7 @@
     },
     {
       "name": "Problem Studio",
-      "image": "project-problemstudio.jpg",
+      "image": "problemstudio.com.jpg",
       "imagePosition": "center center",
       "description": "WE FIX YOUR #1 PROBLEM: YOUR WEBSITE IS BORING AF. A coding & animation studio by Rou Hun Fan & Sander Visser.",
       "url": "https://problem.studio",

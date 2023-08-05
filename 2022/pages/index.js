@@ -108,7 +108,7 @@ export default function Index({ projects, available, timeline }) {
           Available:
         </WordMask>
         <WordMask direction="left" delay={tl.availableAnswer} altFont={true}>
-          {available ? "Yes" : "No"}
+          {typeof available === "string" ? available : available ? "Yes" : "No"}
         </WordMask>
       </Row>
     </motion.div>

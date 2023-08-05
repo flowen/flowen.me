@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   motion,
   useAnimation,
@@ -34,7 +34,7 @@ function App({ Component, pageProps, router }) {
   const controls = useAnimation();
   const [scale, setScale] = useState();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (console && console.log) {
       const message = `%c
       

@@ -101,7 +101,7 @@ export default function Projects({ projects }) {
                       whileHover={{ scale: 1.1 }}
                     >
                       <Image
-                        src={`/assets/img/${project.image}`}
+                        src={`/assets/img/projects/${project.image}`}
                         alt={project.name}
                         layout="fill"
                         objectFit="cover"

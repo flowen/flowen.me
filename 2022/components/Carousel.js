@@ -26,7 +26,7 @@ export default function Carousel({ projects, delay }) {
     timer();
 
     return () => clearTimeout(timer);
-  }, [ref, active]);
+  }, [ref, active, projects.length]);
 
   return (
     <Wrapper>
@@ -41,7 +41,7 @@ export default function Carousel({ projects, delay }) {
           <Image
             key={project.name}
             className={active === index ? "active" : ""}
-            src={`/assets/img/${project.image}`}
+            src={`/assets/img/projects/${project.image}`}
             alt={project.name}
             layout="fill"
             objectFit="cover"
