@@ -35,13 +35,23 @@ export default function Footer({ timeline }) {
         &nbsp;
         <WordMask direction="left" delay={timeline.tg}>
           <a
+            href="https://www.linkedin.com/in/flowen/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LI
+          </a>
+        </WordMask>
+        {/* &nbsp;
+        <WordMask direction="left" delay={timeline.tg}>
+          <a
             href="https://t.me/flowen"
             target="_blank"
             rel="noopener noreferrer"
           >
             TG
           </a>
-        </WordMask>
+        </WordMask> */}
         &nbsp;
         <WordMask direction="left" delay={timeline.tw}>
           <a
