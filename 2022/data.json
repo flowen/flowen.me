@@ -1,5 +1,5 @@
 {
-  "available": "maybe",
+  "available": "yes",
   "now": "Jamming part-time /w hifilabs.co fam",
   "projects": [
     {
@@ -23,7 +23,7 @@
       "image": "daktyl.xyz.jpg",
       "imagePosition": "center center",
       "description": "Lead dev for once again my homies @ HIFI Labs. Integrated music player, ",
-      "url": "https://daktyl.xyz/",
+      "url": "https://64a6eaf125dba20008636e29--daktyl-xyz.netlify.app/",
       "tech": "React, Nextjs, Firebase, Framer motion, Notion CMS integration"
     },
     {

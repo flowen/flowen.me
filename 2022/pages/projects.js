@@ -83,6 +83,7 @@ export default function Projects({ projects }) {
                 initial="initial"
                 animate="animate"
                 custom={inView}
+                className={project.url ? "" : "no-link"}
               >
                 <_Project
                   variants={projectVariants}
@@ -146,6 +147,10 @@ const Anchor = styled(motion.a, {
   display: "flex",
   aspectRatio: "20 / 9",
   width: "100%",
+
+  "&.no-link": {
+    cursor: "not-allowed",
+  },
 });
 
 const _Project = styled(motion.div, {
