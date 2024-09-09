@@ -44,22 +44,16 @@ export default function Me({ now, timeline }: MeProps) {
             layoutId="overlay"
           />
 
-          <motion.a
-            href="/"
-            style={{ display: "block", height: "100%" }}
-            layoutId="me-image-link"
-          >
-            <motion.img
-              ref={meImgRef}
-              src="/assets/img/me.webp"
-              alt="me"
-              style={{
-                height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
-              }}
-              layoutId="me-image"
-              exit={{ y: "-100%", opacity: 0 }}
-            />
-          </motion.a>
+          <motion.img
+            ref={meImgRef}
+            src="/assets/img/me.webp"
+            alt="me"
+            style={{
+              height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
+            }}
+            layoutId="me-image"
+            exit={{ y: "-100%", opacity: 0 }}
+          />
         </Wrapper>
 
         <LogoSVG
