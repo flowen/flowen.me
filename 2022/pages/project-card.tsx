@@ -81,8 +81,25 @@ const linkVariant = {
   }),
 };
 
-export function ProjectCard({ project, index }: ProjectCardProps) {
+export default function ProjectCard({ project, index }: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+
+  console.log(`Rendering ProjectCard for index ${index}:`, project);
+
+  if (!project) {
+    console.error(`Project at index ${index} is undefined or null`);
+    return null;
+  }
+
+  const { name, image, imagePosition, description, tech, press, url } = project;
+
+  if (!name || !image) {
+    console.error(
+      `Project at index ${index} is missing required fields:`,
+      project
+    );
+    return null;
+  }
 
   return (
     <InView threshold={0.2} triggerOnce>
@@ -112,11 +129,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                   whileHover={{ scale: 1.1 }}
                 >
                   <Image
-                    src={`/assets/img/projects/${project.image}`}
-                    alt={project.name}
+                    src={`/assets/img/projects/${image}`}
+                    alt={name}
                     layout="fill"
                     objectFit="cover"
-                    objectPosition={project.imagePosition}
+                    objectPosition={imagePosition || "center"}
                     style={{
                       pointerEvents: "none",
                     }}
@@ -124,13 +141,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 </motion.div>
 
                 <Name
-                  data-name={project.name}
+                  data-name={name}
                   variants={yVariants}
                   initial="initial"
                   animate="animate"
                   transition={{ delay: 0.5 }}
                 >
-                  {project.name}
+                  {name}
                 </Name>
               </Inner>
 

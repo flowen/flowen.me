@@ -17,6 +17,9 @@ const HEIGHTMULTIPLIER = 2.5;
 interface Project {
   id: string;
   title: string;
+  name: string;
+  image: string;
+  imagePosition: string;
 }
 
 interface Timeline {

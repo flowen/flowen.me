@@ -109,7 +109,7 @@ function App({ Component, pageProps, router }: AppProps) {
 
       <main>
         <MotionConfig transition={{ ease: easeIn, duration: 0.6 }}>
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             <Component {...pageProps} key={router.route} timeline={timeline} />
           </AnimatePresence>
         </MotionConfig>

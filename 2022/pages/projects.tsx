@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { ProjectCard as ProjectCardComponent } from "./project-card";
+import ProjectCard from "./project-card";
 import { styled } from "../stitches.config";
 
 interface Project {
@@ -25,13 +25,23 @@ export default function Projects({ projects }: ProjectsProps) {
       </Head>
 
       <ProjectsContainer>
-        {projects.map((project, index) => (
-          <ProjectCardComponent
-            key={project.name}
-            project={project}
-            index={index}
-          />
-        ))}
+        {projects && Array.isArray(projects) ? (
+          projects.map((project, index) => {
+            if (project && typeof project === "object" && "name" in project) {
+              return (
+                <ProjectCard
+                  key={project.name}
+                  project={project}
+                  index={index}
+                />
+              );
+            } else {
+              return null;
+            }
+          })
+        ) : (
+          <p>No projects available</p>
+        )}
       </ProjectsContainer>
     </Wrapper>
   );
