@@ -1,9 +1,12 @@
+import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-
+import { GetStaticProps } from "next";
 import { motion } from "framer-motion";
-import { styled } from "stitches.config";
+import fsPromises from "fs/promises";
+import path from "path";
 
+import { styled } from "stitches.config";
 import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 import Carousel from "@/components/Carousel";
@@ -11,10 +14,42 @@ import { easeInOut } from "@/utils/easing";
 
 const HEIGHTMULTIPLIER = 2.5;
 
-export default function Index({ projects, available, timeline }) {
+interface Project {
+  id: string;
+  title: string;
+}
+
+interface Timeline {
+  header: {
+    fan: number;
+  };
+  [key: string]: any;
+}
+
+interface IndexProps {
+  projects: Project[];
+  available: string | boolean;
+  timeline: Timeline;
+}
+
+interface TimelineIndex {
+  uiDev: number;
+  design: number;
+  motion: number;
+  ampersand: number;
+  frontend: number;
+  imgProjects: number;
+  imgMe: number;
+  creative: number;
+  coding: number;
+  available: number;
+  availableAnswer: number;
+}
+
+export default function Index({ projects, available, timeline }: IndexProps) {
   const start = timeline.header.fan;
   const difference = 0.1;
-  const tlIndex = {
+  const tlIndex: TimelineIndex = {
     uiDev: start,
     design: start + difference,
     motion: start + difference * 2,
@@ -28,7 +63,7 @@ export default function Index({ projects, available, timeline }) {
     availableAnswer: start + difference * 10,
   };
 
-  const tl = { ...timeline, ...tlIndex };
+  const tl: Timeline & TimelineIndex = { ...timeline, ...tlIndex };
 
   return (
     <motion.div>
@@ -79,10 +114,11 @@ export default function Index({ projects, available, timeline }) {
             />
 
             <motion.img
-              src="/assets/img/me.jpg"
+              src="/assets/img/me.webp"
               alt="me"
               style={{
                 height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
+                pointerEvents: "none",
               }}
               transition={{ delay: tl.imgMe, ease: easeInOut }}
               layoutId="me-image"
@@ -158,6 +194,7 @@ const Overlay = styled(motion.div, {
   left: 0,
   width: "100%",
   height: "100%",
+  pointerEvents: "none",
 
   background: "rgb(189 179 187)",
   mixBlendMode: "lighten",
@@ -166,16 +203,12 @@ const Overlay = styled(motion.div, {
 
 export { Overlay };
 
-// Fetching data from the JSON file
-import fsPromises from "fs/promises";
-import path from "path";
-
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps<IndexProps> = async () => {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
-  const data = JSON.parse(jsonData);
+  const data = JSON.parse(jsonData.toString()) as IndexProps;
 
   return {
     props: data,
   };
-}
+};

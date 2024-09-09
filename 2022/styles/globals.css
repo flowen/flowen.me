@@ -50,11 +50,15 @@ body {
 }
 
 @media screen and (min-width: 425px) {
-  --font-size: 10vw;
+  body {
+    --font-size: 10vw;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  --font-size: 11vw;
+  body {
+    --font-size: 11vw;
+  }
 }
 
 a {

@@ -3,7 +3,17 @@ import Link from "next/link";
 import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 
-export default function Header({ timeline }) {
+interface Timeline {
+  rou: number;
+  hun: number;
+  fan: number;
+}
+
+interface HeaderProps {
+  timeline: Timeline;
+}
+
+export default function Header({ timeline }: HeaderProps) {
   return (
     <header>
       <Row

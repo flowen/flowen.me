@@ -5,4 +5,4 @@ export const Row = styled("div", {
   alignItems: "center",
   justifyContent: "start",
   wordBreak: "break-all",
-});
+} as const);

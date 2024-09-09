@@ -1,5 +1,11 @@
 import React from "react";
-import NextDocument, { Html, Head, Main, NextScript } from "next/document";
+import NextDocument, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from "next/document";
 import { getCssText } from "../stitches.config";
 
 const SITE_NAME = "Freelance frontend UI developer and designer, Rou Hun Fan";
@@ -13,6 +19,11 @@ const PROJECT_KEYWORDS =
   "Remote, remote developer, front-end developer, front-end, creative developer, creative, designer, front-end designer, remote, freelancer, the Netherlands, Holland, Nederland";
 
 export default class Document extends NextDocument {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await NextDocument.getInitialProps(ctx);
+    return { ...initialProps };
+  }
+
   render() {
     return (
       <Html lang="en">
@@ -32,7 +43,7 @@ export default class Document extends NextDocument {
           <meta name="keywords" content={PROJECT_KEYWORDS} />
           <meta name="theme-color" content="#ffffff" />
           <meta name="msapplication-TileColor" content="#da532c" />
-          <meta name="google" value="notranslate" />
+          <meta name="google" content="notranslate" />
 
           <meta content="en-us" httpEquiv="Content-Language" />
           <meta content="IE=edge,chrome=1" httpEquiv="X-UA-Compatible" />

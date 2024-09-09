@@ -4,7 +4,20 @@ import WordMask from "@/components/WordMask";
 import { useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
 
-export default function Footer({ timeline }) {
+interface Timeline {
+  dob: number;
+  contact: number;
+  arrow: number;
+  cv: number;
+  tg: number;
+  tw: number;
+}
+
+interface FooterProps {
+  timeline: Timeline;
+}
+
+export default function Footer({ timeline }: FooterProps) {
   const router = useRouter();
   return (
     <footer>

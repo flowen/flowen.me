@@ -2,6 +2,15 @@ import { styled, theme } from "stitches.config";
 import { motion } from "framer-motion";
 import { easeIn, easeOut } from "@/utils/easing";
 
+interface WordMaskProps {
+  children?: React.ReactNode;
+  direction?: "left" | "right" | "top" | "bottom";
+  delay?: number;
+  altFont?: boolean;
+  html?: string;
+  [key: string]: any;
+}
+
 export default function WordMask({
   children,
   direction,
@@ -9,7 +18,7 @@ export default function WordMask({
   altFont = false,
   html,
   ...props
-}) {
+}: WordMaskProps) {
   return (
     <Mask {...props}>
       <motion.div

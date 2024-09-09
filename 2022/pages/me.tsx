@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import Head from "next/head";
-
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
 
@@ -11,15 +10,21 @@ import Logo from "@/assets/svg/logo.svg";
 
 const HEIGHTMULTIPLIER = 3.25;
 
-export default function Me({ now, timeline }) {
-  const meImgRef = useRef(null);
+interface MeProps {
+  now: string;
+  timeline: {
+    [key: string]: number;
+  };
+}
+
+export default function Me({ now, timeline }: MeProps) {
+  const meImgRef = useRef<HTMLImageElement>(null);
 
   const tlMe = {
     now: 0.35,
     nowContent: 0.5,
   };
 
-  // merge timeline object with new object with tl2
   const tl = { ...timeline, ...tlMe };
 
   return (
@@ -39,16 +44,22 @@ export default function Me({ now, timeline }) {
             layoutId="overlay"
           />
 
-          <motion.img
-            ref={meImgRef}
-            src="/assets/img/me.jpg"
-            alt="me"
-            style={{
-              height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
-            }}
-            layoutId="me-image"
-            exit={{ y: "-100%", opacity: 0 }}
-          />
+          <motion.a
+            href="/"
+            style={{ display: "block", height: "100%" }}
+            layoutId="me-image-link"
+          >
+            <motion.img
+              ref={meImgRef}
+              src="/assets/img/me.webp"
+              alt="me"
+              style={{
+                height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
+              }}
+              layoutId="me-image"
+              exit={{ y: "-100%", opacity: 0 }}
+            />
+          </motion.a>
         </Wrapper>
 
         <LogoSVG
@@ -94,13 +105,14 @@ const LogoSVG = styled(motion.div, {
 // Fetching data from the JSON file
 import fsPromises from "fs/promises";
 import path from "path";
+import { GetStaticProps } from "next";
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
-  const data = JSON.parse(jsonData);
+  const data = JSON.parse(jsonData.toString());
 
   return {
     props: data,
   };
-}
+};

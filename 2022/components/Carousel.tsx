@@ -6,9 +6,20 @@ import { styled } from "stitches.config";
 
 import { easeOut, easeInOut } from "@/utils/easing";
 
-export default function Carousel({ projects, delay }) {
-  const ref = useRef(null);
-  const [active, setActive] = useState(0);
+interface Project {
+  name: string;
+  image: string;
+  imagePosition: string;
+}
+
+interface CarouselProps {
+  projects: Project[];
+  delay: number;
+}
+
+export default function Carousel({ projects, delay }: CarouselProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState<number>(0);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -18,12 +29,9 @@ export default function Carousel({ projects, delay }) {
       return;
     }
 
-    const timer = () =>
-      setTimeout(() => {
-        setActive(active + 1);
-      }, 400);
-
-    timer();
+    const timer = setTimeout(() => {
+      setActive(active + 1);
+    }, 400);
 
     return () => clearTimeout(timer);
   }, [ref, active, projects.length]);

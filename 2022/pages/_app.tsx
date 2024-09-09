@@ -6,6 +6,7 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { styled } from "@stitches/react";
+import { AppProps } from "next/app";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -14,7 +15,23 @@ import { easeIn, easeOut } from "@/utils/easing";
 import "../styles/vars.css";
 import "../styles/globals.css";
 
-const timeline = {
+interface Timeline {
+  header: {
+    rou: number;
+    hun: number;
+    fan: number;
+  };
+  footer: {
+    dob: number;
+    contact: number;
+    arrow: number;
+    cv: number;
+    tg: number;
+    tw: number;
+  };
+}
+
+const timeline: Timeline = {
   header: {
     rou: 0,
     hun: 0.1,
@@ -30,9 +47,9 @@ const timeline = {
   },
 };
 
-function App({ Component, pageProps, router }) {
+function App({ Component, pageProps, router }: AppProps) {
   const controls = useAnimation();
-  const [scale, setScale] = useState();
+  const [scale, setScale] = useState<number | undefined>();
 
   useEffect(() => {
     if (console && console.log) {
@@ -57,11 +74,11 @@ function App({ Component, pageProps, router }) {
     window.scrollTo(0, 0);
 
     // lock scrolling and clicking
-    const body = document.querySelector("body");
+    const body = document.querySelector("body")!;
     body.style.overflow = "hidden";
     body.style.pointerEvents = "none";
 
-    const wrapper = document.querySelector(".wrapper");
+    const wrapper = document.querySelector(".wrapper") as HTMLElement;
     const wrapperHeight = wrapper.offsetHeight;
 
     // if wrapperHeight larger than height, scale down whole wrapper
@@ -92,7 +109,7 @@ function App({ Component, pageProps, router }) {
 
       <main>
         <MotionConfig transition={{ ease: easeIn, duration: 0.6 }}>
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode="wait">
             <Component {...pageProps} key={router.route} timeline={timeline} />
           </AnimatePresence>
         </MotionConfig>
