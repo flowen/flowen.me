@@ -21,27 +21,13 @@ export default function Projects({ projects }: ProjectsProps) {
   return (
     <Wrapper>
       <Head>
-        <title>Projects by Flowen</title>
+        <title>Flowen's projects</title>
       </Head>
 
       <ProjectsContainer>
-        {projects && Array.isArray(projects) ? (
-          projects.map((project, index) => {
-            if (project && typeof project === "object" && "name" in project) {
-              return (
-                <ProjectCard
-                  key={project.name}
-                  project={project}
-                  index={index}
-                />
-              );
-            } else {
-              return null;
-            }
-          })
-        ) : (
-          <p>No projects available</p>
-        )}
+        {projects.map((project, index) => (
+          <ProjectCard key={project.name} project={project} index={index} />
+        ))}
       </ProjectsContainer>
     </Wrapper>
   );

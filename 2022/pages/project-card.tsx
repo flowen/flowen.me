@@ -84,20 +84,13 @@ const linkVariant = {
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log(`Rendering ProjectCard for index ${index}:`, project);
-
   if (!project) {
-    console.error(`Project at index ${index} is undefined or null`);
     return null;
   }
 
-  const { name, image, imagePosition, description, tech, press, url } = project;
+  const { name, image, imagePosition } = project;
 
   if (!name || !image) {
-    console.error(
-      `Project at index ${index} is missing required fields:`,
-      project
-    );
     return null;
   }
 
@@ -121,11 +114,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               ref={ref}
             >
               <Inner>
-                <motion.div
+                <ImageWrapper
                   variants={yVariants}
                   initial="initial"
                   animate="animate"
-                  style={{ height: "100%" }}
                   whileHover={{ scale: 1.1 }}
                 >
                   <Image
@@ -136,9 +128,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     objectPosition={imagePosition || "center"}
                     style={{
                       pointerEvents: "none",
+                      position: "unset",
+                      width: "unset",
+                      height: "unset",
                     }}
                   />
-                </motion.div>
+                </ImageWrapper>
 
                 <Name
                   data-name={name}
@@ -164,10 +159,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             {isOpen && (
               <ProjectDetails
                 layout
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={{ height: 0 }}
+                animate={{ height: "auto" }}
+                exit={{ height: 0 }}
                 transition={{ duration: 0.3 }}
+                style={{ height: isOpen ? "auto" : 0 }}
               >
                 <p>{project.description}</p>
                 <div>
@@ -211,33 +207,15 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
 const Anchor = styled(motion.div, {
   display: "flex",
-  aspectRatio: "20 / 9",
-  width: "100%",
   cursor: "pointer",
+  width: "100%",
 });
 
 const _Project = styled(motion.div, {
   position: "relative",
   width: "100%",
-  height: "24vh",
   border: "3px solid #fff",
-
-  "& img": {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-  },
-  "@tabletLandscape": {
-    height: "35vh",
-  },
-  "@tablet": {
-    minHeight: "300px",
-  },
-  "@laptop": {
-    minHeight: "450px",
-  },
+  // height: "100%",
 });
 
 const Inner = styled("div", {
@@ -245,6 +223,24 @@ const Inner = styled("div", {
   overflow: "hidden",
   width: "100%",
   height: "100%",
+});
+
+const ImageWrapper = styled(motion.div, {
+  position: "relative",
+  width: "100%",
+  height: "100%",
+
+  "& > span": {
+    position: "unset !important",
+  },
+
+  "& img": {
+    position: "relative !important",
+    width: "100% !important",
+    height: "unset !important",
+    objectFit: "cover",
+    aspectRatio: "20 / 9",
+  },
 });
 
 const Name = styled(motion.h2, {
@@ -290,32 +286,38 @@ const Shadow = styled(motion.div, {
   mixBlendMode: "difference",
 });
 
-const ProjectDetails = styled(motion.div, {
-  padding: "1rem",
-  backgroundColor: "rgba(255, 255, 255, 0.9)",
-  color: "#000",
-  overflow: "hidden",
+const ProjectDetails = styled(
+  motion.div,
+  {
+    transformOrigin: "top",
+    overflow: "hidden",
+    height: "auto", // Remove the conditional height
+    padding: "1rem",
+    backgroundColor: "rgba(255, 255, 255, 0.9)",
+    color: "#000",
 
-  "& p, div, > a": {
-    fontSize: "0.25em",
-  },
+    "& p, div, > a": {
+      fontSize: "0.25em",
+    },
 
-  "p, div": {
-    marginBottom: "1em",
-  },
+    "p, div": {
+      marginBottom: "1em",
+    },
 
-  "& ul": {
-    display: "inline-flex",
-    gap: "1em",
-    listStyle: "disc",
-    marginLeft: "1rem",
-  },
+    "& ul": {
+      display: "inline-flex",
+      gap: "1em",
+      listStyle: "disc",
+      marginLeft: "1rem",
+    },
 
-  "& a": {
-    color: "blue",
-    textDecoration: "underline",
+    "& a": {
+      color: "blue",
+      textDecoration: "underline",
+    },
   },
-});
+  { shouldForwardProp: (prop: string) => prop !== "isOpen" }
+);
 
 const ProjectWrapper = styled(motion.div, {
   marginBottom: "5vh",
