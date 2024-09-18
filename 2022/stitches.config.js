@@ -8,6 +8,7 @@ export const { styled, getCssText, theme } = createStitches({
     tabletLandscape: "(min-width: 64em)", // 1024px
     laptop: "(min-width: 72.5em)", // 1160px
     desktop: "(min-width: 90em)", // 1440px
+    test: "(min-width: 90em)", // 1440px
     darkMode: "(prefers-color-scheme: dark)",
   },
   theme: {
