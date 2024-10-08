@@ -8,7 +8,7 @@ import { styled } from "stitches.config";
 
 import { Overlay } from "../pages/project-card";
 import { easeOut, easeInOut } from "@/utils/easing";
-
+import { Timeline } from "@/pages/index";
 interface Project {
   name: string;
   image: string;
@@ -17,7 +17,7 @@ interface Project {
 
 interface CarouselProps {
   projects: Project[];
-  delay: number;
+  tl: Timeline;
 }
 
 const overlayVariants = {

@@ -20,7 +20,7 @@ interface Project {
   imagePosition: string;
 }
 
-interface Timeline {
+export interface Timeline {
   header: {
     fan: number;
   };
