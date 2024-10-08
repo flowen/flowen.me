@@ -14,10 +14,10 @@
   command = "yarn build"
 
 [build.environment]
-  NODE_VERSION = "v22.7.0"
+  NODE_VERSION = "22"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# [[plugins]]
+#  package = "@netlify/plugin-nextjs"
 
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
