@@ -88,11 +88,9 @@ export default function Index({ projects, available, timeline }: IndexProps) {
             </WordMask>
           </div>
 
-          <Link href="/projects" scroll={false}>
-            <AnchorProjects>
-              <Carousel projects={projects} delay={tl.imgProjects} />
-            </AnchorProjects>
-          </Link>
+          <AnchorProjects href="/projects" scroll={false}>
+            <Carousel projects={projects} delay={tl.imgProjects} />
+          </AnchorProjects>
         </Row>
 
         <Row>
@@ -107,27 +105,25 @@ export default function Index({ projects, available, timeline }: IndexProps) {
       </h1>
 
       <Row css={{ position: "relative" }}>
-        <Link href="/me" scroll={false}>
-          <LinkMe>
-            <Overlay
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: tl.imgMe }}
-              layoutId="overlay"
-            />
+        <LinkMe href="/me" scroll={false}>
+          <Overlay
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: tl.imgMe }}
+            layoutId="overlay"
+          />
 
-            <motion.img
-              src="/assets/img/me.webp"
-              alt="me"
-              style={{
-                height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
-                pointerEvents: "none",
-              }}
-              transition={{ delay: tl.imgMe, ease: easeInOut }}
-              layoutId="me-image"
-            />
-          </LinkMe>
-        </Link>
+          <motion.img
+            src="/assets/img/me.webp"
+            alt="me"
+            style={{
+              height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
+              pointerEvents: "none",
+            }}
+            transition={{ delay: tl.imgMe, ease: easeInOut }}
+            layoutId="me-image"
+          />
+        </LinkMe>
 
         <CreativeCoding>
           <WordMask direction="top" delay={tl.creative}>
@@ -154,7 +150,7 @@ export default function Index({ projects, available, timeline }: IndexProps) {
   );
 }
 
-const AnchorProjects = styled(motion.a, {
+const AnchorProjects = styled(motion.create(Link), {
   position: "relative",
   flex: 1,
   margin: "1rem 0 1rem 3rem",
@@ -182,7 +178,7 @@ const Ampersand = styled("span", {
   include: "fontAlt",
 });
 
-const LinkMe = styled("a", {
+const LinkMe = styled(Link, {
   overflow: "hidden",
   position: "relative",
   display: "block",

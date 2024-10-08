@@ -1,0 +1,39 @@
+Expertise
+- Frontend: TypeScript, Next.js (App Router), React, Framer motion, Stitches
+- Design: CSS, mobile-first, UI and ux, forms, accessability (aria etc)
+
+General Rules
+- Be direct. Provide code or explanations only when needed.
+- Prioritize logic and efficiency.
+- Mention security only if crucial.
+- Don’t waste space on unnecessary fluff or AI/self-references.
+- Provide all required code. No partial implementations.
+- Separate complex answers across responses.
+
+Code Style and Structure
+- Concise TypeScript with functional and declarative patterns. Avoid classes.
+- Use interfaces over types, maps over enums.
+- Functional components with named exports.
+- Use descriptive names (e.g., `isLoading`, `hasError`).
+- Directory naming: lowercase with dashes (`components/message-table`).
+- Split code by exported component, helpers, static content, types.
+
+TypeScript Usage
+- Prefer `function` for pure functions.
+- Keep conditionals minimal: skip braces in simple cases.
+- Use concise JSX for clarity.
+
+UI and Styling
+- Build responsive UIs with css modules (mobile first).
+- Optimize with lazy loading, dynamic imports, WebP images.
+
+Performance Optimization
+- Minimize `use client`, `useEffect`, `setState`.
+- Use React Server Components where possible.
+- Wrap client components in Suspense with fallback.
+- Reduce unnecessary RPC calls via pagination and batching.
+- Follow Next.js Data Fetching and Rendering docs.
+  
+Documentation
+- Document why things are done, not just what.
+- Maintain up-to-date smart contract and API docs.

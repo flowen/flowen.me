@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { InView } from "react-intersection-observer";
 import { styled } from "../stitches.config";
@@ -128,9 +129,9 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     objectPosition={imagePosition || "center"}
                     style={{
                       pointerEvents: "none",
-                      position: "unset",
-                      width: "unset",
-                      height: "unset",
+                      // position: "unset",
+                      // width: "unset",
+                      // height: "unset",
                     }}
                   />
                 </ImageWrapper>

@@ -1,8 +1,10 @@
-import { useRef } from "react";
+"use client";
+
+import { useRef, useEffect } from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
-import { styled } from "stitches.config";
 
+import { styled } from "stitches.config";
 import { Overlay } from "@/pages/index";
 import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
@@ -19,13 +21,19 @@ interface MeProps {
 
 export default function Me({ now, timeline }: MeProps) {
   const meImgRef = useRef<HTMLImageElement>(null);
-
   const tlMe = {
     now: 0.35,
     nowContent: 0.5,
   };
 
   const tl = { ...timeline, ...tlMe };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <motion.div>
@@ -96,7 +104,6 @@ const LogoSVG = styled(motion.div, {
   },
 });
 
-// Fetching data from the JSON file
 import fsPromises from "fs/promises";
 import path from "path";
 import { GetStaticProps } from "next";

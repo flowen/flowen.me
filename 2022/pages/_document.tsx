@@ -49,6 +49,7 @@ export default class Document extends NextDocument {
           <meta content="IE=edge,chrome=1" httpEquiv="X-UA-Compatible" />
           <meta content="on" httpEquiv="cleartype" />
           <meta content="yes" name="apple-mobile-web-app-capable" />
+          <meta name="mobile-web-app-capable" content="yes" />
           <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 
           <meta content={SITE_NAME} property="og:title" />
@@ -61,7 +62,6 @@ export default class Document extends NextDocument {
           <meta content="true" name="HandheldFriendly" />
           <meta content={SITE_DESCRIPTION} name="description" />
           <meta content={SITE_NAME} name="apple-mobile-web-app-title" />
-          <meta content="yes" name="apple-mobile-web-app-capable" />
           <meta content="white" name="apple-mobile-web-app-status-bar-style" />
 
           <meta content="summary_large_image" name="twitter:card" />

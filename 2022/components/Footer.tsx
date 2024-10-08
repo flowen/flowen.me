@@ -77,7 +77,7 @@ export default function Footer({ timeline }: FooterProps) {
         </WordMask>
       </Wrapper>
 
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         {router.pathname !== "/" && (
           <WordMask direction="bottom" altFont>
             <Link href="/" scroll={false}>

@@ -25,19 +25,12 @@ export const { styled, getCssText, theme } = createStitches({
       dark: "#161b1b",
       grey: "#b3aba4",
     },
-    /* Durations */
     duration: {
       fast: 0.125,
       normal: 0.25,
       slow: 0.5,
       slower: 1.5,
       slowest: 2.25,
-    },
-    ease: {
-      easeIn: "cubic-bezier(0.895, 0.03, 0.685, 0.22)",
-      easeOut: "cubic-bezier(0.165, 0.84, 0.44, 1)",
-      easeInOut: " cubic-bezier(0.64, 0.04, 0.35, 1)",
-      easeBounce: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
     },
   },
   utils: {

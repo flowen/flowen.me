@@ -1,5 +1,7 @@
+"use client";
+
 import { useRef, useState, useEffect } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
@@ -91,6 +93,8 @@ const CarouselTitle = styled(motion.h2, {
   position: "absolute",
   bottom: "-20px",
   left: "-10px",
+  width: "100%",
+  whiteSpace: "nowrap",
   fontSize: "5vw",
   include: "fontAlt",
   mixBlendMode: "difference",

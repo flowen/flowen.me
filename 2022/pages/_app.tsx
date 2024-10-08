@@ -89,13 +89,15 @@ function App({ Component, pageProps, router }: AppProps) {
       wrapper.style.transform = `scale(${height / wrapperHeight})`;
     }
 
-    setTimeout(() => {
-      controls.start(() => ({ scale: 1 }));
+    const timeout = setTimeout(() => {
+      controls.start({ scale: 1 });
 
       body.style.overflow = "";
       body.style.pointerEvents = "";
     }, timeline.footer.tw * 1000 + 1000);
-  }, [controls]);
+
+    return () => clearTimeout(timeout);
+  }, [controls, timeline.footer.tw]);
 
   return (
     <MotionWrapper
@@ -109,7 +111,6 @@ function App({ Component, pageProps, router }: AppProps) {
 
       <main>
         <MotionConfig transition={{ ease: easeIn, duration: 0.6 }}>
-          {/* @ts-ignore */}
           <AnimatePresence mode="wait">
             <Component {...pageProps} key={router.route} timeline={timeline} />
           </AnimatePresence>
@@ -124,12 +125,12 @@ function App({ Component, pageProps, router }: AppProps) {
 export default App;
 
 const Wrapper = styled("div", {
-  maxWidth: "1100px",
   display: "flex",
   flexDirection: "column",
+  maxWidth: "1100px",
   margin: "0 auto",
   padding: "10vh 0 15vh",
   transformOrigin: "top",
 });
 
-const MotionWrapper = motion(Wrapper);
+const MotionWrapper = motion.create(Wrapper);
