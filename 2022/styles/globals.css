@@ -49,18 +49,6 @@ body {
   color: var(--white);
 }
 
-@media screen and (min-width: 425px) {
-  body {
-    --font-size: 10vw;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  body {
-    --font-size: 11vw;
-  }
-}
-
 a {
   color: var(--white);
   text-decoration-thickness: 0.2rem;

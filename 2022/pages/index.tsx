@@ -12,8 +12,6 @@ import WordMask from "@/components/WordMask";
 import Carousel from "@/components/Carousel";
 import { easeInOut } from "@/utils/easing";
 
-const HEIGHTMULTIPLIER = 2.5;
-
 interface Project {
   id: string;
   title: string;
@@ -43,6 +41,7 @@ interface TimelineIndex {
   frontend: number;
   imgProjects: number;
   imgMe: number;
+  imgMeOverlay: number;
   creative: number;
   coding: number;
   available: number;
@@ -60,10 +59,11 @@ export default function Index({ projects, available, timeline }: IndexProps) {
     frontend: start + difference * 4,
     imgProjects: start + difference * 5,
     imgMe: start + difference * 6,
-    creative: start + difference * 7,
-    coding: start + difference * 8,
-    available: start + difference * 9,
-    availableAnswer: start + difference * 10,
+    imgMeOverlay: start + difference * 7,
+    creative: start + difference * 8,
+    coding: start + difference * 9,
+    available: start + difference * 10,
+    availableAnswer: start + difference * 11,
   };
 
   const tl: Timeline & TimelineIndex = { ...timeline, ...tlIndex };
@@ -89,7 +89,7 @@ export default function Index({ projects, available, timeline }: IndexProps) {
           </div>
 
           <AnchorProjects href="/projects" scroll={false}>
-            <Carousel projects={projects} delay={tl.imgProjects} />
+            <Carousel projects={projects} tl={tl} />
           </AnchorProjects>
         </Row>
 
@@ -109,17 +109,20 @@ export default function Index({ projects, available, timeline }: IndexProps) {
           <Overlay
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: tl.imgMe }}
-            layoutId="overlay"
+            transition={{ delay: tl.imgMeOverlay, ease: easeInOut }}
+            // layoutId="overlay"
           />
 
           <motion.img
             src="/assets/img/me.webp"
             alt="me"
             style={{
-              height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
+              height: 328,
               pointerEvents: "none",
+              originY: 0,
             }}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: tl.imgMe, ease: easeInOut }}
             layoutId="me-image"
           />
@@ -151,10 +154,11 @@ export default function Index({ projects, available, timeline }: IndexProps) {
 }
 
 const AnchorProjects = styled(motion.create(Link), {
+  display: "block",
   position: "relative",
-  flex: 1,
+  flex: "1 1 0",
   margin: "1rem 0 1rem 3rem",
-  height: `calc(var(--font-size) * ${2.5})`,
+  height: 328,
 
   "&:hover": {
     cursor: "pointer",
@@ -163,10 +167,6 @@ const AnchorProjects = styled(motion.create(Link), {
   "& img": {
     display: "block",
     width: "100%",
-  },
-
-  "& + h2": {
-    color: "red",
   },
 });
 
@@ -183,7 +183,7 @@ const LinkMe = styled(Link, {
   position: "relative",
   display: "block",
   margin: "0 7vh 2vh 0",
-  height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
+  height: 328,
 });
 
 const Overlay = styled(motion.div, {

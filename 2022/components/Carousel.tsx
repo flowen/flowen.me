@@ -6,6 +6,7 @@ import Image from "next/legacy/image";
 import { motion } from "framer-motion";
 import { styled } from "stitches.config";
 
+import { Overlay } from "../pages/project-card";
 import { easeOut, easeInOut } from "@/utils/easing";
 
 interface Project {
@@ -19,7 +20,21 @@ interface CarouselProps {
   delay: number;
 }
 
-export default function Carousel({ projects, delay }: CarouselProps) {
+const overlayVariants = {
+  initial: { opacity: 0, scale: [1, 0] },
+  animate: (delay: number) => {
+    return {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.25,
+        delay: delay,
+      },
+    };
+  },
+};
+
+export default function Carousel({ projects, tl }: CarouselProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState<number>(0);
 
@@ -45,7 +60,7 @@ export default function Carousel({ projects, delay }: CarouselProps) {
         initial={{ y: "-101%" }}
         animate={{ y: 0 }}
         exit={{ y: "-101%" }}
-        transition={{ delay, ease: easeInOut }}
+        transition={{ delay: tl.imgProjects, ease: easeInOut }}
       >
         {projects.map((project, index) => (
           <Image
@@ -65,10 +80,17 @@ export default function Carousel({ projects, delay }: CarouselProps) {
         initial={{ y: "-100%", opacity: 0 }}
         animate={{ y: 0, rotate: -10, opacity: 1 }}
         exit={{ y: "-25%", opacity: 0 }}
-        transition={{ ease: easeOut, delay: delay - 0.2 }}
+        transition={{ ease: easeOut, delay: tl.imgProjects - 0.2 }}
       >
         Projects
       </CarouselTitle>
+
+      <Overlay
+        variants={overlayVariants}
+        initial="initial"
+        animate="animate"
+        custom={tl.imgProjects + 0.2}
+      />
     </Wrapper>
   );
 }
@@ -95,7 +117,8 @@ const CarouselTitle = styled(motion.h2, {
   left: "-10px",
   width: "100%",
   whiteSpace: "nowrap",
-  fontSize: "5vw",
+  fontSize: "7.5vw",
   include: "fontAlt",
-  mixBlendMode: "difference",
+  zIndex: 100,
+  // mixBlendMode: "difference",
 });

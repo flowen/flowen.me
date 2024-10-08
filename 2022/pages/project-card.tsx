@@ -56,17 +56,34 @@ const yVariants = {
   },
 };
 
-const shadowVariants = {
-  initial: { y: 0 },
-  animate: (inView: boolean) => ({
-    x: inView ? 8 : 4,
-    y: inView ? 15 : 0,
+const overlayVariants = {
+  initial: { y: 0, scale: 0.25, opacity: 1 },
+  animate: ([inView, isOpen]: [boolean, boolean]) => ({
+    y: inView ? -7.5 : isOpen ? 0 : 0,
+    scale: isOpen ? 1.025 : inView ? 1.025 : 0.25,
+    opacity: isOpen ? 0 : 1,
     transition: {
-      duration: 0.5,
-      delay: 0.75,
-      ease: easeInOut,
+      y: { duration: 0.5, delay: 0.25, ease: easeOut },
+      scale: { duration: 0.5, delay: 0.25, ease: easeOut },
+      opacity: { duration: 0.5, delay: 0, ease: easeOut },
     },
   }),
+};
+
+const detailsVariant = {
+  initial: {
+    height: 0,
+  },
+  animate: (isOpen: boolean) => ({
+    height: isOpen ? "auto" : 0,
+    transition: {
+      duration: 0.5,
+      ease: easeOut,
+    },
+  }),
+  exit: {
+    height: 0,
+  },
 };
 
 const linkVariant = {
@@ -98,7 +115,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <InView threshold={0.2} triggerOnce>
       {({ ref, inView }) => (
-        <ProjectWrapper layout transition={{ duration: 0.5, ease: easeOut }}>
+        <ProjectWrapper transition={{ duration: 0.5, ease: easeOut }}>
           <Anchor
             onClick={() => setIsOpen(!isOpen)}
             variants={linkVariant}
@@ -125,13 +142,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     src={`/assets/img/projects/${image}`}
                     alt={name}
                     layout="fill"
-                    objectFit="cover"
-                    objectPosition={imagePosition || "center"}
+                    // objectFit="cover"
+                    // objectPosition={imagePosition || "center"}
                     style={{
                       pointerEvents: "none",
-                      // position: "unset",
-                      // width: "unset",
-                      // height: "unset",
+                      height: "100%",
                     }}
                   />
                 </ImageWrapper>
@@ -147,11 +162,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 </Name>
               </Inner>
 
-              <Shadow
-                variants={shadowVariants}
+              <Overlay
+                variants={overlayVariants}
                 initial="initial"
                 animate="animate"
-                custom={inView}
+                custom={[inView, isOpen]}
+                style={{ originY: 0.25 }}
               />
             </_Project>
           </Anchor>
@@ -160,11 +176,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             {isOpen && (
               <ProjectDetails
                 layout
-                initial={{ height: 0 }}
-                animate={{ height: "auto" }}
-                exit={{ height: 0 }}
-                transition={{ duration: 0.3 }}
-                style={{ height: isOpen ? "auto" : 0 }}
+                variants={detailsVariant}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                custom={{ isOpen }}
               >
                 <p>{project.description}</p>
                 <div>
@@ -276,13 +292,13 @@ const Name = styled(motion.h2, {
   },
 });
 
-const Shadow = styled(motion.div, {
-  zIndex: -1,
+export const Overlay = styled(motion.div, {
+  zIndex: 1,
   position: "absolute",
   width: "100%",
   height: "100%",
-  bottom: "-4px",
-  left: "4px",
+  bottom: 0,
+  left: 0,
   background: "red",
   mixBlendMode: "difference",
 });
@@ -290,12 +306,14 @@ const Shadow = styled(motion.div, {
 const ProjectDetails = styled(
   motion.div,
   {
-    transformOrigin: "top",
     overflow: "hidden",
+    zIndex: "100",
+    position: "relative",
     height: "auto", // Remove the conditional height
     padding: "1rem",
     backgroundColor: "rgba(255, 255, 255, 0.9)",
     color: "#000",
+    transformOrigin: "top",
 
     "& p, div, > a": {
       fontSize: "0.25em",
