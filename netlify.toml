@@ -11,10 +11,10 @@
 [build]
   base = "/2022/"
   publish = ".next"
-  command = "npm run build"
+  command = "yarn build"
 
 [build.environment]
-  NODE_VERSION = "v16.4.0"
+  NODE_VERSION = "v22.7.0"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
