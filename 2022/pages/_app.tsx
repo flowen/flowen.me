@@ -97,7 +97,7 @@ function App({ Component, pageProps, router }: AppProps) {
     }, timeline.footer.tw * 1000 + 1000);
 
     return () => clearTimeout(timeout);
-  }, [controls, timeline.footer.tw]);
+  }, [controls]);
 
   return (
     <MotionWrapper

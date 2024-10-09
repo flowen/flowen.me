@@ -23,7 +23,7 @@ export default function Projects({ projects }: ProjectsProps) {
   return (
     <Wrapper>
       <Head>
-        <title>Flowen's projects</title>
+        <title>Flowen&apos;s projects</title>
       </Head>
 
       <ProjectsContainer>
