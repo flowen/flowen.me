@@ -46,12 +46,6 @@ export default function Me({ now, timeline }: MeProps) {
           style={{ height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})` }}
           exit={{ overflow: "hidden" }}
         >
-          <Overlay
-            animate={{ opacity: 0 }}
-            exit={{ opacity: 1, y: "-101%" }}
-            layoutId="overlay"
-          />
-
           <motion.img
             ref={meImgRef}
             src="/assets/img/me.webp"
@@ -60,7 +54,7 @@ export default function Me({ now, timeline }: MeProps) {
               height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
             }}
             layoutId="me-image"
-            exit={{ y: "-100%", opacity: 0 }}
+            exit={{ y: "-100%" }}
           />
         </Wrapper>
 

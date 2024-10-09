@@ -5,6 +5,7 @@ import { GetStaticProps } from "next";
 import { motion } from "framer-motion";
 import fsPromises from "fs/promises";
 import path from "path";
+import { useRouter } from "next/router";
 
 import { styled } from "stitches.config";
 import { Row } from "@/components/Row";
@@ -49,6 +50,7 @@ interface TimelineIndex {
 }
 
 export default function Index({ projects, available, timeline }: IndexProps) {
+  const router = useRouter();
   const start = timeline.header.fan;
   const difference = 0.1;
   const tlIndex: TimelineIndex = {
@@ -106,26 +108,26 @@ export default function Index({ projects, available, timeline }: IndexProps) {
 
       <Row css={{ position: "relative" }}>
         <LinkMe href="/me" scroll={false}>
-          <Overlay
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: tl.imgMeOverlay, ease: easeInOut }}
-            layoutId="overlay"
-          />
-
-          <motion.img
-            src="/assets/img/me.webp"
-            alt="me"
-            style={{
-              height: 328,
-              pointerEvents: "none",
-              originY: 0,
-            }}
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: tl.imgMe, ease: easeInOut }}
-            layoutId="me-image"
-          />
+          >
+            <motion.img
+              src="/assets/img/me.webp"
+              alt="me"
+              style={{
+                height: 328,
+                pointerEvents: "none",
+                originY: 0,
+              }}
+              initial={{ y: 100 }}
+              animate={{ y: 0 }}
+              exit={router.asPath !== "/me" ? { y: "-100%" } : undefined}
+              transition={{ delay: tl.imgMe, ease: easeInOut }}
+              layoutId="me-image"
+            />
+          </motion.div>
         </LinkMe>
 
         <CreativeCoding>
@@ -184,7 +186,6 @@ const LinkMe = styled(Link, {
   display: "block",
   margin: "0 7vh 2vh 0",
   height: 328,
-  opacity: 0, // initially hidden so we dont see it on load
 });
 
 const Overlay = styled(motion.div, {
@@ -195,11 +196,9 @@ const Overlay = styled(motion.div, {
   width: "100%",
   height: "100%",
   pointerEvents: "none",
-
   background: "rgb(189 179 187)",
   mixBlendMode: "lighten",
-  transition: "opacity var(--d-slower) var(--ease-out)",
-  opacity: 0, // initially hidden so we dont see it on load
+  // Remove the opacity and transition properties from here
 });
 
 export { Overlay };
