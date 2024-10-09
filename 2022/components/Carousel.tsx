@@ -74,6 +74,12 @@ export default function Carousel({ projects, tl }: CarouselProps) {
             priority={true}
           />
         ))}
+        <Overlay
+          variants={overlayVariants}
+          initial="initial"
+          animate="animate"
+          custom={tl.imgProjects + 0.2}
+        />
       </_Carousel>
 
       <CarouselTitle
@@ -84,13 +90,6 @@ export default function Carousel({ projects, tl }: CarouselProps) {
       >
         Projects
       </CarouselTitle>
-
-      <Overlay
-        variants={overlayVariants}
-        initial="initial"
-        animate="animate"
-        custom={tl.imgProjects + 0.2}
-      />
     </Wrapper>
   );
 }

@@ -293,7 +293,7 @@ const Name = styled(motion.h2, {
 });
 
 export const Overlay = styled(motion.div, {
-  zIndex: 1,
+  zIndex: 1000,
   position: "absolute",
   width: "100%",
   height: "100%",
