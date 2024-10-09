@@ -64,13 +64,13 @@ export default function Me({ now, timeline }: MeProps) {
           />
         </Wrapper>
 
-        <LogoSVG
+        <LogoWrapper
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
           <Logo />
-        </LogoSVG>
+        </LogoWrapper>
       </Row>
 
       <h1>
@@ -94,10 +94,10 @@ const Wrapper = styled(motion.div, {
   position: "relative",
 });
 
-const LogoSVG = styled(motion.div, {
-  position: "relative",
-  top: "7.5vw",
-  left: "-7.5vw",
+const LogoWrapper = styled(motion.div, {
+  position: "absolute",
+  top: "5vw",
+  left: "27.5vw",
 
   "& svg": {
     height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
