@@ -184,6 +184,7 @@ const LinkMe = styled(Link, {
   display: "block",
   margin: "0 7vh 2vh 0",
   height: 328,
+  opacity: 0, // initially hidden so we dont see it on load
 });
 
 const Overlay = styled(motion.div, {
@@ -198,6 +199,7 @@ const Overlay = styled(motion.div, {
   background: "rgb(189 179 187)",
   mixBlendMode: "lighten",
   transition: "opacity var(--d-slower) var(--ease-out)",
+  opacity: 0, // initially hidden so we dont see it on load
 });
 
 export { Overlay };
