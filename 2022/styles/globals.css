@@ -4,15 +4,8 @@
     url("/assets/fonts/AzeretMono-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
-
-/* @font-face {
-  font-family: "AzeretMono BlackItalic";
-  src: local("AzeretMono BlackItalic"), local("AzeretMono-BlackItalic"),
-    url("/assets/fonts/AzeretMono-BlackItalic.woff2") format("woff2");
-  font-weight: 900;
-  font-style: italic;
-} */
 
 @font-face {
   font-family: "Ephidona";
@@ -20,6 +13,7 @@
     url("/assets/fonts/Ephidona.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -47,6 +41,13 @@ body {
   line-height: 1.5;
   text-transform: uppercase;
   color: var(--white);
+
+  /* Improve font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  font-smooth: always;
 }
 
 a {
