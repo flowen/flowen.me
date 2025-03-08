@@ -2,7 +2,7 @@ import Link from "next/link";
 import { styled } from "stitches.config";
 import WordMask from "@/components/WordMask";
 import { useRouter } from "next/router";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 
 interface Timeline {
   dob: number;

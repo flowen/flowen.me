@@ -4,7 +4,7 @@ import {
   useAnimation,
   MotionConfig,
   AnimatePresence,
-} from "framer-motion";
+} from "motion/react";
 import { styled } from "@stitches/react";
 import { AppProps } from "next/app";
 

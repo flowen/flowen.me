@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/legacy/image";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { InView } from "react-intersection-observer";
 import { styled } from "../stitches.config";
 import { easeOut, easeInOut } from "../utils/easing";
@@ -76,15 +76,17 @@ const detailsVariant = {
   initial: {
     height: 0,
   },
-  animate: (isOpen: boolean) => ({
+  animate: ({ isOpen }: { isOpen: boolean }) => ({
     height: isOpen ? "auto" : 0,
     transition: {
-      duration: 0.5,
-      ease: easeOut,
+      height: { duration: 0.5, ease: easeOut },
     },
   }),
   exit: {
     height: 0,
+    transition: {
+      height: { duration: 0.3, ease: easeInOut },
+    },
   },
 };
 
@@ -165,6 +167,8 @@ export default function ProjectCard({
                     src={`/assets/img/projects/${image}`}
                     alt={name}
                     layout="fill"
+                    objectFit="cover"
+                    objectPosition={imagePosition || "center"}
                     style={{
                       pointerEvents: "none",
                       height: "100%",
@@ -335,6 +339,12 @@ const ProjectDetails = styled(motion.div, {
   backgroundColor: "#fff",
   color: "#000",
   marginTop: "1rem",
+  transformOrigin: "top",
+  willChange: "height, opacity",
+
+  "& *": {
+    fontSize: "1.25rem",
+  },
 
   "& p": {
     marginTop: 0,

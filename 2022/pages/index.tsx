@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { GetStaticProps } from "next";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import fsPromises from "fs/promises";
 import path from "path";
 import { useRouter } from "next/router";
@@ -153,18 +153,23 @@ export default function Index({ projects, available, timeline }: IndexProps) {
       >
         <LinkMe href="/me" scroll={false}>
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: tl.imgMe, ease: easeInOut }}
-            style={{ position: "relative", width: "100%", height: "100%" }}
+            layoutId="me-image"
+            style={{
+              position: "relative",
+              width: "100%",
+              height: "100%",
+            }}
           >
             <motion.div
-              style={{ position: "relative", width: "100%", height: "100%" }}
-              initial={{ y: 100 }}
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "100%",
+              }}
+              initial={{ y: "-100%" }}
               animate={{ y: 0 }}
               exit={router.asPath !== "/me" ? { y: "-100%" } : undefined}
               transition={{ delay: tl.imgMe, ease: easeInOut }}
-              layoutId="me-image"
             >
               <Image
                 src="/assets/img/me.webp"
@@ -251,7 +256,7 @@ const LinkMe = styled(Link, {
   overflow: "hidden",
   position: "relative",
   display: "block",
-  margin: "0 20px 2vh 0",
+  margin: "0 20px 0 0",
   width: "100%",
 });
 
@@ -265,7 +270,6 @@ const Overlay = styled(motion.div, {
   pointerEvents: "none",
   background: "rgb(189 179 187)",
   mixBlendMode: "lighten",
-  // Remove the opacity and transition properties from here
 });
 
 export { Overlay };

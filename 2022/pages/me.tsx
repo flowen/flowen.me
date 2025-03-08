@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 import { styled } from "stitches.config";
 import { Row } from "@/components/Row";
@@ -24,6 +24,7 @@ const nameWords = [
 interface MeProps {
   now: string;
   bio: string;
+  future: string;
   timeline: {
     header: {
       fan: number;
@@ -42,18 +43,14 @@ interface MeProps {
   };
 }
 
-export default function Me({ now, timeline, bio }: MeProps) {
+export default function Me({ now, timeline, bio, future }: MeProps) {
   const router = useRouter();
   const [wordOrder, setWordOrder] = useState<number[]>([0, 1, 2]);
   const [isShuffling, setIsShuffling] = useState<boolean>(false);
   const [key, setKey] = useState<number>(0); // Key to force remount
-  const [carouselDelay, setCarouselDelay] = useState<number>(1.5); // Default carousel delay
-  const [activeImageIndex, setActiveImageIndex] = useState<number>(0); // Track active image
-
-  // Determine if we navigated from another page or loaded directly
+  const [carouselDelay, setCarouselDelay] = useState<number>(1.5);
   const [isDirectNavigation, setIsDirectNavigation] = useState<boolean>(true);
 
-  // Timeline values specific to the me page
   const tlMe = useMemo(
     () => ({
       now: 0.35,
@@ -66,22 +63,49 @@ export default function Me({ now, timeline, bio }: MeProps) {
 
   // Calculate the total delay based on the highest value in the timeline
   const calculateTotalDelay = useCallback(() => {
-    // The highest value should be timeline.footer.tw (1.7)
     const appDelay = timeline.footer.tw * 1000 + 1000; // Same as in _app.tsx
     const totalDelay = appDelay + APP_ANIMATION_TIME * 1000; // Add app animation time
     return totalDelay;
   }, [timeline.footer.tw]);
 
-  // Check if we navigated from another page
+  // Track page loads using Next.js router events
   useEffect(() => {
-    // If we have a referrer or previous route, we didn't load directly
-    if (
-      document.referrer.includes(window.location.host) ||
-      router.asPath !== router.pathname
-    ) {
-      setIsDirectNavigation(false);
+    // Check URL for manual override first
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const forceMode = params.get("navMode");
+
+      if (forceMode === "direct") {
+        setIsDirectNavigation(true);
+        return;
+      } else if (forceMode === "indirect") {
+        setIsDirectNavigation(false);
+        return;
+      }
     }
-  }, [router.asPath, router.pathname]);
+
+    // Next.js-specific approach using router events
+    const handleRouteChangeStart = () => {
+      // Store a flag in sessionStorage indicating we're navigating within the app
+      if (typeof window !== "undefined") {
+        sessionStorage.setItem("nextNavigation", "true");
+      }
+    };
+
+    // Setup listener for future navigations
+    router.events.on("routeChangeStart", handleRouteChangeStart);
+
+    // Check if we have the navigation flag from a previous navigation
+    if (typeof window !== "undefined") {
+      const hadPreviousNavigation =
+        sessionStorage.getItem("nextNavigation") === "true";
+      setIsDirectNavigation(!hadPreviousNavigation);
+    }
+
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChangeStart);
+    };
+  }, []);
 
   useEffect(() => {
     window.scrollTo({
@@ -95,8 +119,8 @@ export default function Me({ now, timeline, bio }: MeProps) {
     // Calculate the appropriate carousel delay based on navigation type
     if (isDirectNavigation) {
       // For direct navigation, use the highest value from the timeline plus app animation time
-      const appDelay = timeline.footer.tw + 1; // Convert to seconds and add 1s buffer
-      const totalDelay = appDelay + APP_ANIMATION_TIME; // Add app animation time in seconds
+      const appDelay = timeline.footer.tw + 1;
+      const totalDelay = appDelay + APP_ANIMATION_TIME;
       setCarouselDelay(totalDelay);
     } else {
       // For navigation from another page, use the default delay
@@ -169,14 +193,13 @@ export default function Me({ now, timeline, bio }: MeProps) {
 
       <AboutMe>
         <AnimatePresence mode="wait">
-          <WordContainer key={`word-${key}-${wordOrder[0]}`}>
-            <WordMask
-              direction={nameWords[wordOrder[0]].direction}
-              delay={isShuffling ? 0 : tlMe.nameWords}
-            >
-              {nameWords[wordOrder[0]].text}
-            </WordMask>
-          </WordContainer>
+          <WordMask
+            key={`word-${key}-${wordOrder[0]}`}
+            direction={nameWords[wordOrder[0]].direction}
+            delay={isShuffling ? 0 : tlMe.nameWords}
+          >
+            {nameWords[wordOrder[0]].text}
+          </WordMask>
         </AnimatePresence>
 
         <WordMask direction="top" delay={tlMe.nameWords}>
@@ -184,14 +207,13 @@ export default function Me({ now, timeline, bio }: MeProps) {
         </WordMask>
 
         <AnimatePresence mode="wait">
-          <WordContainer key={`word-${key}-${wordOrder[1]}`}>
-            <WordMask
-              direction={nameWords[wordOrder[1]].direction}
-              delay={isShuffling ? 0 : tlMe.nameWords}
-            >
-              {nameWords[wordOrder[1]].text}
-            </WordMask>
-          </WordContainer>
+          <WordMask
+            key={`word-${key}-${wordOrder[1]}`}
+            direction={nameWords[wordOrder[1]].direction}
+            delay={isShuffling ? 0 : tlMe.nameWords}
+          >
+            {nameWords[wordOrder[1]].text}
+          </WordMask>
         </AnimatePresence>
 
         <WordMask direction="top" delay={tlMe.nameWords}>
@@ -199,14 +221,13 @@ export default function Me({ now, timeline, bio }: MeProps) {
         </WordMask>
 
         <AnimatePresence mode="wait">
-          <WordContainer key={`word-${key}-${wordOrder[2]}`}>
-            <WordMask
-              direction={nameWords[wordOrder[2]].direction}
-              delay={isShuffling ? 0 : tlMe.nameWords}
-            >
-              {nameWords[wordOrder[2]].text}
-            </WordMask>
-          </WordContainer>
+          <WordMask
+            key={`word-${key}-${wordOrder[2]}`}
+            direction={nameWords[wordOrder[2]].direction}
+            delay={isShuffling ? 0 : tlMe.nameWords}
+          >
+            {nameWords[wordOrder[2]].text}
+          </WordMask>
         </AnimatePresence>
       </AboutMe>
 
@@ -237,6 +258,20 @@ export default function Me({ now, timeline, bio }: MeProps) {
           css={{ fontSize: "5vw", marginBottom: "5vh" }}
         />
       </h1>
+
+      <h1>
+        <WordMask direction="top" delay={tlMe.now}>
+          /FUTURE
+        </WordMask>
+
+        <WordMask
+          direction="top"
+          delay={tlMe.nowContent}
+          altFont
+          html={future}
+          css={{ fontSize: "5vw", marginBottom: "5vh" }}
+        />
+      </h1>
     </motion.div>
   );
 }
@@ -253,6 +288,7 @@ const LogoWrapper = styled(motion.div, {
   position: "absolute",
   top: "5vw",
   left: "27.5vw",
+  mixBlendMode: "difference",
 
   "& svg": {
     height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
@@ -261,17 +297,10 @@ const LogoWrapper = styled(motion.div, {
 
 const AboutMe = styled("div", {
   display: "flex",
-  gap: "1vw",
-  margin: "5vh 0 5vh",
+  gap: "20px",
+  margin: "5vh 0",
   fontFamily: "var(--font-alt)",
   fontSize: "5vw",
-  alignItems: "center",
-});
-
-const WordContainer = styled(motion.div, {
-  minWidth: "150px",
-  display: "flex",
-  justifyContent: "center",
 });
 
 import fsPromises from "fs/promises";

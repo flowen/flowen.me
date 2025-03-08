@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import Image from "next/legacy/image";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { styled } from "stitches.config";
 
 import { Overlay } from "../pages/project-card";

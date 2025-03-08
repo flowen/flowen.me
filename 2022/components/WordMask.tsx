@@ -1,5 +1,5 @@
 import { styled, theme } from "stitches.config";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { easeIn, easeOut } from "@/utils/easing";
 
 interface WordMaskProps {
