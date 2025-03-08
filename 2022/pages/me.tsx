@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "motion/react";
@@ -47,9 +47,11 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
   const router = useRouter();
   const [wordOrder, setWordOrder] = useState<number[]>([0, 1, 2]);
   const [isShuffling, setIsShuffling] = useState<boolean>(false);
-  const [key, setKey] = useState<number>(0); // Key to force remount
-  const [carouselDelay, setCarouselDelay] = useState<number>(1.5);
+  const [key, setKey] = useState<number>(0);
+  const [carouselDelay, setCarouselDelay] =
+    useState<number>(APP_ANIMATION_TIME);
   const [isDirectNavigation, setIsDirectNavigation] = useState<boolean>(true);
+  const isExitingRef = useRef(false);
 
   const tlMe = useMemo(
     () => ({
@@ -68,9 +70,7 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
     return totalDelay;
   }, [timeline.footer.tw]);
 
-  // Track page loads using Next.js router events
   useEffect(() => {
-    // Check URL for manual override first
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
       const forceMode = params.get("navMode");
@@ -84,15 +84,29 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
       }
     }
 
-    // Next.js-specific approach using router events
-    const handleRouteChangeStart = () => {
+    // fix for exit animations for rou hun = flowen = lowen
+    const handleRouteChangeStart = (url: string) => {
       // Store a flag in sessionStorage indicating we're navigating within the app
       if (typeof window !== "undefined") {
         sessionStorage.setItem("nextNavigation", "true");
       }
-    };
+      // Set exiting ref to true immediately (synchronous)
+      isExitingRef.current = true;
+      setKey((prev) => prev + 1);
 
-    // Setup listener for future navigations
+      if (url !== router.asPath) {
+        // Prevent the default navigation
+        router.events.emit("routeChangeError");
+
+        window.history.pushState(null, "", router.asPath);
+
+        setTimeout(() => {
+          router.push(url);
+        }, 300);
+
+        return false;
+      }
+    };
     router.events.on("routeChangeStart", handleRouteChangeStart);
 
     // Check if we have the navigation flag from a previous navigation
@@ -105,7 +119,7 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
     return () => {
       router.events.off("routeChangeStart", handleRouteChangeStart);
     };
-  }, []);
+  }, [router]);
 
   useEffect(() => {
     window.scrollTo({
@@ -196,13 +210,16 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
           <WordMask
             key={`word-${key}-${wordOrder[0]}`}
             direction={nameWords[wordOrder[0]].direction}
-            delay={isShuffling ? 0 : tlMe.nameWords}
+            delay={isExitingRef.current ? 0 : isShuffling ? 0 : tlMe.nameWords}
           >
             {nameWords[wordOrder[0]].text}
           </WordMask>
         </AnimatePresence>
 
-        <WordMask direction="top" delay={tlMe.nameWords}>
+        <WordMask
+          direction="top"
+          delay={isExitingRef.current ? 0 : tlMe.nameWords}
+        >
           =
         </WordMask>
 
@@ -210,13 +227,16 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
           <WordMask
             key={`word-${key}-${wordOrder[1]}`}
             direction={nameWords[wordOrder[1]].direction}
-            delay={isShuffling ? 0 : tlMe.nameWords}
+            delay={isExitingRef.current ? 0 : isShuffling ? 0 : tlMe.nameWords}
           >
             {nameWords[wordOrder[1]].text}
           </WordMask>
         </AnimatePresence>
 
-        <WordMask direction="top" delay={tlMe.nameWords}>
+        <WordMask
+          direction="top"
+          delay={isExitingRef.current ? 0 : tlMe.nameWords}
+        >
           =
         </WordMask>
 
@@ -224,7 +244,7 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
           <WordMask
             key={`word-${key}-${wordOrder[2]}`}
             direction={nameWords[wordOrder[2]].direction}
-            delay={isShuffling ? 0 : tlMe.nameWords}
+            delay={isExitingRef.current ? 0 : isShuffling ? 0 : tlMe.nameWords}
           >
             {nameWords[wordOrder[2]].text}
           </WordMask>
