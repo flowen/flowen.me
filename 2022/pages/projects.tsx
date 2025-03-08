@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import ProjectCard from "./project-card";
 import { styled } from "../stitches.config";
@@ -20,15 +20,89 @@ interface ProjectsProps {
 }
 
 export default function Projects({ projects }: ProjectsProps) {
+  const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const [visibleProjects, setVisibleProjects] = useState<Set<string>>(
+    new Set()
+  );
+
+  // Set the first visible project as active by default
+  useEffect(() => {
+    if (visibleProjects.size > 0 && !activeProject) {
+      const firstVisible = projects.find((p) => visibleProjects.has(p.name));
+      if (firstVisible) {
+        setActiveProject(firstVisible);
+      }
+    }
+  }, [visibleProjects, activeProject, projects]);
+
+  // Handle project visibility changes
+  const handleProjectVisibilityChange = (
+    project: Project,
+    isVisible: boolean
+  ) => {
+    setVisibleProjects((prev) => {
+      const newSet = new Set(prev);
+      if (isVisible) {
+        newSet.add(project.name);
+      } else {
+        newSet.delete(project.name);
+      }
+      return newSet;
+    });
+  };
+
+  const handleProjectOpenChange = (project: Project, isOpen: boolean) => {
+    if (isOpen) {
+      setActiveProject(project);
+    }
+  };
+
+  const getMetaTitle = () => {
+    if (activeProject) {
+      return `${activeProject.name} | Rou Hun Fan | Frontend Developer & Designer`;
+    }
+    return "Projects | Rou Hun Fan | Frontend Developer & Designer";
+  };
+
+  const getMetaDescription = () => {
+    if (activeProject) {
+      return activeProject.description;
+    }
+    return "Explore my portfolio of frontend development and design projects. Specializing in creating engaging, interactive web experiences.";
+  };
+
+  const getMetaKeywords = () => {
+    if (activeProject) {
+      return `${activeProject.name}, ${activeProject.tech}, frontend development, UI design, web development`;
+    }
+    return "frontend development, UI design, web projects, portfolio, interactive websites";
+  };
+
   return (
     <Wrapper>
       <Head>
-        <title>Flowen&apos;s projects</title>
+        <title>{getMetaTitle()}</title>
+        <meta name="description" content={getMetaDescription()} />
+        <meta name="keywords" content={getMetaKeywords()} />
+        {activeProject && activeProject.image && (
+          <meta
+            property="og:image"
+            content={`/assets/img/projects/${activeProject.image}`}
+          />
+        )}
       </Head>
 
       <ProjectsContainer>
         {projects.map((project, index) => (
-          <ProjectCard key={project.name} project={project} index={index} />
+          <ProjectCard
+            key={project.name}
+            project={project}
+            index={index}
+            onVisibilityChange={(isVisible) =>
+              handleProjectVisibilityChange(project, isVisible)
+            }
+            onOpenChange={(isOpen) => handleProjectOpenChange(project, isOpen)}
+          />
         ))}
       </ProjectsContainer>
     </Wrapper>

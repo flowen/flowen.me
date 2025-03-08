@@ -11,7 +11,8 @@ import { styled } from "stitches.config";
 import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 import Carousel from "@/components/Carousel";
-import { easeInOut } from "@/utils/easing";
+import { easeInOut, easeOut } from "@/utils/easing";
+import Image from "next/image";
 
 interface Project {
   id: string;
@@ -73,12 +74,30 @@ export default function Index({ projects, available, timeline }: IndexProps) {
   return (
     <motion.div>
       <Head>
-        <title>Freelance frontend UI developer and designer, Rou Hun Fan</title>
+        <title>
+          The web is boring af, lets 🌶️ it up | Freelance frontend UI developer
+          and designer | Rou Hun Fan
+        </title>
       </Head>
 
       <h1>
-        <Row>
-          <div>
+        <Row
+          css={{
+            display: "flex",
+            alignItems: "stretch",
+            flexWrap: "nowrap",
+          }}
+        >
+          <div
+            style={{
+              flex: "0 0 auto",
+              whiteSpace: "nowrap",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignSelf: "stretch",
+            }}
+          >
             <WordMask direction="top" delay={tl.uiDev}>
               UI dev
             </WordMask>
@@ -90,9 +109,27 @@ export default function Index({ projects, available, timeline }: IndexProps) {
             </WordMask>
           </div>
 
-          <AnchorProjects href="/projects" scroll={false}>
-            <Carousel projects={projects} tl={tl} />
-          </AnchorProjects>
+          <div
+            style={{
+              position: "relative",
+              flex: "0 1 100%",
+              minHeight: "100%",
+              marginLeft: "2rem",
+            }}
+          >
+            <AnchorProjects href="/projects" scroll={false}>
+              <Carousel projects={projects} tl={tl} />
+            </AnchorProjects>
+
+            <CarouselTitle
+              initial={{ y: "-100%", opacity: 0 }}
+              animate={{ y: 0, rotate: -10, opacity: 1 }}
+              exit={{ y: "-25%", opacity: 0 }}
+              transition={{ ease: easeOut, delay: tl.imgProjects + 0.25 }}
+            >
+              Projects
+            </CarouselTitle>
+          </div>
         </Row>
 
         <Row>
@@ -106,31 +143,46 @@ export default function Index({ projects, available, timeline }: IndexProps) {
         </Row>
       </h1>
 
-      <Row css={{ position: "relative" }}>
+      <Row
+        css={{
+          display: "flex",
+          alignItems: "stretch",
+          justifyContent: "space-between",
+          flexWrap: "nowrap",
+        }}
+      >
         <LinkMe href="/me" scroll={false}>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: tl.imgMe, ease: easeInOut }}
+            style={{ position: "relative", width: "100%", height: "100%" }}
           >
-            <motion.img
-              src="/assets/img/me.webp"
-              alt="me"
-              style={{
-                height: 328,
-                pointerEvents: "none",
-                originY: 0,
-              }}
+            <motion.div
+              style={{ position: "relative", width: "100%", height: "100%" }}
               initial={{ y: 100 }}
               animate={{ y: 0 }}
               exit={router.asPath !== "/me" ? { y: "-100%" } : undefined}
               transition={{ delay: tl.imgMe, ease: easeInOut }}
               layoutId="me-image"
-            />
+            >
+              <Image
+                src="/assets/img/me.webp"
+                alt="me"
+                fill
+                sizes="(max-width: 768px) 100vw, 328px"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center -20px",
+                  pointerEvents: "none",
+                }}
+                priority
+              />
+            </motion.div>
           </motion.div>
         </LinkMe>
 
-        <CreativeCoding>
+        <HelpingBizGrow>
           <WordMask direction="top" delay={tl.creative}>
             10+ years
           </WordMask>
@@ -140,7 +192,7 @@ export default function Index({ projects, available, timeline }: IndexProps) {
           <WordMask direction="bottom" delay={tl.creative}>
             biz grow
           </WordMask>
-        </CreativeCoding>
+        </HelpingBizGrow>
       </Row>
 
       <Row>
@@ -148,7 +200,11 @@ export default function Index({ projects, available, timeline }: IndexProps) {
           Available:
         </WordMask>
         <WordMask direction="left" delay={tl.availableAnswer} altFont={true}>
-          {typeof available === "string" ? available : available ? "Yes" : "No"}
+          {typeof available === "string"
+            ? available
+            : available
+            ? "Yes LFG"
+            : "No sers"}
         </WordMask>
       </Row>
     </motion.div>
@@ -156,24 +212,35 @@ export default function Index({ projects, available, timeline }: IndexProps) {
 }
 
 const AnchorProjects = styled(motion.create(Link), {
+  overflow: "hidden",
   display: "block",
-  position: "relative",
-  flex: "1 1 0",
-  margin: "1rem 0 1rem 3rem",
-  height: 328,
+  width: "100%",
+  height: "100%",
 
   "&:hover": {
     cursor: "pointer",
   },
-
-  "& img": {
-    display: "block",
-    width: "100%",
-  },
 });
 
-const CreativeCoding = styled("h1", {
+const CarouselTitle = styled(motion.h2, {
+  position: "absolute",
+  bottom: "-20px",
+  left: "-10px",
+  width: "100%",
+  whiteSpace: "nowrap",
+  fontSize: "7.5vw",
   include: "fontAlt",
+  zIndex: 100,
+  mixBlendMode: "difference",
+});
+
+const HelpingBizGrow = styled("h1", {
+  include: "fontAlt",
+  alignSelf: "stretch",
+  display: "flex",
+  flex: "0 0 auto",
+  flexDirection: "column",
+  justifyContent: "center",
 });
 
 const Ampersand = styled("span", {
@@ -184,8 +251,8 @@ const LinkMe = styled(Link, {
   overflow: "hidden",
   position: "relative",
   display: "block",
-  margin: "0 7vh 2vh 0",
-  height: 328,
+  margin: "0 20px 2vh 0",
+  width: "100%",
 });
 
 const Overlay = styled(motion.div, {

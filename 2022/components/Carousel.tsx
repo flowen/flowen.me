@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { styled } from "stitches.config";
 
 import { Overlay } from "../pages/project-card";
-import { easeOut, easeInOut } from "@/utils/easing";
+import { easeInOut } from "@/utils/easing";
 import { Timeline } from "@/pages/index";
 interface Project {
   name: string;
@@ -54,51 +54,46 @@ export default function Carousel({ projects, tl }: CarouselProps) {
   }, [ref, active, projects.length]);
 
   return (
-    <Wrapper>
-      <_Carousel
-        ref={ref}
-        initial={{ y: "-101%" }}
-        animate={{ y: 0 }}
-        exit={{ y: "-101%" }}
-        transition={{ delay: tl.imgProjects, ease: easeInOut }}
-      >
-        {projects.map((project, index) => (
+    <_Carousel
+      ref={ref}
+      initial={{ y: "-101%" }}
+      animate={{ y: 0 }}
+      exit={{ y: "-101%" }}
+      transition={{ delay: tl.imgProjects, ease: easeInOut }}
+    >
+      {projects.map((project, index) => (
+        <div
+          key={project.name}
+          className={`image-container ${active === index ? "active" : ""}`}
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            top: 0,
+            left: 0,
+          }}
+        >
           <Image
-            key={project.name}
-            className={active === index ? "active" : ""}
             src={`/assets/img/projects/${project.image}`}
             alt={project.name}
             layout="fill"
-            objectFit="cover"
-            objectPosition={project.imagePosition}
+            style={{
+              objectFit: "cover",
+              objectPosition: project.imagePosition,
+            }}
             priority={true}
           />
-        ))}
-        <Overlay
-          variants={overlayVariants}
-          initial="initial"
-          animate="animate"
-          custom={tl.imgProjects + 0.2}
-        />
-      </_Carousel>
-
-      <CarouselTitle
-        initial={{ y: "-100%", opacity: 0 }}
-        animate={{ y: 0, rotate: -10, opacity: 1 }}
-        exit={{ y: "-25%", opacity: 0 }}
-        transition={{ ease: easeOut, delay: tl.imgProjects - 0.2 }}
-      >
-        Projects
-      </CarouselTitle>
-    </Wrapper>
+        </div>
+      ))}
+      <Overlay
+        variants={overlayVariants}
+        initial="initial"
+        animate="animate"
+        custom={tl.imgProjects + 0.2}
+      />
+    </_Carousel>
   );
 }
-
-const Wrapper = styled(motion.div, {
-  overflow: "hidden",
-  width: "100%",
-  height: "100%",
-});
 
 const _Carousel = styled(motion.div, {
   position: "relative",
@@ -108,16 +103,4 @@ const _Carousel = styled(motion.div, {
   "& .active": {
     zIndex: "100 !important",
   },
-});
-
-const CarouselTitle = styled(motion.h2, {
-  position: "absolute",
-  bottom: "-20px",
-  left: "-10px",
-  width: "100%",
-  whiteSpace: "nowrap",
-  fontSize: "7.5vw",
-  include: "fontAlt",
-  zIndex: 100,
-  // mixBlendMode: "difference",
 });

@@ -117,7 +117,9 @@ function App({ Component, pageProps, router }: AppProps) {
         </MotionConfig>
       </main>
 
-      <Footer timeline={timeline.footer} />
+      <AnimatePresence mode="wait">
+        <Footer timeline={timeline.footer} key={`footer-${router.route}`} />
+      </AnimatePresence>
     </MotionWrapper>
   );
 }

@@ -55,7 +55,7 @@ export default function Footer({ timeline }: FooterProps) {
             LI
           </a>
         </WordMask>
-        {/* &nbsp;
+        &nbsp;
         <WordMask direction="left" delay={timeline.tg}>
           <a
             href="https://t.me/flowen"
@@ -64,15 +64,15 @@ export default function Footer({ timeline }: FooterProps) {
           >
             TG
           </a>
-        </WordMask> */}
+        </WordMask>
         &nbsp;
         <WordMask direction="left" delay={timeline.tw}>
           <a
-            href="https://twitter.com/flowen_af"
+            href="https://x.com/flowen_af"
             target="_blank"
             rel="noopener noreferrer"
           >
-            TW
+            X
           </a>
         </WordMask>
       </Wrapper>

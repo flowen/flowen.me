@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/legacy/image";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -17,6 +17,8 @@ interface ProjectCardProps {
     url?: string;
   };
   index: number;
+  onVisibilityChange?: (isVisible: boolean) => void;
+  onOpenChange?: (isOpen: boolean) => void;
 }
 
 const projectVariants = {
@@ -99,8 +101,25 @@ const linkVariant = {
   }),
 };
 
-export default function ProjectCard({ project, index }: ProjectCardProps) {
+export default function ProjectCard({
+  project,
+  index,
+  onVisibilityChange,
+  onOpenChange,
+}: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Notify parent when open state changes
+  useEffect(() => {
+    if (onOpenChange) {
+      onOpenChange(isOpen);
+    }
+  }, [isOpen, onOpenChange]);
+
+  // Handle opening/closing the project details
+  const handleToggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
 
   if (!project) {
     return null;
@@ -113,11 +132,15 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   }
 
   return (
-    <InView threshold={0.2} triggerOnce>
+    <InView
+      threshold={0.2}
+      triggerOnce
+      onChange={(inView) => onVisibilityChange && onVisibilityChange(inView)}
+    >
       {({ ref, inView }) => (
         <ProjectWrapper transition={{ duration: 0.5, ease: easeOut }}>
           <Anchor
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={handleToggleOpen}
             variants={linkVariant}
             initial="initial"
             animate="animate"
@@ -142,8 +165,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     src={`/assets/img/projects/${image}`}
                     alt={name}
                     layout="fill"
-                    // objectFit="cover"
-                    // objectPosition={imagePosition || "center"}
                     style={{
                       pointerEvents: "none",
                       height: "100%",
@@ -232,7 +253,6 @@ const _Project = styled(motion.div, {
   position: "relative",
   width: "100%",
   border: "3px solid #fff",
-  // height: "100%",
 });
 
 const Inner = styled("div", {
@@ -303,41 +323,42 @@ export const Overlay = styled(motion.div, {
   mixBlendMode: "difference",
 });
 
-const ProjectDetails = styled(
-  motion.div,
-  {
-    overflow: "hidden",
-    zIndex: "100",
-    position: "relative",
-    height: "auto", // Remove the conditional height
-    padding: "1rem",
-    backgroundColor: "rgba(255, 255, 255, 0.9)",
+const ProjectWrapper = styled(motion.div, {
+  position: "relative",
+  width: "100%",
+  marginBottom: "5vh",
+});
+
+const ProjectDetails = styled(motion.div, {
+  overflow: "hidden",
+  padding: "2rem",
+  backgroundColor: "#fff",
+  color: "#000",
+  marginTop: "1rem",
+
+  "& p": {
+    marginTop: 0,
+  },
+
+  "& div": {
+    marginBottom: "1rem",
+  },
+
+  "& ul": {
+    margin: 0,
+    padding: 0,
+    listStyle: "none",
+  },
+
+  "& a": {
     color: "#000",
-    transformOrigin: "top",
+    textDecoration: "none",
+    borderBottom: "1px solid #000",
+    paddingBottom: "2px",
+    transition: "all 0.2s ease",
 
-    "& p, div, > a": {
-      fontSize: "0.25em",
-    },
-
-    "p, div": {
-      marginBottom: "1em",
-    },
-
-    "& ul": {
-      display: "inline-flex",
-      gap: "1em",
-      listStyle: "disc",
-      marginLeft: "1rem",
-    },
-
-    "& a": {
-      color: "blue",
-      textDecoration: "underline",
+    "&:hover": {
+      borderBottomColor: "transparent",
     },
   },
-  { shouldForwardProp: (prop: string) => prop !== "isOpen" }
-);
-
-const ProjectWrapper = styled(motion.div, {
-  marginBottom: "5vh",
 });
