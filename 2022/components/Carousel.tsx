@@ -8,7 +8,8 @@ import { styled } from "stitches.config";
 
 import { Overlay } from "../pages/project-card";
 import { easeInOut } from "@/utils/easing";
-import { Timeline } from "@/pages/index";
+import { timelineIndex } from "@/utils/timelines";
+
 interface Project {
   name: string;
   image: string;
@@ -17,7 +18,6 @@ interface Project {
 
 interface CarouselProps {
   projects: Project[];
-  tl: Timeline;
 }
 
 const overlayVariants = {
@@ -34,7 +34,7 @@ const overlayVariants = {
   },
 };
 
-export default function Carousel({ projects, tl }: CarouselProps) {
+export default function Carousel({ projects }: CarouselProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState<number>(0);
 
@@ -59,7 +59,7 @@ export default function Carousel({ projects, tl }: CarouselProps) {
       initial={{ y: "-101%" }}
       animate={{ y: 0 }}
       exit={{ y: "-101%" }}
-      transition={{ delay: tl.imgProjects, ease: easeInOut }}
+      transition={{ delay: timelineIndex.imgProjects, ease: easeInOut }}
     >
       {projects.map((project, index) => (
         <div
@@ -89,7 +89,7 @@ export default function Carousel({ projects, tl }: CarouselProps) {
         variants={overlayVariants}
         initial="initial"
         animate="animate"
-        custom={tl.imgProjects + 0.2}
+        custom={timelineIndex.imgProjects + 0.2}
       />
     </_Carousel>
   );

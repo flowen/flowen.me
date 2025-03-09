@@ -1,18 +1,21 @@
-import React from "react";
+import { useEffect } from "react";
+import { GetStaticProps } from "next";
 import Link from "next/link";
 import Head from "next/head";
-import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
+import Image from "next/image";
+
 import { motion } from "motion/react";
 import fsPromises from "fs/promises";
 import path from "path";
-import { useRouter } from "next/router";
 
 import { styled } from "stitches.config";
 import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 import Carousel from "@/components/Carousel";
+
 import { easeInOut, easeOut } from "@/utils/easing";
-import Image from "next/image";
+import { timelineIndex } from "@/utils/timelines";
 
 interface Project {
   id: string;
@@ -22,54 +25,13 @@ interface Project {
   imagePosition: string;
 }
 
-export interface Timeline {
-  header: {
-    fan: number;
-  };
-  [key: string]: any;
-}
-
 interface IndexProps {
   projects: Project[];
   available: string | boolean;
-  timeline: Timeline;
 }
 
-interface TimelineIndex {
-  uiDev: number;
-  design: number;
-  motion: number;
-  ampersand: number;
-  frontend: number;
-  imgProjects: number;
-  imgMe: number;
-  imgMeOverlay: number;
-  creative: number;
-  coding: number;
-  available: number;
-  availableAnswer: number;
-}
-
-export default function Index({ projects, available, timeline }: IndexProps) {
+export default function Index({ projects, available }: IndexProps) {
   const router = useRouter();
-  const start = timeline.header.fan;
-  const difference = 0.1;
-  const tlIndex: TimelineIndex = {
-    uiDev: start,
-    design: start + difference,
-    motion: start + difference * 2,
-    ampersand: start + difference * 3,
-    frontend: start + difference * 4,
-    imgProjects: start + difference * 5,
-    imgMe: start + difference * 6,
-    imgMeOverlay: start + difference * 7,
-    creative: start + difference * 8,
-    coding: start + difference * 9,
-    available: start + difference * 10,
-    availableAnswer: start + difference * 11,
-  };
-
-  const tl: Timeline & TimelineIndex = { ...timeline, ...tlIndex };
 
   return (
     <motion.div>
@@ -83,7 +45,6 @@ export default function Index({ projects, available, timeline }: IndexProps) {
       <h1>
         <Row
           css={{
-            display: "flex",
             alignItems: "stretch",
             flexWrap: "nowrap",
           }}
@@ -98,13 +59,13 @@ export default function Index({ projects, available, timeline }: IndexProps) {
               alignSelf: "stretch",
             }}
           >
-            <WordMask direction="top" delay={tl.uiDev}>
+            <WordMask direction="top" delay={timelineIndex.uiDev}>
               UI dev
             </WordMask>
-            <WordMask direction="left" delay={tl.design}>
+            <WordMask direction="left" delay={timelineIndex.design}>
               Design
             </WordMask>
-            <WordMask direction="bottom" delay={tl.motion}>
+            <WordMask direction="bottom" delay={timelineIndex.motion}>
               Motion
             </WordMask>
           </div>
@@ -118,14 +79,17 @@ export default function Index({ projects, available, timeline }: IndexProps) {
             }}
           >
             <AnchorProjects href="/projects" scroll={false}>
-              <Carousel projects={projects} tl={tl} />
+              <Carousel projects={projects} />
             </AnchorProjects>
 
             <CarouselTitle
               initial={{ y: "-100%", opacity: 0 }}
               animate={{ y: 0, rotate: -10, opacity: 1 }}
               exit={{ y: "-25%", opacity: 0 }}
-              transition={{ ease: easeOut, delay: tl.imgProjects + 0.25 }}
+              transition={{
+                ease: easeOut,
+                delay: timelineIndex.imgProjects + 0.25,
+              }}
             >
               Projects
             </CarouselTitle>
@@ -133,11 +97,11 @@ export default function Index({ projects, available, timeline }: IndexProps) {
         </Row>
 
         <Row>
-          <WordMask direction="top" delay={tl.ampersand}>
+          <WordMask direction="top" delay={timelineIndex.ampersand}>
             <Ampersand>&amp;</Ampersand>
           </WordMask>
           &nbsp;
-          <WordMask direction="top" delay={tl.frontend}>
+          <WordMask direction="top" delay={timelineIndex.frontend}>
             Frontend
           </WordMask>
         </Row>
@@ -145,7 +109,6 @@ export default function Index({ projects, available, timeline }: IndexProps) {
 
       <Row
         css={{
-          display: "flex",
           alignItems: "stretch",
           justifyContent: "space-between",
           flexWrap: "nowrap",
@@ -169,7 +132,7 @@ export default function Index({ projects, available, timeline }: IndexProps) {
               initial={{ y: "-100%" }}
               animate={{ y: 0 }}
               exit={router.asPath !== "/me" ? { y: "-100%" } : undefined}
-              transition={{ delay: tl.imgMe, ease: easeInOut }}
+              transition={{ delay: timelineIndex.imgMe, ease: easeInOut }}
             >
               <Image
                 src="/assets/img/me.webp"
@@ -188,23 +151,27 @@ export default function Index({ projects, available, timeline }: IndexProps) {
         </LinkMe>
 
         <HelpingBizGrow>
-          <WordMask direction="top" delay={tl.creative}>
+          <WordMask direction="top" delay={timelineIndex.creative}>
             10+ years
           </WordMask>
-          <WordMask direction="bottom" delay={tl.creative}>
+          <WordMask direction="bottom" delay={timelineIndex.creative}>
             of helping
           </WordMask>
-          <WordMask direction="bottom" delay={tl.creative}>
+          <WordMask direction="bottom" delay={timelineIndex.creative}>
             biz grow
           </WordMask>
         </HelpingBizGrow>
       </Row>
 
       <Row>
-        <WordMask direction="right" delay={tl.available}>
+        <WordMask direction="right" delay={timelineIndex.available}>
           Available:
         </WordMask>
-        <WordMask direction="left" delay={tl.availableAnswer} altFont={true}>
+        <WordMask
+          direction="left"
+          delay={timelineIndex.availableAnswer}
+          altFont={true}
+        >
           {typeof available === "string"
             ? available
             : available

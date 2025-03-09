@@ -10,11 +10,11 @@ import { Row } from "@/components/Row";
 import WordMask from "@/components/WordMask";
 import Logo from "@/assets/svg/logo.svg";
 import MeCarousel from "@/components/MeCarousel";
+import { timelineMe } from "@/utils/timelines";
 
 const HEIGHTMULTIPLIER = 3.25;
 const APP_ANIMATION_TIME = 1.5; // Animation time from _app.tsx MotionWrapper
 
-// Words to shuffle with their directions
 const nameWords = [
   { text: "Rou Hun", direction: "left" as const },
   { text: "Lowen", direction: "bottom" as const },
@@ -25,25 +25,9 @@ interface MeProps {
   now: string;
   bio: string;
   future: string;
-  timeline: {
-    header: {
-      fan: number;
-      [key: string]: number;
-    };
-    footer: {
-      dob: number;
-      contact: number;
-      arrow: number;
-      cv: number;
-      tg: number;
-      tw: number;
-      [key: string]: number;
-    };
-    [key: string]: any;
-  };
 }
 
-export default function Me({ now, timeline, bio, future }: MeProps) {
+export default function Me({ now, bio, future }: MeProps) {
   const router = useRouter();
   const [wordOrder, setWordOrder] = useState<number[]>([0, 1, 2]);
   const [isShuffling, setIsShuffling] = useState<boolean>(false);
@@ -53,22 +37,12 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
   const [isDirectNavigation, setIsDirectNavigation] = useState<boolean>(true);
   const isExitingRef = useRef(false);
 
-  const tlMe = useMemo(
-    () => ({
-      now: 0.35,
-      nowContent: 0.5,
-      meCarousel: 1.5,
-      nameWords: 0.8,
-    }),
-    []
-  );
-
   // Calculate the total delay based on the highest value in the timeline
   const calculateTotalDelay = useCallback(() => {
-    const appDelay = timeline.footer.tw * 1000 + 1000; // Same as in _app.tsx
+    const appDelay = timelineMe.footer.tw * 1000 + 1000; // Same as in _app.tsx
     const totalDelay = appDelay + APP_ANIMATION_TIME * 1000; // Add app animation time
     return totalDelay;
-  }, [timeline.footer.tw]);
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -121,40 +95,33 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
     };
   }, [router]);
 
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);
-
   // Calculate and set the appropriate delays based on navigation type
   useEffect(() => {
     // Calculate the appropriate carousel delay based on navigation type
     if (isDirectNavigation) {
       // For direct navigation, use the highest value from the timeline plus app animation time
-      const appDelay = timeline.footer.tw + 1;
+      const appDelay = timelineMe.footer.tw + 1;
       const totalDelay = appDelay + APP_ANIMATION_TIME;
       setCarouselDelay(totalDelay);
     } else {
       // For navigation from another page, use the default delay
-      setCarouselDelay(tlMe.meCarousel);
+      setCarouselDelay(timelineMe.meCarousel);
     }
-  }, [isDirectNavigation, tlMe.meCarousel, timeline.footer.tw]);
+  }, [isDirectNavigation]);
 
   // Start shuffling after initial animation
   useEffect(() => {
     // Longer delay for direct navigation, shorter for page transitions
     const delayTime = isDirectNavigation
       ? calculateTotalDelay() // Use the calculated total delay for direct navigation
-      : tlMe.nameWords * 1000 + 1000; // Shorter delay when coming from another page
+      : timelineMe.nameWords * 1000 + 1000; // Shorter delay when coming from another page
 
     const timer = setTimeout(() => {
       setIsShuffling(true);
     }, delayTime);
 
     return () => clearTimeout(timer);
-  }, [isDirectNavigation, tlMe.nameWords, calculateTotalDelay]);
+  }, [isDirectNavigation, calculateTotalDelay]);
 
   // Shuffle the words every 2 seconds
   useEffect(() => {
@@ -210,7 +177,9 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
           <WordMask
             key={`word-${key}-${wordOrder[0]}`}
             direction={nameWords[wordOrder[0]].direction}
-            delay={isExitingRef.current ? 0 : isShuffling ? 0 : tlMe.nameWords}
+            delay={
+              isExitingRef.current ? 0 : isShuffling ? 0 : timelineMe.nameWords
+            }
           >
             {nameWords[wordOrder[0]].text}
           </WordMask>
@@ -218,7 +187,7 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
 
         <WordMask
           direction="top"
-          delay={isExitingRef.current ? 0 : tlMe.nameWords}
+          delay={isExitingRef.current ? 0 : timelineMe.nameWords}
         >
           =
         </WordMask>
@@ -227,7 +196,9 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
           <WordMask
             key={`word-${key}-${wordOrder[1]}`}
             direction={nameWords[wordOrder[1]].direction}
-            delay={isExitingRef.current ? 0 : isShuffling ? 0 : tlMe.nameWords}
+            delay={
+              isExitingRef.current ? 0 : isShuffling ? 0 : timelineMe.nameWords
+            }
           >
             {nameWords[wordOrder[1]].text}
           </WordMask>
@@ -235,7 +206,7 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
 
         <WordMask
           direction="top"
-          delay={isExitingRef.current ? 0 : tlMe.nameWords}
+          delay={isExitingRef.current ? 0 : timelineMe.nameWords}
         >
           =
         </WordMask>
@@ -244,7 +215,9 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
           <WordMask
             key={`word-${key}-${wordOrder[2]}`}
             direction={nameWords[wordOrder[2]].direction}
-            delay={isExitingRef.current ? 0 : isShuffling ? 0 : tlMe.nameWords}
+            delay={
+              isExitingRef.current ? 0 : isShuffling ? 0 : timelineMe.nameWords
+            }
           >
             {nameWords[wordOrder[2]].text}
           </WordMask>
@@ -252,13 +225,13 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
       </AboutMe>
 
       <h1>
-        <WordMask direction="top" delay={tlMe.now}>
+        <WordMask direction="top" delay={timelineMe.now}>
           /NOW
         </WordMask>
 
         <WordMask
           direction="top"
-          delay={tlMe.nowContent}
+          delay={timelineMe.nowContent}
           altFont
           html={now}
           css={{ fontSize: "5vw", marginBottom: "5vh" }}
@@ -266,13 +239,13 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
       </h1>
 
       <h1>
-        <WordMask direction="top" delay={tlMe.now}>
+        <WordMask direction="top" delay={timelineMe.now}>
           /BIO
         </WordMask>
 
         <WordMask
           direction="top"
-          delay={tlMe.nowContent}
+          delay={timelineMe.nowContent}
           altFont
           html={bio}
           css={{ fontSize: "5vw", marginBottom: "5vh" }}
@@ -280,13 +253,13 @@ export default function Me({ now, timeline, bio, future }: MeProps) {
       </h1>
 
       <h1>
-        <WordMask direction="top" delay={tlMe.now}>
+        <WordMask direction="top" delay={timelineMe.now}>
           /FUTURE
         </WordMask>
 
         <WordMask
           direction="top"
-          delay={tlMe.nowContent}
+          delay={timelineMe.nowContent}
           altFont
           html={future}
           css={{ fontSize: "5vw", marginBottom: "5vh" }}

@@ -1,42 +1,68 @@
+import { AnimatePresence } from "motion/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { styled } from "stitches.config";
 import WordMask from "@/components/WordMask";
-import { useRouter } from "next/router";
-import { AnimatePresence } from "motion/react";
+import { timeline } from "@/utils/timelines";
+import { useEffect, useRef, useState } from "react";
 
-interface Timeline {
-  dob: number;
-  contact: number;
-  arrow: number;
-  cv: number;
-  tg: number;
-  tw: number;
-}
-
-interface FooterProps {
-  timeline: Timeline;
-}
-
-export default function Footer({ timeline }: FooterProps) {
+export default function Footer() {
   const router = useRouter();
+  const isExitingRef = useRef(false);
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    // Only apply exit animation fix when on the /me page
+    if (router.pathname !== "/me") return;
+
+    const handleRouteChangeStart = (url: string) => {
+      // Store a flag in sessionStorage indicating we're navigating within the app
+      if (typeof window !== "undefined") {
+        sessionStorage.setItem("nextNavigation", "true");
+      }
+      // Set exiting ref to true immediately (synchronous)
+      isExitingRef.current = true;
+      setKey((prev) => prev + 1);
+
+      if (url !== router.asPath) {
+        // Prevent the default navigation
+        router.events.emit("routeChangeError");
+
+        window.history.pushState(null, "", router.asPath);
+
+        setTimeout(() => {
+          router.push(url);
+        }, 300);
+
+        return false;
+      }
+    };
+
+    router.events.on("routeChangeStart", handleRouteChangeStart);
+
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChangeStart);
+    };
+  }, [router]);
+
   return (
     <footer>
       <h1>
-        <WordMask direction="top" delay={timeline.dob}>
-          <Zeroes>0000</Zeroes>‘831229
+        <WordMask direction="top" delay={timeline.footer.dob}>
+          <Zeroes>0000</Zeroes>&apos;831229
         </WordMask>
       </h1>
 
       <Wrapper>
-        <WordMask direction="top" delay={timeline.contact}>
+        <WordMask direction="top" delay={timeline.footer.contact}>
           <span style={{ fontWeight: "normal" }}>Contact</span>
         </WordMask>
         &nbsp;
-        <WordMask direction="left" delay={timeline.arrow}>
+        <WordMask direction="left" delay={timeline.footer.arrow}>
           &#10143;
         </WordMask>
         &nbsp;
-        <WordMask direction="left" delay={timeline.cv}>
+        <WordMask direction="left" delay={timeline.footer.cv}>
           <a
             href="https://read.cv/flowen"
             target="_blank"
@@ -46,7 +72,7 @@ export default function Footer({ timeline }: FooterProps) {
           </a>
         </WordMask>
         &nbsp;
-        <WordMask direction="left" delay={timeline.tg}>
+        <WordMask direction="left" delay={timeline.footer.tg}>
           <a
             href="https://www.linkedin.com/in/flowen/"
             target="_blank"
@@ -56,7 +82,7 @@ export default function Footer({ timeline }: FooterProps) {
           </a>
         </WordMask>
         &nbsp;
-        <WordMask direction="left" delay={timeline.tg}>
+        <WordMask direction="left" delay={timeline.footer.tg}>
           <a
             href="https://t.me/flowen"
             target="_blank"
@@ -66,7 +92,7 @@ export default function Footer({ timeline }: FooterProps) {
           </a>
         </WordMask>
         &nbsp;
-        <WordMask direction="left" delay={timeline.tw}>
+        <WordMask direction="left" delay={timeline.footer.tw}>
           <a
             href="https://x.com/flowen_af"
             target="_blank"

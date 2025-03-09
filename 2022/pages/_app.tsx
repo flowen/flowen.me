@@ -12,44 +12,30 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 import { easeIn, easeOut } from "@/utils/easing";
+import { timeline } from "@/utils/timelines";
+
 import "../styles/vars.css";
 import "../styles/globals.css";
-
-interface Timeline {
-  header: {
-    rou: number;
-    hun: number;
-    fan: number;
-  };
-  footer: {
-    dob: number;
-    contact: number;
-    arrow: number;
-    cv: number;
-    tg: number;
-    tw: number;
-  };
-}
-
-const timeline: Timeline = {
-  header: {
-    rou: 0,
-    hun: 0.1,
-    fan: 0.2,
-  },
-  footer: {
-    dob: 1.25,
-    contact: 1.5,
-    arrow: 1.55,
-    cv: 1.6,
-    tg: 1.65,
-    tw: 1.7,
-  },
-};
 
 function App({ Component, pageProps, router }: AppProps) {
   const controls = useAnimation();
   const [scale, setScale] = useState<number | undefined>();
+
+  // Add a route change event listener to scroll to top when navigating between pages
+  useEffect(() => {
+    const handleRouteChangeComplete = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChangeComplete);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChangeComplete);
+    };
+  }, [router.events]);
 
   useEffect(() => {
     if (console && console.log) {
@@ -112,7 +98,7 @@ function App({ Component, pageProps, router }: AppProps) {
       <main>
         <MotionConfig transition={{ ease: easeIn, duration: 0.6 }}>
           <AnimatePresence mode="wait">
-            <Component {...pageProps} key={router.route} timeline={timeline} />
+            <Component {...pageProps} key={router.route} />
           </AnimatePresence>
         </MotionConfig>
       </main>
