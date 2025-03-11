@@ -4,12 +4,11 @@ import { useRouter } from "next/router";
 import { styled } from "stitches.config";
 import WordMask from "@/components/WordMask";
 import { timeline } from "@/utils/timelines";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Footer() {
   const router = useRouter();
   const isExitingRef = useRef(false);
-  const [key, setKey] = useState(0);
 
   useEffect(() => {
     // Only apply exit animation fix when on the /me page
@@ -22,7 +21,6 @@ export default function Footer() {
       }
       // Set exiting ref to true immediately (synchronous)
       isExitingRef.current = true;
-      setKey((prev) => prev + 1);
 
       if (url !== router.asPath) {
         // Prevent the default navigation

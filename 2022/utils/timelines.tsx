@@ -72,17 +72,17 @@ export const timelineIndex: Timeline & TimelineIndex = {
 
 // ***** me page timeline
 interface TimelineMe {
-  now: 0.35;
-  nowContent: 0.5;
-  meCarousel: 1.5;
-  nameWords: 0.8;
+  now: number;
+  nowContent: number;
+  meCarousel: number;
+  nameWords: number;
 }
 
 const tlMe: TimelineMe = {
+  nameWords: 0.2,
   now: 0.35,
   nowContent: 0.5,
   meCarousel: 1.5,
-  nameWords: 0.8,
 };
 
 export const timelineMe: Timeline & TimelineMe = { ...timeline, ...tlMe };

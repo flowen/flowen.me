@@ -7,7 +7,7 @@ import { styled } from "stitches.config";
 import { easeInOut } from "@/utils/easing";
 
 interface MeCarouselProps {
-  delay?: number;
+  carouselStartDelay: number;
   height: string | number;
 }
 
@@ -23,7 +23,10 @@ const meImages = [
   "me/me8.webp",
 ];
 
-export default function MeCarousel({ delay = 1.5, height }: MeCarouselProps) {
+export default function MeCarousel({
+  carouselStartDelay,
+  height,
+}: MeCarouselProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState<number>(0);
   const [carouselStarted, setCarouselStarted] = useState<boolean>(false);
@@ -31,10 +34,10 @@ export default function MeCarousel({ delay = 1.5, height }: MeCarouselProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setCarouselStarted(true);
-    }, delay * 1000);
+    }, carouselStartDelay * 1000);
 
     return () => clearTimeout(timer);
-  }, [delay]);
+  }, [carouselStartDelay]);
 
   useEffect(() => {
     if (!ref.current || !carouselStarted) return;

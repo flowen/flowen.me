@@ -114,7 +114,7 @@ export default function Index({ projects, available }: IndexProps) {
           flexWrap: "nowrap",
         }}
       >
-        <LinkMe href="/me" scroll={false}>
+        <LinkMe href="/me?shortAnimation=1" scroll={false}>
           <motion.div
             layoutId="me-image"
             style={{
