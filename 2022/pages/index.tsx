@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import Head from "next/head";

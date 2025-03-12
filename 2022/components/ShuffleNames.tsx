@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from "react";
-import { AnimatePresence } from "motion/react";
-import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import WordMask from "@/components/WordMask";
 import { timelineMe } from "@/utils/timelines";
+import { styled } from "stitches.config";
+import { easeOut } from "@/utils/easing";
 
 const NAMES = [
   { text: "Rou Hun", direction: "left" as const },
@@ -11,7 +12,6 @@ const NAMES = [
 ];
 
 const DELAYS = {
-  EXIT: 0,
   SHUFFLE: 0,
   INTERVAL: 2000,
   WORD_MASK: timelineMe.nameWords,
@@ -26,39 +26,26 @@ export default function ShuffleNames({
   isShortAnimation,
   calculateTotalDelay,
 }: ShuffleNamesProps) {
-  const router = useRouter();
   const [wordOrder, setWordOrder] = useState<number[]>([0, 1, 2]);
   const [isShuffling, setIsShuffling] = useState<boolean>(false);
   const [key, setKey] = useState<number>(0);
-  const isExitingRef = useRef(false);
 
-  // Listen for route changes to trigger exit animations
-  useEffect(() => {
-    const handleRouteChangeStart = () => {
-      console.log("ShuffleNames: Exit animation triggered");
-      isExitingRef.current = true;
-    };
-
-    router.events.on("routeChangeStart", handleRouteChangeStart);
-    return () => {
-      router.events.off("routeChangeStart", handleRouteChangeStart);
-    };
-  }, [router]);
-
+  // Start shuffling after initial animation
   useEffect(() => {
     const startDelay = isShortAnimation
       ? 0
       : calculateTotalDelay() - DELAYS.INTERVAL;
 
+    console.log({ startDelay });
+
     const startTimer = setTimeout(() => {
-      if (!isExitingRef.current) {
-        setIsShuffling(true);
-      }
+      setIsShuffling(true);
     }, startDelay);
 
     return () => clearTimeout(startTimer);
   }, [isShortAnimation, calculateTotalDelay]);
 
+  // Handle shuffling interval
   useEffect(() => {
     if (!isShuffling) return;
 
@@ -79,58 +66,86 @@ export default function ShuffleNames({
     };
   }, [isShuffling]);
 
-  // Determine delay based on animation state
-  const getDelay = (index: number) => {
-    if (isExitingRef.current) return DELAYS.EXIT;
-    if (isShuffling) return DELAYS.SHUFFLE;
-    return DELAYS.WORD_MASK;
-  };
+  // For animated words with shuffling
+  const getDelay = () => (isShuffling ? DELAYS.SHUFFLE : DELAYS.WORD_MASK);
 
   return (
-    <>
-      <AnimatePresence mode="wait">
-        <WordMask
-          key={`word-${key}-${wordOrder[0]}`}
-          direction={NAMES[wordOrder[0]].direction}
-          delay={getDelay(0)}
-        >
-          {NAMES[wordOrder[0]].text}
-        </WordMask>
-      </AnimatePresence>
-
-      <WordMask
-        direction="top"
-        delay={isExitingRef.current ? DELAYS.EXIT : DELAYS.WORD_MASK}
+    <Wrapper>
+      <MotionAboutMe
+        key="shuffle-container"
+        initial={{ y: 0 }}
+        animate={{ y: 0 }}
+        exit={{ y: "100%" }}
+        transition={{ ease: easeOut, duration: 0.5 }}
       >
-        =
-      </WordMask>
+        <AnimatePresence mode="wait">
+          <WordMask
+            key={`word-${key}-${wordOrder[0]}`}
+            direction={NAMES[wordOrder[0]].direction}
+            delay={getDelay()}
+            exitDelay={0}
+            exitDuration={0.1}
+          >
+            {NAMES[wordOrder[0]].text}
+          </WordMask>
+        </AnimatePresence>
 
-      <AnimatePresence mode="wait">
         <WordMask
-          key={`word-${key}-${wordOrder[1]}`}
-          direction={NAMES[wordOrder[1]].direction}
-          delay={getDelay(1)}
+          direction="top"
+          delay={DELAYS.WORD_MASK}
+          exitDelay={0}
+          exitDuration={0.1}
         >
-          {NAMES[wordOrder[1]].text}
+          =
         </WordMask>
-      </AnimatePresence>
 
-      <WordMask
-        direction="top"
-        delay={isExitingRef.current ? DELAYS.EXIT : DELAYS.WORD_MASK}
-      >
-        =
-      </WordMask>
+        <AnimatePresence mode="wait">
+          <WordMask
+            key={`word-${key}-${wordOrder[1]}`}
+            direction={NAMES[wordOrder[1]].direction}
+            delay={getDelay()}
+            exitDelay={0}
+            exitDuration={0.1}
+          >
+            {NAMES[wordOrder[1]].text}
+          </WordMask>
+        </AnimatePresence>
 
-      <AnimatePresence mode="wait">
         <WordMask
-          key={`word-${key}-${wordOrder[2]}`}
-          direction={NAMES[wordOrder[2]].direction}
-          delay={getDelay(2)}
+          direction="top"
+          delay={DELAYS.WORD_MASK}
+          exitDelay={0}
+          exitDuration={0.1}
         >
-          {NAMES[wordOrder[2]].text}
+          =
         </WordMask>
-      </AnimatePresence>
-    </>
+
+        <AnimatePresence mode="wait">
+          <WordMask
+            key={`word-${key}-${wordOrder[2]}`}
+            direction={NAMES[wordOrder[2]].direction}
+            delay={getDelay()}
+            exitDelay={0}
+            exitDuration={0.1}
+          >
+            {NAMES[wordOrder[2]].text}
+          </WordMask>
+        </AnimatePresence>
+      </MotionAboutMe>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled("div", {
+  overflow: "hidden",
+  margin: "5vh 0",
+});
+
+const AboutMe = styled("div", {
+  display: "flex",
+  gap: "20px",
+  fontFamily: "var(--font-alt)",
+  fontSize: "5vw",
+});
+
+const MotionAboutMe = motion.create(AboutMe);

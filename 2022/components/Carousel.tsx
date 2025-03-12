@@ -77,10 +77,6 @@ export default function Carousel({ projects }: CarouselProps) {
             src={`/assets/img/projects/${project.image}`}
             alt={project.name}
             layout="fill"
-            style={{
-              objectFit: "cover",
-              objectPosition: project.imagePosition,
-            }}
             priority={true}
           />
         </div>

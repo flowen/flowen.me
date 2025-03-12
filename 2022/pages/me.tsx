@@ -91,12 +91,10 @@ export default function Me({ now, bio, future }: MeProps) {
         </LogoWrapper>
       </Row>
 
-      <AboutMe>
-        <ShuffleNames
-          isShortAnimation={isShortAnimation}
-          calculateTotalDelay={calculateTotalDelay}
-        />
-      </AboutMe>
+      <ShuffleNames
+        isShortAnimation={isShortAnimation}
+        calculateTotalDelay={calculateTotalDelay}
+      />
 
       <h1>
         <WordMask direction="top" delay={timelineMe.now}>
@@ -160,14 +158,6 @@ const LogoWrapper = styled(motion.div, {
   "& svg": {
     height: `calc(var(--font-size) * ${HEIGHTMULTIPLIER})`,
   },
-});
-
-const AboutMe = styled("div", {
-  display: "flex",
-  gap: "20px",
-  margin: "5vh 0",
-  fontFamily: "var(--font-alt)",
-  fontSize: "5vw",
 });
 
 import fsPromises from "fs/promises";

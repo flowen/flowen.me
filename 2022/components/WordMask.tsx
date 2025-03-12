@@ -1,4 +1,4 @@
-import { styled, theme } from "stitches.config";
+import { styled } from "stitches.config";
 import { motion } from "motion/react";
 import { easeIn, easeOut } from "@/utils/easing";
 
@@ -6,6 +6,8 @@ interface WordMaskProps {
   children?: React.ReactNode;
   direction?: "left" | "right" | "top" | "bottom";
   delay?: number;
+  exitDelay?: number;
+  exitDuration?: number;
   altFont?: boolean;
   html?: string;
   [key: string]: any;
@@ -15,6 +17,8 @@ export default function WordMask({
   children,
   direction,
   delay = 0,
+  exitDelay,
+  exitDuration,
   altFont = false,
   html,
   ...props
@@ -31,6 +35,11 @@ export default function WordMask({
         animate={{
           x: 0,
           y: 0,
+          transition: {
+            ease: easeOut,
+            duration: 0.5,
+            delay: delay,
+          },
         }}
         exit={{
           x:
@@ -38,15 +47,10 @@ export default function WordMask({
           y:
             direction === "top" ? "100%" : direction === "bottom" ? "-100%" : 0,
           transition: {
-            delay: 0.2,
-            duration: 0.5,
+            delay: exitDelay || 0.2,
+            duration: exitDuration || 0.5,
             ease: easeIn,
           },
-        }}
-        transition={{
-          ease: easeOut,
-          duration: theme.duration.slow.value,
-          delay: delay,
         }}
       >
         {html ? (
