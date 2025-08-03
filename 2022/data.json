@@ -146,7 +146,10 @@
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:6736571129848299520/"
     },
     { "name": "lpunderground.com", "url": "https://lpunderground.com" },
-    { "name": "principlesofwealth.net (RT by naval - rip)", "url": false },
+    {
+      "name": "principlesofwealth.net (RT by naval)",
+      "url": "https://romantic-payne-b0042a.netlify.app/"
+    },
     {
       "name": "100 audiovisual dailies (more like 17)",
       "url": "https://github.com/flowen/100avdaillies"

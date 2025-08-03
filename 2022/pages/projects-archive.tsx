@@ -51,9 +51,11 @@ const easeInCubic = (t: number) => t * t * t;
 export default function ProjectsArchive({ archive }: Archive) {
   return (
     <>
-      <WordMask direction="top" delay={0}>
-        <_Link href="/projects">Return to Projects</_Link>
-      </WordMask>
+      <WrapLink>
+        <WordMask direction="top" delay={0}>
+          <_Link href="/projects">Return to Projects</_Link>
+        </WordMask>
+      </WrapLink>
       <Archive>
         {archive.map(({ name, url }, index) => (
           <ArchiveItem
@@ -88,7 +90,7 @@ const Archive = styled("ul", {
   margin: 0,
 });
 
-const WrapLink = styled(motion.div, {
+const WrapLink = styled("div", {
   position: "sticky",
   top: "0",
   backgroundColor: "hsl(var(--dark) / 0.75)",
