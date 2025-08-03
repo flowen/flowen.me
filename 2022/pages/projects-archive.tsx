@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { styled } from "../stitches.config";
 import { easeOut, motion } from "motion/react";
+import { styled } from "../stitches.config";
+import WordMask from "@/components/WordMask";
 
 interface Archive {
   archive: ArchiveItem[];
@@ -13,64 +14,68 @@ interface ArchiveItem {
   url?: string;
 }
 
-export const ArchiveItemVariants = {
-  initial: {
+const staggerVariant = {
+  initial: ({ index, total }: { index: number; total: number }) => ({
     opacity: 0,
     filter: "blur(8px)",
     scaleX: 0.7,
     transition: {
-      opacity: { duration: 0.1, delay: 0, ease: easeOut },
-      scale: { duration: 0.15, delay: 0.05, ease: easeOut },
-      filter: { duration: 0.25, delay: 0.1, ease: easeOut },
+      duration: 0.15,
+      delay: easeInCubic(index / total) * 0.75,
+      ease: easeOut,
     },
-  },
-  whileInView: {
+  }),
+  whileInView: ({ index, total }: { index: number; total: number }) => ({
     opacity: 1,
     filter: "blur(0)",
     scaleX: 1,
     transition: {
-      opacity: { duration: 0.1, delay: 0, ease: easeOut },
-      scale: { duration: 0.15, delay: 0.05, ease: easeOut },
-      filter: { duration: 0.25, delay: 0.1, ease: easeOut },
+      duration: 0.15,
+      delay: easeInCubic(index / total) * 0.75,
+      ease: easeOut,
     },
-  },
-  exit: {
+  }),
+  exit: () => ({
     opacity: 0,
     filter: "blur(8px)",
     scaleX: 0.7,
     transition: {
-      opacity: { duration: 0.2, delay: 0, ease: easeOut },
-      scale: { duration: 0.1, delay: 0, ease: easeOut },
-      filter: { duration: 0.1, delay: 0, ease: easeOut },
+      duration: 0.35,
+      ease: easeOut,
     },
-  },
+  }),
 };
+
+const easeInCubic = (t: number) => t * t * t;
 
 export default function ProjectsArchive({ archive }: Archive) {
   return (
-    <Archive>
-      <WrapLink>
+    <>
+      <WordMask direction="top" delay={0}>
         <_Link href="/projects">Return to Projects</_Link>
-      </WrapLink>
-      {archive.map(({ name, url }, index) => (
-        <ArchiveItem
-          key={index}
-          variants={ArchiveItemVariants}
-          initial="initial"
-          whileInView="whileInView"
-          exit="exit"
-          style={{ transformOrigin: "left center" }}
-        >
-          {url ? (
-            <Anchor href={url} target="_blank" rel="noopener noreferrer">
-              {name}
-            </Anchor>
-          ) : (
-            name
-          )}
-        </ArchiveItem>
-      ))}
-    </Archive>
+      </WordMask>
+      <Archive>
+        {archive.map(({ name, url }, index) => (
+          <ArchiveItem
+            key={index}
+            variants={staggerVariant}
+            initial="initial"
+            whileInView="whileInView"
+            exit="exit"
+            custom={{ index, total: archive.length }}
+            style={{ transformOrigin: "left center" }}
+          >
+            {url ? (
+              <Anchor href={url} target="_blank" rel="noopener noreferrer">
+                {name}
+              </Anchor>
+            ) : (
+              name
+            )}
+          </ArchiveItem>
+        ))}
+      </Archive>
+    </>
   );
 }
 
@@ -85,14 +90,16 @@ const Archive = styled("ul", {
 
 const WrapLink = styled(motion.div, {
   position: "sticky",
-  top: "2vw",
+  top: "0",
   backgroundColor: "hsl(var(--dark) / 0.75)",
-  backdropFilter: "blur(2px)",
+  backdropFilter: "blur(3px)",
+  padding: "0 0 2vw 0",
+  zIndex: 100,
 });
 
 const _Link = styled(Link, {
   fontFamily: "var(--font-alt)",
-  fontSize: "2vw",
+  fontSize: "5vw",
 });
 
 const ArchiveItem = styled(motion.li, {

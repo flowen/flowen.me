@@ -15,6 +15,7 @@ import Carousel from "@/components/Carousel";
 
 import { easeInOut, easeOut } from "@/utils/easing";
 import { timelineIndex } from "@/utils/timelines";
+import "@/utils/dontgo";
 
 interface Project {
   id: string;

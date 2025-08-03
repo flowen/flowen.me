@@ -109,7 +109,7 @@ export default function Projects({ projects }: ProjectsProps) {
       </ProjectsContainer>
 
       <Link href="/projects-archive" style={{ fontSize: "20px" }}>
-        projects &lt; 2000
+        archive
       </Link>
     </Wrapper>
   );

@@ -15,6 +15,7 @@ __metadata:
     "@types/node": "npm:^22.7.5"
     "@types/react": "npm:19.0.10"
     "@types/react-dom": "npm:19.0.4"
+    dont-go: "npm:^1.1.1"
     eslint: "npm:^8.0.0"
     eslint-config-next: "npm:15.2.1"
     motion: "npm:^12.4.10"
@@ -2958,6 +2959,13 @@ __metadata:
     domelementtype: "npm:^2.3.0"
     domhandler: "npm:^5.0.3"
   checksum: 10c0/47938f473b987ea71cd59e59626eb8666d3aa8feba5266e45527f3b636c7883cca7e582d901531961f742c519d7514636b7973353b648762b2e3bedbf235fada
+  languageName: node
+  linkType: hard
+
+"dont-go@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "dont-go@npm:1.1.1"
+  checksum: 10c0/ed3d76d8c3f827f96a8a58d3ea7f01add6fc20b58a88d73dd5348f1d857868be4fb64fb720cafac7a0a9a73f9484e50c73d10cfdd821047360dcc4cc752c39fa
   languageName: node
   linkType: hard
 
