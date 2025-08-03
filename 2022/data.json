@@ -126,5 +126,70 @@
         }
       ]
     }
+  ],
+  "archive": [
+    {
+      "name": "TRADEBOPS FM prototype",
+      "url": "https://takehome-metadao.vercel.app/"
+    },
+    {
+      "name": "Web3 Telepathy explorer prototype",
+      "url": "https://succinct-takehome.vercel.app/"
+    },
+    { "name": "death row records", "url": "https://deathrowrecords.com/" },
+    {
+      "name": "won ADE Hackathon - MTV Mood 2018",
+      "url": "https://www.youtube.com/watch?v=p7Hhz_qDvR8"
+    },
+    {
+      "name": "HP valley interactive web demo",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:6736571129848299520/"
+    },
+    { "name": "lpunderground.com", "url": "https://lpunderground.com" },
+    { "name": "principlesofwealth.net (RT by naval - rip)", "url": false },
+    {
+      "name": "100 audiovisual dailies (more like 17)",
+      "url": "https://github.com/flowen/100avdaillies"
+    },
+    {
+      "name": "Audioreactive visual experiments (processing/unity)",
+      "url": "https://instagram.com/flowen"
+    },
+    { "name": "Backhub.co", "url": false },
+    { "name": "greenberry", "url": false },
+    { "name": "PlusTouch", "url": false },
+    { "name": "CountMe app designs", "url": false },
+    { "name": "Solaris bank", "url": "https://www.solarisgroup.com/en/" },
+    { "name": "Theatre JS demo", "url": "https://theatrejs-demo.netlify.app" },
+    {
+      "name": "Won whitestone av contest",
+      "url": "https://www.amazon.co.uk/Shinbyeong-forgotten-futuristic-illegal-parties-ebook/dp/B07KPDNYV2"
+    },
+    { "name": "molabs.ai", "url": false },
+    { "name": "dateanomad.net", "url": false },
+    {
+      "name": "shinbyeong (wrote a fiction book)",
+      "url": "https://medium.com/@flowen/im-writing-my-first-book-or-else-i-pay-my-girlfriend-a-1000-6fabc847137f"
+    },
+    { "name": "droomplekken.nl", "url": "https://droomplekken.nl" },
+    { "name": "Chinese take-away", "url": false },
+    { "name": "Challengestad", "url": false },
+    { "name": "Wereldhave", "url": false },
+    { "name": "Testguild", "url": "https://testguild.com/" },
+    { "name": "Mirabeau agency", "url": false },
+    { "name": "VVV cadeaukaarten", "url": false },
+    { "name": "jaarbeurs.nl", "url": false },
+    { "name": "c1000.nl", "url": false },
+    { "name": "Douwe Egberts", "url": false },
+    { "name": "Philips Senseo", "url": false },
+    { "name": "skoda.nl", "url": false },
+    { "name": "volkswagen.nl", "url": false },
+    { "name": "seat.nl", "url": false },
+    { "name": "Gazelle", "url": false },
+    { "name": "Friesland Campina", "url": false },
+    { "name": "Pon Automotive", "url": false },
+    { "name": "mixe.nl", "url": false },
+    { "name": "Urban terror clan Muppet invasion", "url": false },
+    { "name": "first website on Geocities", "url": false }
   ]
 }

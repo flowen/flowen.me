@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import Head from "next/head";
+
 import ProjectCard from "./project-card";
 import { styled } from "../stitches.config";
 
@@ -105,6 +107,10 @@ export default function Projects({ projects }: ProjectsProps) {
           />
         ))}
       </ProjectsContainer>
+
+      <Link href="/projects-archive" style={{ fontSize: "20px" }}>
+        projects &lt; 2000
+      </Link>
     </Wrapper>
   );
 }
