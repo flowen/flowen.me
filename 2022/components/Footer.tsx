@@ -60,16 +60,6 @@ export default function Footer() {
           &#10143;
         </WordMask>
         &nbsp;
-        <WordMask direction="left" delay={timeline.footer.cv}>
-          <a
-            href="https://read.cv/flowen"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            CV
-          </a>
-        </WordMask>
-        &nbsp;
         <WordMask direction="left" delay={timeline.footer.tg}>
           <a
             href="https://www.linkedin.com/in/flowen/"
