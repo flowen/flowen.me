@@ -115,7 +115,8 @@ const P = styled(motion.p, {
   fontFamily: "var(--font-alt)",
   fontSize: "6vw",
   margin: "1em 0",
-  maxWidth: "600px",
+  maxWidth: "75%",
+  minWidth: "300px",
 });
 
 const ArchiveItem = styled(motion.li, {

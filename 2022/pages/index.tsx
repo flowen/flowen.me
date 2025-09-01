@@ -239,8 +239,6 @@ const Overlay = styled(motion.div, {
   mixBlendMode: "lighten",
 });
 
-export { Overlay };
-
 export const getStaticProps: GetStaticProps<IndexProps> = async () => {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
