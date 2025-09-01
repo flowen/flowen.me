@@ -136,7 +136,10 @@
       "name": "Web3 Telepathy explorer prototype",
       "url": "https://succinct-takehome.vercel.app/"
     },
-    { "name": "death row records", "url": "https://deathrowrecords.com/" },
+    {
+      "name": "death row records - Snoop Dog's record label website",
+      "url": "https://deathrowrecords.com/"
+    },
     {
       "name": "won ADE Hackathon - MTV Mood 2018",
       "url": "https://www.youtube.com/watch?v=p7Hhz_qDvR8"
@@ -145,9 +148,12 @@
       "name": "HP valley interactive web demo",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:6736571129848299520/"
     },
-    { "name": "lpunderground.com", "url": "https://lpunderground.com" },
     {
-      "name": "principlesofwealth.net (RT by naval)",
+      "name": "lpunderground - some small stuff",
+      "url": "https://lpunderground.com"
+    },
+    {
+      "name": "principlesofwealth.net - Retweeted by naval (rip)",
       "url": "https://romantic-payne-b0042a.netlify.app/"
     },
     {
@@ -160,28 +166,42 @@
     },
     { "name": "Backhub.co", "url": false },
     { "name": "greenberry", "url": false },
-    { "name": "PlusTouch", "url": false },
-    { "name": "CountMe app designs", "url": false },
+    { "name": "PlusTouch - interactive boards thingies (rip)", "url": false },
+    { "name": "Statkraft - miniproject", "url": false },
+    {
+      "name": "CountMe App designs (covid-19 app)",
+      "url": "https://www.figma.com/design/0EkgKBrKer3sFeJGpt6xZD/countME---portfolio?node-id=5-0&t=Jz4HltPu6o8cOq4H-1"
+    },
     { "name": "Solaris bank", "url": "https://www.solarisgroup.com/en/" },
-    { "name": "Theatre JS demo", "url": "https://theatrejs-demo.netlify.app" },
+    {
+      "name": "Tons of Processing, Unity and threejs audioreactive visuals - on instagram",
+      "url": "https://instagram.com/flowen_af"
+    },
+    {
+      "name": "Theatre JS demo - audiovisual animations",
+      "url": "https://theatrejs-demo.netlify.app"
+    },
     {
       "name": "Won whitestone av contest",
       "url": "https://www.amazon.co.uk/Shinbyeong-forgotten-futuristic-illegal-parties-ebook/dp/B07KPDNYV2"
     },
-    { "name": "molabs.ai", "url": false },
-    { "name": "dateanomad.net", "url": false },
     {
-      "name": "shinbyeong (wrote a fiction book)",
-      "url": "https://medium.com/@flowen/im-writing-my-first-book-or-else-i-pay-my-girlfriend-a-1000-6fabc847137f"
+      "name": "molabs.ai - tamagotchis and nfts threejs project - rip",
+      "url": false
+    },
+    { "name": "dateanomad.net - old dating site - rip", "url": false },
+    {
+      "name": "shinbyeong - buy my fiction book!",
+      "url": "https://www.amazon.co.uk/Shinbyeong-forgotten-futuristic-illegal-parties-ebook/dp/B07KPDNYV2?crid=3C4LYL31XDM3F&dib=eyJ2IjoiMSJ9.ekT5AGaZKaznL5gBOk74csPYR7DxMSrYUnXeNu0mhSs.QiQqvsmQPzOgQnkWNOYQ6c4IYSZs2WPgUQR5rML2nT8&dib_tag=se&keywords=shinbyeong&qid=1756581138&sprefix=shinbyeong+,aps,80&sr=8-1"
     },
     { "name": "droomplekken.nl", "url": "https://droomplekken.nl" },
     { "name": "Chinese take-away", "url": false },
     { "name": "Challengestad", "url": false },
     { "name": "Wereldhave", "url": false },
     { "name": "Testguild", "url": "https://testguild.com/" },
-    { "name": "Mirabeau agency", "url": false },
-    { "name": "VVV cadeaukaarten", "url": false },
     { "name": "jaarbeurs.nl", "url": false },
+    { "name": "Mirabeau agency (RIP?)", "url": false },
+    { "name": "VVV cadeaukaarten", "url": false },
     { "name": "c1000.nl", "url": false },
     { "name": "Douwe Egberts", "url": false },
     { "name": "Philips Senseo", "url": false },
@@ -191,8 +211,33 @@
     { "name": "Gazelle", "url": false },
     { "name": "Friesland Campina", "url": false },
     { "name": "Pon Automotive", "url": false },
+    { "name": "More than I can remember for eFocus/Valtech ☝️", "url": false },
+    {
+      "name": "portfolio github",
+      "url": "https://github.com/flowen/flowen.me"
+    },
+    {
+      "name": "portfolio 2011",
+      "url": "https://github.com/flowen/flowen.me/blob/master/2011/2011-flowen.nl-homepage.png"
+    },
+    {
+      "name": "portfolio 2010",
+      "url": "https://github.com/flowen/flowen.me/blob/master/2010/2010-flowen.nl-homepage.png"
+    },
+    {
+      "name": "portfolio 2009",
+      "url": "https://github.com/flowen/flowen.me/blob/master/2009/2009-flowen.nl.png"
+    },
+    {
+      "name": "portfolio 2008",
+      "url": "https://github.com/flowen/flowen.me/blob/master/2008/2008-flowen.nl.png"
+    },
     { "name": "mixe.nl", "url": false },
     { "name": "Urban terror clan Muppet invasion", "url": false },
+    {
+      "name": "websites for own Quake World Team Fortress clans",
+      "url": false
+    },
     { "name": "first website on Geocities", "url": false }
   ]
 }

@@ -94,6 +94,24 @@ export default function Projects({ projects }: ProjectsProps) {
         )}
       </Head>
 
+      <WordMask
+        direction="top"
+        delay={0}
+        style={{
+          alignSelf: "flex-end",
+          zIndex: 20,
+          position: "sticky",
+          top: 40,
+          display: "block",
+          fontSize: "2vw",
+          transform: "rotate(6deg) translateX(-10%) translateY(-25px)",
+        }}
+      >
+        <Link href="/projects-archive" scroll={false}>
+          archive
+        </Link>
+      </WordMask>
+
       <ProjectsContainer>
         {projects.map((project, index) => (
           <ProjectCard
@@ -107,10 +125,6 @@ export default function Projects({ projects }: ProjectsProps) {
           />
         ))}
       </ProjectsContainer>
-
-      <Link href="/projects-archive" style={{ fontSize: "20px" }}>
-        archive
-      </Link>
     </Wrapper>
   );
 }
@@ -125,11 +139,13 @@ const ProjectsContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
   width: "100%",
+  zIndex: 10,
 });
 
 import { GetStaticProps } from "next";
 import fsPromises from "fs/promises";
 import path from "path";
+import WordMask from "@/components/WordMask";
 
 export const getStaticProps: GetStaticProps = async () => {
   const filePath = path.join(process.cwd(), "data.json");

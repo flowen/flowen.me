@@ -53,9 +53,16 @@ export default function ProjectsArchive({ archive }: Archive) {
     <>
       <WrapLink>
         <WordMask direction="top" delay={0}>
-          <_Link href="/projects">Return to Projects</_Link>
+          <_Link href="/projects" scroll={false}>
+            Return to Projects
+          </_Link>
         </WordMask>
       </WrapLink>
+      <WordMask direction="top" delay={0}>
+        <P>
+          Whatever I could remember or was too lazy to add to the projects page
+        </P>
+      </WordMask>
       <Archive>
         {archive.map(({ name, url }, index) => (
           <ArchiveItem
@@ -102,6 +109,13 @@ const WrapLink = styled("div", {
 const _Link = styled(Link, {
   fontFamily: "var(--font-alt)",
   fontSize: "5vw",
+});
+
+const P = styled(motion.p, {
+  fontFamily: "var(--font-alt)",
+  fontSize: "6vw",
+  margin: "1em 0",
+  maxWidth: "600px",
 });
 
 const ArchiveItem = styled(motion.li, {
