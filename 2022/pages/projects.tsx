@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import { motion } from "motion/react";
 
 import ProjectCard from "./project-card";
 import { styled } from "../stitches.config";
+import { easeOut } from "@/utils/easing";
 
 interface Project {
   name: string;
@@ -24,7 +26,7 @@ interface ProjectsProps {
 export default function Projects({ projects }: ProjectsProps) {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [visibleProjects, setVisibleProjects] = useState<Set<string>>(
-    new Set()
+    new Set(),
   );
 
   // Set the first visible project as active by default
@@ -40,7 +42,7 @@ export default function Projects({ projects }: ProjectsProps) {
   // Handle project visibility changes
   const handleProjectVisibilityChange = (
     project: Project,
-    isVisible: boolean
+    isVisible: boolean,
   ) => {
     setVisibleProjects((prev) => {
       const newSet = new Set(prev);
@@ -94,23 +96,18 @@ export default function Projects({ projects }: ProjectsProps) {
         )}
       </Head>
 
-      <WordMask
-        direction="top"
-        delay={0}
-        style={{
-          alignSelf: "flex-end",
-          zIndex: 20,
-          position: "sticky",
-          top: 40,
-          display: "block",
-          fontSize: "2vw",
-          transform: "rotate(6deg) translateX(-10%) translateY(-25px)",
+      <ArchiveLink
+        initial={{ y: "-100%", opacity: 0 }}
+        animate={{ y: 0, rotate: 10, opacity: 1 }}
+        exit={{ y: "-25%", opacity: 0 }}
+        transition={{
+          ease: easeOut,
         }}
+        href="/projects-archive"
+        scroll={false}
       >
-        <Link href="/projects-archive" scroll={false}>
-          archive
-        </Link>
-      </WordMask>
+        archive
+      </ArchiveLink>
 
       <ProjectsContainer>
         {projects.map((project, index) => (
@@ -142,10 +139,21 @@ const ProjectsContainer = styled("div", {
   zIndex: 10,
 });
 
+const ArchiveLink = styled(motion.create(Link), {
+  zIndex: 200,
+  position: "fixed",
+  right: 50,
+  bottom: 40,
+  display: "block",
+  whiteSpace: "nowrap",
+  fontSize: "7.5vw",
+  include: "fontAlt",
+  mixBlendMode: "difference",
+});
+
 import { GetStaticProps } from "next";
 import fsPromises from "fs/promises";
 import path from "path";
-import WordMask from "@/components/WordMask";
 
 export const getStaticProps: GetStaticProps = async () => {
   const filePath = path.join(process.cwd(), "data.json");
