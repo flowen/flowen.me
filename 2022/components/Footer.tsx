@@ -69,7 +69,7 @@ export default function Footer() {
             LI
           </a>
         </WordMask>
-        &nbsp;
+        {/* &nbsp;
         <WordMask direction="left" delay={timeline.footer.tg}>
           <a
             href="https://t.me/flowen"
@@ -78,7 +78,7 @@ export default function Footer() {
           >
             TG
           </a>
-        </WordMask>
+        </WordMask> */}
         &nbsp;
         <WordMask direction="left" delay={timeline.footer.tw}>
           <a
