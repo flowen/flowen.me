@@ -19,24 +19,21 @@ const nextConfig: NextConfig = {
 
     return config;
   },
-  experimental: {
-    turbo: {
-      rules: {
-        "*.{jpg,jpeg,png,webp}": ["next-image-loader"],
-        "*.svg": {
-          loaders: ["@svgr/webpack"],
-          as: "*.js",
-        },
+  turbopack: {
+    rules: {
+      "*.{jpg,jpeg,png,webp}": ["next-image-loader"],
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
       },
-      resolveAlias: {
-        "@": ".",
-        "@assets": path.resolve(__dirname, "./assets"),
-        "@components": path.resolve(__dirname, "./components"),
-        "@pages": path.resolve(__dirname, "./pages"),
-        "@styles": path.resolve(__dirname, "./styles"),
-        "@utils": path.resolve(__dirname, "./utils"),
-      },
-      memoryLimit: process.env.NODE_ENV === "production" ? 1024 : 4096,
+    },
+    resolveAlias: {
+      "@": ".",
+      "@assets": path.resolve(__dirname, "./assets"),
+      "@components": path.resolve(__dirname, "./components"),
+      "@pages": path.resolve(__dirname, "./pages"),
+      "@styles": path.resolve(__dirname, "./styles"),
+      "@utils": path.resolve(__dirname, "./utils"),
     },
   },
 };
